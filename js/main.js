@@ -5,10 +5,12 @@ var main = {
 	vars : {},
 
 	init: function(){
+		this.stickyFooter();
 		this.triggers();
 		this.megatron.init();
 		this.sidebar.init();
 		this.map.init();
+		
 
 		$(window).resize(function(){
 			main.megatron.resize();
@@ -16,6 +18,13 @@ var main = {
 		});
 
 		$('.equal-height').matchHeight();	
+	},
+
+	stickyFooter: function(){
+		var footer = $('#footer').height(),
+			push = $('.push'),
+			wrapper = $('#kanye-west');
+			wrapper.css({'margin-bottom': -footer, 'padding-bottom': footer});
 	},
 
 	triggers: function(){
@@ -26,7 +35,7 @@ var main = {
 		$('.feedback-toggle').on('click',function(){
 			element.toggleClass('feedback-visible');
 		});
-		$('.feedback-overlay').on('click', function(e){
+		$('.feedback-overlay').on('click', function(){
 			element.toggleClass('feedback-visible');
 		});
 	},
@@ -82,7 +91,7 @@ var main = {
 		if(!element.length){return false;}
 
 		//bind trigger for scroll
-		filterTop = $('#filters').offset().top;
+		var filterTop = $('#filters').offset().top;
 
 		$('#filters button').on('click', function(){
 			$('html,body').animate({scrollTop: filterTop});
@@ -160,9 +169,9 @@ var main = {
 
 			var sidebarHeight = $('.sidebar').outerHeight();
 			var containerHeight = $('.inner-content').outerHeight();
-			
+
 			if(containerHeight < sidebarHeight){
-				main.sidebar.container.css('height', sidebarHeight);
+				main.sidebar.content.css('height', sidebarHeight);
 			}else{
 				main.sidebar.container.css('height', containerHeight);
 			}

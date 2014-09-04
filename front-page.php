@@ -45,7 +45,7 @@
 								<?php the_title(); ?>
 							</h3>
 							<p>
-								<a href="<?php the_permalink(); ?>" class="button primary small">Explore</a>								
+								<a href="<?php the_permalink(); ?>" class="button primary small" title="Explore <?php the_title(); ?>">Explore</a>								
 							</p>
 						</div>
 					</div>
@@ -55,20 +55,31 @@
 			</div><!-- .houses -->			
 		</div><!-- .flow -->
 
+		<?php  
+		    $post_object= get_field('featured_event');
+			if($post_object):
+				$post = $post_object;
+				setup_postdata( $post );
+		?>
+		<?php $event_thumbnail_url = get_post_meta($post->ID, 'event_thumbnail_url', true); ?>
+
 		<div class="events">
 			<div class="row">
 				<div class="column col-2-3 pad expand">
-					<div class="rect bg" style="background-image:url(<?php bloginfo("stylesheet_directory"); ?>/img/home-event1.jpg)">
+					<div class="rect bg" style="background-image:url(<?php echo $event_thumbnail_url; ?>)">
 						<div class="valign">
 							<h3 class="title large">
-								'Hobson's Choice' at The Regent's Park Theatre
+								<?php the_title(); ?>
 							</h3>
 							<p>
-								<a href="#" class="button primary small">View Event</a>								
+								<a href="<?php the_permalink(); ?>" class="button primary small" title="View <?php the_title(); ?>">View Event</a>
 							</p>							
 						</div>
 					</div>
 				</div>
+		<?php endif; ?>	
+		<?php wp_reset_postdata(); ?>
+
 				<div class="column col-1-3 pad expand">
 					<div class="square pattern-img">
 						<div class="valign">
@@ -79,7 +90,7 @@
 								There is an abundance of events to suit all in June: screening both the World Cup & Wimbledon.
 							</p>
 							<p>
-								<a href="#" class="button primary small">Full Events Calendar</a>
+								<a href="#" class="button primary small" title="View Events Calendar">Full Events Calendar</a>
 							</p>
 						</div>
 					</div>
@@ -107,7 +118,7 @@
 								<?php the_title(); ?>
 							</h3>
 							<p>
-								<a href="<?php the_permalink(); ?>" class="button primary small">Explore</a>								
+								<a href="<?php the_permalink(); ?>" class="button primary small" title="Explore <?php the_title(); ?>">Explore</a>								
 							</p>
 						</div>
 					</div>
@@ -124,7 +135,7 @@
 					<div class="column col-2-3 pad expand <?php the_sub_field('alignment'); ?>">
 					<?php $posts = get_sub_field('page'); ?>
 					<?php foreach ($posts as $post): setup_postdata( $post );?>
-						<?php $url = wp_get_attachment_url( get_post_thumbnail_id($page->ID) ); ?>
+						<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 						<div class="rect bg" style="background-image:url(<?php echo $url; ?>)">
 							<div class="valign">
 								<h2 class="title large"><?php the_sub_field('title_text') ?></h2>

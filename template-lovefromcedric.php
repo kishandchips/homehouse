@@ -19,12 +19,12 @@
 	<div id="content-wrapper">
 		<section class="inner">
 
-			<div class="featured">
+			<article class="featured">
 				<?php $featured = get_field('featured_offer'); ?>
 
 				<?php foreach($featured as $post): ?>
 				<?php setup_postdata( $post ); ?>
-				<?php $featured_id = $post->post->ID; ?>
+				<?php $featured_id = $post->ID; ?>
 				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'full' ); ?>
 				<?php $terms = get_the_terms( $post->ID, 'offer-category' ); ?>
 
@@ -42,7 +42,7 @@
 
 				<?php endforeach; ?>
 				<?php wp_reset_postdata(); ?>
-			</div><!-- .featured -->
+			</article><!-- .featured -->
 
 			<div id="filters">
 				<p>Filter Offers:</p>
@@ -69,20 +69,16 @@
 						<?php $term_id = $term->term_id; ?>
 						<?php $cat = $term->name; ?>
 					<?php endforeach; ?>
-						<div class="item <?php the_field('item_size'); ?> <?php echo $term_id ?>">
+						<article class="item <?php the_field('item_size'); ?> <?php echo $term_id ?>">
 							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?> ">
 								<figure style="background-image: url(<?php echo $image[0] ?>)">
-<!-- 									<div class="overlay">
-										<p>View Offer</p>
-									</div> -->
-									
 									<div class="meta pattern">
 										<h2 class="title"><?php the_title(); ?></h2>
 										<p class="cat"><?php echo $cat ?></p>
 									</div>
 								</figure>
 							</a>
-						</div><!-- .item -->
+						</article><!-- .item -->
 
 				<?php endwhile; endif; ?>
 				<?php wp_reset_postdata(); ?>	

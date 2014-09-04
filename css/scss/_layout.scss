@@ -13,13 +13,20 @@ body{
 	@media screen and (max-width:800px){
 		font-size: 80%;
 	}
-
 }
 
 .container{
 	@media screen and (max-width: 750px){
 		width: 100%;
 	}
+}
+
+#kanye-west{
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	background-image: url(../img/page-bg.jpg);
+	background-repeat: repeat;
 }
 
 /* ==========================================================================
@@ -413,7 +420,7 @@ nav{
    .grid-sizer,.item{
    		position: relative;
    		width: 25%;
-   		padding: 20px;
+   		padding: 10px;
 
    		@media screen and (max-width: 900px){
    			width: 33%;
@@ -432,12 +439,6 @@ nav{
 
    			&:hover{
 
-   				.meta{
-   					@include translateY(0);
-   				}
-   				.overlay{
-   					@extend .visible;
-   				}
    			}
    		}
 		
@@ -513,8 +514,6 @@ nav{
 
    		.meta{
    			padding: 1em;
-   			@include translateY(200%);
-			@include transition(all,.35s);
 
 	   		.title{
 	   			font-size: 1.125em;
@@ -540,6 +539,7 @@ nav{
 		position: absolute;
 		top:0;
 		left:0;
+		height: 100%;
 		min-width: 200px;
 		padding: 5em 1em;
 		background-color: #202020;
@@ -641,11 +641,6 @@ nav{
 /* ==========================================================================
    PAGE
    ========================================================================== */
-
-.page-pattern{
-	background-image:url(../img/page-bg.jpg);
-	background-repeat: repeat;		
-}
 
 #page{
 	overflow:hidden;

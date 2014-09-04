@@ -14,34 +14,36 @@
     </head>
 	<body <?php body_class(); ?>>
 
-    <header id="header" class="mega"> 
-        <div class="logo-big">
-            <a href="<?php echo bloginfo('url'); ?> ">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/logo-header.png" alt="">
-            </a>
-        </div>
-        <div class="logo-small halign">
-            <a href="<?php echo bloginfo('url'); ?> ">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/logo-footer.png" alt="">
-            </a>
-        </div>
-
-        <nav id="nav" class="clearfix">
-            <div class="mobile-menu left">
-                <button aria-role="Mobile Menu Button" class="mob-button">
-                    <i class="icon-menu"></i>
-                    <span>Menu</span>
-                </button>
+    <div id="kanye-west">
+        
+        <header id="header" class="mega"> 
+            <div class="logo-big">
+                <a href="<?php echo bloginfo('url'); ?> ">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo-header.png" alt="">
+                </a>
+            </div>
+            <div class="logo-small halign">
+                <a href="<?php echo bloginfo('url'); ?> ">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo-footer.png" alt="">
+                </a>
             </div>
 
-            <?php 
-                $args = array(
-                    'theme_location' => 'header_nav',
-                    'menu' => '',
-                    'container' => '',
-                );
+            <nav id="nav" class="clearfix">
+                <div class="mobile-menu left">
+                    <button aria-role="Mobile Menu Button" class="mob-button">
+                        <i class="icon-menu"></i>
+                        <span>Menu</span>
+                    </button>
+                </div>
 
-                wp_nav_menu( $args ); 
-            ?>
-        </nav>
-    </header>
+                <?php 
+                    $args = array(
+                        'theme_location' => 'header_nav',
+                        'menu' => '',
+                        'container' => '',
+                    );
+
+                    wp_nav_menu( $args ); 
+                ?>
+            </nav>
+        </header>

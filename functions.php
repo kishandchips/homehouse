@@ -105,13 +105,9 @@ function offer_category() {
 }
 
 // Sidebar
-
 add_action( 'widgets_init', 'my_sidebars' );
 
 function my_sidebars() {
-
-	// require(get_template_directory().'/inc/widgets/Mcwidget.php');
-
 	/* Register the 'primary' sidebar. */
 	register_sidebar(
 		array(
@@ -126,12 +122,25 @@ function my_sidebars() {
 	);
 }
 
-// Shortcode
+// SHORTCODES
 function button($atts, $content = null) {
    extract(shortcode_atts(array('link' => '#','style' => 'primary', 'size'=> 'small'), $atts));
    return '<a class="button '.$style." ".$size.'" href="'.$link.'">' . do_shortcode($content) . '</a>';
 }
 add_shortcode('button', 'button');
+
+function check_user ($params, $content = null){
+  //check tha the user is logged in
+  if ( is_user_logged_in() ){
+    //user is logged in so show the content
+    return $content;
+  }
+  else{
+    //user is not logged in so hide the content
+    return;
+  }
+}
+add_shortcode('loggedin', 'check_user' );
 
 // Filters
 add_filter( 'widget_title', '__return_false' );

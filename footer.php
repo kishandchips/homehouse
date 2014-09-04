@@ -1,3 +1,6 @@
+
+</div><!-- #kanye-west -->
+
 <footer id="footer" class="white">
 	<div class="certificates">
 		<ul>
@@ -13,7 +16,10 @@
 	<div class="sitemap pattern clearfix">
 		<div class="left">
 			<div class="logo">
+			 <a href="<?php echo bloginfo('url'); ?> " title="Homehouse">
 				<img src="<?php bloginfo("stylesheet_directory"); ?>/img/logo-footer.png" alt="">
+			</a>
+				
 			</div>
 <!-- 			<div class="contact-details">
 				<div class="detail left">
@@ -47,7 +53,6 @@
 		</div>
 	</div>
 </footer>
-
 <?php wp_footer(); ?>
 </body>
 </html>
