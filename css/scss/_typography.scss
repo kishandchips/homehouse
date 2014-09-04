@@ -1,0 +1,31 @@
+body{
+	@include garamond;
+}
+.white{
+	color: #fff;
+}
+.black{
+	color: #333;
+}
+
+.small{
+	font-size: 0.75em;
+}
+.med{
+	font-size: 1.5em;
+}
+.large{
+	font-size: 2em;
+}
+.xlarge{
+	font-size: 3em;
+}
+
+.title{
+	display: inline-block;
+	margin: 0;
+	@include playfair;
+	font-weight: 300;
+	text-transform: uppercase;
+	text-decoration: none;
+}

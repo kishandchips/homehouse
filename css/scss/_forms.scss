@@ -1,0 +1,189 @@
+fieldset{
+	margin:0 0 1em 0;
+	padding: 0;
+	border: none;
+}
+
+label{
+	display: block;
+	font-size: 0.8em;
+	@include playfair;
+	font-weight: 300;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+input[type="text"]{
+	@extend .small;
+	width: 100%;
+	max-width: 320px;
+	margin-bottom: 0.5em;
+	padding: 0.5em;
+	color: #9d9d9d;
+	background-color: #f6f6f6;
+	border: 2px solid #949494;
+	@include border-radius(3px);
+	outline: none;
+
+	&.large-input{
+		max-width: 310px;
+	}
+	&.med-input{
+		max-width: 155px;
+	}
+}
+
+input[type="text"]:focus, textarea:focus{
+	@include single-box-shadow(rgba(#A268BF,1),0, 0, 5px, false, false);
+}
+
+input[type="submit"]{
+	@extend .button;
+}
+
+/* ==========================================================================
+   GRAVITY FORMS
+   ========================================================================== */
+
+.gform_wrapper{
+	form{
+		.gform_body{
+			ul.gform_fields{
+				li.gfield{
+					&.member-no,&.tel,&.email{
+						width: 40%;
+					}
+
+					&.gfield_error{
+						background-color: #fff;
+						border: none;
+						@include border-radius(3px);
+
+						label{
+							color: #333;
+						}
+					}
+
+					label{
+						font-size: 0.8em;
+						@include playfair;
+						font-weight: 300;
+						letter-spacing: 2px;
+						text-transform: uppercase;
+					}					
+				}
+			}
+			.ginput_container{
+				.ginput_left, .ginput_right{
+					float: none;
+					display: inline-block;
+					width: 49%;
+					margin-left: 2%;
+
+					label{
+						font-size: 0.8em;
+					}
+				}
+
+				.ginput_left{
+					margin-left: 0;
+				}
+
+				input[type="text"]{
+					width: 100% !important;
+					max-width: initial;
+					padding: 0.5em;
+					color: #fff;
+					font-size: 1em;
+					letter-spacing: 1px;
+					background-color: #1f1f1f;
+					border:1px solid #2c2c2c;
+				}
+
+				textarea{
+					width: 100% !important;
+					color: #fff;
+					font-size: 1em;
+					letter-spacing: 1px;
+					background-color: #1f1f1f;
+					border:1px solid #2c2c2c;
+					@include border-radius(3px);
+				}
+			}
+		}//.gform_body
+
+		.gform_footer{
+			input[type="submit"]{
+				color: #fff;
+				font-size: 0.8em;
+				letter-spacing: 2px;
+				background-color: #503B5A;
+				border: 1px solid #503B5A;
+				@include transition(all,.3s);
+
+				&:hover{
+					background-color: #573169;
+				}
+			}
+		}
+
+		.validation_error{
+			position: relative;
+			padding-left: 25px;
+			color: #fff;
+
+			&:after{
+				@extend %icon;
+				content: "\f071";
+				position: absolute;
+				left: 0;
+				bottom: 6px;
+				color: #e74c3c;
+			}
+		}
+	}
+}//.gform_wrapper
+
+// EVENT ESPRESSO REG FORM
+
+#registration_form{
+	label{
+		&.error{
+			color: #e74c3c;
+		}
+	}
+	.additional-attendee-div{
+		display: inline-block;
+
+		img{
+			display: none;
+		}
+	}
+	
+	.add-additional-attendee-lnk{
+		padding: 0.7em 1.4em;
+		color: #fff !important;
+		background-color: #2ecc71;
+		border: 1px solid #27ae60;
+		@include single-text-shadow(none);
+	}
+
+	.remove-additional-attendee-lnk{
+		padding: 0.7em 1.4em;
+		color: #fff !important;
+		background-color: #e74c3c;
+		border: 1px solid #c0392b;
+		@include single-text-shadow(none);
+	}
+
+	.espresso_add_attendee{
+		border-bottom: 1px dotted rgba(0,0,0,0.2);
+	}
+}
+
+
+
+
+
+
+

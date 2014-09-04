@@ -1,0 +1,21 @@
+@import '//fast.fonts.net/jsapi/7c3154b6-84d1-41cf-880b-8d493e275dd8.js';
+
+@mixin garamond{
+	font-family:'Garamond Prmr W01 Cap';
+	font-weight: normal;
+}
+
+@mixin garamond-semi{
+	font-family:'GaramondPrmrW01-SmBdCap';
+}
+
+@mixin garamond-bold{
+	font-family:'GaramondPrmrW01-BdCap';
+}
+
+@mixin playfair{
+	font-family: 'Playfair Display', serif;
+}
+
+
+

@@ -1,0 +1,457 @@
+/* ==========================================================================
+   HOME
+   ========================================================================== */
+
+#home{
+	overflow: hidden;
+	
+	.events{
+		.pattern-img{
+			background-image:url(../img/head.png),url(../img/black-bg.png);
+			background-repeat: no-repeat,repeat;
+			background-position: 50% 95%;
+
+			@media screen and (max-width: 1200px){
+				background-size:25%;
+			}
+		}
+
+		.event-detail{
+			padding: 2em;
+			text-align: center;
+			letter-spacing: 1px;
+			
+			.date{
+				font-size: 1.5em;
+			}
+
+			p{
+				margin:0;
+			}
+		}
+	}//.events
+
+	.members{
+		.pattern-img{
+			background-image:url(../img/bells.png),url(../img/black-bg.png);
+			background-repeat: no-repeat,repeat;
+			background-position: 100% 0%;
+
+			@media screen and (max-width: 1200px){
+				background-size:50%;
+			}
+		}
+	}//.members
+
+	.bedrooms{
+		.pattern-img{
+			background-image:url(../img/disturb.png),url(../img/black-bg.png);
+			background-repeat: no-repeat,repeat;
+			background-position: 50% -5%;
+
+			@media screen and (max-width: 1200px){
+				background-size:50%;
+			}
+
+			@media screen and (max-width: 750px){
+				background-position: 100% -27%;
+			}
+		}
+	}//.bedrooms
+	
+	.food{
+		.pattern-img{
+			background-image:url(../img/drink.png),url(../img/black-bg.png);
+			background-repeat: no-repeat,repeat;
+			background-position: 0% 110%;
+			
+			@media screen and (max-width: 1200px){
+				background-size:50%;
+			}
+			@media screen and (max-width: 750px){
+				background-size:20%;
+				background-position: 0% 100%;
+			}
+		}
+	}//.bedrooms
+}//#home
+
+/* ==========================================================================
+   EVENTS-SINGLE
+   ========================================================================== */
+
+#events-single{
+	@extend .black;
+
+	.page-pattern{
+		background-image:url(../img/white-bg.jpg) !important;
+	}
+
+	.inner-content{
+		margin: 4em 0;
+		padding: 4em;
+		background-color: #fff;
+
+		.description{
+			max-width: 600px;
+		}
+	}
+
+	.form{
+		.section-heading{
+			border-bottom: 2px solid #000;
+		}
+	}
+}
+
+/* ==========================================================================
+   BEDROOMS
+   ========================================================================== */
+#bedrooms{
+	.inner-content{
+		width: 80%;
+		margin:0 auto;
+		padding:5em 0;
+	}
+	.bedroom{
+		background-color: #000;
+	}
+}
+/* ==========================================================================
+   BOOKING
+   ========================================================================== */
+
+#booking{
+	@extend #events-single;
+}
+
+/* ==========================================================================
+   LOVE FROM CEDRIC
+   ========================================================================== */
+
+#cedric{
+
+	.inner{
+		padding: 0;
+	}
+
+	a{
+		text-decoration: none;
+	}
+
+	header{
+		position: relative;
+		height:400px;
+		background-image: url(../img/page-bg.jpg);
+		background-repeat: repeat;
+
+		&:after{
+			content:"";
+			display: inline-block;
+			position: absolute;
+			top:0;left:0;
+			height: 100%;
+			width: 100%;
+			z-index: 5;
+
+			@include filter-gradient(#000000, #e00000, vertical); // IE6-8
+			$experimental-support-for-svg: true;
+			@include background-image(linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.88) 62%,rgba(0,0,0,0.88) 100%));
+		}
+
+		.valign{
+			width: 100%;
+			padding:0 20%;
+			z-index: 10;
+
+			@media screen and (max-width:600px){
+				padding: 0 5%;
+			}
+		}
+	}//header
+
+	.featured{
+		width: 100%;
+		padding: 20px;
+
+		figure{
+			padding-top: 30%;
+			background-size: cover;
+			background-position: center;
+			@include transition(all,.3s);
+   			
+   			@media screen and (max-width: 700px){
+	   				padding-top: 80%;
+	   		}
+		}
+
+		.meta{
+			padding: 1em 1em 1.3em 1em;
+
+			.cat{
+				margin:0;
+				line-height: 0.5;
+			}
+		}
+
+	}//featured
+
+	#filters{
+		padding: 0 20px;
+
+		p{
+			display: inline-block;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+
+		button{
+			font-size: 0.8em;
+			@include garamond;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			border: 1px solid #fff;
+		}
+	}//#filters
+}
+
+/* ==========================================================================
+   SINGLE CEDRIC
+   ========================================================================== */
+
+#single-cedric{
+
+	a{
+		color: #A268BE;
+		border-bottom: 1px dotted #503B5A;
+		text-decoration: none;
+		@include transition(all,.3s);
+
+		&:hover{
+			border-bottom: 1px dotted #A268BE;
+		}
+	}
+	
+	.hero.image{
+		height: 500px;
+	}
+
+	.inner{
+		width: 100%;
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 2em 0;
+
+		.post-title{
+			margin-top: 0;
+			@extend .xlarge;
+			font-weight: 300;
+			text-align: center;
+			text-transform: uppercase;
+			line-height: 1;
+			letter-spacing: 1px;
+		}
+	}
+
+	article.single{
+		margin-top: -200px;
+		padding: 4em;
+		color: #000;
+		line-height: 1.7;
+		background-color: #fff;
+		@include single-box-shadow(0,5px,20px,8px,rgba(0,0,0,0.5));
+	}
+}
+
+/* ==========================================================================
+   RESERVATION
+   ========================================================================== */
+
+#reservation{
+
+	.content-wrapper{ 
+		.content{
+
+			header{
+				margin-bottom: 2em;
+				border-bottom: 1px solid #fff;
+			}
+
+			.inner{
+				padding: 0;
+			}
+		}
+	}
+
+	#reservation_widget{
+		width:100%;
+		height: 450px;
+		border: none;
+
+		.main_content_holder{
+			background: #521A6D;
+		}
+	}	
+}
+
+/* ==========================================================================
+   HISTORY
+   ========================================================================== */
+
+#history{
+	.history-snippet{
+		position: relative;
+		padding:0 3em 3em;
+		border-left: 1px solid #fff;
+
+		&:first-of-type{
+			margin-top: 2em;
+		}
+
+		&.end{
+			border-left: none;
+			text-align: center;
+
+			.meta{
+				color: #000;
+				background-color:#fff;
+			}
+		}
+	}
+
+	.meta{
+		position: absolute;
+		top: 2.5em;
+		left: -25px;
+		width: 50px;
+		height: 50px;
+		color: #000;
+		text-align: center;
+		background-color: #fff;
+		@include border-radius(50px);
+		
+		span{
+			width: 100%;
+			left:0;
+			@extend .valign;
+		}
+
+		&:first-child{
+			top: 0;
+			color: #fff;
+			background-color: #000;
+		}
+	}
+
+	.body{
+		p:first-child{
+			margin-top: 0;
+		}
+	}
+}
+
+/* ==========================================================================
+   TEAM
+   ========================================================================== */
+
+#team{
+
+	.member{
+		margin: 2em 0;
+	}
+
+	.member-name{
+		margin: 0;
+		@extend .med;
+		@include playfair;
+		line-height: 0.7;
+		text-transform: uppercase;
+	}
+
+	.member-title{
+		margin:0.2em 0;
+		text-transform: uppercase;
+	}
+}
+
+/* ==========================================================================
+   CONTACT
+   ========================================================================== */
+
+#contact{
+	position:relative;
+	height: 100%;
+
+	&.feedback-visible{
+		.feedback-overlay{
+			background-color: rgba(0, 0, 0, 0.4);
+			z-index: 200;			
+		}
+
+		.feedback{
+			top: 0;
+			@extend .visible;				
+		}
+	}
+
+	#map{
+		height: 100%;
+		img{
+			max-width: inherit;
+		}
+	}
+	
+	.contact-info{
+		height: 100%;
+		z-index: 100;
+		padding: 2em;
+		color: #202020;
+		font-size: 0.875em;
+		background-color: #fff;
+
+		header{
+			h2{
+				margin: 0;
+			}
+		}
+	}
+
+	.opening{
+		margin-top: 4em;
+		.row{
+			margin:0 -10px;
+		}
+		.column{
+			padding:10px;
+		}
+	}
+	
+	.feedback-overlay{
+		position:absolute;
+		top:0;
+		left:0;
+		width: 100%;
+		height: 100%;
+		@include transition(all,.3s);
+	}// .feedback-overlay
+
+	.feedback{
+		position: absolute;
+		top:-5em;
+		left: 25%;
+		z-index: 200;
+		width: 50%;
+		margin: 0 auto;
+		padding: 2em;
+		background-color: #202020;
+		@extend .invisible;
+		@include transition(all,.3s);
+
+		>button{
+			position: absolute;
+			top:0;right:0;
+			color: #fff;
+		}
+	}// .feedback
+
+}
