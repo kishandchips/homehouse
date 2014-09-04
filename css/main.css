@@ -1986,22 +1986,25 @@ nav ul {
    BOOKING
    ========================================================================== */
 /* ==========================================================================
+   CALENDAR
+   ========================================================================== */
+/* ==========================================================================
    LOVE FROM CEDRIC
    ========================================================================== */
-/* line 135, scss/_templates.scss */
+/* line 156, scss/_templates.scss */
 #cedric .inner {
   padding: 0; }
-/* line 139, scss/_templates.scss */
+/* line 160, scss/_templates.scss */
 #cedric a {
   color: #fff;
   text-decoration: none; }
-/* line 144, scss/_templates.scss */
+/* line 165, scss/_templates.scss */
 #cedric header {
   position: relative;
   height: 400px;
   background-image: url(../img/page-bg.jpg);
   background-repeat: repeat; }
-  /* line 150, scss/_templates.scss */
+  /* line 171, scss/_templates.scss */
   #cedric header:after {
     content: "";
     display: inline-block;
@@ -2016,20 +2019,20 @@ nav ul {
     background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.88) 62%, rgba(0, 0, 0, 0.88) 100%);
     background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.88) 62%, rgba(0, 0, 0, 0.88) 100%);
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.88) 62%, rgba(0, 0, 0, 0.88) 100%); }
-  /* line 164, scss/_templates.scss */
+  /* line 185, scss/_templates.scss */
   #cedric header .valign, #cedric header #history .meta span, #history .meta #cedric header span {
     width: 100%;
     padding: 0 20%;
     z-index: 10; }
     @media screen and (max-width: 600px) {
-      /* line 164, scss/_templates.scss */
+      /* line 185, scss/_templates.scss */
       #cedric header .valign, #cedric header #history .meta span, #history .meta #cedric header span {
         padding: 0 5%; } }
-/* line 175, scss/_templates.scss */
+/* line 196, scss/_templates.scss */
 #cedric .featured {
   width: 100%;
   padding: 20px; }
-  /* line 179, scss/_templates.scss */
+  /* line 200, scss/_templates.scss */
   #cedric .featured figure {
     padding-top: 30%;
     background-size: cover;
@@ -2039,25 +2042,25 @@ nav ul {
     -webkit-transition: all, 0.3s;
     transition: all, 0.3s; }
     @media screen and (max-width: 700px) {
-      /* line 179, scss/_templates.scss */
+      /* line 200, scss/_templates.scss */
       #cedric .featured figure {
         padding-top: 80%; } }
-  /* line 190, scss/_templates.scss */
+  /* line 211, scss/_templates.scss */
   #cedric .featured .meta {
     padding: 1em 1em 1.3em 1em; }
-    /* line 193, scss/_templates.scss */
+    /* line 214, scss/_templates.scss */
     #cedric .featured .meta .cat {
       margin: 0;
       line-height: 0.5; }
-/* line 201, scss/_templates.scss */
+/* line 222, scss/_templates.scss */
 #cedric #filters {
   padding: 0 20px; }
-  /* line 204, scss/_templates.scss */
+  /* line 225, scss/_templates.scss */
   #cedric #filters p {
     display: inline-block;
     text-transform: uppercase;
     letter-spacing: 2px; }
-  /* line 210, scss/_templates.scss */
+  /* line 231, scss/_templates.scss */
   #cedric #filters button {
     font-size: 0.8em;
     font-family: 'Garamond Prmr W01 Cap';
@@ -2069,7 +2072,7 @@ nav ul {
 /* ==========================================================================
    SINGLE CEDRIC
    ========================================================================== */
-/* line 226, scss/_templates.scss */
+/* line 247, scss/_templates.scss */
 #single-cedric a {
   color: #A268BE;
   border-bottom: 1px dotted #503B5A;
@@ -2078,19 +2081,19 @@ nav ul {
   -o-transition: all, 0.3s;
   -webkit-transition: all, 0.3s;
   transition: all, 0.3s; }
-  /* line 232, scss/_templates.scss */
+  /* line 253, scss/_templates.scss */
   #single-cedric a:hover {
     border-bottom: 1px dotted #A268BE; }
-/* line 237, scss/_templates.scss */
+/* line 258, scss/_templates.scss */
 #single-cedric .hero.image {
   height: 500px; }
-/* line 241, scss/_templates.scss */
+/* line 262, scss/_templates.scss */
 #single-cedric .inner {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
   padding: 2em 0; }
-  /* line 247, scss/_templates.scss */
+  /* line 268, scss/_templates.scss */
   #single-cedric .inner .post-title {
     margin-top: 0;
     font-weight: 300;
@@ -2098,7 +2101,7 @@ nav ul {
     text-transform: uppercase;
     line-height: 1;
     letter-spacing: 1px; }
-/* line 258, scss/_templates.scss */
+/* line 279, scss/_templates.scss */
 #single-cedric article.single {
   margin-top: -200px;
   padding: 4em;
@@ -2112,42 +2115,42 @@ nav ul {
 /* ==========================================================================
    RESERVATION
    ========================================================================== */
-/* line 277, scss/_templates.scss */
+/* line 298, scss/_templates.scss */
 #reservation .content-wrapper .content header {
   margin-bottom: 2em;
   border-bottom: 1px solid #fff; }
-/* line 282, scss/_templates.scss */
+/* line 303, scss/_templates.scss */
 #reservation .content-wrapper .content .inner {
   padding: 0; }
-/* line 288, scss/_templates.scss */
+/* line 309, scss/_templates.scss */
 #reservation #reservation_widget {
   width: 100%;
   height: 450px;
   border: none; }
-  /* line 293, scss/_templates.scss */
+  /* line 314, scss/_templates.scss */
   #reservation #reservation_widget .main_content_holder {
     background: #521A6D; }
 
 /* ==========================================================================
    HISTORY
    ========================================================================== */
-/* line 304, scss/_templates.scss */
+/* line 325, scss/_templates.scss */
 #history .history-snippet {
   position: relative;
   padding: 0 3em 3em;
   border-left: 1px solid #fff; }
-  /* line 309, scss/_templates.scss */
+  /* line 330, scss/_templates.scss */
   #history .history-snippet:first-of-type {
     margin-top: 2em; }
-  /* line 313, scss/_templates.scss */
+  /* line 334, scss/_templates.scss */
   #history .history-snippet.end {
     border-left: none;
     text-align: center; }
-    /* line 317, scss/_templates.scss */
+    /* line 338, scss/_templates.scss */
     #history .history-snippet.end .meta {
       color: #000;
       background-color: #fff; }
-/* line 324, scss/_templates.scss */
+/* line 345, scss/_templates.scss */
 #history .meta {
   position: absolute;
   top: 2.5em;
@@ -2160,32 +2163,32 @@ nav ul {
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border-radius: 50px; }
-  /* line 335, scss/_templates.scss */
+  /* line 356, scss/_templates.scss */
   #history .meta span {
     width: 100%;
     left: 0; }
-  /* line 341, scss/_templates.scss */
+  /* line 362, scss/_templates.scss */
   #history .meta:first-child {
     top: 0;
     color: #fff;
     background-color: #000; }
-/* line 349, scss/_templates.scss */
+/* line 370, scss/_templates.scss */
 #history .body p:first-child {
   margin-top: 0; }
 
 /* ==========================================================================
    TEAM
    ========================================================================== */
-/* line 361, scss/_templates.scss */
+/* line 382, scss/_templates.scss */
 #team .member {
   margin: 2em 0; }
-/* line 365, scss/_templates.scss */
+/* line 386, scss/_templates.scss */
 #team .member-name {
   margin: 0;
   font-family: 'Playfair Display', serif;
   line-height: 0.7;
   text-transform: uppercase; }
-/* line 373, scss/_templates.scss */
+/* line 394, scss/_templates.scss */
 #team .member-title {
   margin: 0.2em 0;
   text-transform: uppercase; }
@@ -2193,24 +2196,24 @@ nav ul {
 /* ==========================================================================
    CONTACT
    ========================================================================== */
-/* line 383, scss/_templates.scss */
+/* line 404, scss/_templates.scss */
 #contact {
   position: relative;
   height: 100%; }
-  /* line 388, scss/_templates.scss */
+  /* line 409, scss/_templates.scss */
   #contact.feedback-visible .feedback-overlay {
     background-color: rgba(0, 0, 0, 0.4);
     z-index: 200; }
-  /* line 393, scss/_templates.scss */
+  /* line 414, scss/_templates.scss */
   #contact.feedback-visible .feedback {
     top: 0; }
-  /* line 399, scss/_templates.scss */
+  /* line 420, scss/_templates.scss */
   #contact #map {
     height: 100%; }
-    /* line 401, scss/_templates.scss */
+    /* line 422, scss/_templates.scss */
     #contact #map img {
       max-width: inherit; }
-  /* line 406, scss/_templates.scss */
+  /* line 427, scss/_templates.scss */
   #contact .contact-info {
     height: 100%;
     z-index: 100;
@@ -2218,19 +2221,19 @@ nav ul {
     color: #202020;
     font-size: 0.875em;
     background-color: #fff; }
-    /* line 415, scss/_templates.scss */
+    /* line 436, scss/_templates.scss */
     #contact .contact-info header h2 {
       margin: 0; }
-  /* line 421, scss/_templates.scss */
+  /* line 442, scss/_templates.scss */
   #contact .opening {
     margin-top: 4em; }
-    /* line 423, scss/_templates.scss */
+    /* line 444, scss/_templates.scss */
     #contact .opening .row {
       margin: 0 -10px; }
-    /* line 426, scss/_templates.scss */
+    /* line 447, scss/_templates.scss */
     #contact .opening .column {
       padding: 10px; }
-  /* line 431, scss/_templates.scss */
+  /* line 452, scss/_templates.scss */
   #contact .feedback-overlay {
     position: absolute;
     top: 0;
@@ -2241,7 +2244,7 @@ nav ul {
     -o-transition: all, 0.3s;
     -webkit-transition: all, 0.3s;
     transition: all, 0.3s; }
-  /* line 440, scss/_templates.scss */
+  /* line 461, scss/_templates.scss */
   #contact .feedback {
     position: absolute;
     top: -5em;
@@ -2255,7 +2258,7 @@ nav ul {
     -o-transition: all, 0.3s;
     -webkit-transition: all, 0.3s;
     transition: all, 0.3s; }
-    /* line 452, scss/_templates.scss */
+    /* line 473, scss/_templates.scss */
     #contact .feedback > button {
       position: absolute;
       top: 0;

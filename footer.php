@@ -16,7 +16,7 @@
 	<div class="sitemap pattern clearfix">
 		<div class="left">
 			<div class="logo">
-			 <a href="<?php echo bloginfo('url'); ?> " title="Homehouse">
+			 <a href="<?php echo bloginfo('url'); ?>" title="Homehouse">
 				<img src="<?php bloginfo("stylesheet_directory"); ?>/img/logo-footer.png" alt="">
 			</a>
 				

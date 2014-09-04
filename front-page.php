@@ -90,7 +90,7 @@
 								There is an abundance of events to suit all in June: screening both the World Cup & Wimbledon.
 							</p>
 							<p>
-								<a href="#" class="button primary small" title="View Events Calendar">Full Events Calendar</a>
+								<a href="<?php echo bloginfo('url'); ?>/events-calendar" class="button primary small" title="View Events Calendar">Full Events Calendar</a>
 							</p>
 						</div>
 					</div>

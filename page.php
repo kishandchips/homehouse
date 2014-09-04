@@ -48,25 +48,26 @@
 				</div><!-- sidenav -->
 			
 
-			<section class="inner-content column col-4-5">
-			    <button aria-role="Mobile Sidebar Button" class="mob-button">
-                    <i class="icon-menu"></i>
-                    <span>Sidebar</span>
-                </button>
+				<section class="inner-content column col-4-5">
+				    <button aria-role="Mobile Sidebar Button" class="mob-button">
+	                    <i class="icon-menu"></i>
+	                    <span>Sidebar</span>
+	                </button>
             <?php else: ?>
-            <section class="inner-content column col-4-5">
+
+            	<section class="inner-content">
             <?php endif; ?>
             
-				<header>
-					<h3 class="title large"><?php the_title(); ?></h3>						
-				</header>
+					<header>
+						<h3 class="title large"><?php the_title(); ?></h3>						
+					</header>
 
-				<?php if(have_posts()): while(have_posts()): the_post(); ?>
-				<div class="body">
-					<?php the_content(); ?>
-				</div>
-				<?php endwhile; endif; ?>						
-			</section><!-- .inner-content -->
+					<?php if(have_posts()): while(have_posts()): the_post(); ?>
+					<div class="body">
+						<?php the_content(); ?>
+					</div>
+					<?php endwhile; endif; ?>						
+				</section><!-- .inner-content -->
 
 		</div><!-- .container -->
 
