@@ -6,6 +6,10 @@
 <?php get_header(); ?>
 
 <div id="contact" class="row">
+	<div id="map" class="column col-3-5 equal-height">
+		<?php wp_enqueue_script('mapkey'); ?>
+	</div><!-- .map -->
+	
 	<div class="contact-info column col-2-5 equal-height">
 		<div class="address">
 			<header>
@@ -45,10 +49,6 @@
 		</button>		
 		<?php echo do_shortcode('[gravityform id=2 title=false description=true ajax=true ]' ); ?>
 	</div><!-- .feedback -->	
-
-	<div id="map" class="column col-3-5 equal-height">
-		<?php wp_enqueue_script('mapkey'); ?>
-	</div><!-- .map -->
 
 </div><!-- #contact -->
 

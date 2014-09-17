@@ -11,7 +11,7 @@
 
 	</section><!-- hero-slider -->
 	
-	<div id="content-wrapper" class="page-pattern clearfix">
+	<div id="content-wrapper" class="page-pattern-white clearfix">
 		<div class="container">
 				<section class="inner-content">
 					<header>

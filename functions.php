@@ -104,7 +104,7 @@ function offer_category() {
 	register_taxonomy( 'offer-category', array( 'love-from-cedric' ), $args );
 }
 
-// Sidebar
+// SIDEBAR
 add_action( 'widgets_init', 'my_sidebars' );
 
 function my_sidebars() {
@@ -121,6 +121,20 @@ function my_sidebars() {
 		)
 	);
 }
+
+// USER PROFILES
+
+function modify_contact_methods($profile_fields) {
+
+	// Add new fields
+	$profile_fields['telephone'] = 'Contact Number';
+
+	// Remove old fields
+	unset($profile_fields['aim']);
+
+	return $profile_fields;
+}
+add_filter('user_contactmethods', 'modify_contact_methods');
 
 // SHORTCODES
 function button($atts, $content = null) {

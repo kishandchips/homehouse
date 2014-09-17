@@ -5,14 +5,15 @@
 ?>
 <?php get_header(); ?>
 
-<div id="events" class="white">
+<div id="events">
 
 	<div id="content-wrapper">
 		<?php $args = array( 'post_type' => 'espresso_event', 'posts_per_page' => 5 ); ?>
 		<?php $loop = new WP_Query( $args ); ?>
 
 		<?php while($loop->have_posts()): $loop->the_post(); ?>
-			<article id="event_data-<?php echo $event_id ?>" class="event <?php echo $category_identifier; ?>">
+			<?php $event_id = get_post_meta($post->ID, 'event_id', true); ?>
+			<article id="event_data-<?php echo $event_id ?>" class="event>">
 				<div class="row">
 					<div class="column col-2-3 pad expand">
 						<?php $event_thumbnail_url = get_post_meta($post->ID, 'event_thumbnail_url', true); ?>

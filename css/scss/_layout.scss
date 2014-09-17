@@ -648,18 +648,7 @@ nav{
 
 #content-wrapper{
 	.inner-content{
-		padding: 5em 20% 5em 1em;
-		@include transition(transform, .3s);
-
-		@media screen and (max-width: 800px){
-			padding-right:0;
-		}
-
-		@media screen and (max-width: 750px){
-			width: 100%;
-			margin:0 auto;
-			padding: 5em 1em;	
-		}
+		margin: 5em auto ;
 
 		.sidebar-visible &{
 			margin: 0;
@@ -668,7 +657,7 @@ nav{
 			@media screen and (min-width: 751px){
 				@include translateX(0);
 			}
-		}
+		}// .sidebar-visible
 
 		.mob-button{
 			display: none;
@@ -685,7 +674,7 @@ nav{
 			@media screen and (max-width: 750px){
 				display: inline-block;
 			}
-		}
+		}// .mob-button
 
 		header{
 			margin-bottom: 2em;
@@ -805,6 +794,7 @@ nav{
 
     .grid-flow{
     	overflow:hidden;
+    	width: 100%;
     	background-color: black;
 
 		@media screen and (max-width:1000px){

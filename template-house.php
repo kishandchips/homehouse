@@ -70,26 +70,45 @@
 						<div class="valign">
 							<h3 class="title">Events at house No 19</h3>
 							<p>There is an abundance of events to suit all in June: screening both the World Cup and Wimbledon.</p>
-							<p><a href="<?php echo bloginfo('url'); ?>/calendars" class="button primary small">Full events calendar</a></p>
+							<p><a href="<?php echo bloginfo('url'); ?>/events-calendar" class="button primary small" title="Full Events Calendar">Full events calendar</a></p>
 						</div>
 					</div>
 				</div>
+
+				<?php 
+					global $post;
+					$slug = get_post( $post )->post_name;
+
+				?>
+				<?php 
+					$args = array(
+						'post_type'   => 'espresso_event',
+						'posts_per_page'         => 2,
+						'tax_query' => array(
+							array(
+								'taxonomy'         => 'category',
+								'field'            => 'slug',
+								'terms'            => array($slug),
+							)
+						),
+					);
+				
+				$upcoming_events = new WP_Query( $args );
+				 ?>
+
+				 <?php if($upcoming_events->have_posts()): while($upcoming_events->have_posts()): $upcoming_events->the_post(); ?>
 				<div class="column col-1-3 pad">
-					<div class="rect bg" style="background-image:url(<?php bloginfo("stylesheet_directory"); ?>/img/events2.jpg)">
+					<?php $event_thumbnail_url = get_post_meta($post->ID, 'event_thumbnail_url', true); ?>
+					<div class="rect bg" style="background-image:url(<?php echo $event_thumbnail_url; ?>)">
 						<div class="valign">
-							<h3 class="title">Write and deliver the perfect speech</h3>
-							<p><a href="#" class="button primary small">View Event</a></p>
+							<h3 class="title"><?php the_title(); ?></h3>
+							<p><a href="<?php the_permalink(); ?>" class="button primary small">View Event</a></p>
 						</div>
 					</div>
 				</div>
-				<div class="column col-1-3 pad">
-					<div class="rect bg" style="background-image:url(<?php bloginfo("stylesheet_directory"); ?>/img/events3.jpg)">
-						<div class="valign">
-							<h3 class="title">The unspoken rules of dating</h3>
-							<p><a href="#" class="button primary small">View Event</a></p>
-						</div>
-					</div>
-				</div>		
+				<?php endwhile; endif; ?>
+				<?php wp_reset_query(); ?>	
+
 			</section>		
 		</div><!-- flow -->	
 
