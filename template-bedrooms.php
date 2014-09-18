@@ -5,7 +5,12 @@
 ?>
 <?php get_header(); ?>
 
-<div id="bedrooms">
+<?php if(get_field('sidebar')): ?>
+	<div id="bedrooms" class="has-sidebar">
+<?php else: ?>
+	<div id="bedrooms">
+<?php endif; ?>
+
 	<?php $images = get_field('slider_images'); ?>
 	<?php if($images): ?>
 		<?php if(count($images)>1): ?>

@@ -5,7 +5,11 @@
 ?>
 <?php get_header(); ?>
 
-<div id="testimonials" class="clearfix">
+<?php if(get_field('sidebar')): ?>
+	<div id="testimonials" class="clearfix has-sidebar">
+<?php else: ?>
+	<div id="testimonials" class="clearfix">
+<?php endif; ?>
 
 	<div id="content-wrapper" class="page-pattern clearfix">
 		<div class="container">

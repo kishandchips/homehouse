@@ -5,7 +5,11 @@
 ?>
 <?php get_header(); ?>
 
-<div id="events">
+<?php if(get_field('sidebar')): ?>
+	<div id="events" class="has-sidebar">
+<?php else: ?>
+	<div id="events">
+<?php endif; ?>
 
 	<div id="content-wrapper">
 		<?php $args = array( 'post_type' => 'espresso_event', 'posts_per_page' => 5 ); ?>

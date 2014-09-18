@@ -5,7 +5,11 @@
 ?>
 <?php get_header(); ?>
 
-<div id="house-single">
+<?php if(get_field('sidebar')): ?>
+	<div id="house-single" class="has-sidebar">
+<?php else: ?>
+	<div id="house-single">
+<?php endif; ?>
 
 	<?php $images = get_field('slider_images'); ?>
 	<?php if($images): ?>

@@ -1,26 +1,21 @@
-#page{
-	&.has-sidebar{
-		.inner-content{
-			// padding: 5em 20% 5em 1em;
-		}
-	}
+.has-sidebar{
+	height: 100%;
 
 	.inner-content{
 		width: 80%;
-		// padding: 5em 1em;
-		@include transition(transform, .3s);
+		@include transition(all,.3s);
 
-		@media screen and (max-width: 800px){
-			padding-right:0;
+		.sidebar-visible &{
+			width: 100%;
+			@include translateX(200px);	
 		}
 
 		@media screen and (max-width: 750px){
 			width: 100%;
 			margin:0 auto;
-			padding: 5em 1em;	
 		}
 	}
-}// #page
+}// .has-sidebar
 
 
 /* ==========================================================================

@@ -21,17 +21,6 @@
 			</a>
 				
 			</div>
-<!-- 			<div class="contact-details">
-				<div class="detail left">
-					<p>20 Portman Square,</p>
-					<p>London,</p>
-					<p>W1H 6LW</p>
-				</div>
-				<div class="detail left">
-					<p>Tel: 020 7670 2000</p>
-					<p>Fax: 020 7670 2020</p>
-				</div>			
-			</div>	 -->	
 		</div>
 
 		<div class="right">

@@ -5,7 +5,11 @@
 ?>
 <?php get_header(); ?>
 
-<div id="reservation">
+<?php if(get_field('sidebar')): ?>
+	<div id="reservation" class="has-sidebar">
+<?php else: ?>
+	<div id="reservation">
+<?php endif; ?>
 	
 	<div id="content-wrapper" class="pattern">
 		<section class="inner">

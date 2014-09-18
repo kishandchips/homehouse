@@ -5,7 +5,11 @@
 ?>
 <?php get_header(); ?>
 
-<div id="team">
+<?php if(get_field('sidebar')): ?>
+	<div id="team" class="has-sidebar">
+<?php else: ?>
+	<div id="team">
+<?php endif; ?>
 
 	<div id="content-wrapper" class="page-pattern">
 		<section class="container">

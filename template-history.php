@@ -5,7 +5,11 @@
 ?>
 <?php get_header(); ?>
 
-<div id="history">
+<?php if(get_field('sidebar')): ?>
+	<div id="history" class="has-sidebar">
+<?php else: ?>
+	<div id="history">
+<?php endif; ?>
 
 	<div id="content-wrapper" class="page-pattern">
 		<div class="container">

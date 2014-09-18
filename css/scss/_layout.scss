@@ -22,9 +22,6 @@ body{
 }
 
 #kanye-west{
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
 	background-image: url(../img/page-bg.jpg);
 	background-repeat: repeat;
 }
@@ -541,17 +538,18 @@ nav{
 		left:0;
 		height: 100%;
 		min-width: 200px;
+		margin-left: -200px;
 		padding: 5em 1em;
 		background-color: #202020;
-		@include translateX(-100%);
 		@include transition(all,.3s);
 	}
 
 	.sidebar-visible &{
-		@include translateX(0);
+		margin-left: 0;
 		
 		@media screen and (min-width:751px){
 			position: relative;
+			margin-left: 0;
 			min-width: auto;
 			background-color: transparent;
 		}
@@ -647,17 +645,11 @@ nav{
 }//#page
 
 #content-wrapper{
+	position: relative;
+
 	.inner-content{
-		margin: 5em auto ;
-
-		.sidebar-visible &{
-			margin: 0;
-			@include translateX(200px);
-
-			@media screen and (min-width: 751px){
-				@include translateX(0);
-			}
-		}// .sidebar-visible
+		margin: 0 auto ;
+		padding: 5em 1em;
 
 		.mob-button{
 			display: none;

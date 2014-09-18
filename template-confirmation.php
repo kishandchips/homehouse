@@ -5,7 +5,11 @@
 ?>
 <?php get_header(); ?>
 
-<div id="events-single">
+<?php if(get_field('sidebar')): ?>
+	<div id="events-single" class="has-sidebar">
+<?php else: ?>
+	<div id="events-single">
+<?php endif; ?>
 
 	<div id="content-wrapper" class="page-pattern clearfix">
 		<div class="container">
