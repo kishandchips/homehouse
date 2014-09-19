@@ -13,9 +13,15 @@
 				<?php if(count($images)>1): ?>
 
 					<section class="hero flexslider thumbnails">
+						
+						<div class="hero-content">
+							<h2 class="title"><?php the_title(); ?></h2>
+						</div>
+
 						<ul class="slides">
 							<?php foreach ($images as $image): ?>
-								<li style="background-image:url(<?php echo $image['url']; ?>)">
+								<li>
+									<img src="<?php echo $image['url']; ?>">
 								</li>
 							<?php endforeach; ?>
 						</ul>
@@ -24,7 +30,13 @@
 				<?php else: ?>
 					<?php foreach ($images as $image): ?>
 
-						<div class="hero image" style="background-image:url(<?php echo $image['url']; ?>)">
+						<div class="hero image">
+	
+							<div class="hero-content">
+								<h2 class="title"><?php the_title(); ?></h2>
+							</div>
+
+							<img src="<?php echo $image['url']; ?>">
 						</div><!-- hero image -->
 
 					<?php endforeach; ?>
@@ -137,7 +149,7 @@
 				</section><!--  .grid-flow -->
 			</div><!-- .flow -->
 		<?php endif; ?>	
-					
+
 	</div><!-- #page -->
 
 <?php get_footer(); ?>

@@ -9,7 +9,6 @@
 	<?php else : ?>
 		<?php $image = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
 		<section class="hero image" style="background-image:url(<?php echo $image ?>)">
-		what
 		</section><!-- hero image -->
 	<?php endif; ?>
 

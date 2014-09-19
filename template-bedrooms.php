@@ -11,29 +11,6 @@
 	<div id="bedrooms">
 <?php endif; ?>
 
-	<?php $images = get_field('slider_images'); ?>
-	<?php if($images): ?>
-		<?php if(count($images)>1): ?>
-
-			<section class="hero flexslider thumbnails">
-				<ul class="slides">
-					<?php foreach ($images as $image): ?>
-						<li style="background-image:url(<?php echo $image['url']; ?>)">
-						</li>
-					<?php endforeach; ?>
-				</ul>
-			</section><!-- hero flexslider -->
-
-		<?php else: ?>
-			<?php foreach ($images as $image): ?>
-
-				<div class="hero image" style="background-image:url(<?php echo $image['url']; ?>)">
-				</div><!-- hero image -->
-
-			<?php endforeach; ?>
-		<?php endif; ?>
-	<?php endif; ?>
-
 	<div id="content-wrapper" class="page-pattern">
 		<div class="container">
 			<section class="inner-content">

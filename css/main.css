@@ -828,7 +828,7 @@ hr {
   float: right; }
 
 /* line 47, scss/_misc.scss */
-.valign, #history .meta span {
+.valign, .hero .hero-content, #history .meta span {
   position: absolute;
   top: 50%;
   -moz-transform: translateY(-50%);
@@ -1223,10 +1223,10 @@ nav ul {
       top: 100%;
       padding: 1em;
       background: url(../img/bg-megadrop.jpg);
-      -moz-transition: opacity, 0.3s;
-      -o-transition: opacity, 0.3s;
-      -webkit-transition: opacity, 0.3s;
-      transition: opacity, 0.3s; }
+      -moz-transition: opacity, 0.2s;
+      -o-transition: opacity, 0.2s;
+      -webkit-transition: opacity, 0.2s;
+      transition: opacity, 0.2s; }
       /* line 206, scss/_layout.scss */
       #header.mega #nav ul.menu > li.menu-item.menu-item-has-children > ul.sub-menu > li.menu-item {
         border-top: 1px solid #c4c4c4; }
@@ -1336,82 +1336,84 @@ nav ul {
 /* ==========================================================================
    HERO & FLEXSLIDER
    ========================================================================== */
-/* line 351, scss/_layout.scss */
+/* line 352, scss/_layout.scss */
+.hero .hero-content {
+  width: 90%;
+  margin-left: 5%;
+  text-align: center;
+  z-index: 100; }
+  /* line 359, scss/_layout.scss */
+  .hero .hero-content .title, .hero .hero-content #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav .hero .hero-content ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, .hero .hero-content #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu .hero .hero-content a {
+    font-size: 5em;
+    text-shadow: 0 0 5px rgba(51, 51, 51, 0.5); }
+/* line 365, scss/_layout.scss */
 .hero.flexslider {
-  margin: 0 0 5px 0;
-  border: none; }
-  /* line 356, scss/_layout.scss */
+  margin: 0;
+  background-color: black;
+  border: none;
+  border-bottom: 5px solid black; }
+  /* line 372, scss/_layout.scss */
   .hero.flexslider .slides li {
-    position: relative;
-    height: 600px;
-    background-size: cover;
-    background-position: center; }
-    @media screen and (max-height: 700px) {
-      /* line 356, scss/_layout.scss */
-      .hero.flexslider .slides li {
-        height: 350px; } }
-    @media screen and (max-height: 400px) {
-      /* line 356, scss/_layout.scss */
-      .hero.flexslider .slides li {
-        height: 200px; } }
-    /* line 371, scss/_layout.scss */
-    .hero.flexslider .slides li .hero-content.valign, .hero.flexslider .slides li #history .meta span.hero-content, #history .meta .hero.flexslider .slides li span.hero-content {
-      width: 100%;
-      padding: 0 20%;
-      text-align: center; }
-  /* line 380, scss/_layout.scss */
+    position: relative; }
+  /* line 387, scss/_layout.scss */
   .hero.flexslider .flex-control-nav {
     bottom: 25px; }
-    /* line 385, scss/_layout.scss */
+    /* line 392, scss/_layout.scss */
     .hero.flexslider .flex-control-nav.flex-control-paging li {
       vertical-align: middle; }
-    /* line 389, scss/_layout.scss */
+    /* line 396, scss/_layout.scss */
     .hero.flexslider .flex-control-nav.flex-control-paging a {
       background: rgba(255, 255, 255, 0.5);
       -moz-transition: all, 0.3s;
       -o-transition: all, 0.3s;
       -webkit-transition: all, 0.3s;
       transition: all, 0.3s; }
-      /* line 393, scss/_layout.scss */
+      /* line 400, scss/_layout.scss */
       .hero.flexslider .flex-control-nav.flex-control-paging a.flex-active {
         height: 20px;
         width: 20px;
         background: white; }
-/* line 403, scss/_layout.scss */
+/* line 410, scss/_layout.scss */
 .hero.image {
-  height: 300px;
-  background-size: cover;
-  background-position: center; }
+  position: relative; }
+  /* line 413, scss/_layout.scss */
+  .hero.image img {
+    width: 100%; }
+  /* line 417, scss/_layout.scss */
+  .single-espresso_event .hero.image {
+    height: 500px;
+    background-size: cover;
+    background-position: center; }
 
 /* ==========================================================================
    ISOTOPE
    ========================================================================== */
-/* line 414, scss/_layout.scss */
+/* line 429, scss/_layout.scss */
 #isotope {
   background-color: rgba(0, 0, 0, 0.3); }
-  /* line 417, scss/_layout.scss */
+  /* line 432, scss/_layout.scss */
   #isotope .grid-sizer, #isotope .item {
     position: relative;
     width: 25%;
     padding: 10px; }
     @media screen and (max-width: 900px) {
-      /* line 417, scss/_layout.scss */
+      /* line 432, scss/_layout.scss */
       #isotope .grid-sizer, #isotope .item {
         width: 33%; } }
     @media screen and (max-width: 700px) {
-      /* line 417, scss/_layout.scss */
+      /* line 432, scss/_layout.scss */
       #isotope .grid-sizer, #isotope .item {
         width: 50%; } }
     @media screen and (max-width: 500px) {
-      /* line 417, scss/_layout.scss */
+      /* line 432, scss/_layout.scss */
       #isotope .grid-sizer, #isotope .item {
         width: 100%; } }
-    /* line 432, scss/_layout.scss */
+    /* line 447, scss/_layout.scss */
     #isotope .grid-sizer a, #isotope .item a {
       display: inline-block;
       width: 100%;
       height: 100%; }
-    /* line 446, scss/_layout.scss */
+    /* line 461, scss/_layout.scss */
     #isotope .grid-sizer figure, #isotope .item figure {
       position: relative;
       padding-top: 40%;
@@ -1423,80 +1425,106 @@ nav ul {
       transition: all, 0.5s;
       overflow: hidden; }
       @media screen and (max-width: 700px) {
-        /* line 446, scss/_layout.scss */
+        /* line 461, scss/_layout.scss */
         #isotope .grid-sizer figure, #isotope .item figure {
           padding-top: 100%; } }
       @media screen and (max-width: 500px) {
-        /* line 446, scss/_layout.scss */
+        /* line 461, scss/_layout.scss */
         #isotope .grid-sizer figure, #isotope .item figure {
           padding-top: 50%; } }
-    /* line 462, scss/_layout.scss */
+    /* line 477, scss/_layout.scss */
     #isotope .grid-sizer.wide, #isotope .item.wide {
       width: 50%; }
       @media screen and (max-width: 900px) {
-        /* line 462, scss/_layout.scss */
+        /* line 477, scss/_layout.scss */
         #isotope .grid-sizer.wide, #isotope .item.wide {
           width: 66%; } }
       @media screen and (max-width: 700px) {
-        /* line 462, scss/_layout.scss */
+        /* line 477, scss/_layout.scss */
         #isotope .grid-sizer.wide, #isotope .item.wide {
           width: 100%; }
-          /* line 471, scss/_layout.scss */
+          /* line 486, scss/_layout.scss */
           #isotope .grid-sizer.wide figure, #isotope .item.wide figure {
             padding-top: 50%; } }
-    /* line 478, scss/_layout.scss */
+    /* line 493, scss/_layout.scss */
     #isotope .grid-sizer.tall figure, #isotope .item.tall figure {
       padding-top: 150%; }
       @media screen and (max-width: 700px) {
-        /* line 478, scss/_layout.scss */
+        /* line 493, scss/_layout.scss */
         #isotope .grid-sizer.tall figure, #isotope .item.tall figure {
           padding-top: 200%; } }
       @media screen and (max-width: 500px) {
-        /* line 478, scss/_layout.scss */
+        /* line 493, scss/_layout.scss */
         #isotope .grid-sizer.tall figure, #isotope .item.tall figure {
           padding-top: 50%; } }
-    /* line 490, scss/_layout.scss */
+    /* line 505, scss/_layout.scss */
     #isotope .grid-sizer.normal, #isotope .item.normal {
       width: 25%; }
       @media screen and (max-width: 900px) {
-        /* line 490, scss/_layout.scss */
+        /* line 505, scss/_layout.scss */
         #isotope .grid-sizer.normal, #isotope .item.normal {
           width: 33%; } }
       @media screen and (max-width: 700px) {
-        /* line 490, scss/_layout.scss */
+        /* line 505, scss/_layout.scss */
         #isotope .grid-sizer.normal, #isotope .item.normal {
           width: 50%; } }
       @media screen and (max-width: 500px) {
-        /* line 490, scss/_layout.scss */
+        /* line 505, scss/_layout.scss */
         #isotope .grid-sizer.normal, #isotope .item.normal {
           width: 100%; } }
-      /* line 503, scss/_layout.scss */
+      /* line 518, scss/_layout.scss */
       #isotope .grid-sizer.normal figure, #isotope .item.normal figure {
         padding-top: 100%; }
         @media screen and (max-width: 500px) {
-          /* line 503, scss/_layout.scss */
+          /* line 518, scss/_layout.scss */
           #isotope .grid-sizer.normal figure, #isotope .item.normal figure {
             padding-top: 50%; } }
-    /* line 512, scss/_layout.scss */
+    /* line 527, scss/_layout.scss */
     #isotope .grid-sizer .meta, #isotope .item .meta {
       padding: 1em; }
-      /* line 515, scss/_layout.scss */
+      /* line 530, scss/_layout.scss */
       #isotope .grid-sizer .meta .title, #isotope .grid-sizer .meta #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav #isotope .grid-sizer .meta ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #isotope .grid-sizer .meta #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu #isotope .grid-sizer .meta a, #isotope .item .meta .title, #isotope .item .meta #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav #isotope .item .meta ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #isotope .item .meta #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu #isotope .item .meta a {
         font-size: 1.125em;
         line-height: 1; }
-      /* line 520, scss/_layout.scss */
+      /* line 535, scss/_layout.scss */
       #isotope .grid-sizer .meta .cat, #isotope .item .meta .cat {
         margin: 0;
         line-height: 0.8; }
 
 /* ==========================================================================
+   HAS SIDEBAR
+   ========================================================================== */
+/* line 547, scss/_layout.scss */
+.has-sidebar {
+  height: 100%; }
+  /* line 550, scss/_layout.scss */
+  .has-sidebar .inner-content {
+    width: 80%;
+    -moz-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    -webkit-transition: all, 0.3s;
+    transition: all, 0.3s; }
+    /* line 554, scss/_layout.scss */
+    .sidebar-visible .has-sidebar .inner-content {
+      width: 100%;
+      -moz-transform: translateX(200px);
+      -ms-transform: translateX(200px);
+      -webkit-transform: translateX(200px);
+      transform: translateX(200px); }
+    @media screen and (max-width: 750px) {
+      /* line 550, scss/_layout.scss */
+      .has-sidebar .inner-content {
+        width: 100%;
+        margin: 0 auto; } }
+
+/* ==========================================================================
    SIDENAV
    ========================================================================== */
-/* line 532, scss/_layout.scss */
+/* line 571, scss/_layout.scss */
 .sidebar {
   padding: 5em 0; }
   @media screen and (max-width: 750px) {
-    /* line 532, scss/_layout.scss */
+    /* line 571, scss/_layout.scss */
     .sidebar {
       position: absolute;
       top: 0;
@@ -1510,38 +1538,38 @@ nav ul {
       -o-transition: all, 0.3s;
       -webkit-transition: all, 0.3s;
       transition: all, 0.3s; } }
-  /* line 547, scss/_layout.scss */
+  /* line 586, scss/_layout.scss */
   .sidebar-visible .sidebar {
     margin-left: 0; }
     @media screen and (min-width: 751px) {
-      /* line 547, scss/_layout.scss */
+      /* line 586, scss/_layout.scss */
       .sidebar-visible .sidebar {
         position: relative;
         margin-left: 0;
         min-width: auto;
         background-color: transparent; } }
-  /* line 558, scss/_layout.scss */
+  /* line 597, scss/_layout.scss */
   .sidebar .sidenav-title {
     margin-top: 0;
     font-family: 'Playfair Display', serif;
     font-weight: 300;
     text-transform: uppercase; }
-    /* line 564, scss/_layout.scss */
+    /* line 603, scss/_layout.scss */
     .sidebar .sidenav-title a {
       color: #fff;
       text-decoration: none; }
-  /* line 572, scss/_layout.scss */
+  /* line 611, scss/_layout.scss */
   .sidebar .widget_nav_menu .menu {
     margin: 0;
     padding: 0;
     list-style-type: none; }
-    /* line 578, scss/_layout.scss */
+    /* line 617, scss/_layout.scss */
     .sidebar .widget_nav_menu .menu > .menu-item-has-children > .sub-menu {
       display: none; }
-    /* line 583, scss/_layout.scss */
+    /* line 622, scss/_layout.scss */
     .sidebar .widget_nav_menu .menu li {
       margin-bottom: 0.5em; }
-      /* line 586, scss/_layout.scss */
+      /* line 625, scss/_layout.scss */
       .sidebar .widget_nav_menu .menu li a {
         display: inline-block;
         color: #fff;
@@ -1550,7 +1578,7 @@ nav ul {
         -o-transition: background-color 0.3s;
         -webkit-transition: background-color 0.3s;
         transition: background-color 0.3s; }
-        /* line 592, scss/_layout.scss */
+        /* line 631, scss/_layout.scss */
         .sidebar .widget_nav_menu .menu li a:before {
           display: inline-block;
           content: "\2023";
@@ -1563,67 +1591,67 @@ nav ul {
           -o-transition: all, 0.3s;
           -webkit-transition: all, 0.3s;
           transition: all, 0.3s; }
-        /* line 603, scss/_layout.scss */
+        /* line 642, scss/_layout.scss */
         .sidebar .widget_nav_menu .menu li a:hover:before {
           left: -15px;
           filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
           opacity: 1; }
-      /* line 612, scss/_layout.scss */
+      /* line 651, scss/_layout.scss */
       .sidebar .widget_nav_menu .menu li.current-menu-item > a:before {
         left: -15px;
         filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
         opacity: 1; }
-      /* line 620, scss/_layout.scss */
+      /* line 659, scss/_layout.scss */
       .sidebar .widget_nav_menu .menu li.current_page_item > .sub-menu {
         display: block; }
-      /* line 626, scss/_layout.scss */
+      /* line 665, scss/_layout.scss */
       .sidebar .widget_nav_menu .menu li.current-page-parent > .sub-menu {
         display: block; }
-    /* line 632, scss/_layout.scss */
+    /* line 671, scss/_layout.scss */
     .sidebar .widget_nav_menu .menu .sub-menu {
       padding-left: 20px; }
 
 /* ==========================================================================
    PAGE
    ========================================================================== */
-/* line 643, scss/_layout.scss */
+/* line 682, scss/_layout.scss */
 #page {
   overflow: hidden; }
 
-/* line 647, scss/_layout.scss */
+/* line 686, scss/_layout.scss */
 #content-wrapper {
   position: relative; }
-  /* line 650, scss/_layout.scss */
+  /* line 689, scss/_layout.scss */
   #content-wrapper .inner-content {
     margin: 0 auto;
     padding: 5em 1em; }
-    /* line 654, scss/_layout.scss */
+    /* line 693, scss/_layout.scss */
     #content-wrapper .inner-content .mob-button {
       display: none;
       position: absolute;
       top: 2em;
       color: #000;
       background-color: #fff; }
-      /* line 661, scss/_layout.scss */
+      /* line 700, scss/_layout.scss */
       #content-wrapper .inner-content .mob-button i {
         display: inline-block;
         vertical-align: middle; }
       @media screen and (max-width: 750px) {
-        /* line 654, scss/_layout.scss */
+        /* line 693, scss/_layout.scss */
         #content-wrapper .inner-content .mob-button {
           display: inline-block; } }
-    /* line 671, scss/_layout.scss */
+    /* line 710, scss/_layout.scss */
     #content-wrapper .inner-content header {
       margin-bottom: 2em;
       border-bottom: 1px solid #fff; }
-      /* line 674, scss/_layout.scss */
+      /* line 713, scss/_layout.scss */
       #content-wrapper .inner-content header .title, #content-wrapper .inner-content header #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav #content-wrapper .inner-content header ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #content-wrapper .inner-content header #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu #content-wrapper .inner-content header a {
         line-height: 1; }
-    /* line 679, scss/_layout.scss */
+    /* line 718, scss/_layout.scss */
     #content-wrapper .inner-content .body {
       padding: 0 1em;
       line-height: 1.7; }
-    /* line 684, scss/_layout.scss */
+    /* line 723, scss/_layout.scss */
     #content-wrapper .inner-content a {
       color: #A268BE;
       text-decoration: none;
@@ -1632,10 +1660,10 @@ nav ul {
       -o-transition: all, 0.3s;
       -webkit-transition: all, 0.3s;
       transition: all, 0.3s; }
-      /* line 690, scss/_layout.scss */
+      /* line 729, scss/_layout.scss */
       #content-wrapper .inner-content a:hover {
         border-bottom: 1px solid #A268BE; }
-      /* line 694, scss/_layout.scss */
+      /* line 733, scss/_layout.scss */
       #content-wrapper .inner-content a.button {
         color: #fff;
         border-bottom: none; }
@@ -1643,45 +1671,45 @@ nav ul {
 /* ==========================================================================
    GRID ITEMS
    ========================================================================== */
-/* line 706, scss/_layout.scss */
+/* line 745, scss/_layout.scss */
 .row {
   margin: 0; }
   @media screen and (max-width: 750px) {
-    /* line 709, scss/_layout.scss */
+    /* line 748, scss/_layout.scss */
     .row .column.col-1-3.expand {
       width: 100%; }
-      /* line 713, scss/_layout.scss */
+      /* line 752, scss/_layout.scss */
       .row .column.col-1-3.expand .square {
         padding-top: 40%; } }
   @media screen and (max-width: 750px) {
-    /* line 719, scss/_layout.scss */
+    /* line 758, scss/_layout.scss */
     .row .column.col-2-3.expand {
       width: 100%; } }
 
-/* line 727, scss/_layout.scss */
+/* line 766, scss/_layout.scss */
 .square {
   position: relative;
   padding-top: 100%; }
-  /* line 731, scss/_layout.scss */
-  .square .valign, .square #history .meta span, #history .meta .square span {
+  /* line 770, scss/_layout.scss */
+  .square .valign, .square .hero .hero-content, .hero .square .hero-content, .square #history .meta span, #history .meta .square span {
     padding: 0 1em; }
 
-/* line 736, scss/_layout.scss */
+/* line 775, scss/_layout.scss */
 .rect {
   position: relative;
   padding-top: 49.3%; }
-  /* line 740, scss/_layout.scss */
-  .rect .valign, .rect #history .meta span, #history .meta .rect span {
+  /* line 779, scss/_layout.scss */
+  .rect .valign, .rect .hero .hero-content, .hero .rect .hero-content, .rect #history .meta span, #history .meta .rect span {
     padding: 0 4em; }
 
-/* line 746, scss/_layout.scss */
+/* line 785, scss/_layout.scss */
 .square.bg, .rect.bg {
   background-size: cover;
   background-position: center; }
-  /* line 751, scss/_layout.scss */
+  /* line 790, scss/_layout.scss */
   .square.bg:hover:after, .rect.bg:hover:after {
     background-color: rgba(51, 51, 51, 0.4); }
-  /* line 755, scss/_layout.scss */
+  /* line 794, scss/_layout.scss */
   .square.bg:after, .rect.bg:after {
     content: "";
     display: inline-block;
@@ -1695,50 +1723,50 @@ nav ul {
     -webkit-transition: all, 0.3s;
     transition: all, 0.3s;
     z-index: 5; }
-/* line 768, scss/_layout.scss */
-.square .valign, .square #history .meta span, #history .meta .square span, .rect .valign, .rect #history .meta span, #history .meta .rect span {
+/* line 807, scss/_layout.scss */
+.square .valign, .square .hero .hero-content, .hero .square .hero-content, .square #history .meta span, #history .meta .square span, .rect .valign, .rect .hero .hero-content, .hero .rect .hero-content, .rect #history .meta span, #history .meta .rect span {
   width: 100%;
   text-align: center;
   z-index: 10; }
-  /* line 773, scss/_layout.scss */
-  .square .valign .title, .square #history .meta span .title, #history .meta .square span .title, .square .valign #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav .square .valign ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, .square #history .meta span #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav .square #history .meta span ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #history .meta .square span #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav #history .meta .square span ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, .square .valign #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu .square .valign a, .square #history .meta span #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu .square #history .meta span a, #history .meta .square span #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu #history .meta .square span a, .rect .valign .title, .rect #history .meta span .title, #history .meta .rect span .title, .rect .valign #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav .rect .valign ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, .rect #history .meta span #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav .rect #history .meta span ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #history .meta .rect span #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav #history .meta .rect span ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, .rect .valign #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu .rect .valign a, .rect #history .meta span #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu .rect #history .meta span a, #history .meta .rect span #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu #history .meta .rect span a {
+  /* line 812, scss/_layout.scss */
+  .square .valign .title, .square .hero .hero-content .title, .hero .square .hero-content .title, .square #history .meta span .title, #history .meta .square span .title, .square .valign #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav .square .valign ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, .square .hero .hero-content #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav .square .hero .hero-content ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, .hero .square .hero-content #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav .hero .square .hero-content ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, .square #history .meta span #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav .square #history .meta span ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #history .meta .square span #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav #history .meta .square span ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, .square .valign #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu .square .valign a, .square .hero .hero-content #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu .square .hero .hero-content a, .hero .square .hero-content #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu .hero .square .hero-content a, .square #history .meta span #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu .square #history .meta span a, #history .meta .square span #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu #history .meta .square span a, .rect .valign .title, .rect .hero .hero-content .title, .hero .rect .hero-content .title, .rect #history .meta span .title, #history .meta .rect span .title, .rect .valign #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav .rect .valign ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, .rect .hero .hero-content #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav .rect .hero .hero-content ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, .hero .rect .hero-content #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav .hero .rect .hero-content ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, .rect #history .meta span #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav .rect #history .meta span ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #history .meta .rect span #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav #history .meta .rect span ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, .rect .valign #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu .rect .valign a, .rect .hero .hero-content #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu .rect .hero .hero-content a, .hero .rect .hero-content #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu .hero .rect .hero-content a, .rect #history .meta span #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu .rect #history .meta span a, #history .meta .rect span #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu #history .meta .rect span a {
     text-shadow: 0 0 5px rgba(51, 51, 51, 0.5); }
 
-/* line 779, scss/_layout.scss */
+/* line 818, scss/_layout.scss */
 .flow {
   position: relative; }
   @media screen and (max-width: 600px) {
-    /* line 779, scss/_layout.scss */
+    /* line 818, scss/_layout.scss */
     .flow {
       overflow-y: hidden;
       overflow-x: auto; } }
-  /* line 787, scss/_layout.scss */
+  /* line 826, scss/_layout.scss */
   .flow .grid-flow {
     overflow: hidden;
     width: 100%;
     background-color: black; }
     @media screen and (max-width: 1000px) {
-      /* line 793, scss/_layout.scss */
+      /* line 832, scss/_layout.scss */
       .flow .grid-flow .column.col-1-3 {
         font-size: 60%; } }
     @media screen and (min-width: 600px) and (max-width: 800px) {
-      /* line 799, scss/_layout.scss */
+      /* line 838, scss/_layout.scss */
       .flow .grid-flow .column.col-1-3 {
         font-size: 60%; } }
     @media screen and (max-width: 600px) {
-      /* line 787, scss/_layout.scss */
+      /* line 826, scss/_layout.scss */
       .flow .grid-flow {
         width: 900px; } }
     @media screen and (max-width: 480px) {
-      /* line 787, scss/_layout.scss */
+      /* line 826, scss/_layout.scss */
       .flow .grid-flow {
         width: 720px; } }
     @media screen and (max-width: 320px) {
-      /* line 787, scss/_layout.scss */
+      /* line 826, scss/_layout.scss */
       .flow .grid-flow {
         width: 480px; } }
 
-/* line 818, scss/_layout.scss */
+/* line 857, scss/_layout.scss */
 .pattern {
   background-image: url(../img/black-bg.png);
   background-repeat: repeat; }
@@ -1746,81 +1774,81 @@ nav ul {
 /* ==========================================================================
    FOOTER
    ========================================================================== */
-/* line 828, scss/_layout.scss */
+/* line 867, scss/_layout.scss */
 #footer .certificates {
   padding: 1em 0;
   text-align: center;
   background-color: #181319; }
   @media screen and (max-width: 600px) {
-    /* line 828, scss/_layout.scss */
+    /* line 867, scss/_layout.scss */
     #footer .certificates {
       display: none; } }
-  /* line 837, scss/_layout.scss */
+  /* line 876, scss/_layout.scss */
   #footer .certificates ul {
     display: inline-block;
     margin: 0;
     padding: 0;
     list-style-type: none; }
-    /* line 843, scss/_layout.scss */
+    /* line 882, scss/_layout.scss */
     #footer .certificates ul li {
       display: inline-block;
       height: 70px;
       padding: 0 2em; }
       @media screen and (max-width: 800px) {
-        /* line 843, scss/_layout.scss */
+        /* line 882, scss/_layout.scss */
         #footer .certificates ul li {
           height: 40px; } }
-      /* line 852, scss/_layout.scss */
+      /* line 891, scss/_layout.scss */
       #footer .certificates ul li img {
         max-height: 100%;
         width: auto; }
-/* line 860, scss/_layout.scss */
+/* line 899, scss/_layout.scss */
 #footer .sitemap {
   position: relative;
   padding: 1em; }
   @media screen and (max-width: 500px) {
-    /* line 864, scss/_layout.scss */
+    /* line 903, scss/_layout.scss */
     #footer .sitemap > .left {
       float: none; } }
-  /* line 871, scss/_layout.scss */
+  /* line 909, scss/_layout.scss */
   #footer .sitemap > .left .logo {
     display: inline-block;
     vertical-align: top; }
-  /* line 877, scss/_layout.scss */
+  /* line 914, scss/_layout.scss */
   #footer .sitemap > .left .contact-details {
     overflow: hidden; }
     @media screen and (max-width: 600px) {
-      /* line 877, scss/_layout.scss */
+      /* line 914, scss/_layout.scss */
       #footer .sitemap > .left .contact-details {
         display: inline-block;
         margin-left: 1em; } }
-    /* line 885, scss/_layout.scss */
+    /* line 922, scss/_layout.scss */
     #footer .sitemap > .left .contact-details .detail {
       margin-left: 2em; }
-      /* line 888, scss/_layout.scss */
+      /* line 925, scss/_layout.scss */
       #footer .sitemap > .left .contact-details .detail:first-child {
         margin-left: 0; }
-    /* line 893, scss/_layout.scss */
+    /* line 930, scss/_layout.scss */
     #footer .sitemap > .left .contact-details p {
       margin: 0; }
   @media screen and (max-width: 500px) {
-    /* line 899, scss/_layout.scss */
+    /* line 936, scss/_layout.scss */
     #footer .sitemap .right {
       float: none; } }
-  /* line 905, scss/_layout.scss */
+  /* line 942, scss/_layout.scss */
   #footer .sitemap .right nav {
     display: inline-block;
     text-align: right; }
-    /* line 909, scss/_layout.scss */
+    /* line 946, scss/_layout.scss */
     #footer .sitemap .right nav ul.menu {
       display: inline-block;
       vertical-align: middle;
       margin-right: 2em; }
-      /* line 914, scss/_layout.scss */
+      /* line 951, scss/_layout.scss */
       #footer .sitemap .right nav ul.menu li {
         display: inline-block;
         margin-left: 1em; }
-      /* line 919, scss/_layout.scss */
+      /* line 956, scss/_layout.scss */
       #footer .sitemap .right nav ul.menu a {
         padding-bottom: 3px;
         color: #fff;
@@ -1831,283 +1859,49 @@ nav ul {
         -o-transition: all, 0.3s;
         -webkit-transition: all, 0.3s;
         transition: all, 0.3s; }
-        /* line 928, scss/_layout.scss */
+        /* line 965, scss/_layout.scss */
         #footer .sitemap .right nav ul.menu a:hover {
           border-bottom: 1px solid #fff; }
-    /* line 934, scss/_layout.scss */
+    /* line 971, scss/_layout.scss */
     #footer .sitemap .right nav ul.social {
       display: inline-block; }
-      /* line 937, scss/_layout.scss */
+      /* line 974, scss/_layout.scss */
       #footer .sitemap .right nav ul.social li {
         display: inline-block;
         line-height: 50px; }
-        /* line 941, scss/_layout.scss */
+        /* line 978, scss/_layout.scss */
         #footer .sitemap .right nav ul.social li a {
           color: #fff; }
-        /* line 945, scss/_layout.scss */
+        /* line 982, scss/_layout.scss */
         #footer .sitemap .right nav ul.social li .icon {
           display: inline-block;
           vertical-align: middle;
           font-size: 2em;
           text-decoration: none; }
     @media screen and (max-width: 500px) {
-      /* line 905, scss/_layout.scss */
+      /* line 942, scss/_layout.scss */
       #footer .sitemap .right nav {
         display: block;
         text-align: center; }
-        /* line 958, scss/_layout.scss */
+        /* line 995, scss/_layout.scss */
         #footer .sitemap .right nav ul.menu {
           display: block; }
-          /* line 960, scss/_layout.scss */
+          /* line 997, scss/_layout.scss */
           #footer .sitemap .right nav ul.menu li {
             display: block;
             margin-left: 0; } }
 
-/* line 1, scss/_templates.scss */
-.has-sidebar {
-  height: 100%; }
-  /* line 4, scss/_templates.scss */
-  .has-sidebar .inner-content {
-    width: 80%;
-    -moz-transition: all, 0.3s;
-    -o-transition: all, 0.3s;
-    -webkit-transition: all, 0.3s;
-    transition: all, 0.3s; }
-    /* line 8, scss/_templates.scss */
-    .sidebar-visible .has-sidebar .inner-content {
-      width: 100%;
-      -moz-transform: translateX(200px);
-      -ms-transform: translateX(200px);
-      -webkit-transform: translateX(200px);
-      transform: translateX(200px); }
-    @media screen and (max-width: 750px) {
-      /* line 4, scss/_templates.scss */
-      .has-sidebar .inner-content {
-        width: 100%;
-        margin: 0 auto; } }
-
 /* ==========================================================================
-   HOME
+   MISC
    ========================================================================== */
-/* line 25, scss/_templates.scss */
-.page-pattern-white {
-  background-image: url(../img/white-bg.jpg) !important; }
-
-/* line 30, scss/_templates.scss */
-#home {
-  background-color: black;
-  overflow: hidden; }
-  /* line 35, scss/_templates.scss */
-  #home .events .pattern-img {
-    background-image: url(../img/head.png), url(../img/black-bg.png);
-    background-repeat: no-repeat,repeat;
-    background-position: 50% 95%; }
-    @media screen and (max-width: 1200px) {
-      /* line 35, scss/_templates.scss */
-      #home .events .pattern-img {
-        background-size: 25%; } }
-  /* line 45, scss/_templates.scss */
-  #home .events .event-detail {
-    padding: 2em;
-    text-align: center;
-    letter-spacing: 1px; }
-    /* line 50, scss/_templates.scss */
-    #home .events .event-detail .date {
-      font-size: 1.5em; }
-    /* line 54, scss/_templates.scss */
-    #home .events .event-detail p {
-      margin: 0; }
-  /* line 61, scss/_templates.scss */
-  #home .members .pattern-img {
-    background-image: url(../img/bells.png), url(../img/black-bg.png);
-    background-repeat: no-repeat,repeat;
-    background-position: 100% 0%; }
-    @media screen and (max-width: 1200px) {
-      /* line 61, scss/_templates.scss */
-      #home .members .pattern-img {
-        background-size: 50%; } }
-  /* line 73, scss/_templates.scss */
-  #home .bedrooms .pattern-img {
-    background-image: url(../img/disturb.png), url(../img/black-bg.png);
-    background-repeat: no-repeat,repeat;
-    background-position: 50% -5%; }
-    @media screen and (max-width: 1200px) {
-      /* line 73, scss/_templates.scss */
-      #home .bedrooms .pattern-img {
-        background-size: 50%; } }
-    @media screen and (max-width: 750px) {
-      /* line 73, scss/_templates.scss */
-      #home .bedrooms .pattern-img {
-        background-position: 100% -27%; } }
-  /* line 89, scss/_templates.scss */
-  #home .food .pattern-img {
-    background-image: url(../img/drink.png), url(../img/black-bg.png);
-    background-repeat: no-repeat,repeat;
-    background-position: 0% 110%; }
-    @media screen and (max-width: 1200px) {
-      /* line 89, scss/_templates.scss */
-      #home .food .pattern-img {
-        background-size: 50%; } }
-    @media screen and (max-width: 750px) {
-      /* line 89, scss/_templates.scss */
-      #home .food .pattern-img {
-        background-size: 20%;
-        background-position: 0% 100%; } }
-
-/* ==========================================================================
-   EVENTS
-   ========================================================================== */
-/* line 109, scss/_templates.scss */
-#events {
-  background-color: #000; }
-
-/* ==========================================================================
-   EVENTS-SINGLE
-   ========================================================================== */
-/* line 120, scss/_templates.scss */
-#events-single .inner-content, #booking .inner-content {
-  padding: 4em;
-  background-color: #fff; }
-  /* line 124, scss/_templates.scss */
-  #events-single .inner-content .description, #booking .inner-content .description {
-    max-width: 600px; }
-/* line 130, scss/_templates.scss */
-#events-single .form .section-heading, #booking .form .section-heading {
-  border-bottom: 2px solid #000; }
-
-/* ==========================================================================
-   BEDROOMS
-   ========================================================================== */
-/* line 140, scss/_templates.scss */
-#bedrooms .inner-content {
-  width: 80%; }
-/* line 143, scss/_templates.scss */
-#bedrooms .bedroom {
-  background-color: #000; }
-
-/* ==========================================================================
-   BOOKING
-   ========================================================================== */
-/* ==========================================================================
-   CALENDAR
-   ========================================================================== */
-/* line 159, scss/_templates.scss */
-#calendar {
-  color: #000; }
-
-/* line 167, scss/_templates.scss */
-#espresso_calendar table.fc-border-separate td {
-  /*border-top: 1px solid #ddd !important;*/ }
-
-/* line 170, scss/_templates.scss */
-#espresso_calendar td.fc-widget-content {
-  /*border-top: 1px solid #ededed !important;*/ }
-
-/* line 174, scss/_templates.scss */
-#espresso_calendar {
-  margin: 0;
-  padding: 3em;
-  background-color: #fff; }
-  /* line 179, scss/_templates.scss */
-  #espresso_calendar .fc-widget-header, #espresso_calendar .fc-widget-content {
-    border: none !important;
-    border-top: none !important; }
-  /* line 185, scss/_templates.scss */
-  #espresso_calendar .fc-header .fc-header-title {
-    color: #9b59b6; }
-  /* line 188, scss/_templates.scss */
-  #espresso_calendar .fc-header .fc-header-space {
-    display: none !important; }
-  /* line 193, scss/_templates.scss */
-  #espresso_calendar .fc-button-today {
-    margin-right: 0 !important;
-    color: #fff !important;
-    background-color: #9b59b6 !important;
-    border: none !important;
-    border-top-left-radius: 5px !important;
-    border-bottom-left-radius: 5px !important;
-    -moz-transition: all, 0.3s;
-    -o-transition: all, 0.3s;
-    -webkit-transition: all, 0.3s;
-    transition: all, 0.3s; }
-    /* line 202, scss/_templates.scss */
-    #espresso_calendar .fc-button-today:hover {
-      color: #fff !important;
-      background-color: rgba(155, 89, 182, 0.7) !important; }
-  /* line 208, scss/_templates.scss */
-  #espresso_calendar .fc-button-prev, #espresso_calendar .fc-button-next {
-    color: #fff !important;
-    background-color: #8e44ad !important;
-    border: none !important;
-    -moz-transition: all, 0.3s;
-    -o-transition: all, 0.3s;
-    -webkit-transition: all, 0.3s;
-    transition: all, 0.3s; }
-    /* line 214, scss/_templates.scss */
-    #espresso_calendar .fc-button-prev:hover, #espresso_calendar .fc-button-next:hover {
-      color: #fff !important;
-      background-color: rgba(142, 68, 173, 0.7) !important; }
-  /* line 220, scss/_templates.scss */
-  #espresso_calendar .fc-button-prev {
-    margin-right: 0 !important; }
-  /* line 224, scss/_templates.scss */
-  #espresso_calendar .fc-button-next {
-    border-top-right-radius: 5px !important;
-    border-bottom-right-radius: 5px !important; }
-  /* line 229, scss/_templates.scss */
-  #espresso_calendar .fc-week {
-    -moz-transition: all, 0.3s;
-    -o-transition: all, 0.3s;
-    -webkit-transition: all, 0.3s;
-    transition: all, 0.3s; }
-  /* line 232, scss/_templates.scss */
-  #espresso_calendar .fc-week:hover {
-    background-color: transparent !important; }
-  /* line 236, scss/_templates.scss */
-  #espresso_calendar .fc-day {
-    background-color: #F7F7F7 !important;
-    border-top: none !important;
-    -moz-transition: all, 0.3s;
-    -o-transition: all, 0.3s;
-    -webkit-transition: all, 0.3s;
-    transition: all, 0.3s; }
-    /* line 241, scss/_templates.scss */
-    #espresso_calendar .fc-day.fc-today {
-      background-color: #2ecc71 !important; }
-      /* line 244, scss/_templates.scss */
-      #espresso_calendar .fc-day.fc-today .fc-day-number {
-        color: #fff !important; }
-  /* line 249, scss/_templates.scss */
-  #espresso_calendar .fc-day:hover {
-    background-color: #3498db !important; }
-    /* line 252, scss/_templates.scss */
-    #espresso_calendar .fc-day:hover .fc-day-number {
-      color: #fff !important; }
-  /* line 257, scss/_templates.scss */
-  #espresso_calendar a.fc-event {
-    color: #fff !important; }
-  /* line 260, scss/_templates.scss */
-  #espresso_calendar .fc-event {
-    background-color: #9b59b6 !important; }
-
-/* ==========================================================================
-   LOVE FROM CEDRIC
-   ========================================================================== */
-/* line 271, scss/_templates.scss */
-#cedric .inner {
-  padding: 0; }
-/* line 275, scss/_templates.scss */
-#cedric a {
-  color: #fff;
-  text-decoration: none; }
-/* line 280, scss/_templates.scss */
-#cedric header {
+/* line 1012, scss/_layout.scss */
+.header-fancy {
   position: relative;
   height: 400px;
   background-image: url(../img/page-bg.jpg);
   background-repeat: repeat; }
-  /* line 286, scss/_templates.scss */
-  #cedric header:after {
+  /* line 1018, scss/_layout.scss */
+  .header-fancy:after {
     content: "";
     display: inline-block;
     position: absolute;
@@ -2124,20 +1918,235 @@ nav ul {
     background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.88) 62%, rgba(0, 0, 0, 0.88) 100%);
     background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.88) 62%, rgba(0, 0, 0, 0.88) 100%);
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.88) 62%, rgba(0, 0, 0, 0.88) 100%); }
-  /* line 300, scss/_templates.scss */
-  #cedric header .valign, #cedric header #history .meta span, #history .meta #cedric header span {
+  /* line 1032, scss/_layout.scss */
+  .header-fancy .valign, .header-fancy .hero .hero-content, .hero .header-fancy .hero-content, .header-fancy #history .meta span, #history .meta .header-fancy span {
     width: 100%;
     padding: 0 20%;
     z-index: 10; }
     @media screen and (max-width: 600px) {
-      /* line 300, scss/_templates.scss */
-      #cedric header .valign, #cedric header #history .meta span, #history .meta #cedric header span {
+      /* line 1032, scss/_layout.scss */
+      .header-fancy .valign, .header-fancy .hero .hero-content, .hero .header-fancy .hero-content, .header-fancy #history .meta span, #history .meta .header-fancy span {
         padding: 0 5%; } }
-/* line 311, scss/_templates.scss */
+
+/* ==========================================================================
+   HOME
+   ========================================================================== */
+/* line 5, scss/_templates.scss */
+.page-pattern-white {
+  background-image: url(../img/white-bg.jpg) !important; }
+
+/* line 10, scss/_templates.scss */
+#home {
+  background-color: black;
+  overflow: hidden; }
+  /* line 15, scss/_templates.scss */
+  #home .events .pattern-img {
+    background-image: url(../img/head.png), url(../img/black-bg.png);
+    background-repeat: no-repeat,repeat;
+    background-position: 50% 95%; }
+    @media screen and (max-width: 1200px) {
+      /* line 15, scss/_templates.scss */
+      #home .events .pattern-img {
+        background-size: 25%; } }
+  /* line 25, scss/_templates.scss */
+  #home .events .event-detail {
+    padding: 2em;
+    text-align: center;
+    letter-spacing: 1px; }
+    /* line 30, scss/_templates.scss */
+    #home .events .event-detail .date {
+      font-size: 1.5em; }
+    /* line 34, scss/_templates.scss */
+    #home .events .event-detail p {
+      margin: 0; }
+  /* line 41, scss/_templates.scss */
+  #home .members .pattern-img {
+    background-image: url(../img/bells.png), url(../img/black-bg.png);
+    background-repeat: no-repeat,repeat;
+    background-position: 100% 0%; }
+    @media screen and (max-width: 1200px) {
+      /* line 41, scss/_templates.scss */
+      #home .members .pattern-img {
+        background-size: 50%; } }
+  /* line 53, scss/_templates.scss */
+  #home .bedrooms .pattern-img {
+    background-image: url(../img/disturb.png), url(../img/black-bg.png);
+    background-repeat: no-repeat,repeat;
+    background-position: 50% -5%; }
+    @media screen and (max-width: 1200px) {
+      /* line 53, scss/_templates.scss */
+      #home .bedrooms .pattern-img {
+        background-size: 50%; } }
+    @media screen and (max-width: 750px) {
+      /* line 53, scss/_templates.scss */
+      #home .bedrooms .pattern-img {
+        background-position: 100% -27%; } }
+  /* line 69, scss/_templates.scss */
+  #home .food .pattern-img {
+    background-image: url(../img/drink.png), url(../img/black-bg.png);
+    background-repeat: no-repeat,repeat;
+    background-position: 0% 110%; }
+    @media screen and (max-width: 1200px) {
+      /* line 69, scss/_templates.scss */
+      #home .food .pattern-img {
+        background-size: 50%; } }
+    @media screen and (max-width: 750px) {
+      /* line 69, scss/_templates.scss */
+      #home .food .pattern-img {
+        background-size: 20%;
+        background-position: 0% 100%; } }
+
+/* ==========================================================================
+   EVENTS
+   ========================================================================== */
+/* line 89, scss/_templates.scss */
+#events {
+  background-color: #000; }
+
+/* ==========================================================================
+   EVENTS-SINGLE
+   ========================================================================== */
+/* line 100, scss/_templates.scss */
+#events-single .inner-content, #booking .inner-content {
+  padding: 4em;
+  background-color: #fff; }
+  /* line 104, scss/_templates.scss */
+  #events-single .inner-content .description, #booking .inner-content .description {
+    max-width: 600px; }
+/* line 110, scss/_templates.scss */
+#events-single .form .section-heading, #booking .form .section-heading {
+  border-bottom: 2px solid #000; }
+
+/* ==========================================================================
+   BEDROOMS
+   ========================================================================== */
+/* line 120, scss/_templates.scss */
+#bedrooms .inner-content {
+  width: 80%; }
+/* line 123, scss/_templates.scss */
+#bedrooms .bedroom {
+  background-color: #000; }
+
+/* ==========================================================================
+   BOOKING
+   ========================================================================== */
+/* ==========================================================================
+   CALENDAR
+   ========================================================================== */
+/* line 139, scss/_templates.scss */
+#calendar {
+  color: #000; }
+
+/* line 147, scss/_templates.scss */
+#espresso_calendar table.fc-border-separate td {
+  /*border-top: 1px solid #ddd !important;*/ }
+
+/* line 150, scss/_templates.scss */
+#espresso_calendar td.fc-widget-content {
+  /*border-top: 1px solid #ededed !important;*/ }
+
+/* line 154, scss/_templates.scss */
+#espresso_calendar {
+  margin: 0;
+  padding: 3em;
+  background-color: #fff; }
+  /* line 159, scss/_templates.scss */
+  #espresso_calendar .fc-widget-header, #espresso_calendar .fc-widget-content {
+    border: none !important;
+    border-top: none !important; }
+  /* line 165, scss/_templates.scss */
+  #espresso_calendar .fc-header .fc-header-title {
+    color: #9b59b6; }
+  /* line 168, scss/_templates.scss */
+  #espresso_calendar .fc-header .fc-header-space {
+    display: none !important; }
+  /* line 173, scss/_templates.scss */
+  #espresso_calendar .fc-button-today {
+    margin-right: 0 !important;
+    color: #fff !important;
+    background-color: #9b59b6 !important;
+    border: none !important;
+    border-top-left-radius: 5px !important;
+    border-bottom-left-radius: 5px !important;
+    -moz-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    -webkit-transition: all, 0.3s;
+    transition: all, 0.3s; }
+    /* line 182, scss/_templates.scss */
+    #espresso_calendar .fc-button-today:hover {
+      color: #fff !important;
+      background-color: rgba(155, 89, 182, 0.7) !important; }
+  /* line 188, scss/_templates.scss */
+  #espresso_calendar .fc-button-prev, #espresso_calendar .fc-button-next {
+    color: #fff !important;
+    background-color: #8e44ad !important;
+    border: none !important;
+    -moz-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    -webkit-transition: all, 0.3s;
+    transition: all, 0.3s; }
+    /* line 194, scss/_templates.scss */
+    #espresso_calendar .fc-button-prev:hover, #espresso_calendar .fc-button-next:hover {
+      color: #fff !important;
+      background-color: rgba(142, 68, 173, 0.7) !important; }
+  /* line 200, scss/_templates.scss */
+  #espresso_calendar .fc-button-prev {
+    margin-right: 0 !important; }
+  /* line 204, scss/_templates.scss */
+  #espresso_calendar .fc-button-next {
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important; }
+  /* line 209, scss/_templates.scss */
+  #espresso_calendar .fc-week {
+    -moz-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    -webkit-transition: all, 0.3s;
+    transition: all, 0.3s; }
+  /* line 212, scss/_templates.scss */
+  #espresso_calendar .fc-week:hover {
+    background-color: transparent !important; }
+  /* line 216, scss/_templates.scss */
+  #espresso_calendar .fc-day {
+    background-color: #F7F7F7 !important;
+    border-top: none !important;
+    -moz-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    -webkit-transition: all, 0.3s;
+    transition: all, 0.3s; }
+    /* line 221, scss/_templates.scss */
+    #espresso_calendar .fc-day.fc-today {
+      background-color: #2ecc71 !important; }
+      /* line 224, scss/_templates.scss */
+      #espresso_calendar .fc-day.fc-today .fc-day-number {
+        color: #fff !important; }
+  /* line 229, scss/_templates.scss */
+  #espresso_calendar .fc-day:hover {
+    background-color: #3498db !important; }
+    /* line 232, scss/_templates.scss */
+    #espresso_calendar .fc-day:hover .fc-day-number {
+      color: #fff !important; }
+  /* line 237, scss/_templates.scss */
+  #espresso_calendar a.fc-event {
+    color: #fff !important; }
+  /* line 240, scss/_templates.scss */
+  #espresso_calendar .fc-event {
+    background-color: #9b59b6 !important; }
+
+/* ==========================================================================
+   LOVE FROM CEDRIC
+   ========================================================================== */
+/* line 251, scss/_templates.scss */
+#cedric .inner {
+  padding: 0; }
+/* line 255, scss/_templates.scss */
+#cedric a {
+  color: #fff;
+  text-decoration: none; }
+/* line 260, scss/_templates.scss */
 #cedric .featured {
   width: 100%;
   padding: 20px; }
-  /* line 315, scss/_templates.scss */
+  /* line 264, scss/_templates.scss */
   #cedric .featured figure {
     padding-top: 30%;
     background-size: cover;
@@ -2147,25 +2156,25 @@ nav ul {
     -webkit-transition: all, 0.3s;
     transition: all, 0.3s; }
     @media screen and (max-width: 700px) {
-      /* line 315, scss/_templates.scss */
+      /* line 264, scss/_templates.scss */
       #cedric .featured figure {
         padding-top: 80%; } }
-  /* line 326, scss/_templates.scss */
+  /* line 275, scss/_templates.scss */
   #cedric .featured .meta {
     padding: 1em 1em 1.3em 1em; }
-    /* line 329, scss/_templates.scss */
+    /* line 278, scss/_templates.scss */
     #cedric .featured .meta .cat {
       margin: 0;
       line-height: 0.5; }
-/* line 337, scss/_templates.scss */
+/* line 286, scss/_templates.scss */
 #cedric #filters {
   padding: 0 20px; }
-  /* line 340, scss/_templates.scss */
+  /* line 289, scss/_templates.scss */
   #cedric #filters p {
     display: inline-block;
     text-transform: uppercase;
     letter-spacing: 2px; }
-  /* line 346, scss/_templates.scss */
+  /* line 295, scss/_templates.scss */
   #cedric #filters button {
     font-size: 0.8em;
     font-family: 'Garamond Prmr W01 Cap';
@@ -2177,7 +2186,7 @@ nav ul {
 /* ==========================================================================
    SINGLE CEDRIC
    ========================================================================== */
-/* line 362, scss/_templates.scss */
+/* line 311, scss/_templates.scss */
 #single-cedric a {
   color: #A268BE;
   border-bottom: 1px dotted #503B5A;
@@ -2186,19 +2195,19 @@ nav ul {
   -o-transition: all, 0.3s;
   -webkit-transition: all, 0.3s;
   transition: all, 0.3s; }
-  /* line 368, scss/_templates.scss */
+  /* line 317, scss/_templates.scss */
   #single-cedric a:hover {
     border-bottom: 1px dotted #A268BE; }
-/* line 373, scss/_templates.scss */
+/* line 322, scss/_templates.scss */
 #single-cedric .hero.image {
   height: 500px; }
-/* line 377, scss/_templates.scss */
+/* line 326, scss/_templates.scss */
 #single-cedric .inner {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
   padding: 2em 0; }
-  /* line 383, scss/_templates.scss */
+  /* line 332, scss/_templates.scss */
   #single-cedric .inner .post-title {
     margin-top: 0;
     font-weight: 300;
@@ -2206,7 +2215,7 @@ nav ul {
     text-transform: uppercase;
     line-height: 1;
     letter-spacing: 1px; }
-/* line 394, scss/_templates.scss */
+/* line 343, scss/_templates.scss */
 #single-cedric article.single {
   margin-top: -200px;
   padding: 4em;
@@ -2220,42 +2229,42 @@ nav ul {
 /* ==========================================================================
    RESERVATION
    ========================================================================== */
-/* line 413, scss/_templates.scss */
+/* line 362, scss/_templates.scss */
 #reservation .content-wrapper .content header {
   margin-bottom: 2em;
   border-bottom: 1px solid #fff; }
-/* line 418, scss/_templates.scss */
+/* line 367, scss/_templates.scss */
 #reservation .content-wrapper .content .inner {
   padding: 0; }
-/* line 424, scss/_templates.scss */
+/* line 373, scss/_templates.scss */
 #reservation #reservation_widget {
   width: 100%;
   height: 450px;
   border: none; }
-  /* line 429, scss/_templates.scss */
+  /* line 378, scss/_templates.scss */
   #reservation #reservation_widget .main_content_holder {
     background: #521A6D; }
 
 /* ==========================================================================
    HISTORY
    ========================================================================== */
-/* line 440, scss/_templates.scss */
+/* line 389, scss/_templates.scss */
 #history .history-snippet {
   position: relative;
   padding: 0 3em 3em;
   border-left: 1px solid #fff; }
-  /* line 445, scss/_templates.scss */
+  /* line 394, scss/_templates.scss */
   #history .history-snippet:first-of-type {
     margin-top: 2em; }
-  /* line 449, scss/_templates.scss */
+  /* line 398, scss/_templates.scss */
   #history .history-snippet.end {
     border-left: none;
     text-align: center; }
-    /* line 453, scss/_templates.scss */
+    /* line 402, scss/_templates.scss */
     #history .history-snippet.end .meta {
       color: #000;
       background-color: #fff; }
-/* line 460, scss/_templates.scss */
+/* line 409, scss/_templates.scss */
 #history .meta {
   position: absolute;
   top: 2.5em;
@@ -2268,32 +2277,32 @@ nav ul {
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border-radius: 50px; }
-  /* line 471, scss/_templates.scss */
+  /* line 420, scss/_templates.scss */
   #history .meta span {
     width: 100%;
     left: 0; }
-  /* line 477, scss/_templates.scss */
+  /* line 426, scss/_templates.scss */
   #history .meta:first-child {
     top: 0;
     color: #fff;
     background-color: #000; }
-/* line 485, scss/_templates.scss */
+/* line 434, scss/_templates.scss */
 #history .body p:first-child {
   margin-top: 0; }
 
 /* ==========================================================================
    TEAM
    ========================================================================== */
-/* line 497, scss/_templates.scss */
+/* line 446, scss/_templates.scss */
 #team .member {
   margin: 2em 0; }
-/* line 501, scss/_templates.scss */
+/* line 450, scss/_templates.scss */
 #team .member-name {
   margin: 0;
   font-family: 'Playfair Display', serif;
   line-height: 0.7;
   text-transform: uppercase; }
-/* line 509, scss/_templates.scss */
+/* line 458, scss/_templates.scss */
 #team .member-title {
   margin: 0.2em 0;
   text-transform: uppercase; }
@@ -2301,32 +2310,32 @@ nav ul {
 /* ==========================================================================
    CONTACT
    ========================================================================== */
-/* line 519, scss/_templates.scss */
+/* line 468, scss/_templates.scss */
 #contact {
   position: relative;
   height: 100%; }
-  /* line 524, scss/_templates.scss */
+  /* line 473, scss/_templates.scss */
   #contact.feedback-visible .feedback-overlay {
     display: block;
     background-color: rgba(0, 0, 0, 0.4);
     z-index: 200; }
-  /* line 530, scss/_templates.scss */
+  /* line 479, scss/_templates.scss */
   #contact.feedback-visible .feedback {
     top: 0; }
-  /* line 536, scss/_templates.scss */
+  /* line 485, scss/_templates.scss */
   #contact #map {
     position: relative;
     top: 0;
     bottom: 0; }
-    /* line 540, scss/_templates.scss */
+    /* line 489, scss/_templates.scss */
     #contact #map img {
       max-width: inherit; }
     @media screen and (max-width: 1400px) {
-      /* line 536, scss/_templates.scss */
+      /* line 485, scss/_templates.scss */
       #contact #map {
         height: 500px;
         width: 100%; } }
-  /* line 550, scss/_templates.scss */
+  /* line 499, scss/_templates.scss */
   #contact .contact-info {
     height: 100%;
     z-index: 100;
@@ -2334,27 +2343,27 @@ nav ul {
     color: #202020;
     font-size: 0.875em;
     background-color: #fff; }
-    /* line 559, scss/_templates.scss */
+    /* line 508, scss/_templates.scss */
     #contact .contact-info header h2 {
       margin: 0; }
     @media screen and (max-width: 1400px) {
-      /* line 550, scss/_templates.scss */
+      /* line 499, scss/_templates.scss */
       #contact .contact-info {
         width: 100%; } }
-  /* line 568, scss/_templates.scss */
+  /* line 517, scss/_templates.scss */
   #contact .opening {
     margin-top: 4em; }
-    /* line 570, scss/_templates.scss */
+    /* line 519, scss/_templates.scss */
     #contact .opening .row {
       margin: 0 -10px; }
-    /* line 573, scss/_templates.scss */
+    /* line 522, scss/_templates.scss */
     #contact .opening .column {
       padding: 10px; }
       @media screen and (max-width: 500px) {
-        /* line 573, scss/_templates.scss */
+        /* line 522, scss/_templates.scss */
         #contact .opening .column {
           width: 100%; } }
-  /* line 582, scss/_templates.scss */
+  /* line 531, scss/_templates.scss */
   #contact .feedback-overlay {
     display: none;
     position: absolute;
@@ -2366,7 +2375,7 @@ nav ul {
     -o-transition: all, 0.3s;
     -webkit-transition: all, 0.3s;
     transition: all, 0.3s; }
-  /* line 592, scss/_templates.scss */
+  /* line 541, scss/_templates.scss */
   #contact .feedback {
     position: absolute;
     top: -5em;
@@ -2380,7 +2389,12 @@ nav ul {
     -o-transition: all, 0.3s;
     -webkit-transition: all, 0.3s;
     transition: all, 0.3s; }
-    /* line 604, scss/_templates.scss */
+    @media screen and (max-width: 1000px) {
+      /* line 541, scss/_templates.scss */
+      #contact .feedback {
+        width: 75%;
+        left: 12.5%; } }
+    /* line 558, scss/_templates.scss */
     #contact .feedback > button {
       position: absolute;
       top: 0;

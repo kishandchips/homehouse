@@ -201,7 +201,7 @@ nav{
 						padding: 1em;
 						background: url(../img/bg-megadrop.jpg);
 						@extend .invisible;
-						@include transition(opacity, .3s);
+						@include transition(opacity, .2s);
 
 						> li.menu-item{
 
@@ -348,32 +348,39 @@ nav{
    ========================================================================== */
 
 .hero{
+
+	.hero-content{
+		@extend .valign;
+		width: 90%;
+		margin-left: 5%;
+		text-align: center;
+		z-index: 100;
+
+		.title{
+			font-size: 5em;
+			@include text-shadow(0 0 5px rgba(51,51,51,0.5));
+		}
+	}
+
 	&.flexslider{
-		margin: 0 0 5px 0;
+		margin:0;
+		background-color: black;
 		border:none;
+		border-bottom:5px solid black;
 
 		.slides{
 			li{
 				position: relative;
-				height:600px;
-				background-size:cover;
-				background-position: center;
+				// height:600px;
+				// background-size:cover;
+				// background-position: center;
 
-				@media screen and (max-height:700px){
-					height: 350px;	
-				}
-				@media screen and (max-height:400px){
-					height: 200px;	
-				}
-
-
-				.hero-content{
-					&.valign{
-						width:100%;
-						padding: 0 20%;
-						text-align: center;
-					}
-				}
+				// @media screen and (max-height:700px){
+				// 	height: 350px;	
+				// }
+				// @media screen and (max-height:400px){
+				// 	height: 200px;	
+				// }
 			}
 		}// .slides
 
@@ -401,9 +408,17 @@ nav{
 	}// .flexslider
 
 	&.image{
-		height:300px;
-		background-size: cover;
-		background-position: center;
+		position: relative;
+
+		img{
+			width: 100%;	
+		}
+
+		.single-espresso_event &{
+			height:500px;
+			background-size: cover;
+			background-position: center;
+		}
 	}
 } // .hero
 
@@ -524,6 +539,30 @@ nav{
    		}
 	}//.item	
 }//#isotope
+
+/* ==========================================================================
+   HAS SIDEBAR
+   ========================================================================== */
+
+.has-sidebar{
+	height: 100%;
+
+	.inner-content{
+		width: 80%;
+		@include transition(all,.3s);
+
+		.sidebar-visible &{
+			width: 100%;
+			@include translateX(200px);	
+		}
+
+		@media screen and (max-width: 750px){
+			width: 100%;
+			margin:0 auto;
+		}
+	}
+}// .has-sidebar
+
 
 /* ==========================================================================
    SIDENAV
@@ -862,7 +901,6 @@ nav{
 		padding:1em;
 
 		>.left{
-			// margin-bottom: 1em;
 
 			@media screen and (max-width:500px){
 				float: none;
@@ -871,7 +909,6 @@ nav{
 			.logo{
 				display: inline-block;
 				vertical-align: top;
-				// margin-bottom: 0.5em;
 			}
 
 			.contact-details{
@@ -967,3 +1004,38 @@ nav{
 		}//right
 	}//.sitemap
 }//#footer
+
+/* ==========================================================================
+   MISC
+   ========================================================================== */
+
+.header-fancy{
+	position: relative;
+	height:400px;
+	background-image: url(../img/page-bg.jpg);
+	background-repeat: repeat;
+
+	&:after{
+		content:"";
+		display: inline-block;
+		position: absolute;
+		top:0;left:0;
+		height: 100%;
+		width: 100%;
+		z-index: 5;
+
+		@include filter-gradient(#000000, #e00000, vertical); // IE6-8
+		$experimental-support-for-svg: true;
+		@include background-image(linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.88) 62%,rgba(0,0,0,0.88) 100%));
+	}
+
+	.valign{
+		width: 100%;
+		padding:0 20%;
+		z-index: 10;
+
+		@media screen and (max-width:600px){
+			padding: 0 5%;
+		}
+	}
+}//.header-fancy

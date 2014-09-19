@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "17682",
+"creatorBuild": "17756",
 "files": {
 	"\/404.php": {
 		"fileType": 8192,
@@ -321,15 +321,6 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/events.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/events.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/footer.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -362,15 +353,6 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/header.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/house.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/house.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -1167,6 +1149,479 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/temp\/Bison-Bar-2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 145405,
+		"inputAbbreviatedPath": "\/img\/temp\/Bison-Bar-2.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Bison-Bar-2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Bison-Bar-3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 53668,
+		"inputAbbreviatedPath": "\/img\/temp\/Bison-Bar-3.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Bison-Bar-3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Bison-Bar-4.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 108998,
+		"inputAbbreviatedPath": "\/img\/temp\/Bison-Bar-4.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Bison-Bar-4.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Bison-Bar-5.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 129811,
+		"inputAbbreviatedPath": "\/img\/temp\/Bison-Bar-5.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Bison-Bar-5.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Bison-Bar.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 111449,
+		"inputAbbreviatedPath": "\/img\/temp\/Bison-Bar.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Bison-Bar.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Bison-Feat.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 99741,
+		"inputAbbreviatedPath": "\/img\/temp\/Bison-Feat.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Bison-Feat.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Drawing-Room.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 142239,
+		"inputAbbreviatedPath": "\/img\/temp\/Drawing-Room.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Drawing-Room.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/DrawingRoom-Feat.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 91742,
+		"inputAbbreviatedPath": "\/img\/temp\/DrawingRoom-Feat.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/DrawingRoom-Feat.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/DrawingRoom-Great-Room.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 134615,
+		"inputAbbreviatedPath": "\/img\/temp\/DrawingRoom-Great-Room.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/DrawingRoom-Great-Room.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/DrawingRoom-Music-Room.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 155782,
+		"inputAbbreviatedPath": "\/img\/temp\/DrawingRoom-Music-Room.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/DrawingRoom-Music-Room.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/DrawingRoom-Music-Room2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 141946,
+		"inputAbbreviatedPath": "\/img\/temp\/DrawingRoom-Music-Room2.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/DrawingRoom-Music-Room2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Garden.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 144960,
+		"inputAbbreviatedPath": "\/img\/temp\/Garden.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Garden.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Garden2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 121283,
+		"inputAbbreviatedPath": "\/img\/temp\/Garden2.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Garden2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Garden3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 87688,
+		"inputAbbreviatedPath": "\/img\/temp\/Garden3.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Garden3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Gloucester.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 130014,
+		"inputAbbreviatedPath": "\/img\/temp\/Gloucester.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Gloucester.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Gloucester2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 191104,
+		"inputAbbreviatedPath": "\/img\/temp\/Gloucester2.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Gloucester2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/homehouse-2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 748672,
+		"inputAbbreviatedPath": "\/img\/temp\/homehouse-2.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/homehouse-2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/homehouse-3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 272343,
+		"inputAbbreviatedPath": "\/img\/temp\/homehouse-3.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/homehouse-3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/homehouse-4.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 261387,
+		"inputAbbreviatedPath": "\/img\/temp\/homehouse-4.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/homehouse-4.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/homehouse-5.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 145012,
+		"inputAbbreviatedPath": "\/img\/temp\/homehouse-5.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/homehouse-5.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/homehouse-6.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 130297,
+		"inputAbbreviatedPath": "\/img\/temp\/homehouse-6.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/homehouse-6.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/homehouse-7.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 144966,
+		"inputAbbreviatedPath": "\/img\/temp\/homehouse-7.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/homehouse-7.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/homehouse-8.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 141819,
+		"inputAbbreviatedPath": "\/img\/temp\/homehouse-8.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/homehouse-8.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/homehouse.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 251125,
+		"inputAbbreviatedPath": "\/img\/temp\/homehouse.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/homehouse.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/House21-Bar.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 101549,
+		"inputAbbreviatedPath": "\/img\/temp\/House21-Bar.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/House21-Bar.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/House21-Bar2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 101776,
+		"inputAbbreviatedPath": "\/img\/temp\/House21-Bar2.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/House21-Bar2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/House21-Lounge.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 141161,
+		"inputAbbreviatedPath": "\/img\/temp\/House21-Lounge.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/House21-Lounge.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/House21-Lounge2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 80835,
+		"inputAbbreviatedPath": "\/img\/temp\/House21-Lounge2.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/House21-Lounge2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Octagon-Feat.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 79993,
+		"inputAbbreviatedPath": "\/img\/temp\/Octagon-Feat.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Octagon-Feat.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Octagon.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 139288,
+		"inputAbbreviatedPath": "\/img\/temp\/Octagon.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Octagon.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Octagon2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 122689,
+		"inputAbbreviatedPath": "\/img\/temp\/Octagon2.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Octagon2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Octagon3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 105873,
+		"inputAbbreviatedPath": "\/img\/temp\/Octagon3.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Octagon3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Restaurant-Feat.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 45721,
+		"inputAbbreviatedPath": "\/img\/temp\/Restaurant-Feat.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Restaurant-Feat.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Restaurant.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 137315,
+		"inputAbbreviatedPath": "\/img\/temp\/Restaurant.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Restaurant.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Restaurant2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 131775,
+		"inputAbbreviatedPath": "\/img\/temp\/Restaurant2.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Restaurant2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Restaurant3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 53268,
+		"inputAbbreviatedPath": "\/img\/temp\/Restaurant3.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Restaurant3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Restaurant4.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 62620,
+		"inputAbbreviatedPath": "\/img\/temp\/Restaurant4.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Restaurant4.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Vault.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 66480,
+		"inputAbbreviatedPath": "\/img\/temp\/Vault.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Vault.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Vault2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 61125,
+		"inputAbbreviatedPath": "\/img\/temp\/Vault2.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Vault2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Vault3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 109414,
+		"inputAbbreviatedPath": "\/img\/temp\/Vault3.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Vault3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Vault4.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 85635,
+		"inputAbbreviatedPath": "\/img\/temp\/Vault4.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Vault4.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Vault5.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 153531,
+		"inputAbbreviatedPath": "\/img\/temp\/Vault5.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Vault5.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Vestibule.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 116504,
+		"inputAbbreviatedPath": "\/img\/temp\/Vestibule.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Vestibule.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/terrace.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1346,15 +1801,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/reservation.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/reservation.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/screenshot.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1420,6 +1866,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/template-calendar.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/template-calendar.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/template-confirmation.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1438,6 +1893,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/template-events.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/template-events.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/template-history.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1447,11 +1911,29 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/template-house.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/template-house.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/template-lovefromcedric.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/template-lovefromcedric.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/template-reservation.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/template-reservation.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -1470,15 +1952,6 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/template-testimonials.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/template-typeform.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/template-typeform.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -1615,6 +2088,10 @@
 			"flagValue": -1
 			},
 		"non_empty_constructor_needs_parens": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"prefer_english_operator": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -2093,6 +2570,7 @@
 	"stylusAutoOutputPathReplace1": "stylus",
 	"stylusAutoOutputPathReplace2": "css",
 	"stylusAutoOutputPathStyle": 2,
+	"stylusCreateSourceMap": 0,
 	"stylusDebugStyle": 0,
 	"stylusImportCSS": 0,
 	"stylusOutputStyle": 0,
