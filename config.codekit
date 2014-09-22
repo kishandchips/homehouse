@@ -1028,6 +1028,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/site-login-logo.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3985,
+		"inputAbbreviatedPath": "\/img\/site-login-logo.jpg",
+		"outputAbbreviatedPath": "\/img\/site-login-logo.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/site-login-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5771,
+		"inputAbbreviatedPath": "\/img\/site-login-logo.png",
+		"outputAbbreviatedPath": "\/img\/site-login-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/slider1.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1145,6 +1167,28 @@
 		"initialSize": 15956,
 		"inputAbbreviatedPath": "\/img\/team-reece.jpg",
 		"outputAbbreviatedPath": "\/img\/team-reece.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Bedrooms-Attwick.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 61047,
+		"inputAbbreviatedPath": "\/img\/temp\/Bedrooms-Attwick.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Bedrooms-Attwick.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Bedrooms-Islington-Feat.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 190831,
+		"inputAbbreviatedPath": "\/img\/temp\/Bedrooms-Islington-Feat.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Bedrooms-Islington-Feat.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1413,6 +1457,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/temp\/House-Feat.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 66917,
+		"inputAbbreviatedPath": "\/img\/temp\/House-Feat.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/House-Feat.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/temp\/House21-Bar.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1607,6 +1662,17 @@
 		"initialSize": 153531,
 		"inputAbbreviatedPath": "\/img\/temp\/Vault5.jpg",
 		"outputAbbreviatedPath": "\/img\/temp\/Vault5.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/Vestibule-Feat.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 68429,
+		"inputAbbreviatedPath": "\/img\/temp\/Vestibule-Feat.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/Vestibule-Feat.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

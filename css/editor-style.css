@@ -1,4 +1,4 @@
-@import '//fast.fonts.net/jsapi/7c3154b6-84d1-41cf-880b-8d493e275dd8.js';
+@import "//fast.fonts.net/jsapi/7c3154b6-84d1-41cf-880b-8d493e275dd8.js";
 /* line 1, scss/_typography.scss */
 body {
   font-family: 'Garamond Prmr W01 Cap';
@@ -32,7 +32,10 @@ body {
 .title {
   display: inline-block;
   margin: 0;
-  font-family: 'Playfair Display', serif;
-  font-weight: 300;
+  font-family: 'GaramondPrmrW01-BdCap';
   text-transform: uppercase;
   text-decoration: none; }
+  /* line 31, scss/_typography.scss */
+  .title.thin {
+    font-weight: 300;
+    letter-spacing: 2px; }

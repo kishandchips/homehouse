@@ -15,7 +15,7 @@
 		<div class="container">
 			<section class="inner-content">
 				<header>
-					<h3 class="title large"><?php the_title(); ?></h3>						
+					<h3 class="title thin large"><?php the_title(); ?></h3>						
 				</header>
 
 				<?php if(have_posts()): while(have_posts()): the_post(); ?>

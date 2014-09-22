@@ -16,7 +16,15 @@
 
     <div id="kanye-west">
         
-        <header id="header" class="mega"> 
+        <div class="login clearfix">
+            <?php dynamic_sidebar('header' ); ?>
+            <button class="js-login">
+                <i class="icon-login"></i>
+                <span>Members Login</span>
+            </button>    
+        </div><!-- .login -->
+
+        <header id="header" class="mega">
             <div class="logo-big">
                 <a href="<?php echo bloginfo('url'); ?> ">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/logo-header.png" alt="">

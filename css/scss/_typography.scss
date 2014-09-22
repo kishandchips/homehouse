@@ -24,8 +24,13 @@ body{
 .title{
 	display: inline-block;
 	margin: 0;
-	@include playfair;
-	font-weight: 300;
+	@include garamond-bold;
 	text-transform: uppercase;
 	text-decoration: none;
+
+	&.thin{
+		font-weight: 300;
+		letter-spacing: 2px;
+	}
 }
+

@@ -15,7 +15,7 @@
 					<section class="hero flexslider thumbnails">
 						
 						<div class="hero-content">
-							<h2 class="title"><?php the_title(); ?></h2>
+							<h2 class="title thin"><?php the_title(); ?></h2>
 						</div>
 
 						<ul class="slides">
@@ -46,12 +46,7 @@
 
 		<?php endif; ?>
 
-	<?php if(get_field('display_grid')): ?>
-		<div id="content-wrapper" class="with-flow">
-	<?php else: ?>
-		<div id="content-wrapper">
-	<?php endif; ?>
-	
+		<div id="content-wrapper">	
 			<div class="container">
 
 				<?php if(get_field('sidebar')): ?>
@@ -91,10 +86,6 @@
 					</section><!-- .inner-content -->
 
 			</div><!-- .container -->
-
-
-
-		</div><!-- #content-wrapper -->
 
 		<?php if(get_field('display_grid')): ?>
 			<div class="flow">
@@ -149,6 +140,9 @@
 				</section><!--  .grid-flow -->
 			</div><!-- .flow -->
 		<?php endif; ?>	
+		
+		</div><!-- #content-wrapper -->
+
 
 	</div><!-- #page -->
 

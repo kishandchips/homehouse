@@ -19,6 +19,7 @@
 			this.sidebar.init();
 			this.cedric.init();
 			this.contact.init();
+			this.footer.init();
 
 			main.w.on('load', function(){
 				$('.flexslider').flexslider({
@@ -37,6 +38,10 @@
 				if(!element.length){return;}
 
 				this.megatron.init();
+
+				$('.js-login').on('click', function(){
+					$('.login').toggleClass('visible');
+				});
 
 			},
 
@@ -246,7 +251,30 @@
 				}// cedric.isotope.init
 			
 			}// cedric.isotope
-		}// main.cedric
+		},// main.cedric
+
+		footer: {
+			element: $('#footer'),
+
+			init: function(){
+				var element = main.footer.element;
+				if(!element.length){return;}
+
+				this.sticky();
+			},
+
+			sticky: function(){
+				var footerHeight = main.footer.element.outerHeight();
+				main.vars.wrapper.css('margin-bottom', -footerHeight);
+				$('.push').css('height', footerHeight);
+			},
+
+			resize: function(){
+				var footerHeight = main.footer.element.outerHeight();
+				main.vars.wrapper.css('margin-bottom', -footerHeight);
+				$('.push').css('height', footerHeight);
+			}
+		}
 
 	};//main
 

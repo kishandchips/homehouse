@@ -120,21 +120,42 @@ function my_sidebars() {
 			'after_title' => '</h3>'
 		)
 	);
+	/* Register the 'header' sidebar. */
+	register_sidebar(
+		array(
+			'id' => 'header',
+			'name' => __( 'Header' ),
+			'description' => __( 'Header Sidebar' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>'
+		)
+	);
 }
 
-// USER PROFILES
+// WORDPRESS LOGO
 
-function modify_contact_methods($profile_fields) {
+function my_login_logo() { ?>
+    <style type="text/css">
+        body.login div#login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/site-login-logo.jpg);
+           	background-size: cover;
+			height: 150px;
+			width: 150px;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
-	// Add new fields
-	$profile_fields['telephone'] = 'Contact Number';
+// REMOVE ADMIN BAR FOR NON ADMINS
+add_action('after_setup_theme', 'remove_admin_bar');
 
-	// Remove old fields
-	unset($profile_fields['aim']);
-
-	return $profile_fields;
+function remove_admin_bar() {
+	if (!current_user_can('administrator') && !is_admin()) {
+  	show_admin_bar(false);
+	}
 }
-add_filter('user_contactmethods', 'modify_contact_methods');
 
 // SHORTCODES
 function button($atts, $content = null) {

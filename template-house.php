@@ -18,7 +18,7 @@
 			<section class="hero flexslider thumbnails">
 				
 				<div class="hero-content">
-					<h2 class="title"><?php the_title(); ?></h2>
+					<h2 class="title thin"><?php the_title(); ?></h2>
 				</div>
 
 				<ul class="slides">

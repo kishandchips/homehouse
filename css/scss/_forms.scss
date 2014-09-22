@@ -13,7 +13,7 @@ label{
 	text-transform: uppercase;
 }
 
-input[type="text"]{
+input[type="text"], input[type="password"]{
 	@extend .small;
 	width: 100%;
 	max-width: 320px;

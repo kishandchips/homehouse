@@ -1,4 +1,4 @@
-
+	<div class="push"></div><!-- sticky footer -->
 </div><!-- #kanye-west -->
 
 <footer id="footer" class="white">
