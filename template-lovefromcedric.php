@@ -48,9 +48,9 @@
 				<p>Filter Offers:</p>
 				<?php $terms = get_terms('offer-category') ?>
 				<?php foreach ($terms as $term): ?>
-					<button data-filter=".<?php echo $term->term_id ?>" class="button primary"><?php echo $term->name ?></button>
+					<button data-filter=".<?php echo $term->term_id ?>" class="button filter-button primary"><?php echo $term->name ?></button>
 				<?php endforeach; ?>
-					<button data-filter="*" class="button primary">Show All</button>		
+					<button data-filter="*" class="button filter-button primary">Show All</button>		
 			</div><!-- #filters -->
 
 			<div id="isotope">

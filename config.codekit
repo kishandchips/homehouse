@@ -1171,6 +1171,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/temp\/bartender.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.47739e+06,
+		"inputAbbreviatedPath": "\/img\/temp\/bartender.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/bartender.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/temp\/Bedrooms-Attwick.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1255,6 +1266,17 @@
 		"initialSize": 99741,
 		"inputAbbreviatedPath": "\/img\/temp\/Bison-Feat.jpg",
 		"outputAbbreviatedPath": "\/img\/temp\/Bison-Feat.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/caroline.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 98130,
+		"inputAbbreviatedPath": "\/img\/temp\/caroline.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/caroline.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1556,6 +1578,61 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/temp\/olivia.JPG": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 161142,
+		"inputAbbreviatedPath": "\/img\/temp\/olivia.JPG",
+		"outputAbbreviatedPath": "\/img\/temp\/olivia.JPG",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/private-hire.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 133966,
+		"inputAbbreviatedPath": "\/img\/temp\/private-hire.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/private-hire.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/private-hire2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 104085,
+		"inputAbbreviatedPath": "\/img\/temp\/private-hire2.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/private-hire2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/private-hire3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 170229,
+		"inputAbbreviatedPath": "\/img\/temp\/private-hire3.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/private-hire3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/private-hire4.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 136583,
+		"inputAbbreviatedPath": "\/img\/temp\/private-hire4.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/private-hire4.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/temp\/Restaurant-Feat.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1607,6 +1684,39 @@
 		"initialSize": 62620,
 		"inputAbbreviatedPath": "\/img\/temp\/Restaurant4.jpg",
 		"outputAbbreviatedPath": "\/img\/temp\/Restaurant4.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/screenshot.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 421806,
+		"inputAbbreviatedPath": "\/img\/temp\/screenshot.png",
+		"outputAbbreviatedPath": "\/img\/temp\/screenshot.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/soho-night.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3.7694e+06,
+		"inputAbbreviatedPath": "\/img\/temp\/soho-night.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/soho-night.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/spanishfood.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 116405,
+		"inputAbbreviatedPath": "\/img\/temp\/spanishfood.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/spanishfood.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1919,6 +2029,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/style.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/template-bars.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/template-bars.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

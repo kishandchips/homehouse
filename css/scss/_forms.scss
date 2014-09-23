@@ -50,6 +50,34 @@ input[type="submit"]{
 		.gform_body{
 			ul.gform_fields{
 				li.gfield{
+
+					&.gsection{
+						padding-top: 2em;
+						
+						&:first-child{
+							padding-top: none;
+						}
+					}
+
+					&.address{
+						#input_3_2_3_container{
+							label{
+								visibility: hidden;
+							}
+						}
+					}
+
+					&.small-print{
+						width: 75%;
+					}
+
+					&.small-print-check{
+						label{
+							width: 75%;
+							text-transform: none;
+						}
+					}
+
 					&.member-no,&.tel,&.email{
 						width: 40%;
 					}

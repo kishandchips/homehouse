@@ -20,7 +20,7 @@
 
 						<ul class="slides">
 							<?php foreach ($images as $image): ?>
-								<li>
+								<li style='background-image: url(<?php echo $image['url']; ?>)'>
 									<img src="<?php echo $image['url']; ?>">
 								</li>
 							<?php endforeach; ?>
@@ -30,10 +30,10 @@
 				<?php else: ?>
 					<?php foreach ($images as $image): ?>
 
-						<div class="hero image">
+						<div class="hero image" style="background-image:url(<?php echo $image['url']; ?>)">
 	
-							<div class="hero-content">
-								<h2 class="title"><?php the_title(); ?></h2>
+							<div class="hero-content"">
+								<h2 class="title thin"><?php the_title(); ?></h2>
 							</div>
 
 							<img src="<?php echo $image['url']; ?>">

@@ -197,7 +197,7 @@
 		},// main.contact
 
 		cedric: {
-			element: $('#cedric'),
+			element: $('#isotope'),
 
 			init: function(){
 				var element = main.cedric.element;
@@ -218,14 +218,50 @@
 					var element = main.cedric.filters.element;		
 					if(!element.length){return;}
 
-					var buttons = $('button', element),
+					var button = $('.filter-button', element),
+						toggle = $('.js-toggle', element),
+						menu = $('.filters-menu'),
 						filterTop = element.offset().top;
 
-					buttons.on('click', function(){
+					button.on('click', function(){
 						$('html,body').animate({scrollTop: filterTop});
 
 						var filterValue = $(this).attr('data-filter');
 						main.cedric.isotope.element.isotope({ filter: filterValue });
+					});
+
+					toggle.on('click', function(){
+						element.toggleClass('filters-visible');
+					});
+
+					menu.on('click', 'button.filter', function() {
+  						var filterValue = $(this).attr('data-filter');
+  						main.cedric.isotope.element.isotope({ filter: filterValue });
+  						
+					});
+
+					menu.on('click', 'button.sort', function(){
+						var sortByValue = $(this).attr('data-sort-by');
+  						main.cedric.isotope.element.isotope({ sortBy: sortByValue});
+  						main.cedric.isotope.element.isotope({ 
+  							sortBy: sortByValue, 
+  							sortAscending:{ 
+  								name:true,
+  								date: true
+  							}
+  						});
+					});
+
+					menu.on('click', 'button.sort-desc', function(){
+						var sortByValue = $(this).attr('data-sort-by');
+  						
+  						main.cedric.isotope.element.isotope({ 
+  							sortBy: sortByValue, 
+  							sortAscending:{ 
+  								name:false,
+  								date:false
+  							}
+  						});
 					});
 
 				}
@@ -245,7 +281,11 @@
 							itemSelector: '.item',
 							masonry:{
 								columnWidth: '.grid-sizer'
-							}
+							},
+							getSortData: {
+								date: '[data-date]',
+							    name: '.title',
+							},
 						});
 					});
 				}// cedric.isotope.init
