@@ -10,6 +10,28 @@
 <?php else: ?>
 	<div id="events">
 <?php endif; ?>
+<?php  
+    $post_objects= get_field('featured_events');
+	if($post_objects): ?>
+
+	<section class="hero flexslider thumbnails">
+
+		<ul class="slides">
+			<?php foreach ($post_objects as $post): ?>
+				<?php setup_postdata($post); ?>
+				<?php $event_thumbnail_url = get_post_meta($post->ID, 'event_thumbnail_url', true); ?>
+					<li style='background-image: url(<?php echo $event_thumbnail_url; ?>)'>
+						<div class="hero-content">
+							<h2 class="title thin"><?php the_title(); ?></h2>
+							<a href="<?php the_permalink(); ?>" class="button primary small">View Event</a>
+						</div>
+						<img src="<?php echo $event_thumbnail_url; ?>">
+					</li>
+			<?php endforeach; ?>
+			<?php wp_reset_postdata(); ?>
+		</ul>
+	</section><!-- hero flexslider -->
+	<?php endif; ?>
 
 	<div id="content-wrapper">
 		<div id="filters">
@@ -52,15 +74,15 @@
 			<?php $args = array( 
 				'post_type' => 'espresso_event', 
 				'posts_per_page' => 50,
-				'meta_key' => 'event_start_date',
-				'meta_query' => array(
-					array(
-						'key' => 'event_start_date',
-						'value' => date('Y-m-d'),
-						'compare' => '>=', // compares the event_start_date against today's date so we only display events that haven't happened yet
-						'type' => 'DATE'
-					)
-				),
+				// 'meta_key' => 'event_start_date',
+				// 'meta_query' => array(
+				// 	array(
+				// 		'key' => 'event_start_date',
+				// 		'value' => date('Y-m-d'),
+				// 		'compare' => '>=', // compares the event_start_date against today's date so we only display events that haven't happened yet
+				// 		'type' => 'DATE'
+				// 	)
+				// ),
 			); ?>
 
 			<?php $loop = new WP_Query( $args ); ?>
@@ -75,11 +97,11 @@
 
 				<article id="event_data-<?php echo $event_id ?>" class="item event <?php foreach ($catArray as $cat): ?><?php echo $cat->slug; ?><?php endforeach; ?>" data-date="<?php the_time("ymdHis"); ?>">
 
-					<div class="row">
+					<div class="rect-items row">
 						<div class="column col-2-3 pad expand">
 							<?php $event_thumbnail_url = get_post_meta($post->ID, 'event_thumbnail_url', true); ?>
 
-							<div class="rect bg" style="background-image:url(<?php echo $event_thumbnail_url; ?>)">
+							<div class="image" style="background-image:url(<?php echo $event_thumbnail_url; ?>)">
 								<div class="valign">
 									<h3 id="event_title-<?php echo $event_id ?>" class="title large">
 										<?php the_title(); ?>
@@ -91,7 +113,7 @@
 							</div>
 						</div>
 						<div class="column col-1-3 pad expand">
-							<div class="square pattern">
+							<div class="content pattern">
 								<div class="event-desc valign">
 									<?php the_excerpt(); ?>
 									<p>

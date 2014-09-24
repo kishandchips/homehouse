@@ -85,9 +85,9 @@
 		</div><!-- .container -->
 
 		<div class="flow">
-			<section class="grid-flow row">
+			<section class="rect-items grid-flow row">
 				<div class="column col-1-3 pad">
-					<div class="rect pattern">
+					<div class="image pattern">
 						<div class="valign">
 							<h3 class="title">Events at house No 19</h3>
 							<p>There is an abundance of events to suit all in June: screening both the World Cup and Wimbledon.</p>
@@ -120,7 +120,7 @@
 				 <?php if($upcoming_events->have_posts()): while($upcoming_events->have_posts()): $upcoming_events->the_post(); ?>
 				<div class="column col-1-3 pad">
 					<?php $event_thumbnail_url = get_post_meta($post->ID, 'event_thumbnail_url', true); ?>
-					<div class="rect bg" style="background-image:url(<?php echo $event_thumbnail_url; ?>)">
+					<div class="image" style="background-image:url(<?php echo $event_thumbnail_url; ?>)">
 						<div class="valign">
 							<h3 class="title"><?php the_title(); ?></h3>
 							<p><a href="<?php the_permalink(); ?>" class="button primary small">View Event</a></p>

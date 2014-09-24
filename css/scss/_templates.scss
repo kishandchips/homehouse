@@ -6,7 +6,6 @@
 	background-image:url(../img/white-bg.jpg) !important;
 }
 
-
 #home{
 	background-color: black;
 	overflow: hidden;
@@ -35,6 +34,7 @@
 				margin:0;
 			}
 		}
+
 	}//.events
 
 	.members{
@@ -89,6 +89,14 @@
 #events{
 	background-color: #181818;
 
+	.rect-items{
+		.content{
+			@media screen and (max-width: 750px){
+				display: none;
+			}
+		}
+	}
+
 	#filters{
 		position: relative;
 		
@@ -107,6 +115,7 @@
 		}
 		button{
 			color: #fff;
+			padding: 0.2em;
 		}
 
 		.filter-heading{
@@ -232,9 +241,6 @@
    BEDROOMS
    ========================================================================== */
 #bedrooms{
-	.inner-content{
-		width: 80%;
-	}
 	.bedroom{
 		background-color: #000;
 	}
@@ -252,11 +258,7 @@
    ========================================================================== */
 
 #calendar{
-	color: #000;
-
-	.inner-content{
-
-	}
+	color: #fff;
 }
 
 #espresso_calendar table.fc-border-separate td {
@@ -269,7 +271,11 @@
 #espresso_calendar{
 	margin: 0;
 	padding: 3em;
-	background-color: #fff;
+	background-color: #272727;
+
+	@media screen and (max-width: 600px){
+		padding: 1em 10px;
+	}
 
 	.fc-widget-header, .fc-widget-content{
 		border: none !important;
@@ -334,7 +340,7 @@
 		@include transition(all,.3s);
 
 		&.fc-today{
-			background-color: #2ecc71 !important;
+			background-color: #fff !important;
 
 			.fc-day-number{
 				color: #fff !important;
@@ -342,7 +348,7 @@
 		}
 	}
 	.fc-day:hover{
-		background-color: #3498db !important;
+		background-color: #6F8DA2 !important;
 
 		.fc-day-number{
 			color: #fff !important;
@@ -357,6 +363,20 @@
 	}
 }
 
+.qtip-jtools{
+	background: #272727 !important;
+	font-size: 0.8em !important;
+
+	a{
+		color: #A268BE;
+		border-bottom: 1px solid transparent;
+		@include transition(all,.3s);
+
+		&:hover{
+			border-bottom: 1px solid #A268BE;
+		}
+	}
+}
 /* ==========================================================================
    LOVE FROM CEDRIC
    ========================================================================== */

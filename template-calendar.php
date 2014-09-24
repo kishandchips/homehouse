@@ -11,7 +11,7 @@
 	<div id="calendar">
 <?php endif; ?>
 
-	<div id="content-wrapper" class="page-pattern-white">
+	<div id="content-wrapper">
 		<div class="container">
 
 			<?php if(get_field('sidebar')): ?>

@@ -26,6 +26,10 @@ body{
 	min-height: 100%;
 	background-image: url(../img/page-bg.jpg);
 	background-repeat: repeat;
+
+	.sidebar-visible &{
+		overflow-x:hidden;
+	}
 }
 
 /* ==========================================================================
@@ -469,10 +473,15 @@ nav{
 		text-align: center;
 		z-index: 100;
 
+		@media screen and (max-width:500px){
+			width: 80%;
+			margin-left: 10%;
+		}
+
 		.title{
 			padding:0 0.5em;
 			font-size: 5em;
-			background-color: rgba(#000, 0.4);
+			line-height: 1;
 			
 			@media screen and (min-width: 1440px){
 				font-size: 5em;
@@ -487,7 +496,11 @@ nav{
 				font-size: 2em;
 			}
 		}
-	}
+
+		.button{
+			margin-top: 1em;
+		}
+	}// .hero-content
 
 	&.flexslider{
 		height: 600px;
@@ -501,7 +514,7 @@ nav{
 			height: 350px;	
 		}
 		@media screen and (max-width:400px){
-			height: 200px;	
+			height: 250px;	
 		}
 
 		.slides{
@@ -511,11 +524,19 @@ nav{
 				background-size:cover;
 				background-position: center;
 
+				&:after{
+					content:"";
+					display: block;
+					position: absolute;
+					top:0;right:0;bottom:0;left:0;
+					background-color: rgba(#000, 0.5);
+				}
+
 				@media screen and (max-width:700px){
 					height: 350px;	
 				}
 				@media screen and (max-width:400px){
-					height: 200px;	
+					height: 250px;	
 				}
 
 				img{
@@ -528,6 +549,10 @@ nav{
 
 		.flex-control-nav{
 			bottom:25px;
+
+			@media screen and (max-width: 500px){
+				bottom: 0;
+			}
 
 			&.flex-control-paging{
 
@@ -544,6 +569,16 @@ nav{
 						width: 20px;
 						background: rgba(255,255,255,1);
 					}
+
+					@media screen and (max-width: 500px){
+						width: 5px;
+						height: 5px;
+
+						&.flex-active{
+							width: 10px;
+							height: 10px;
+						}
+					}
 				}
 			}
 		}// .flex-control-nav
@@ -552,6 +587,15 @@ nav{
 	&.image{
 		position: relative;
 		height: 500px;
+		background-size: cover;
+
+		&:after{
+			content:"";
+			display: block;
+			position: absolute;
+			top:0;right:0;bottom:0;left:0;
+			background-color: rgba(#000, 0.5);
+		}
 			
 		@media screen and (max-width:700px){
 			height: 350px;	
@@ -782,6 +826,7 @@ nav{
 
 .row{
 	margin:0;
+
 	.column{
 		&.col-1-3.expand{
 			@media screen and (max-width:750px){
@@ -812,39 +857,47 @@ nav{
 	padding-top: 100%;
 
 	.valign{
+		width: 100%;
 		padding: 0 3em;
-	}
-}// .rect
+		text-align: center;
+		z-index: 10;
 
-.rect{
-	position: relative;
-	padding-top: 49.3%;
+		@media screen and (max-width: 600px){
+			padding: 0 2em;
+		}
 
-	.valign{
-		padding: 0 4em;
-	}
-}// .rect
+		.title{
+			@include text-shadow(0 0 5px rgba(51,51,51,0.5));
 
-.square, .rect{
-	&.bg{
-		background-size:cover;
-		background-position: center;
-		
-		&:hover{
-			&:after{
-				background-color: rgba(51,51,51,0.4);
+			@media screen and (max-width: 600px){
+				font-size: 1.5em;
+				line-height: 1.1;
 			}
 		}
-		&:after{
-			content:"";
-			display: inline-block;
-			position:absolute;
-			top:0;
-			width:100%;
-			height:100%;
-			background-color: rgba(51,51,51,0.2);
-			@include transition(all,.3s);
-			z-index: 5;
+	}
+}// .square
+
+.rect-items{
+	.image, .content{
+		position: relative;
+		height: 350px;
+	}
+
+	.content{
+		@media screen and (max-width: 750px){
+			height: 200px;
+		}
+
+		.valign{
+			padding: 0 3em;
+		}
+	}
+
+	.image{
+		@extend .bg;
+
+		.valign{
+			padding: 0 2em;
 		}
 	}
 
@@ -852,36 +905,50 @@ nav{
 		width: 100%;
 		text-align: center;
 		z-index: 10;
+	}
+}// .rect-item
 
-		.title{
-			@include text-shadow(0 0 5px rgba(51,51,51,0.5));
+.bg{
+	background-size:cover;
+	background-position: center;
+	
+	&:hover{
+		&:after{
+			background-color: rgba(51,51,51,0.4);
 		}
 	}
-}// .square,.rect
+	&:after{
+		content:"";
+		display: inline-block;
+		position:absolute;
+		top:0;
+		width:100%;
+		height:100%;
+		background-color: rgba(51,51,51,0.2);
+		@include transition(all,.3s);
+		z-index: 5;
+	}
+}// .bg
 
 .flow{
     position: relative;
 
 	@media screen and (max-width:750px){
 		overflow-y: hidden;
-    	overflow-x: auto;	
+    	overflow-x: scroll;	
 	}
 
     .grid-flow{
-    	overflow:hidden;
+    	overflow-y: hidden;
+    	overflow-x: scroll;
     	width: 100%;
     	background-color: black;
 
 		@media screen and (max-width:1000px){
-    		.column.col-1-3{
-				font-size: 60%;
-			}	
 		}
 
     	@media screen and (min-width:600px) and (max-width: 800px){
-    		.column.col-1-3{
-				font-size: 60%;
-			}	
+
     	}
 
 		@media screen and (max-width:750px){
@@ -889,7 +956,7 @@ nav{
 		}
 
 		@media screen and (max-width: 480px){
-			width:720px;
+			width: 720px;
 		}
 
 		@media screen and (max-width: 320px){

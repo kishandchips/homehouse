@@ -8,7 +8,7 @@
 
 		<?php if(get_field('display_grid')): ?>
 			<div class="flow">
-				<section class="grid-flow row">
+				<section class="rect-items grid-flow row">
 				<?php global $post; ?>
 
 				<?php $grid_items = get_field('grid_items'); ?>
@@ -33,9 +33,9 @@
 					
 					<?php if(get_sub_field('display_background')): ?>
 						<?php $image = get_sub_field('grid_image'); ?>
-						<div class="rect bg"  style="background-image:url(<?php echo $image['url']; ?>)">
+						<div class="image"  style="background-image:url(<?php echo $image['url']; ?>)">
 					<?php else: ?>
-						<div class="rect pattern">
+						<div class="image pattern">
 					<?php endif; ?>
 							<div class="valign">
 								<?php the_sub_field('grid_content') ?>

@@ -32,7 +32,7 @@
 
 						<div class="hero image" style="background-image:url(<?php echo $image['url']; ?>)">
 	
-							<div class="hero-content"">
+							<div class="hero-content">
 								<h2 class="title thin"><?php the_title(); ?></h2>
 							</div>
 
@@ -89,7 +89,7 @@
 
 		<?php if(get_field('display_grid')): ?>
 			<div class="flow">
-				<section class="grid-flow row">
+				<section class="rect-items grid-flow row">
 
 				<?php $grid_items = get_field('grid_items'); ?>
 				<?php $widget_count = count( $grid_items ); ?>
@@ -113,9 +113,9 @@
 					
 					<?php if(get_field('display_background')): ?>
 						<?php $image = get_sub_field('grid_image'); ?>
-						<div class="rect bg"  style="background-image:url(<?php echo $image['url']; ?>)">
+						<div class="image"  style="background-image:url(<?php echo $image['url']; ?>)">
 					<?php else: ?>
-						<div class="rect pattern">
+						<div class="image pattern">
 					<?php endif; ?>
 							<div class="valign">
 								<?php the_sub_field('grid_content') ?>
