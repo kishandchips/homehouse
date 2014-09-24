@@ -20,10 +20,24 @@ button{
 	&.primary{
 		color: #fff;
 		border: 1px solid #fff;
+		
 		&:hover{
 			color: #000;
 			background-color: #fff;
 		}
+		
+		&.invert{
+			color: #000;
+			background-color: #fff;
+			border: 1px solid #fff;
+			
+			&:hover{
+				color: #fff;
+				background-color: #573168;
+				border: 1px solid #573168;
+			}
+		}
+
 	}
 
 	&.secondary{

@@ -1,4 +1,4 @@
-/* ==========================================================================
+ /* ==========================================================================
    BASE
    ========================================================================== */
 
@@ -524,12 +524,43 @@ nav{
 				background-size:cover;
 				background-position: center;
 
-				&:after{
-					content:"";
-					display: block;
+				// &:after{
+				// 	content:"";
+				// 	display: block;
+				// 	position: absolute;
+				// 	top:0;right:0;bottom:0;left:0;
+				// 	background-color: rgba(#000, 0.5);
+				// }
+
+				.slide-content-wrapper{
 					position: absolute;
-					top:0;right:0;bottom:0;left:0;
-					background-color: rgba(#000, 0.5);
+					top: 0;
+					left:0;
+					width: 450px;
+					height: 600px;
+
+					.slide-content{
+						position: relative;
+						top: 10%;
+						left: 10%;
+						width: 80%;
+						height: 80%;
+						padding: 6em 3em;
+						background-repeat: repeat;
+						border: 1px solid #555555;
+
+						.heading{
+							text-transform: uppercase;
+						}
+
+						.slide-title{
+							margin: 0;
+							padding: 0.2em 0;
+							@extend .large;
+							text-transform: uppercase;
+							border-bottom: 2px dotted #fff;
+						}
+					}
 				}
 
 				@media screen and (max-width:700px){
@@ -625,6 +656,112 @@ nav{
 	}
 } // .hero
 
+/* ==========================================================================
+   HOME SLIDER
+   ========================================================================== */
+.slide-content-wrapper{
+		&:after{
+			content:"";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width:100%;
+			height: 100%;
+			display: inline-block;
+			background-repeat: no-repeat;
+		}
+}
+
+.house19-slide{
+	background-image: url(../img/house19-slide.jpg);
+
+	.slide-content-wrapper{
+		&:after{
+			background-image: url(../img/deco-carousel-house-19.png);
+			background-position:100% 100%;
+		}
+	}
+
+	.slide-content{
+		position:relative;
+		background-image: url(../img/bg-box-house-19.jpg);
+	}
+}
+
+.house20-slide{
+	background-image: url(../img/house20-slide.jpg);
+
+	.slide-content-wrapper{
+		&:after{
+			background-image: url(../img/deco-carousel-house-20.png);
+			background-position:100% 100%;
+		}
+	}
+
+	.slide-content{
+		background-image: url(../img/bg-box-house-20.jpg);	
+	}
+}
+
+.house21-slide{
+	background-image: url(../img/house21-slide.jpg);
+	
+	.slide-content-wrapper{
+		&:after{
+			background-image: url(../img/deco-carousel-house-21.png);
+			background-position:100% 100%;
+		}
+	}
+
+	.slide-content{
+		background-image: url(../img/bg-box-house-21.jpg);	
+	}
+}
+
+.restaurants-slide{
+		background-image: url(../img/restaurants-slide.jpg);
+
+	.slide-content-wrapper{
+		&:after{
+			background-image: url(../img/deco-carousel-restaurants.png);
+			background-position:100% 100%;
+		}
+	}
+
+	.slide-content{
+		background-image: url(../img/bg-box-restaurant.jpg);
+	}
+}
+
+.bedrooms-slide{
+	background-image: url(../img/bedrooms-slide.jpg);
+
+	.slide-content-wrapper{
+		&:after{
+			background-image: url(../img/deco-carousel-bedrooms.png);
+			background-position:200% 0;
+		}
+	}
+
+	.slide-content{
+		background-image: url(../img/bg-box-bedrooms.jpg);
+	}
+}
+
+.bars-slide{
+	background-image: url(../img/bars-slide.jpg);
+
+	.slide-content-wrapper{
+		&:after{
+			background-image: url(../img/deco-carousel-bars.png);
+			background-position:100% 100%;
+		}
+	}
+
+	.slide-content{
+		background-image: url(../img/bg-box-bars.jpg);
+	}
+}
 /* ==========================================================================
    HAS SIDEBAR
    ========================================================================== */
