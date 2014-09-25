@@ -36,8 +36,8 @@
 						<div class="description">
 							<?php the_content(); ?>
 						</div>
-						<!-- <?php echo do_shortcode('[ESPRESSO_CART_LINK event_id="'.$event_id.'" direct_to_cart=1 moving_to_cart="Redirecting to cart..."]' ); ?> -->
-						<?php echo do_shortcode('[ESPRESSO_REG_FORM event_id="'.$event_id.'"]' ); ?>
+						<?php echo do_shortcode('[ESPRESSO_CART_LINK event_id="'.$event_id.'" direct_to_cart=1 moving_to_cart="Redirecting to cart..."]' ); ?>
+						<!-- <?php echo do_shortcode('[ESPRESSO_REG_FORM event_id="'.$event_id.'"]' ); ?> -->
 
 					</div>
 					<?php endwhile; endif; ?>
