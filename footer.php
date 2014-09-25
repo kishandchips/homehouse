@@ -13,7 +13,7 @@
 		</ul>
 	</div>
 
-	<div class="sitemap pattern clearfix">
+	<div class="sitemap clearfix">
 		<div class="left">
 			<div class="logo">
 			 <a href="<?php echo bloginfo('url'); ?>" title="Homehouse">

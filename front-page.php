@@ -10,12 +10,14 @@
 				
 				<div class="slide-content-wrapper">
 					<div class="slide-content">
-						<span class="heading">
-							Explore
-						</span>
-						<p class="slide-title">House No 19</p>
-						<p>The ultimate sophisticated, yet relaxed entertaining space. This is the perfect place to enjoy sumptuous Brasserie style dining or long cocktail soirees, where spontaneous outbursts of revelry abound.</p>
-						<a href="#" class="button primary invert small">See the House</a>
+						<div class="inner">
+							<span class="heading">
+								Explore
+							</span>
+							<p class="slide-title">House No 19</p>
+							<p>The ultimate sophisticated, yet relaxed entertaining space. This is the perfect place to enjoy sumptuous Brasserie style dining or long cocktail soirees, where spontaneous outbursts of revelry abound.</p>
+							<a href="#" class="button primary invert small">See the House</a>							
+						</div>
 					</div>
 				</div>
 			</li><!-- .house19-slide -->
@@ -25,12 +27,14 @@
 				
 				<div class="slide-content-wrapper">
 					<div class="slide-content">
-						<span class="heading">
-							Explore
-						</span>
-						<p class="slide-title">House No 20</p>
-						<p>The sumptuous Drawing Rooms provide the ideal setting for a quintessentially British Afternoon Tea, a casual dinner or a decadent cocktail...</p>
-						<a href="#" class="button primary invert small">See the House</a>
+						<div class="inner">
+							<span class="heading">
+								Explore
+							</span>
+							<p class="slide-title">House No 20</p>
+							<p>The sumptuous Drawing Rooms provide the ideal setting for a quintessentially British Afternoon Tea, a casual dinner or a decadent cocktail...</p>
+							<a href="#" class="button primary invert small">See the House</a>							
+						</div>
 					</div>
 				</div>
 			</li><!-- .house20-slide -->
@@ -40,12 +44,14 @@
 				
 				<div class="slide-content-wrapper">
 					<div class="slide-content">
-						<span class="heading">
-							Explore
-						</span>
-						<p class="slide-title">House No 21</p>
-						<p>Where Georgian grandeur meets cutting edge design... creating a unique space that is perfect for work, rest or play...</p>
-						<a href="#" class="button primary invert small">See the House</a>
+						<div class="inner">
+							<span class="heading">
+								Explore
+							</span>
+							<p class="slide-title">House No 21</p>
+							<p>Where Georgian grandeur meets cutting edge design... creating a unique space that is perfect for work, rest or play...</p>
+							<a href="#" class="button primary invert small">See the House</a>							
+						</div>
 					</div>
 				</div>
 			</li><!-- .house21-slide -->
@@ -55,12 +61,14 @@
 				
 				<div class="slide-content-wrapper">
 					<div class="slide-content">
-						<span class="heading">
-							The
-						</span>
-						<p class="slide-title">Restaurants</p>
-						<p>From British classics to Asian delights, there is a taste to suit every bud.</p>
-						<a href="#" class="button primary invert small">See the Restaurants</a>
+						<div class="inner">
+							<span class="heading">
+								The
+							</span>
+							<p class="slide-title">Restaurants</p>
+							<p>From British classics to Asian delights, there is a taste to suit every bud.</p>
+							<a href="#" class="button primary invert small">See the Restaurants</a>							
+						</div>
 					</div>
 				</div>
 			</li><!-- .restaurants-slide -->
@@ -70,12 +78,14 @@
 				
 				<div class="slide-content-wrapper">
 					<div class="slide-content">
-						<span class="heading">
-							The
-						</span>
-						<p class="slide-title">Bedrooms</p>
-						<p>The 20 luxurious rooms and suites are beautifully spacious and offer guests a warm and exclusive living space with the highest standards in comfort and technology...</p>
-						<a href="#" class="button primary invert small">See the Bedrooms</a>
+						<div class="inner">
+							<span class="heading">
+								The
+							</span>
+							<p class="slide-title">Bedrooms</p>
+							<p>The 20 luxurious rooms and suites are beautifully spacious and offer guests a warm and exclusive living space with the highest standards in comfort and technology...</p>
+							<a href="#" class="button primary invert small">See the Bedrooms</a>							
+						</div>
 					</div>
 				</div>
 			</li><!-- .bedrooms-slide -->
@@ -85,12 +95,14 @@
 				
 				<div class="slide-content-wrapper">
 					<div class="slide-content">
-						<span class="heading">
-							The
-						</span>
-						<p class="slide-title">Bars</p>
-						<p>From the futuristic Zaha Hadid designed bar in House 21 to the classic Bison Bar, there are myriad opportunities to socialise and celebrate...</p>
-						<a href="#" class="button primary invert small">See the Bars</a>
+						<div class="inner">
+							<span class="heading">
+								The
+							</span>
+							<p class="slide-title">Bars</p>
+							<p>From the futuristic Zaha Hadid designed bar in House 21 to the classic Bison Bar, there are myriad opportunities to socialise and celebrate...</p>
+							<a href="#" class="button primary invert small">See the Bars</a>							
+						</div>
 					</div>
 				</div>
 			</li><!-- .bars-slide -->

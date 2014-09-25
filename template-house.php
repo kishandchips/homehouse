@@ -87,7 +87,7 @@
 		<div class="flow">
 			<section class="rect-items grid-flow row">
 				<div class="column col-1-3 pad">
-					<div class="image pattern">
+					<div class="content pattern">
 						<div class="valign">
 							<h3 class="title">Events at house No 19</h3>
 							<p>There is an abundance of events to suit all in June: screening both the World Cup and Wimbledon.</p>

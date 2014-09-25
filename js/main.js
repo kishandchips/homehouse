@@ -23,7 +23,8 @@
 
 			main.w.on('load', function(){
 				$('.flexslider').flexslider({
-			    	animation: "slide"
+			    	animation: "slide",
+			    	controlNav: false,
 			  	});
 			});
 
@@ -247,7 +248,6 @@
   							sortBy: sortByValue, 
   							sortAscending:{ 
   								name:true,
-  								date: true
   							}
   						});
 					});
@@ -259,7 +259,6 @@
   							sortBy: sortByValue, 
   							sortAscending:{ 
   								name:false,
-  								date:false
   							}
   						});
 					});

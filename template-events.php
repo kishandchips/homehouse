@@ -23,6 +23,7 @@
 					<li style='background-image: url(<?php echo $event_thumbnail_url; ?>)'>
 						<div class="hero-content">
 							<h2 class="title thin"><?php the_title(); ?></h2>
+							<br>
 							<a href="<?php the_permalink(); ?>" class="button primary small">View Event</a>
 						</div>
 						<img src="<?php echo $event_thumbnail_url; ?>">
@@ -33,6 +34,8 @@
 	</section><!-- hero flexslider -->
 	<?php endif; ?>
 
+	<?php $current_month = date('m'); ?>
+	<?php $next_month = date("m",strtotime("+1 months")); ?>
 	<div id="content-wrapper">
 		<div id="filters">
 			<button class="button filter-heading js-toggle">
@@ -59,10 +62,10 @@
 						</ul>
 					</li>
 					<li>
-						<b class="filter-heading">Filter by Date</b>
+						<b class="filter-heading">Filter by Month</b>
 						<ul class="filter-list">
-							<li><button class="button sort" data-sort-by="date">Ascending</button></li>
-							<li><button class="button sort-desc" data-sort-by="date">Descending</button></li>
+							<li><button class="button filter" data-filter=".<?php echo $current_month; ?>">Current Month</button></li>
+							<li><button class="button filter" data-filter=".<?php echo $next_month; ?>">Next Month</button></li>
 						</ul>
 					</li>
 				</ul>
@@ -95,7 +98,7 @@
 					
 				</pre>
 
-				<article id="event_data-<?php echo $event_id ?>" class="item event <?php foreach ($catArray as $cat): ?><?php echo $cat->slug; ?><?php endforeach; ?>" data-date="<?php the_time("ymdHis"); ?>">
+				<article id="event_data-<?php echo $event_id ?>" class="item event <?php the_time('m'); ?> <?php foreach ($catArray as $cat): ?><?php echo $cat->slug; ?><?php endforeach; ?>" data-date="<?php the_time("ymdHis"); ?>">
 
 					<div class="rect-items row">
 						<div class="column col-2-3 pad expand">

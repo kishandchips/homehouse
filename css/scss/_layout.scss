@@ -152,7 +152,7 @@ body{
 #header{
 	position: relative;
 	text-align:center;
-	background-image: url(../img/header-bg.jpg);
+	background-image: url(../img/header-bg.png);
 	background-repeat: repeat;
 	border-bottom: 5px solid black;
 
@@ -238,11 +238,18 @@ nav{
 				%menu-links{
 					display: inline-block;
 					margin: 1em 0;
+					padding-bottom: 2px;
 					color: #454545;
 					font-size: 0.75em;
 					font-weight: bold;
 					text-transform: uppercase;
 					text-decoration: none;
+					border-bottom: 1px solid transparent;
+					@include transition(all,.3s);
+
+					&:hover{
+						border-bottom: 1px solid #454545;
+					}
 				}
 				
 				// LINKS WITH CHILDREN
@@ -479,9 +486,10 @@ nav{
 		}
 
 		.title{
-			padding:0 0.5em;
+			display: inline;
+			padding: 0.155em 0.4em;
 			font-size: 5em;
-			line-height: 1;
+			background-color: rgba(#000, 0.4);
 			
 			@media screen and (min-width: 1440px){
 				font-size: 5em;
@@ -524,14 +532,6 @@ nav{
 				background-size:cover;
 				background-position: center;
 
-				// &:after{
-				// 	content:"";
-				// 	display: block;
-				// 	position: absolute;
-				// 	top:0;right:0;bottom:0;left:0;
-				// 	background-color: rgba(#000, 0.5);
-				// }
-
 				.slide-content-wrapper{
 					position: absolute;
 					top: 0;
@@ -561,7 +561,7 @@ nav{
 							border-bottom: 2px dotted #fff;
 						}
 					}
-				}
+				}// .slide-content-wrapper
 
 				@media screen and (max-width:700px){
 					height: 350px;	
@@ -575,7 +575,7 @@ nav{
 					height: 100%;
 					@include opacity(0);
 				}
-			}
+			}// li
 		}// .slides
 
 		.flex-control-nav{
@@ -660,16 +660,22 @@ nav{
    HOME SLIDER
    ========================================================================== */
 .slide-content-wrapper{
-		&:after{
-			content:"";
-			position: absolute;
-			top: 0;
-			left: 0;
-			width:100%;
-			height: 100%;
-			display: inline-block;
-			background-repeat: no-repeat;
-		}
+	.inner{
+		position: relative;
+		z-index: 50;
+	}
+
+	&:after{
+		content:"";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width:100%;
+		height: 100%;
+		display: inline-block;
+		background-repeat: no-repeat;
+		z-index: 10;
+	}
 }
 
 .house19-slide{
@@ -684,7 +690,7 @@ nav{
 
 	.slide-content{
 		position:relative;
-		background-image: url(../img/bg-box-house-19.jpg);
+		background-image: url(../img/purple-flower-pattern.jpg);
 	}
 }
 
@@ -699,7 +705,7 @@ nav{
 	}
 
 	.slide-content{
-		background-image: url(../img/bg-box-house-20.jpg);	
+		background-image: url(../img/green-pattern.jpg);	
 	}
 }
 
@@ -714,7 +720,7 @@ nav{
 	}
 
 	.slide-content{
-		background-image: url(../img/bg-box-house-21.jpg);	
+		background-image: url(../img/purple-pattern.jpg);	
 	}
 }
 
@@ -729,7 +735,7 @@ nav{
 	}
 
 	.slide-content{
-		background-image: url(../img/bg-box-restaurant.jpg);
+		background-image: url(../img/green-pattern.jpg);
 	}
 }
 
@@ -744,7 +750,7 @@ nav{
 	}
 
 	.slide-content{
-		background-image: url(../img/bg-box-bedrooms.jpg);
+		background-image: url(../img/grey-pattern.jpg);
 	}
 }
 
@@ -759,7 +765,7 @@ nav{
 	}
 
 	.slide-content{
-		background-image: url(../img/bg-box-bars.jpg);
+		background-image: url(../img/purple-pattern.jpg);
 	}
 }
 /* ==========================================================================
@@ -945,16 +951,16 @@ nav{
 }//.content-wrapper
 
 .inner-content{
-		a{
-			color: #A268BE;
-			text-decoration: none;
-			border-bottom: 1px solid transparent;
-			@include transition(all,.3s);
-			
-			&:hover{
-				border-bottom: 1px solid #A268BE;
-			}
+	a{
+		color: #A268BE;
+		text-decoration: none;
+		border-bottom: 1px solid transparent;
+		@include transition(all,.3s);
+		
+		&:hover{
+			border-bottom: 1px solid #A268BE;
 		}
+	}
 }
 
 /* ==========================================================================
@@ -1004,12 +1010,9 @@ nav{
 		}
 
 		.title{
-			@include text-shadow(0 0 5px rgba(51,51,51,0.5));
-
-			@media screen and (max-width: 600px){
-				font-size: 1.5em;
-				line-height: 1.1;
-			}
+			display: inline;
+			padding: 0.155em 0.4em;
+			background-color: rgba(#000, 0.4);
 		}
 	}
 }// .square
@@ -1018,6 +1021,10 @@ nav{
 	.image, .content{
 		position: relative;
 		height: 350px;
+
+		@media screen and (min-width: 1600px){
+			height:500px;
+		}
 	}
 
 	.content{
@@ -1042,6 +1049,16 @@ nav{
 		width: 100%;
 		text-align: center;
 		z-index: 10;
+
+		h3{
+			margin-bottom: 0.5em;
+		}
+	}
+
+	.title{
+		display: inline;
+		padding: 0.155em 0.4em;
+		background-color: rgba(#000, 0.4);
 	}
 }// .rect-item
 
@@ -1103,7 +1120,7 @@ nav{
 }// .flow
 
 .pattern{
-	background-image: url(../img/black-bg.png);
+	background-image: url(../img/grey-pattern.jpg);
 	background-repeat: repeat;
 }// .pattern
 
@@ -1149,6 +1166,8 @@ nav{
 	.sitemap{
 		position: relative;
 		padding:1em;
+		background-image: url(../img/black-bg.png);
+		background-repeat: repeat;
 
 		>.left{
 
