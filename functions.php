@@ -12,7 +12,10 @@ $template_directory_uri = get_template_directory_uri();
 	);
 
 // Image sizes
-	add_image_size( '', 300, 300, true );
+	add_image_size( 'slider', 1600, 700, true );
+	add_image_size( 'grid-square', 525, 525, true );
+	add_image_size( 'grid-rect-med', 800, 500, true );
+	add_image_size( 'grid-rect-large', 1100, 500, true );
 
 // Scripts Etc
 function custom_styles(){

@@ -4,12 +4,12 @@
 
 	<?php if(get_field('header_image')): ?>
 		<?php $image = get_field('header_image'); ?>
-		<section class="hero image" style="background-image:url(<?php echo $image['url']; ?>)">
+		<section class="hero image" style="background-image:url(<?php echo $image['sizes']['slider']; ?>)">
 			<img src="<?php echo $image['url']; ?>" alt="">
 		</section><!-- hero image -->
 	<?php else : ?>
-		<?php $image = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
-		<section class="hero image" style="background-image:url(<?php echo $image ?>)">
+		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'slider' ); ?>
+		<section class="hero image" style="background-image:url(<?php echo $image[0]; ?>)">
 			<img src="<?php echo $image ?>" alt="">
 		</section><!-- hero image -->
 	<?php endif; ?>

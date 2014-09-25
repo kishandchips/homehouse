@@ -58,8 +58,8 @@
 		<div class="bedroom">
 			<div class="rect-items row">
 				<div class="column col-2-3 pad expand">
-					<?php $url = wp_get_attachment_url( get_post_thumbnail_id($page->ID) ); ?>
-					<div class="image" style="background-image:url(<?php echo $url ?>)">
+					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'slider' ); ?>
+					<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
 					</div>
 				</div>
 				<div class="column col-1-3 pad expand">

@@ -20,8 +20,8 @@
 
 						<ul class="slides">
 							<?php foreach ($images as $image): ?>
-								<li style='background-image: url(<?php echo $image['url']; ?>)'>
-									<img src="<?php echo $image['url']; ?>">
+								<li style='background-image: url(<?php echo $image['sizes']['slider']; ?>)'>
+									<img src="<?php echo $image['sizes']['slider']; ?>">
 								</li>
 							<?php endforeach; ?>
 						</ul>
@@ -30,13 +30,13 @@
 				<?php else: ?>
 					<?php foreach ($images as $image): ?>
 
-						<div class="hero image" style="background-image:url(<?php echo $image['url']; ?>)">
+						<div class="hero image" style="background-image:url(<?php echo $image['sizes']['slider']; ?>)">
 	
 							<div class="hero-content">
 								<h2 class="title thin"><?php the_title(); ?></h2>
 							</div>
 
-							<img src="<?php echo $image['url']; ?>">
+							<img src="<?php echo $image['sizes']['slider']; ?>">
 						</div><!-- hero image -->
 
 					<?php endforeach; ?>
@@ -113,7 +113,7 @@
 					
 					<?php if(get_field('display_background')): ?>
 						<?php $image = get_sub_field('grid_image'); ?>
-						<div class="image"  style="background-image:url(<?php echo $image['url']; ?>)">
+						<div class="image"  style="background-image:url(<?php echo $image['sizes']['grid-rect-med']; ?>)">
 					<?php else: ?>
 						<div class="image pattern">
 					<?php endif; ?>

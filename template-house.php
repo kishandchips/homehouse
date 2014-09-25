@@ -25,7 +25,7 @@
 
 						<ul class="slides">
 							<?php foreach ($images as $image): ?>
-								<li style='background-image: url(<?php echo $image['url']; ?>)'>
+								<li style='background-image: url(<?php echo $image['sizes']['slider']; ?>)'>
 									<img src="<?php echo $image['url']; ?>">
 								</li>
 							<?php endforeach; ?>
@@ -35,7 +35,7 @@
 				<?php else: ?>
 					<?php foreach ($images as $image): ?>
 
-						<div class="hero image" style="background-image:url(<?php echo $image['url']; ?>)">
+						<div class="hero image" style="background-image:url(<?php echo $image['sizes']['slider']; ?>)">
 	
 							<div class="hero-content">
 								<h2 class="title thin"><?php the_title(); ?></h2>

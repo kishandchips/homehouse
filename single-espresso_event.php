@@ -15,6 +15,8 @@
 		<div class="container">
 				<section class="inner-content">
 					<header>
+						<span>You're booking tickets for:</span>
+						<hr>
 						<h2 class="title large"><?php the_title(); ?></h2>						
 					</header>
 

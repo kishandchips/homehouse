@@ -218,7 +218,6 @@
 
 	.inner-content{
 		padding: 4em;
-		background-color: #fff;
 		
 		.title{
 			width: 50%;
@@ -228,12 +227,15 @@
 		.description{
 			max-width: 600px;
 		}
-	}
 
-	.form{
-		.section-heading{
+		hr{
+			margin:1em 0;
 			border-bottom: 2px solid #000;
 		}
+	}
+
+	.section-title{
+		margin-top: 0;
 	}
 }
 

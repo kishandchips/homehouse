@@ -24,6 +24,8 @@ body{
 #kanye-west{
 	position: relative;
 	min-height: 100%;
+	max-width: 1600px;
+	margin: 0 auto;
 	background-image: url(../img/page-bg.jpg);
 	background-repeat: repeat;
 
@@ -511,7 +513,7 @@ nav{
 	}// .hero-content
 
 	&.flexslider{
-		height: 600px;
+		height: 700px;
 		margin:0;
 		background-color: black;
 		border:none;
@@ -528,16 +530,17 @@ nav{
 		.slides{
 			li{
 				position: relative;
-				height:600px;
+				height:700px;
 				background-size:cover;
 				background-position: center;
 
 				.slide-content-wrapper{
-					position: absolute;
-					top: 0;
-					left:0;
 					width: 450px;
-					height: 600px;
+					height: 700px;
+
+					@media screen and (max-width:700px){
+						display: none;
+					}
 
 					.slide-content{
 						position: relative;
@@ -659,7 +662,20 @@ nav{
 /* ==========================================================================
    HOME SLIDER
    ========================================================================== */
+
 .slide-content-wrapper{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	right: auto;
+	@include opacity(0);
+	@include transition(left, 1.2s);
+
+	.flex-active-slide &{
+		left:0;
+		@include opacity(1);
+	}
+
 	.inner{
 		position: relative;
 		z-index: 50;
@@ -995,6 +1011,14 @@ nav{
 	}
 }// .row
 
+.square, .rect-items{
+	.title{
+		display: inline;
+		padding: 0.155em 0.4em;
+		background-color: rgba(#000, 0.25);
+		@include transition(all,.3s);
+	}
+}
 .square{
 	position: relative;
 	padding-top: 100%;
@@ -1007,12 +1031,6 @@ nav{
 
 		@media screen and (max-width: 600px){
 			padding: 0 2em;
-		}
-
-		.title{
-			display: inline;
-			padding: 0.155em 0.4em;
-			background-color: rgba(#000, 0.4);
 		}
 	}
 }// .square
@@ -1054,12 +1072,6 @@ nav{
 			margin-bottom: 0.5em;
 		}
 	}
-
-	.title{
-		display: inline;
-		padding: 0.155em 0.4em;
-		background-color: rgba(#000, 0.4);
-	}
 }// .rect-item
 
 .bg{
@@ -1067,10 +1079,15 @@ nav{
 	background-position: center;
 	
 	&:hover{
+		.title{
+			background:none;
+		}
+
 		&:after{
-			background-color: rgba(51,51,51,0.4);
+			background-color: rgba(51,51,51,0.7);
 		}
 	}
+
 	&:after{
 		content:"";
 		display: inline-block;

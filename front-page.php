@@ -20,7 +20,7 @@
 						</div>
 					</div>
 				</div>
-			</li><!-- .house19-slide -->
+			</li>
 
 			<li class="house20-slide">
 				<img src="">
@@ -37,7 +37,7 @@
 						</div>
 					</div>
 				</div>
-			</li><!-- .house20-slide -->
+			</li>
 
 			<li class="house21-slide">
 				<img src="">
@@ -54,7 +54,7 @@
 						</div>
 					</div>
 				</div>
-			</li><!-- .house21-slide -->
+			</li>
 
 			<li class="restaurants-slide">
 				<img src="">
@@ -71,7 +71,7 @@
 						</div>
 					</div>
 				</div>
-			</li><!-- .restaurants-slide -->
+			</li>
 
 			<li class="bedrooms-slide">
 				<img src="">
@@ -88,7 +88,7 @@
 						</div>
 					</div>
 				</div>
-			</li><!-- .bedrooms-slide -->
+			</li>
 
 			<li class="bars-slide">
 				<img src="">
@@ -105,11 +105,11 @@
 						</div>
 					</div>
 				</div>
-			</li><!-- .bars-slide -->
+			</li>
 
 
 		</ul>
-	</section><!-- hero flexslider -->
+	</section>
 
 	<div id="content-wrapper">
 		<div class="flow">
@@ -119,8 +119,8 @@
 				<?php foreach ($posts as $post): ?>
 					<?php setup_postdata($post); ?>
 				<div class="column col-1-3 pad">
-					<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-					<div class="square bg" style="background-image:url(<?php echo $url; ?>)">
+					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'grid-square' ); ?>
+					<div class="square bg" style="background-image:url(<?php echo $image[0]; ?>)">
 						<div class="valign">
 							<h3 class="title large">
 								<?php the_title(); ?>
@@ -185,16 +185,15 @@
 			<?php if($posts): ?>
 				<?php foreach ($posts as $post): ?>
 				<?php setup_postdata($post); ?>
-					<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 				<?php if(count($posts)== 2): ?>
-
+					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'grid-rect-med' ); ?>
 					<div class="column col-1-2 pad">
-					<div class="image" style="background-image:url(<?php echo $url; ?>)">
+					<div class="image" style="background-image:url(<?php echo $image[0]; ?>)">
 
 				<?php else : ?>
-
+					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'grid-square' ); ?>
 					<div class="column col-1-3 pad">
-					<div class="square bg" style="background-image:url(<?php echo $url; ?>)">
+					<div class="square bg" style="background-image:url(<?php echo $image[0]; ?>)">
 
 				<?php endif; ?>
 					
@@ -221,9 +220,9 @@
 
 					<?php $posts = get_sub_field('page'); ?>
 					<?php foreach ($posts as $post): setup_postdata( $post );?>
-						<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+						<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'grid-rect-med' ); ?>
 
-						<div class="image" style="background-image:url(<?php echo $url; ?>)">
+						<div class="image" style="background-image:url(<?php echo $image[0]; ?>)">
 							<div class="valign">
 								<h2 class="title large"><?php the_sub_field('title_text') ?></h2>
 								<p>

@@ -33,9 +33,10 @@ body {
   display: inline-block;
   margin: 0;
   font-family: 'GaramondPrmrW01-BdCap';
+  font-weight: normal;
   text-transform: uppercase;
   text-decoration: none; }
-  /* line 31, scss/_typography.scss */
+  /* line 32, scss/_typography.scss */
   .title.thin {
     font-weight: 300;
     letter-spacing: 2px; }
