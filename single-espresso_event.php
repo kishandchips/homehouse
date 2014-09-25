@@ -11,13 +11,13 @@
 
 	</section><!-- hero-slider -->
 	
-	<div id="content-wrapper" class="page-pattern-white clearfix">
+	<div id="content-wrapper">
 		<div class="container">
 				<section class="inner-content">
 					<header>
 						<span>You're booking tickets for:</span>
 						<hr>
-						<h2 class="title large"><?php the_title(); ?></h2>						
+						<h2 class="title xlarge"><?php the_title(); ?></h2>						
 					</header>
 
 					<?php if(have_posts()): while(have_posts()): the_post(); ?>

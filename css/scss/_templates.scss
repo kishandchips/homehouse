@@ -215,13 +215,22 @@
 
 #events-single{
 	@extend .black;
+	@extend .page-pattern-white;
 
 	.inner-content{
 		padding: 4em;
 		
-		.title{
-			width: 50%;
-			line-height: 1.7;
+		header{
+			margin: 0;
+			border: none;
+
+			.title{
+				width: 80%;
+			}
+		}
+
+		.body{
+			padding: 0;
 		}
 
 		.description{
@@ -232,10 +241,6 @@
 			margin:1em 0;
 			border-bottom: 2px solid #000;
 		}
-	}
-
-	.section-title{
-		margin-top: 0;
 	}
 }
 
@@ -491,44 +496,8 @@
 		}//.item	
 	}//#isotope
 
-	.inner{
-		padding: 0;
-		background-color: black;
-	}
-
-	a{
-		color: #fff;
-		text-decoration: none;
-	}
-
-	.featured{
-		width: 100%;
-		padding: 20px;
-
-		figure{
-			padding-top: 30%;
-			background-size: cover;
-			background-position: center;
-			@include transition(all,.3s);
-   			
-   			@media screen and (max-width: 700px){
-	   				padding-top: 80%;
-	   		}
-		}
-
-		.meta{
-			padding: 1em 1em 1.3em 1em;
-
-			.cat{
-				margin:0;
-				line-height: 0.5;
-			}
-		}
-
-	}//featured
-
 	#filters{
-		padding: 0 20px;
+		padding: 0 10px;
 
 		p{
 			display: inline-block;
@@ -544,7 +513,70 @@
 			border: 1px solid #fff;
 		}
 	}//#filters
-}
+
+	.inner{
+		padding: 0;
+		background-color: black;
+	}
+	
+	article{
+		&.featured{
+			width: 100%;
+			padding: 10px;
+
+			figure{
+				padding-top: 30%;
+				background-size: cover;
+				background-position: center;
+				@include transition(all,.3s);
+	   			
+	   			@media screen and (max-width: 700px){
+		   				padding-top: 80%;
+		   		}
+			}
+
+			.meta{
+				padding: 1em 1em 1.3em 1em;
+
+				.cat{
+					margin:0;
+					line-height: 0.5;
+				}
+			}
+
+		}//featured
+
+		a{
+			position: relative;
+			display: block;
+			color: #fff;
+			text-decoration: none;
+
+			&:after{
+				content: "";
+				position:absolute;
+				display: inline-block;
+				top:0;right:0;bottom:0;left:0;
+				background-color: transparent;
+				@include transition(all,.3s);
+				z-index: 5;
+			}
+
+			&:hover{
+				&:after{
+					background-color: rgba(51, 51, 51, 0.7);
+				}
+			}
+		}
+
+		.meta{
+			position: relative;
+			background-image: url(../img/header-bg.png);
+			z-index: 10;
+		}
+	}// article
+
+}// #cedric
 
 /* ==========================================================================
    SINGLE CEDRIC

@@ -175,11 +175,36 @@ input[type="submit"]{
 // EVENT ESPRESSO REG FORM
 
 #registration_form{
+	
+	.section-title{
+		margin-top: 0;
+	}
+
 	label{
 		&.error{
 			color: #e74c3c;
 		}
 	}
+
+	.event_form_field, .espresso_add_attendee{
+		margin-bottom: 1em;
+		
+		label{
+			padding-bottom:0.5em;
+			font-size: 1em;
+			font-weight: 600;
+			text-transform: inherit;
+		}
+
+		input[type="text"]{
+			padding: 1em;
+			color: #414141;
+			font-size: 1em;
+			@include garamond-bold;
+			letter-spacing: 1px;
+		}
+	}
+
 	.additional-attendee-div{
 		display: inline-block;
 
@@ -189,15 +214,18 @@ input[type="submit"]{
 	}
 	
 	.add-additional-attendee-lnk{
-		padding: 0.7em 1.4em;
+		width: 100%;
+		max-width: 320px;
+		padding: 0.3em 1em;
 		color: #fff !important;
+		text-align: center;
 		background-color: #2ecc71;
 		border: 1px solid #27ae60;
 		@include single-text-shadow(none);
 	}
 
 	.remove-additional-attendee-lnk{
-		padding: 0.7em 1.4em;
+		padding: 0.3em 1em;
 		color: #fff !important;
 		background-color: #e74c3c;
 		border: 1px solid #c0392b;
@@ -207,11 +235,10 @@ input[type="submit"]{
 	.espresso_add_attendee{
 		border-bottom: 1px dotted rgba(0,0,0,0.2);
 	}
+
+	.event_form_submit{
+		max-width: 320px;
+		padding: 0;
+		text-align: center;
+	}
 }
-
-
-
-
-
-
-

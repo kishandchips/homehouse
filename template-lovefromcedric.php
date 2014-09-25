@@ -25,12 +25,12 @@
 				<?php foreach($featured as $post): ?>
 				<?php setup_postdata( $post ); ?>
 				<?php $featured_id = $post->ID; ?>
-				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'full' ); ?>
+				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'slider' ); ?>
 				<?php $terms = get_the_terms( $post->ID, 'offer-category' ); ?>
 
 					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?> ">
 						<figure style="background-image: url(<?php echo $image[0] ?>)">
-							<div class="meta pattern">
+							<div class="meta">
 								<h2 class="title"><?php the_title(); ?></h2>
 								<?php foreach ($terms as $term): ?>
 									<p class="cat"><?php echo $term->name ?></p>
@@ -72,7 +72,7 @@
 						<article class="item <?php the_field('item_size'); ?> <?php echo $term_id ?>">
 							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?> ">
 								<figure style="background-image: url(<?php echo $image[0] ?>)">
-									<div class="meta pattern">
+									<div class="meta">
 										<h2 class="title"><?php the_title(); ?></h2>
 										<p class="cat"><?php echo $cat ?></p>
 									</div>

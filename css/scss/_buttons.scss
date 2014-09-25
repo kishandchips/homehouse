@@ -8,9 +8,7 @@ button{
 	position: relative;
 	display: inline-block;
 	padding: 0.7em 1.4em;
-	@include garamond-semi;
-	/*@include playfair;*/
-	font-weight: 700;
+	@include garamond-bold;
 	text-transform: uppercase;
 	text-decoration: none;
 	letter-spacing:1px;
@@ -55,7 +53,7 @@ button{
 		padding-right: 3em;
 		color: #fff;
 		background-color: #503B5A;
-		border: 1px solid #503B5A;
+		border: 1px solid #503B5A !important;
 
 		&:hover{
 			background-color: #573169;
@@ -80,6 +78,16 @@ button{
 		&:hover{
 			background-color: #27ae60;
 			border: 1px solid #27ae60;
+		}
+	}
+
+	&.booking{
+		color: #fff;
+		background-color: #004A09;
+		border: none;
+
+		&:hover{
+			background-color: #27ae60;
 		}
 	}
 	
