@@ -264,11 +264,24 @@ nav{
 							padding: 0 19%;
 							background-image:
 							url(../img/megadrop-dove.png), 
+							url(../img/bg-megadrop-bottom-repeat.png),
 							url(../img/bg-megadrop-cloud-left.png),
 							url(../img/bg-megadrop-cloud-right.png),
 							url(../img/bg-megadrop.jpg);
-							background-position:90% 60%, bottom left, bottom right;
-							background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+							background-position:90% 60%, 0 107%, bottom left, bottom right;
+							background-repeat: no-repeat, repeat-x, no-repeat, no-repeat,  repeat;
+
+							&:after{
+								content: "";
+								display: inline-block;
+								position: absolute;
+								bottom: -68px;
+								left: 50%;
+								width: 731px;
+								height: 78px;
+								margin-left: -365px;
+								background-image: url(../img/bg-megadrop-bottom-center.png);
+							}
 
 							@media screen and (max-width:1000px){
 								padding:0 10%;
@@ -759,9 +772,14 @@ nav{
 	background-image: url(../img/bedrooms-slide.jpg);
 
 	.slide-content-wrapper{
+
+		.slide-content{
+			padding-top: 16em !important;
+		}
+
 		&:after{
 			background-image: url(../img/deco-carousel-bedrooms.png);
-			background-position:200% 0;
+			background-position:85% 0;
 		}
 	}
 

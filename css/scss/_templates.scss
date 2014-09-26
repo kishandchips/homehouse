@@ -729,7 +729,7 @@
 
 	.member-name{
 		margin: 0;
-		@extend .med;
+		@extend .medium;
 		@include playfair;
 		line-height: 0.7;
 		text-transform: uppercase;

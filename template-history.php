@@ -48,7 +48,7 @@
 									<span>Now</span>
 								</div>
 							<div class="body">
-								<p class="med">What's next for <?php the_title(); ?>...?</p>
+								<p class="medium">What's next for <?php the_title(); ?>...?</p>
 								<p><a href="#">Show all Upcoming Events</a></p>
 							</div>
 						</article><!-- .history-snippet -->						

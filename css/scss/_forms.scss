@@ -190,6 +190,21 @@ input[type="submit"]{
 	background-color: rgba(254, 255, 245, 1);
 }
 
+#event_espresso_refresh_total, #event_espresso_edit_cart, 
+.event_espresso_refresh_total, .choose-diff-pay-option-pg{
+	margin: 0;
+	padding: 0;
+	text-align: left;
+
+	>a{
+		display: inline-block;
+		font-size: 1em;
+		margin-top: 2em;
+		padding: 0.3em 0.5em;
+		@extend %cart-functions;
+	}
+}
+
 .event_espresso_form_wrapper, .espresso_add_attendee{
 	margin-bottom: 1em;
 	
@@ -224,7 +239,13 @@ input[type="submit"]{
 .event_espresso_form_wrapper{
 	
 	select{
+		display: inline-block;
+		height: 35px;
 		max-width: 320px;
+		padding: 1em 2em;
+		color: #fff;
+		background-color: #444444;
+		@include border-radius(0);
 	}	
 
 	.multi_regis_wrapper_attendee-primary, .multi_regis_wrapper_attendee-additional{
@@ -236,6 +257,10 @@ input[type="submit"]{
 		margin: 2em 0 0 0;
 		padding: 0;
 		font-size: 1em;
+	}
+
+	.event_espresso_form_wrapper input.small{
+		width: 100px;
 	}
 
 }
@@ -294,14 +319,28 @@ input[type="submit"]{
 // EVENT ESPRESSO SHOPPING CART
 
 #event_espresso_shopping_cart{
+
+
+	.ee_delete_item_from_cart{
+		display: inline-block;
+		margin-left: 1em;
+		color: #c0392b;
+		vertical-align: middle;
+		cursor: pointer;
+	}
+
 	.multi_reg_cart_block{
 		margin: 0;
 		padding: 0;
 	}
 
 	.price_list{
+		tr{
+			border-top: 1px solid #E2E2E2;
+		}
+
 		td{
-			padding: 0 0 5px 0;
+			padding: 10px 0 10px 0;
 		}
 
 		.price{
@@ -310,6 +349,16 @@ input[type="submit"]{
 
 		.reg-allowed-limit{
 			font-style: italic;
+		}
+
+		select{
+			display: inline-block;
+			height: 35px;
+			width: 60px;
+			padding: 1em 2em;
+			color: #fff;
+			background-color: #444444;
+			@include border-radius(0);
 		}
 	}
 
@@ -321,10 +370,6 @@ input[type="submit"]{
 
 		.event_total_price{
 			float: none;
-		}
-
-		#event_espresso_refresh_total{
-			text-align: left;
 		}
 	}
 
@@ -353,8 +398,10 @@ input[type="submit"]{
 .espresso_payment_overview{
 	table{
 		tr{
+			border-top: 1px solid #E2E2E2;;
+
 			td{
-				padding-bottom: 1em;
+				padding: 10px 0;
 				vertical-align: bottom;
 			}
 		}

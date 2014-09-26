@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "17756",
+"creatorBuild": "17908",
 "files": {
 	"\/404.php": {
 		"fileType": 8192,
@@ -357,28 +357,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/img\/atholl.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 158819,
-		"inputAbbreviatedPath": "\/img\/atholl.jpg",
-		"outputAbbreviatedPath": "\/img\/atholl.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/attwick.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 67352,
-		"inputAbbreviatedPath": "\/img\/attwick.jpg",
-		"outputAbbreviatedPath": "\/img\/attwick.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img\/bars-slide.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -408,6 +386,17 @@
 		"initialSize": 163632,
 		"inputAbbreviatedPath": "\/img\/bells.png",
 		"outputAbbreviatedPath": "\/img\/bells.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/bg-megadrop-bottom-center.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 29734,
+		"inputAbbreviatedPath": "\/img\/bg-megadrop-bottom-center.png",
+		"outputAbbreviatedPath": "\/img\/bg-megadrop-bottom-center.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -456,50 +445,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/blunt.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 149608,
-		"inputAbbreviatedPath": "\/img\/blunt.jpg",
-		"outputAbbreviatedPath": "\/img\/blunt.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/bulmers.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 340043,
-		"inputAbbreviatedPath": "\/img\/bulmers.jpg",
-		"outputAbbreviatedPath": "\/img\/bulmers.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/carolines.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 121027,
-		"inputAbbreviatedPath": "\/img\/carolines.jpg",
-		"outputAbbreviatedPath": "\/img\/carolines.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/carousel-home-slide-blog.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 339822,
-		"inputAbbreviatedPath": "\/img\/carousel-home-slide-blog.jpg",
-		"outputAbbreviatedPath": "\/img\/carousel-home-slide-blog.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img\/cedric.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -507,17 +452,6 @@
 		"initialSize": 14676,
 		"inputAbbreviatedPath": "\/img\/cedric.png",
 		"outputAbbreviatedPath": "\/img\/cedric.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/charlotte.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 127628,
-		"inputAbbreviatedPath": "\/img\/charlotte.jpg",
-		"outputAbbreviatedPath": "\/img\/charlotte.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -537,7 +471,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 66803,
+		"initialSize": 265696,
 		"inputAbbreviatedPath": "\/img\/deco-carousel-bedrooms.png",
 		"outputAbbreviatedPath": "\/img\/deco-carousel-bedrooms.png",
 		"outputPathIsOutsideProject": 0,
@@ -621,61 +555,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/earl.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 165580,
-		"inputAbbreviatedPath": "\/img\/earl.jpg",
-		"outputAbbreviatedPath": "\/img\/earl.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/emma.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 134304,
-		"inputAbbreviatedPath": "\/img\/emma.jpg",
-		"outputAbbreviatedPath": "\/img\/emma.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/floras.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 168626,
-		"inputAbbreviatedPath": "\/img\/floras.jpg",
-		"outputAbbreviatedPath": "\/img\/floras.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/francis.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 402830,
-		"inputAbbreviatedPath": "\/img\/francis.jpg",
-		"outputAbbreviatedPath": "\/img\/francis.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/fredrick.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 636061,
-		"inputAbbreviatedPath": "\/img\/fredrick.jpg",
-		"outputAbbreviatedPath": "\/img\/fredrick.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img\/green-pattern.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -698,17 +577,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/hanbury.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 106756,
-		"inputAbbreviatedPath": "\/img\/hanbury.jpg",
-		"outputAbbreviatedPath": "\/img\/hanbury.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img\/head.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -720,17 +588,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/header-bg.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 10182,
-		"inputAbbreviatedPath": "\/img\/header-bg.jpg",
-		"outputAbbreviatedPath": "\/img\/header-bg.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img\/header-bg.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -738,105 +595,6 @@
 		"initialSize": 10014,
 		"inputAbbreviatedPath": "\/img\/header-bg.png",
 		"outputAbbreviatedPath": "\/img\/header-bg.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/hero-image.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 132294,
-		"inputAbbreviatedPath": "\/img\/hero-image.jpg",
-		"outputAbbreviatedPath": "\/img\/hero-image.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/history1.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 9505,
-		"inputAbbreviatedPath": "\/img\/history1.jpg",
-		"outputAbbreviatedPath": "\/img\/history1.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/home-bedrooms.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 158062,
-		"inputAbbreviatedPath": "\/img\/home-bedrooms.jpg",
-		"outputAbbreviatedPath": "\/img\/home-bedrooms.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/home-event1.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 181284,
-		"inputAbbreviatedPath": "\/img\/home-event1.jpg",
-		"outputAbbreviatedPath": "\/img\/home-event1.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/home-food.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 138426,
-		"inputAbbreviatedPath": "\/img\/home-food.jpg",
-		"outputAbbreviatedPath": "\/img\/home-food.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/home-house19.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 50812,
-		"inputAbbreviatedPath": "\/img\/home-house19.jpg",
-		"outputAbbreviatedPath": "\/img\/home-house19.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/home-house20.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 65589,
-		"inputAbbreviatedPath": "\/img\/home-house20.jpg",
-		"outputAbbreviatedPath": "\/img\/home-house20.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/home-house21.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 40264,
-		"inputAbbreviatedPath": "\/img\/home-house21.jpg",
-		"outputAbbreviatedPath": "\/img\/home-house21.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/home-members.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 60511,
-		"inputAbbreviatedPath": "\/img\/home-members.jpg",
-		"outputAbbreviatedPath": "\/img\/home-members.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -870,28 +628,6 @@
 		"initialSize": 116504,
 		"inputAbbreviatedPath": "\/img\/house21-slide.jpg",
 		"outputAbbreviatedPath": "\/img\/house21-slide.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/isobel.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 198272,
-		"inputAbbreviatedPath": "\/img\/isobel.jpg",
-		"outputAbbreviatedPath": "\/img\/isobel.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/ladyislington.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 187694,
-		"inputAbbreviatedPath": "\/img\/ladyislington.jpg",
-		"outputAbbreviatedPath": "\/img\/ladyislington.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -995,17 +731,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/lowe.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 172128,
-		"inputAbbreviatedPath": "\/img\/lowe.jpg",
-		"outputAbbreviatedPath": "\/img\/lowe.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img\/megadrop-dove.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1013,28 +738,6 @@
 		"initialSize": 13390,
 		"inputAbbreviatedPath": "\/img\/megadrop-dove.png",
 		"outputAbbreviatedPath": "\/img\/megadrop-dove.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/membership.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 75528,
-		"inputAbbreviatedPath": "\/img\/membership.jpg",
-		"outputAbbreviatedPath": "\/img\/membership.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/newcastle.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 167052,
-		"inputAbbreviatedPath": "\/img\/newcastle.jpg",
-		"outputAbbreviatedPath": "\/img\/newcastle.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1057,17 +760,6 @@
 		"initialSize": 7270,
 		"inputAbbreviatedPath": "\/img\/pin.png",
 		"outputAbbreviatedPath": "\/img\/pin.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/portman.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 166467,
-		"inputAbbreviatedPath": "\/img\/portman.jpg",
-		"outputAbbreviatedPath": "\/img\/portman.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1101,17 +793,6 @@
 		"initialSize": 105733,
 		"inputAbbreviatedPath": "\/img\/restaurants-slide.jpg",
 		"outputAbbreviatedPath": "\/img\/restaurants-slide.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/samuel.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 166718,
-		"inputAbbreviatedPath": "\/img\/samuel.jpg",
-		"outputAbbreviatedPath": "\/img\/samuel.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1237,6 +918,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/temp\/atholl.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 158819,
+		"inputAbbreviatedPath": "\/img\/temp\/atholl.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/atholl.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/attwick.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 67352,
+		"inputAbbreviatedPath": "\/img\/temp\/attwick.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/attwick.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/temp\/bartender.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1336,6 +1039,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/temp\/blunt.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 149608,
+		"inputAbbreviatedPath": "\/img\/temp\/blunt.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/blunt.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/bulmers.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 340043,
+		"inputAbbreviatedPath": "\/img\/temp\/bulmers.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/bulmers.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/temp\/caroline.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1343,6 +1068,28 @@
 		"initialSize": 98130,
 		"inputAbbreviatedPath": "\/img\/temp\/caroline.jpg",
 		"outputAbbreviatedPath": "\/img\/temp\/caroline.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/carolines.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 121027,
+		"inputAbbreviatedPath": "\/img\/temp\/carolines.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/carolines.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/charlotte.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 127628,
+		"inputAbbreviatedPath": "\/img\/temp\/charlotte.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/charlotte.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1402,6 +1149,61 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/temp\/earl.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 165580,
+		"inputAbbreviatedPath": "\/img\/temp\/earl.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/earl.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/emma.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 134304,
+		"inputAbbreviatedPath": "\/img\/temp\/emma.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/emma.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/floras.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 168626,
+		"inputAbbreviatedPath": "\/img\/temp\/floras.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/floras.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/francis.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 402830,
+		"inputAbbreviatedPath": "\/img\/temp\/francis.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/francis.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/fredrick.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 636061,
+		"inputAbbreviatedPath": "\/img\/temp\/fredrick.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/fredrick.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/temp\/Garden.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1453,6 +1255,17 @@
 		"initialSize": 191104,
 		"inputAbbreviatedPath": "\/img\/temp\/Gloucester2.jpg",
 		"outputAbbreviatedPath": "\/img\/temp\/Gloucester2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/hanbury.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 106756,
+		"inputAbbreviatedPath": "\/img\/temp\/hanbury.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/hanbury.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1556,24 +1369,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/temp\/house19-square.png": {
-		"fileType": 32768,
+	"\/img\/temp\/house19-square.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 276404,
-		"inputAbbreviatedPath": "\/img\/temp\/house19-square.png",
-		"outputAbbreviatedPath": "\/img\/temp\/house19-square.png",
+		"initialSize": 47449,
+		"inputAbbreviatedPath": "\/img\/temp\/house19-square.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/house19-square.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/temp\/house20-square.png": {
-		"fileType": 32768,
+	"\/img\/temp\/house20-square.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 392432,
-		"inputAbbreviatedPath": "\/img\/temp\/house20-square.png",
-		"outputAbbreviatedPath": "\/img\/temp\/house20-square.png",
+		"initialSize": 69904,
+		"inputAbbreviatedPath": "\/img\/temp\/house20-square.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/house20-square.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1618,6 +1431,61 @@
 		"initialSize": 80835,
 		"inputAbbreviatedPath": "\/img\/temp\/House21-Lounge2.jpg",
 		"outputAbbreviatedPath": "\/img\/temp\/House21-Lounge2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/house21-square.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 54477,
+		"inputAbbreviatedPath": "\/img\/temp\/house21-square.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/house21-square.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/isobel.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 198272,
+		"inputAbbreviatedPath": "\/img\/temp\/isobel.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/isobel.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/ladyislington.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 187694,
+		"inputAbbreviatedPath": "\/img\/temp\/ladyislington.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/ladyislington.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/lowe.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 172128,
+		"inputAbbreviatedPath": "\/img\/temp\/lowe.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/lowe.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/newcastle.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 167052,
+		"inputAbbreviatedPath": "\/img\/temp\/newcastle.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/newcastle.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1673,6 +1541,17 @@
 		"initialSize": 161142,
 		"inputAbbreviatedPath": "\/img\/temp\/olivia.JPG",
 		"outputAbbreviatedPath": "\/img\/temp\/olivia.JPG",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/portman.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 166467,
+		"inputAbbreviatedPath": "\/img\/temp\/portman.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/portman.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1776,6 +1655,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/temp\/samuel.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 166718,
+		"inputAbbreviatedPath": "\/img\/temp\/samuel.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/samuel.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/temp\/screenshot.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1805,6 +1695,28 @@
 		"initialSize": 116405,
 		"inputAbbreviatedPath": "\/img\/temp\/spanishfood.jpg",
 		"outputAbbreviatedPath": "\/img\/temp\/spanishfood.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/terrace.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 64370,
+		"inputAbbreviatedPath": "\/img\/temp\/terrace.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/terrace.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/temp\/thorpe.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 197509,
+		"inputAbbreviatedPath": "\/img\/temp\/thorpe.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/thorpe.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1886,24 +1798,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/terrace.jpg": {
+	"\/img\/temp\/wyatt.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 64370,
-		"inputAbbreviatedPath": "\/img\/terrace.jpg",
-		"outputAbbreviatedPath": "\/img\/terrace.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/thorpe.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 197509,
-		"inputAbbreviatedPath": "\/img\/thorpe.jpg",
-		"outputAbbreviatedPath": "\/img\/thorpe.jpg",
+		"initialSize": 157227,
+		"inputAbbreviatedPath": "\/img\/temp\/wyatt.jpg",
+		"outputAbbreviatedPath": "\/img\/temp\/wyatt.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1915,17 +1816,6 @@
 		"initialSize": 2877,
 		"inputAbbreviatedPath": "\/img\/white-bg.jpg",
 		"outputAbbreviatedPath": "\/img\/white-bg.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/wyatt.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 157227,
-		"inputAbbreviatedPath": "\/img\/wyatt.jpg",
-		"outputAbbreviatedPath": "\/img\/wyatt.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
