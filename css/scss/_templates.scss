@@ -219,6 +219,10 @@
 
 	.inner-content{
 		padding: 4em;
+
+		@media screen and (max-width: 600px){
+			padding: 2em;
+		}
 		
 		header{
 			margin: 0;

@@ -172,8 +172,75 @@ input[type="submit"]{
 	}
 }//.gform_wrapper
 
-// EVENT ESPRESSO REG FORM
+/* ==========================================================================
+   EVENT ESPRESSO
+   ========================================================================== */
 
+.event_title{
+	display: inline-block;
+	margin-bottom: 0 !important;
+	padding: 1em 2em;
+	color: #fff;
+	text-transform: uppercase;
+	background-image: url(../img/header-bg.png);
+}
+
+.event-data-display{
+	padding: 1em 2em;
+	background-color: rgba(254, 255, 245, 1);
+}
+
+.event_espresso_form_wrapper, .espresso_add_attendee{
+	margin-bottom: 1em;
+	
+	label{
+		padding-bottom:0.5em;
+		font-size: 1em;
+		font-weight: 600;
+		text-transform: inherit;
+	}
+
+	input[type="text"]{
+		padding: 1em;
+		color: #414141;
+		font-size: 1em;
+		@include garamond-bold;
+		letter-spacing: 1px;
+	}
+
+	.submit, #stripe_submit{
+		float: none;
+		@extend .button;
+		color: #fff;
+		background-color: #004A09;
+		border: none;
+
+		&:hover{
+			background-color: #27ae60;
+		}
+	}
+}// .event_espresso_form_wrapper, .espresso_add_attendee
+
+.event_espresso_form_wrapper{
+	
+	select{
+		max-width: 320px;
+	}	
+
+	.multi_regis_wrapper_attendee-primary, .multi_regis_wrapper_attendee-additional{
+		padding: 2em;
+		background-color: rgba(254, 255, 245, 1);
+	}
+
+	#event_espresso_edit_cart{
+		margin: 2em 0 0 0;
+		padding: 0;
+		font-size: 1em;
+	}
+
+}
+
+// EVENT ESPRESSO REG FORM
 #registration_form{
 	
 	.section-title{
@@ -183,25 +250,6 @@ input[type="submit"]{
 	label{
 		&.error{
 			color: #e74c3c;
-		}
-	}
-
-	.event_form_field, .espresso_add_attendee{
-		margin-bottom: 1em;
-		
-		label{
-			padding-bottom:0.5em;
-			font-size: 1em;
-			font-weight: 600;
-			text-transform: inherit;
-		}
-
-		input[type="text"]{
-			padding: 1em;
-			color: #414141;
-			font-size: 1em;
-			@include garamond-bold;
-			letter-spacing: 1px;
 		}
 	}
 
@@ -241,4 +289,75 @@ input[type="submit"]{
 		padding: 0;
 		text-align: center;
 	}
+}// #registration-form
+
+// EVENT ESPRESSO SHOPPING CART
+
+#event_espresso_shopping_cart{
+	.multi_reg_cart_block{
+		margin: 0;
+		padding: 0;
+	}
+
+	.price_list{
+		td{
+			padding: 0 0 5px 0;
+		}
+
+		.price{
+			font-weight: bold;
+		}
+
+		.reg-allowed-limit{
+			font-style: italic;
+		}
+	}
+
+	#event_espresso_total_wrapper{
+		margin: 0;
+		padding: 1em 2em;
+		text-align: left;
+		background-color: rgba(254, 255, 245, 1);
+
+		.event_total_price{
+			float: none;
+		}
+
+		#event_espresso_refresh_total{
+			text-align: left;
+		}
+	}
+
+	#event_espresso_submit_cart{
+		text-align: left;
+	}
+}// .event_espresso_shopping_cart
+
+// EVENT ESPRESSO CHECKOUT FORM
+
+#event_espresso_checkout_form{
+	margin: 0;
+	padding: 0;	
+
+	#event_espresso_registration_form{
+		margin: 0;
+	}
+
+	.mer-event-submit{
+		margin-top: 1em;
+	}
 }
+
+// EVENT ESPRESSO PAYMENT OVERVIEW
+
+.espresso_payment_overview{
+	table{
+		tr{
+			td{
+				padding-bottom: 1em;
+				vertical-align: bottom;
+			}
+		}
+	}
+}
+
