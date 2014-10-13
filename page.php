@@ -14,8 +14,10 @@
 
 					<section class="hero flexslider thumbnails">
 						
-						<div class="hero-content">
-							<h2 class="title thin"><?php the_title(); ?></h2>
+						<div class="hero-content valign">
+							<div class="highlight">
+								<h2 class="title"><?php the_title(); ?></h2>
+							</div>
 						</div>
 
 						<ul class="slides">
@@ -32,8 +34,10 @@
 
 						<div class="hero image" style="background-image:url(<?php echo $image['sizes']['slider']; ?>)">
 	
-							<div class="hero-content">
-								<h2 class="title thin"><?php the_title(); ?></h2>
+							<div class="hero-content valign">
+								<div class="highlight">
+									<h2 class="title"><?php the_title(); ?></h2>
+								</div>
 							</div>
 
 							<img src="<?php echo $image['sizes']['slider']; ?>">
@@ -117,33 +121,37 @@
 					<?php else: ?>
 						<div class="image pattern">
 					<?php endif; ?>
+
 							<div class="valign">
-								<?php the_sub_field('grid_content') ?>
-								<div class="buttons">
-									<?php $buttons = get_sub_field('buttons'); ?>
-									<?php foreach ($buttons as $button):?>
-										<?php $post_object = $button['button_link'] ?>
-										<?php $post = $post_object; ?>
-										<?php setup_postdata( $post ); ?>
-										<?php 	$url = get_the_permalink();
-												$text = (!empty($button['button_text'])) ? $button['button_text'] : null;
-												$style =  (!empty($button['button_style'])) ? $button['button_style'] : null;
-										?>
-										<a href="<?php echo $url ?>" class="button small <?php echo $style?>"><?php echo $text ?></a>
-										<?php wp_reset_postdata(); ?>
-									<?php endforeach; ?>
+								<div class="highlight">
+									<?php the_sub_field('grid_content') ?>
+									<div class="buttons">
+										<?php $buttons = get_sub_field('buttons'); ?>
+										<?php foreach ($buttons as $button):?>
+											<?php $post_object = $button['button_link'] ?>
+											<?php $post = $post_object; ?>
+											<?php setup_postdata( $post ); ?>
+											<?php 	$url = get_the_permalink();
+													$text = (!empty($button['button_text'])) ? $button['button_text'] : null;
+													$style =  (!empty($button['button_style'])) ? $button['button_style'] : null;
+											?>
+											<a href="<?php echo $url ?>" class="button small <?php echo $style?>"><?php echo $text ?></a>
+											<?php wp_reset_postdata(); ?>
+										<?php endforeach; ?>
+									</div>									
 								</div>
 							</div>
-						</div><!-- .rect -->
-				</div><!-- .column -->
+
+						</div><!-- .image -->
+					</div><!-- .column -->
 				<?php endwhile; endif; ?>
+
 				</section><!--  .grid-flow -->
 			</div><!-- .flow -->
+
 		<?php endif; ?>	
 		
 		</div><!-- #content-wrapper -->
-
-
 	</div><!-- #page -->
 
 <?php get_footer(); ?>

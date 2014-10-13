@@ -29,6 +29,7 @@ function custom_scripts(){
 	wp_register_script('mapkey', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCHQcusxyrL3CHhKQ_Ui_MF78sMeOs84es', array('jquery'), '', false);
 
 	wp_enqueue_script('modernizr', $template_directory_uri . '/js/vendor/modernizr-2.6.1.min.js', array('jquery'), '', false);
+	wp_enqueue_script('videojs', $template_directory_uri . '/js/plugins/video.js', array('jquery'), '');
 	wp_enqueue_script('flexslider', $template_directory_uri . '/js/plugins/jquery.flexslider.js', array('jquery'), '', true);
 	wp_enqueue_script('imagesloaded', $template_directory_uri . '/js/plugins/imagesloaded.js', array('jquery'), '', true);
 	wp_enqueue_script('isotope', $template_directory_uri . '/js/plugins/isotope.js', array('jquery'), '', true);
@@ -137,6 +138,16 @@ function my_sidebars() {
 	);
 }
 
+// WORDPRESS COOKIE
+
+function set_newuser_cookie() {
+	if ( !is_admin() && !isset($_COOKIE['HomehouseVisit'])) {
+		setcookie('HomehouseVisit', 1, time()+3600*24*30, COOKIEPATH, COOKIE_DOMAIN, false);
+	}
+}
+add_action( 'init', 'set_newuser_cookie');
+
+
 // WORDPRESS LOGO
 
 function my_login_logo() { ?>
@@ -151,16 +162,9 @@ function my_login_logo() { ?>
 <?php }
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
-// REMOVE ADMIN BAR FOR NON ADMINS
-add_action('after_setup_theme', 'remove_admin_bar');
-
-function remove_admin_bar() {
-	if (!current_user_can('administrator') && !is_admin()) {
-  	show_admin_bar(false);
-	}
-}
 
 // SHORTCODES
+
 function button($atts, $content = null) {
    extract(shortcode_atts(array('link' => '#','style' => 'primary', 'size'=> 'small'), $atts));
    return '<a class="button '.$style." ".$size.'" href="'.$link.'">' . do_shortcode($content) . '</a>';
@@ -168,7 +172,7 @@ function button($atts, $content = null) {
 add_shortcode('button', 'button');
 
 function check_user ($params, $content = null){
-  //check tha the user is logged in
+  //check that the user is logged in
   if ( is_user_logged_in() ){
     //user is logged in so show the content
     return $content;

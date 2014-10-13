@@ -2,12 +2,30 @@
 
 <div id="home">
 
-	<section class="hero flexslider thumbnails">
+	<?php  
+		$video = '<div id="modal-video">';
+		$video .= '<div class="valign">';
+		$video .= '<video id="intro-video" class="video-js vjs-default-skin" autoplay preload="auto" width="100%" height="auto" data-setup="{}">';
+		$video .= '<source src="' . get_template_directory_uri() . '/video/homehouse-intro.mp4" type="video/mp4">';
+		$video .= '<source src="' . get_template_directory_uri() . '/video/homehouse-intro.ogv" type="video/ogg">';
+		$video .= '<source src="' . get_template_directory_uri() . '/video/homehouse-intro-animation.swf" type="video/swf">';
+		$video .= '<source src="' . get_template_directory_uri() . '/video/homehouse-intro-animation.webm" type="video/webm">';
+		$video .= '</video>';
+		$video .= '<p>';
+		$video .= '<button class="button primary small">Skip Intro</button>';
+		$video .= '</p>';
+		$video .= '</div>';
+		$video .= '</div>';
+
+		if(!isset($_COOKIE['HomehouseVisit'])) {
+			echo $video;
+		}
+	?>
+
+	<section class="hero flexslider">
 		<ul class="slides">
 
 			<li class="house19-slide">
-				<img src="">
-				
 				<div class="slide-content-wrapper">
 					<div class="slide-content">
 						<div class="inner">
@@ -23,8 +41,6 @@
 			</li>
 
 			<li class="house20-slide">
-				<img src="">
-				
 				<div class="slide-content-wrapper">
 					<div class="slide-content">
 						<div class="inner">
@@ -40,8 +56,6 @@
 			</li>
 
 			<li class="house21-slide">
-				<img src="">
-				
 				<div class="slide-content-wrapper">
 					<div class="slide-content">
 						<div class="inner">
@@ -57,8 +71,6 @@
 			</li>
 
 			<li class="restaurants-slide">
-				<img src="">
-				
 				<div class="slide-content-wrapper">
 					<div class="slide-content">
 						<div class="inner">
@@ -74,8 +86,6 @@
 			</li>
 
 			<li class="bedrooms-slide">
-				<img src="">
-				
 				<div class="slide-content-wrapper">
 					<div class="slide-content">
 						<div class="inner">
@@ -91,8 +101,6 @@
 			</li>
 
 			<li class="bars-slide">
-				<img src="">
-				
 				<div class="slide-content-wrapper">
 					<div class="slide-content">
 						<div class="inner">
@@ -107,9 +115,8 @@
 				</div>
 			</li>
 
-
 		</ul>
-	</section>
+	</section><!-- HERO SLIDER -->
 
 	<div id="content-wrapper">
 		<div class="flow">
@@ -122,12 +129,14 @@
 					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'grid-square' ); ?>
 					<div class="square bg" style="background-image:url(<?php echo $image[0]; ?>)">
 						<div class="valign">
-							<h3 class="title large">
-								<?php the_title(); ?>
-							</h3>
-							<p>
-								<a href="<?php the_permalink(); ?>" class="button primary small" title="Explore <?php the_title(); ?>">Explore</a>								
-							</p>
+							<div class="highlight">
+								<h3 class="title">
+									<?php the_title(); ?>
+								</h3>
+								<p>
+									<a href="<?php the_permalink(); ?>" class="button primary small" title="Explore <?php the_title(); ?>">Explore</a>								
+								</p>								
+							</div>
 						</div>
 					</div>
 				</div>
@@ -149,12 +158,14 @@
 				<div class="column col-2-3 pad expand">
 					<div class="image" style="background-image:url(<?php echo $event_thumbnail_url; ?>)">
 						<div class="valign">
-							<h3 class="title large">
-								<?php the_title(); ?>
-							</h3>
-							<p>
-								<a href="<?php the_permalink(); ?>" class="button primary small" title="View <?php the_title(); ?>">View Event</a>
-							</p>							
+							<div class="highlight">
+								<h3 class="title">
+									<?php the_title(); ?>
+								</h3>
+								<p>
+									<a href="<?php the_permalink(); ?>" class="button primary small" title="View <?php the_title(); ?>">View Event</a>
+								</p>							
+							</div>
 						</div>
 					</div>
 				</div>
@@ -164,14 +175,14 @@
 				<div class="column col-1-3 pad expand">
 					<div class="content pattern-img">
 						<div class="valign">
-							<h3 class="title large">
+							<h3 class="title">
 								Upcoming Events
 							</h3>
 							<p>
 								There is an abundance of events to suit all in June: screening both the World Cup & Wimbledon.
 							</p>
 							<p>
-								<a href="<?php echo bloginfo('url'); ?>/events-calendar" class="button primary small" title="View Events Calendar">Full Events Calendar</a>
+								<a href="<?php echo bloginfo('url'); ?>/events" class="button primary small" title="View Events Calendar">Full Events Calendar</a>
 							</p>
 						</div>
 					</div>
@@ -198,12 +209,14 @@
 				<?php endif; ?>
 					
 						<div class="valign">
-							<h3 class="title large">
-								<?php the_title(); ?>
-							</h3>
-							<p>
-								<a href="<?php the_permalink(); ?>" class="button primary small" title="Explore <?php the_title(); ?>">Explore</a>								
-							</p>
+							<div class="highlight">
+								<h3 class="title">
+									<?php the_title(); ?>
+								</h3>
+								<p>
+									<a href="<?php the_permalink(); ?>" class="button primary small" title="Explore <?php the_title(); ?>">Explore</a>								
+								</p>							
+							</div>
 						</div>
 					</div>
 				</div>
@@ -224,10 +237,12 @@
 
 						<div class="image" style="background-image:url(<?php echo $image[0]; ?>)">
 							<div class="valign">
-								<h2 class="title large"><?php the_sub_field('title_text') ?></h2>
-								<p>
-									<a href="<?php the_permalink(); ?>" class="button primary small"><?php the_sub_field('button') ?></a>
-								</p>
+								<div class="highlight">
+									<h2 class="title"><?php the_sub_field('title_text') ?></h2>
+									<p>
+										<a href="<?php the_permalink(); ?>" class="button primary small"><?php the_sub_field('button') ?></a>
+									</p>									
+								</div>
 							</div>
 						</div>
 

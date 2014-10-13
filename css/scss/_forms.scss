@@ -320,13 +320,21 @@ input[type="submit"]{
 
 #event_espresso_shopping_cart{
 
-
-	.ee_delete_item_from_cart{
-		display: inline-block;
-		margin-left: 1em;
+	.remove-cart-item{
 		color: #c0392b;
-		vertical-align: middle;
-		cursor: pointer;
+
+		span{
+			display: inline-block;
+			font-size: 0.6em;
+			vertical-align: middle;
+		}
+		
+		.ee_delete_item_from_cart{
+			display: inline-block;
+			margin-left: 1em;
+			vertical-align: middle;
+			cursor: pointer;
+		}
 	}
 
 	.multi_reg_cart_block{
@@ -390,6 +398,11 @@ input[type="submit"]{
 
 	.mer-event-submit{
 		margin-top: 1em;
+	}
+
+	.copy-all-button-wrapper,
+	.copy_dropdown_wrapper {
+		display:none;
 	}
 }
 

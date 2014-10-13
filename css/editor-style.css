@@ -36,7 +36,3 @@ body {
   font-weight: normal;
   text-transform: uppercase;
   text-decoration: none; }
-  /* line 32, scss/_typography.scss */
-  .title.thin {
-    font-weight: 300;
-    letter-spacing: 2px; }

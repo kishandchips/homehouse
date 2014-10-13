@@ -21,10 +21,12 @@
 				<?php setup_postdata($post); ?>
 				<?php $event_thumbnail_url = get_post_meta($post->ID, 'event_thumbnail_url', true); ?>
 					<li style='background-image: url(<?php echo $event_thumbnail_url; ?>)'>
-						<div class="hero-content">
-							<h2 class="title thin"><?php the_title(); ?></h2>
-							<br>
-							<a href="<?php the_permalink(); ?>" class="button primary small">View Event</a>
+						<div class="hero-content valign">
+							<div class="highlight">
+								<h2 class="title"><?php the_title(); ?></h2>
+								<br>
+								<a href="<?php the_permalink(); ?>" class="button primary small">View Event</a>								
+							</div>
 						</div>
 						<img src="<?php echo $event_thumbnail_url; ?>">
 					</li>
@@ -92,13 +94,14 @@
 			
 			<?php while($loop->have_posts()): $loop->the_post(); ?>
 				<?php $event_id = get_post_meta($post->ID, 'event_id', true); ?>
-
+				<?php $event_date = do_shortcode('[EVENT_TIME event_id="'.$event_id.'" type="start_date" format="F j"]'); ?>
+				<?php $filter_date = do_shortcode('[EVENT_TIME event_id="'.$event_id.'" type="start_date" format="m"]'); ?>
 				<?php $catArray = get_the_terms($post,'category'); ?>
 				<pre>
-					
+					<?php echo $event_date; ?>
 				</pre>
 
-				<article id="event_data-<?php echo $event_id ?>" class="item event <?php the_time('m'); ?> <?php foreach ($catArray as $cat): ?><?php echo $cat->slug; ?><?php endforeach; ?>" data-date="<?php the_time("ymdHis"); ?>">
+				<article id="event_data-<?php echo $event_id ?>" class="item event <?php echo $filter_date; ?> <?php foreach ($catArray as $cat): ?><?php echo $cat->slug; ?><?php endforeach; ?>">
 
 					<div class="rect-items row">
 						<div class="column col-2-3 pad expand">
@@ -106,18 +109,21 @@
 
 							<div class="image" style="background-image:url(<?php echo $event_thumbnail_url; ?>)">
 								<div class="valign">
-									<h3 id="event_title-<?php echo $event_id ?>" class="title large">
-										<?php the_title(); ?>
-									</h3>
-									<p>
-										<a href="<?php the_permalink(); ?>"  class="button primary small">View Event</a>								
-									</p>							
+									<div class="highlight">
+										<h3 id="event_title-<?php echo $event_id ?>" class="title large">
+											<?php the_title(); ?>
+										</h3>
+										<p>
+											<a href="<?php the_permalink(); ?>"  class="button primary small">View Event</a>								
+										</p>									
+									</div>
 								</div>
 							</div>
 						</div>
 						<div class="column col-1-3 pad expand">
 							<div class="content pattern">
 								<div class="event-desc valign">
+									<p class="date"><?php echo $event_date ?></p>
 									<?php the_excerpt(); ?>
 									<p>
 										<a href="<?php the_permalink(); ?>" class="button primary small">Read More</a>

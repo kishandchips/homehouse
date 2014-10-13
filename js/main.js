@@ -20,11 +20,12 @@
 			this.cedric.init();
 			this.contact.init();
 			this.footer.init();
+			this.video.init();
 
 			main.w.on('load', function(){
 				$('.flexslider').flexslider({
 			    	animation: "slide",
-			    	controlNav: false,
+			    	controlNav: true,
 			  	});
 			});
 
@@ -313,10 +314,35 @@
 				main.vars.wrapper.css('margin-bottom', -footerHeight);
 				$('.push').css('height', footerHeight);
 			}
+		},
+
+		video: {
+			element: $('.video-js'),
+
+			init: function(){
+				var element = main.video.element;
+				if(!element.length){return;}
+
+				$('#modal-video button').on('click', function(){
+					$("#intro-video").fadeOut(500, function() {
+						$("#modal-video").remove();
+					});
+				});
+
+				player = videojs('#intro-video');
+				
+				player.ready(function(){
+					this.on("ended", function() {
+						$("#intro-video").fadeOut(500, function() {
+							$("#modal-video").remove();
+						});
+						// $('.flexslider .slides').addClass('visible');
+					});
+				});
+			}
 		}
 
 	};//main
-
 
 	main.init();
 	

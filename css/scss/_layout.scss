@@ -199,6 +199,10 @@ nav{
 
 	#nav{
 
+		@media screen and (max-width: 1100px){
+			font-size: 90%;
+		}
+
 		.mobile-menu{
 			display: none;
 		}
@@ -339,9 +343,23 @@ nav{
 						position: absolute;
 						top: 100%;
 						padding: 1em;
-						background: url(../img/bg-megadrop.jpg);
+						background-image: url(../img/bg-megadrop.jpg);
 						@extend .invisible;
 						@include transition(opacity, .2s);
+						
+						&:after{
+							content: "";
+							display: inline-block;
+							position: absolute;
+							bottom: -22px;
+							left: 50%;
+							width: 100%;
+							height: 22px;
+							margin-left: -50%;
+							background-image: url(../img/bg-drop-bottom.png);
+							background-repeat: repeat-x;
+							background-position: center;
+						}
 
 						> li.menu-item{
 
@@ -485,11 +503,41 @@ nav{
 /* ==========================================================================
    HERO & FLEXSLIDER
    ========================================================================== */
+#modal-video{
+	position:fixed;
+	top:0;right:0;bottom:0;left:0;
+	background-color: rgba(#000,0.85);
+	z-index: 9999;
+
+	.valign{
+		width: 90%;
+		margin-left: 5%;
+		text-align: center;
+	}
+
+	video{
+		position: relative;
+		display: inline-block;
+		width: 100% !important;
+		height: auto !important;
+	}
+}
 
 .hero{
+	.arrow-wrap{
+		position: fixed;
+		bottom: 10px;
+		left: 50%;
+		margin-left:-25px;
+		width: 50px;
+		height: 50px;
+		background-image: url('../img/scroll-arrow.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		z-index: 9999;
+	}
 
 	.hero-content{
-		@extend .valign;
 		width: 90%;
 		margin-left: 5%;
 		text-align: center;
@@ -501,11 +549,8 @@ nav{
 		}
 
 		.title{
-			display: inline;
-			padding: 0.155em 0.4em;
 			font-size: 5em;
-			background-color: rgba(#000, 0.25);
-			box-shadow:10px 0 0 rgba(#000, 0.25), -10px 0 0 rgba(#000, 0.25);
+			line-height: 1;
 			
 			@media screen and (min-width: 1440px){
 				font-size: 5em;
@@ -609,23 +654,18 @@ nav{
 				}
 
 				a{
+					height: 10px;
+					width: 10px;
 					background: rgba(255,255,255,0.5);
 					@include transition(all,.3s);
-
+					
 					&.flex-active{
-						height:20px;
-						width: 20px;
 						background: rgba(255,255,255,1);
 					}
 
 					@media screen and (max-width: 500px){
 						width: 5px;
 						height: 5px;
-
-						&.flex-active{
-							width: 10px;
-							height: 10px;
-						}
 					}
 				}
 			}
@@ -841,7 +881,6 @@ nav{
 		min-width: 200px;
 		margin-left: -200px;
 		padding: 5em 1em;
-		// background-color: #202020;
 		@include transition(all,.3s);
 	}
 
@@ -858,7 +897,7 @@ nav{
 
 	.sidenav-title{
 		margin-top: 0;
-		@include playfair;
+		@include garamond-bold;
 		font-weight: 300;
 		text-transform: uppercase;
 
@@ -1041,29 +1080,25 @@ nav{
 }// .row
 
 .square, .rect-items{
-	.title{
-		display: inline;
-		padding: 0.155em 0.4em;
-		background-color: rgba(#000, 0.25);
-  		box-shadow: 10px 0 0 rgba(#000, 0.25), -10px 0 0 rgba(#000, 0.25);
-		@include transition(all,.3s);
+	
+	.valign{
+		width: 100%;
+		text-align: center;
+		z-index: 10;
+
+		h1,h2,h3,h4,h5,h6{
+			margin: 0;
+			padding-bottom: 0.3em;
+			@extend .large;
+			line-height: 1;
+		}// stop wordpress styles overriding title
 	}
-}
+
+}// .square, rect-items
 
 .square{
 	position: relative;
 	padding-top: 100%;
-
-	.valign{
-		width: 100%;
-		padding: 0 3em;
-		text-align: center;
-		z-index: 10;
-
-		@media screen and (max-width: 600px){
-			padding: 0 2em;
-		}
-	}
 }// .square
 
 .rect-items{
@@ -1083,16 +1118,6 @@ nav{
 			padding: 0 2em;
 		}
 	}
-
-	.valign{
-		width: 100%;
-		text-align: center;
-		z-index: 10;
-
-		h3{
-			margin-bottom: 0.5em;
-		}
-	}
 }// .rect-item
 
 .bg{
@@ -1100,7 +1125,7 @@ nav{
 	background-position: center;
 	
 	&:hover{
-		.title{
+		.highlight{
 			background:none;
 			box-shadow:10px 0 0 rgba(#000, 0), -10px 0 0 rgba(#000, 0);
 		}
@@ -1122,6 +1147,22 @@ nav{
 		z-index: 5;
 	}
 }// .bg
+
+.highlight{
+	display: inline-block;
+	padding: 1em 3em;
+	background-color: rgba(#000, 0.25);
+		box-shadow: 10px 0 0 rgba(#000, 0.25), -10px 0 0 rgba(#000, 0.25);
+	@include transition(all,.3s);
+
+	@media screen and (max-width: 600px){
+		padding: 0 2em;
+	}
+
+	p{
+		margin: 0;
+	}
+}// .highlight
 
 .flow{
     position: relative;

@@ -19,8 +19,10 @@
 
 					<section class="hero flexslider thumbnails">
 						
-						<div class="hero-content">
-							<h2 class="title thin"><?php the_title(); ?></h2>
+						<div class="hero-content valign">
+							<div class="highlight">
+								<h2 class="title"><?php the_title(); ?></h2>
+							</div>
 						</div>
 
 						<ul class="slides">
@@ -37,8 +39,10 @@
 
 						<div class="hero image" style="background-image:url(<?php echo $image['sizes']['slider']; ?>)">
 	
-							<div class="hero-content">
-								<h2 class="title thin"><?php the_title(); ?></h2>
+							<div class="hero-content valign">
+								<div class="highlight">
+									<h2 class="title"><?php the_title(); ?></h2>
+								</div>
 							</div>
 
 							<img src="<?php echo $image['url']; ?>">
@@ -122,8 +126,10 @@
 					<?php $event_thumbnail_url = get_post_meta($post->ID, 'event_thumbnail_url', true); ?>
 					<div class="image" style="background-image:url(<?php echo $event_thumbnail_url; ?>)">
 						<div class="valign">
-							<h3 class="title"><?php the_title(); ?></h3>
-							<p><a href="<?php the_permalink(); ?>" class="button primary small">View Event</a></p>
+							<div class="highlight">
+								<h3 class="title"><?php the_title(); ?></h3>
+								<p><a href="<?php the_permalink(); ?>" class="button primary small">View Event</a></p>								
+							</div>
 						</div>
 					</div>
 				</div>

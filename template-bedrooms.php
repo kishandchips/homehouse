@@ -53,10 +53,11 @@
 			</div><!-- .container -->
 
 		<?php $pages = get_pages( array('sort_column'=>'menu_order','child_of'=>$post->ID) ); ?>
-		<?php foreach ($pages as $page ): ?>
+		<?php foreach ($pages as $post ): ?>
 
 		<div class="bedroom">
 			<div class="rect-items row">
+			
 				<div class="column col-2-3 pad expand">
 					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'slider' ); ?>
 					<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
@@ -65,15 +66,16 @@
 				<div class="column col-1-3 pad expand">
 					<div class="content pattern">
 						<div class="valign">
-							<h3 class="title large">
-								<?php echo get_the_title($page->ID); ?>
+							<h3 class="title">
+								<?php echo get_the_title($post->ID); ?>
 							</h3>
 							<p>
-								<a href="<?php echo get_the_permalink($page->ID); ?>" class="button primary small">View Room</a>
-							</p>
+								<a href="<?php echo get_the_permalink($post->ID); ?>" class="button primary small">View Room</a>
+							</p>							
 						</div>
 					</div>
 				</div>
+
 			</div>
 		</div><!-- .bedroom -->
 

@@ -12,7 +12,7 @@
 	
 	.events{
 		.pattern-img{
-			background-image:url(../img/head.png),url(../img/purple-flower-pattern.jpg);
+			background-image:url(../img/head.png),url(../img/grey-pattern.jpg);
 			background-repeat: no-repeat,repeat;
 			background-position: 50% 95%;
 
@@ -39,7 +39,7 @@
 
 	.members{
 		.pattern-img{
-			background-image:url(../img/bells.png),url(../img/purple-flower-pattern.jpg);
+			background-image:url(../img/bells.png),url(../img/grey-pattern.jpg);
 			background-repeat: no-repeat,repeat;
 			background-position: 100% 0%;
 
@@ -207,6 +207,18 @@
    			width: 100%;
    		}
 	}
+
+	.event-desc{
+		padding: 2em;
+
+		.date{
+			margin:0;
+			@extend .large;
+			@include garamond-bold;
+			font-weight: 300;
+		}
+	}//.event-desc
+
 }// #events
 
 /* ==========================================================================

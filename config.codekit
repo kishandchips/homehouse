@@ -241,6 +241,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/css\/scss\/_video.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/scss\/_video.scss",
+		"outputAbbreviatedPath": "\/css\/_video.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/css\/scss\/editor-style.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -390,6 +406,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/bg-drop-bottom.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6690,
+		"inputAbbreviatedPath": "\/img\/bg-drop-bottom.png",
+		"outputAbbreviatedPath": "\/img\/bg-drop-bottom.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/bg-megadrop-bottom-center.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -397,6 +424,17 @@
 		"initialSize": 29734,
 		"inputAbbreviatedPath": "\/img\/bg-megadrop-bottom-center.png",
 		"outputAbbreviatedPath": "\/img\/bg-megadrop-bottom-center.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/bg-megadrop-bottom-repeat.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3117,
+		"inputAbbreviatedPath": "\/img\/bg-megadrop-bottom-repeat.png",
+		"outputAbbreviatedPath": "\/img\/bg-megadrop-bottom-repeat.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -471,7 +509,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 265696,
+		"initialSize": 66803,
 		"inputAbbreviatedPath": "\/img\/deco-carousel-bedrooms.png",
 		"outputAbbreviatedPath": "\/img\/deco-carousel-bedrooms.png",
 		"outputPathIsOutsideProject": 0,
@@ -797,6 +835,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/scroll-arrow.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1333,
+		"inputAbbreviatedPath": "\/img\/scroll-arrow.png",
+		"outputAbbreviatedPath": "\/img\/scroll-arrow.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/site-login-logo.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -977,7 +1026,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 145405,
+		"initialSize": 507009,
 		"inputAbbreviatedPath": "\/img\/temp\/Bison-Bar-2.jpg",
 		"outputAbbreviatedPath": "\/img\/temp\/Bison-Bar-2.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -1032,7 +1081,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 99741,
+		"initialSize": 62760,
 		"inputAbbreviatedPath": "\/img\/temp\/Bison-Feat.jpg",
 		"outputAbbreviatedPath": "\/img\/temp\/Bison-Feat.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -1318,7 +1367,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 130297,
+		"initialSize": 67571,
 		"inputAbbreviatedPath": "\/img\/temp\/homehouse-6.jpg",
 		"outputAbbreviatedPath": "\/img\/temp\/homehouse-6.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -1670,7 +1719,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 421806,
+		"initialSize": 421767,
 		"inputAbbreviatedPath": "\/img\/temp\/screenshot.png",
 		"outputAbbreviatedPath": "\/img\/temp\/screenshot.png",
 		"outputPathIsOutsideProject": 0,
@@ -1681,7 +1730,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 3.7694e+06,
+		"initialSize": 3.44064e+06,
 		"inputAbbreviatedPath": "\/img\/temp\/soho-night.jpg",
 		"outputAbbreviatedPath": "\/img\/temp\/soho-night.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -1769,7 +1818,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 153531,
+		"initialSize": 99472,
 		"inputAbbreviatedPath": "\/img\/temp\/Vault5.jpg",
 		"outputAbbreviatedPath": "\/img\/temp\/Vault5.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -1932,6 +1981,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/plugins\/min\/map-min.js",
 		"outputAbbreviatedPath": "\/js\/plugins\/min\/min\/map-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/plugins\/video.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/plugins\/video.js",
+		"outputAbbreviatedPath": "\/js\/plugins\/min\/video-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -2133,7 +2193,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "SPYROS LEFKADITIS",
+"lastSavedByUser": "Spyros Lefkaditis",
 "manualImportLinks": {
 	},
 "projectAttributes": {
