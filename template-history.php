@@ -49,7 +49,7 @@
 								</div>
 							<div class="body">
 								<p class="medium">What's next for <?php the_title(); ?>...?</p>
-								<p><a href="#">Show all Upcoming Events</a></p>
+								<p><a href="<?php bloginfo('url' ); ?>/events">Show all Upcoming Events</a></p>
 							</div>
 						</article><!-- .history-snippet -->						
 				</section><!--.inner-content  -->

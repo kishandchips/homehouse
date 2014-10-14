@@ -14,7 +14,7 @@
 		</section><!-- hero image -->
 	<?php endif; ?>
 
-	<div id="content-wrapper" class="page-pattern">
+	<div id="content-wrapper">
 		<section class="inner">
 			<article class="single">
 				<?php if(have_posts()): while(have_posts()): the_post(); ?>

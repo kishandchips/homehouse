@@ -9,7 +9,7 @@ html, body {
 }
 
 body {
-    font-size: 1em;
+    height: auto;
     line-height: 1.4;
     -webkit-font-smoothing: antialiased;
 }
@@ -110,4 +110,38 @@ hr{
         font-size: 0.5em;
         vertical-align: middle;
     }
+}
+
+/* WORDPRESS IMAGE */
+
+.alignleft {
+    float: left;
+}
+.alignright {
+    float: right;
+}
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="attachment-"] {
+    height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+img.size-full,
+img.size-large,
+img.header-image,
+img.wp-post-image {
+    max-width: 100%;
+    height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+
+/* Make sure videos and embeds fit their containers */
+embed,
+iframe,
+object,
+video {
+    max-width: 100%;
 }

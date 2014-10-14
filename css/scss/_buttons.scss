@@ -16,26 +16,15 @@ button{
 	@include transition(all,.3s);
 
 	&.primary{
-		color: #fff;
+		color: #000;
+		background-color: #fff;
 		border: 1px solid #fff;
 		
 		&:hover{
-			color: #000;
-			background-color: #fff;
+			color: #fff;
+			background-color: #573168;
+			border: 1px solid #573168;
 		}
-		
-		&.invert{
-			color: #000;
-			background-color: #fff;
-			border: 1px solid #fff;
-			
-			&:hover{
-				color: #fff;
-				background-color: #573168;
-				border: 1px solid #573168;
-			}
-		}
-
 	}
 
 	&.secondary{
@@ -57,6 +46,7 @@ button{
 
 		&:hover{
 			background-color: #573169;
+			border: 1px solid #573169 !important;
 		}
 
 		&:after{

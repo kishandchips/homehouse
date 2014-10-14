@@ -1428,43 +1428,36 @@ button {
   transition: all, 0.3s; }
   /* line 18, scss/_buttons.scss */
   .button.primary, input.primary[type="submit"], .event_espresso_form_wrapper .primary.submit, .event_espresso_form_wrapper .primary#stripe_submit, .espresso_add_attendee .primary.submit, .espresso_add_attendee .primary#stripe_submit {
-    color: #fff;
+    color: #000;
+    background-color: #fff;
     border: 1px solid #fff; }
-    /* line 22, scss/_buttons.scss */
+    /* line 23, scss/_buttons.scss */
     .button.primary:hover, input.primary[type="submit"]:hover, .event_espresso_form_wrapper .primary.submit:hover, .event_espresso_form_wrapper .primary#stripe_submit:hover, .espresso_add_attendee .primary.submit:hover, .espresso_add_attendee .primary#stripe_submit:hover {
-      color: #000;
-      background-color: #fff; }
-    /* line 27, scss/_buttons.scss */
-    .button.primary.invert, input.primary.invert[type="submit"], .event_espresso_form_wrapper .primary.invert.submit, .event_espresso_form_wrapper .primary.invert#stripe_submit, .espresso_add_attendee .primary.invert.submit, .espresso_add_attendee .primary.invert#stripe_submit {
-      color: #000;
-      background-color: #fff;
-      border: 1px solid #fff; }
-      /* line 32, scss/_buttons.scss */
-      .button.primary.invert:hover, input.primary.invert[type="submit"]:hover, .event_espresso_form_wrapper .primary.invert.submit:hover, .event_espresso_form_wrapper .primary.invert#stripe_submit:hover, .espresso_add_attendee .primary.invert.submit:hover, .espresso_add_attendee .primary.invert#stripe_submit:hover {
-        color: #fff;
-        background-color: #573168;
-        border: 1px solid #573168; }
-  /* line 41, scss/_buttons.scss */
+      color: #fff;
+      background-color: #573168;
+      border: 1px solid #573168; }
+  /* line 30, scss/_buttons.scss */
   .button.secondary, input.secondary[type="submit"], .event_espresso_form_wrapper .secondary.submit, .event_espresso_form_wrapper .secondary#stripe_submit, .espresso_add_attendee .secondary.submit, .espresso_add_attendee .secondary#stripe_submit {
     color: #000;
     border: 1px solid #000;
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
     border-radius: 0; }
-    /* line 46, scss/_buttons.scss */
+    /* line 35, scss/_buttons.scss */
     .button.secondary:hover, input.secondary[type="submit"]:hover, .event_espresso_form_wrapper .secondary.submit:hover, .event_espresso_form_wrapper .secondary#stripe_submit:hover, .espresso_add_attendee .secondary.submit:hover, .espresso_add_attendee .secondary#stripe_submit:hover {
       color: #fff;
       background-color: #000; }
-  /* line 52, scss/_buttons.scss */
+  /* line 41, scss/_buttons.scss */
   .button.download, input.download[type="submit"], .event_espresso_form_wrapper .download.submit, .event_espresso_form_wrapper .download#stripe_submit, .espresso_add_attendee .download.submit, .espresso_add_attendee .download#stripe_submit {
     padding-right: 3em;
     color: #fff;
     background-color: #503B5A;
     border: 1px solid #503B5A !important; }
-    /* line 58, scss/_buttons.scss */
+    /* line 47, scss/_buttons.scss */
     .button.download:hover, input.download[type="submit"]:hover, .event_espresso_form_wrapper .download.submit:hover, .event_espresso_form_wrapper .download#stripe_submit:hover, .espresso_add_attendee .download.submit:hover, .espresso_add_attendee .download#stripe_submit:hover {
-      background-color: #573169; }
-    /* line 62, scss/_buttons.scss */
+      background-color: #573169;
+      border: 1px solid #573169 !important; }
+    /* line 52, scss/_buttons.scss */
     .button.download:after, input.download[type="submit"]:after, .event_espresso_form_wrapper .download.submit:after, .event_espresso_form_wrapper .download#stripe_submit:after, .espresso_add_attendee .download.submit:after, .espresso_add_attendee .download#stripe_submit:after {
       position: absolute;
       top: 0.4em;
@@ -1472,40 +1465,202 @@ button {
       display: inline-block;
       content: "\f0f6";
       font-size: 1.4em; }
-  /* line 73, scss/_buttons.scss */
+  /* line 63, scss/_buttons.scss */
   .button.cta, input.cta[type="submit"], .event_espresso_form_wrapper .cta.submit, .event_espresso_form_wrapper .cta#stripe_submit, .espresso_add_attendee .cta.submit, .espresso_add_attendee .cta#stripe_submit {
     color: #fff;
     background-color: #2ecc71;
     border: 1px solid #27ae60; }
-    /* line 78, scss/_buttons.scss */
+    /* line 68, scss/_buttons.scss */
     .button.cta:hover, input.cta[type="submit"]:hover, .event_espresso_form_wrapper .cta.submit:hover, .event_espresso_form_wrapper .cta#stripe_submit:hover, .espresso_add_attendee .cta.submit:hover, .espresso_add_attendee .cta#stripe_submit:hover {
       background-color: #27ae60;
       border: 1px solid #27ae60; }
-  /* line 84, scss/_buttons.scss */
+  /* line 74, scss/_buttons.scss */
   .button.booking, input.booking[type="submit"], .event_espresso_form_wrapper .booking.submit, .event_espresso_form_wrapper .booking#stripe_submit, .espresso_add_attendee .booking.submit, .espresso_add_attendee .booking#stripe_submit {
     color: #fff;
     background-color: #004A09;
     border: none; }
-    /* line 89, scss/_buttons.scss */
+    /* line 79, scss/_buttons.scss */
     .button.booking:hover, input.booking[type="submit"]:hover, .event_espresso_form_wrapper .booking.submit:hover, .event_espresso_form_wrapper .booking#stripe_submit:hover, .espresso_add_attendee .booking.submit:hover, .espresso_add_attendee .booking#stripe_submit:hover {
       background-color: #27ae60; }
-  /* line 94, scss/_buttons.scss */
+  /* line 84, scss/_buttons.scss */
   .button.small, input.button[type="text"], input[type="text"][type="submit"], .event_espresso_form_wrapper input[type="text"].submit, .event_espresso_form_wrapper input[type="text"]#stripe_submit, .espresso_add_attendee input[type="text"].submit, .espresso_add_attendee input[type="text"]#stripe_submit, input.button[type="password"], input[type="password"][type="submit"], .event_espresso_form_wrapper input[type="password"].submit, .event_espresso_form_wrapper input[type="password"]#stripe_submit, .espresso_add_attendee input[type="password"].submit, .espresso_add_attendee input[type="password"]#stripe_submit, input.small[type="submit"], .login input[type="submit"].js-login, .widget_login_wid input[type="submit"], .event_espresso_form_wrapper .small.submit, .event_espresso_form_wrapper .login .submit.js-login, .login .event_espresso_form_wrapper .submit.js-login, .event_espresso_form_wrapper .small#stripe_submit, .event_espresso_form_wrapper .login #stripe_submit.js-login, .login .event_espresso_form_wrapper #stripe_submit.js-login, .event_espresso_form_wrapper .widget_login_wid input#stripe_submit[type="submit"], .widget_login_wid .event_espresso_form_wrapper input#stripe_submit[type="submit"], .espresso_add_attendee .small.submit, .espresso_add_attendee .login .submit.js-login, .login .espresso_add_attendee .submit.js-login, .espresso_add_attendee .small#stripe_submit, .espresso_add_attendee .login #stripe_submit.js-login, .login .espresso_add_attendee #stripe_submit.js-login, .espresso_add_attendee .widget_login_wid input#stripe_submit[type="submit"], .widget_login_wid .espresso_add_attendee input#stripe_submit[type="submit"], .login .button.js-login {
     font-size: 0.75em; }
-  /* line 97, scss/_buttons.scss */
+  /* line 87, scss/_buttons.scss */
   .button.med, input.med[type="submit"], .event_espresso_form_wrapper .med.submit, .event_espresso_form_wrapper .med#stripe_submit, .espresso_add_attendee .med.submit, .espresso_add_attendee .med#stripe_submit {
     font-size: 1.125em; }
-  /* line 100, scss/_buttons.scss */
-  .button.large, input.large[type="submit"], .hero.flexslider .slides li .slide-content-wrapper .slide-content input[type="submit"].slide-title, #events .event-desc input[type="submit"].date, .event_espresso_form_wrapper .large.submit, .event_espresso_form_wrapper .hero.flexslider .slides li .slide-content-wrapper .slide-content .submit.slide-title, .hero.flexslider .slides li .slide-content-wrapper .slide-content .event_espresso_form_wrapper .submit.slide-title, .event_espresso_form_wrapper .square .valign h1.submit, .square .valign .event_espresso_form_wrapper h1.submit, .event_espresso_form_wrapper .square #history .meta span h1.submit, .square #history .meta span .event_espresso_form_wrapper h1.submit, .event_espresso_form_wrapper #history .meta .square span h1.submit, #history .meta .square span .event_espresso_form_wrapper h1.submit, .event_espresso_form_wrapper .square .valign h2.submit, .square .valign .event_espresso_form_wrapper h2.submit, .event_espresso_form_wrapper .square #history .meta span h2.submit, .square #history .meta span .event_espresso_form_wrapper h2.submit, .event_espresso_form_wrapper #history .meta .square span h2.submit, #history .meta .square span .event_espresso_form_wrapper h2.submit, .event_espresso_form_wrapper .square .valign h3.submit, .square .valign .event_espresso_form_wrapper h3.submit, .event_espresso_form_wrapper .square #history .meta span h3.submit, .square #history .meta span .event_espresso_form_wrapper h3.submit, .event_espresso_form_wrapper #history .meta .square span h3.submit, #history .meta .square span .event_espresso_form_wrapper h3.submit, .event_espresso_form_wrapper .square .valign h4.submit, .square .valign .event_espresso_form_wrapper h4.submit, .event_espresso_form_wrapper .square #history .meta span h4.submit, .square #history .meta span .event_espresso_form_wrapper h4.submit, .event_espresso_form_wrapper #history .meta .square span h4.submit, #history .meta .square span .event_espresso_form_wrapper h4.submit, .event_espresso_form_wrapper .square .valign h5.submit, .square .valign .event_espresso_form_wrapper h5.submit, .event_espresso_form_wrapper .square #history .meta span h5.submit, .square #history .meta span .event_espresso_form_wrapper h5.submit, .event_espresso_form_wrapper #history .meta .square span h5.submit, #history .meta .square span .event_espresso_form_wrapper h5.submit, .event_espresso_form_wrapper .square .valign h6.submit, .square .valign .event_espresso_form_wrapper h6.submit, .event_espresso_form_wrapper .square #history .meta span h6.submit, .square #history .meta span .event_espresso_form_wrapper h6.submit, .event_espresso_form_wrapper #history .meta .square span h6.submit, #history .meta .square span .event_espresso_form_wrapper h6.submit, .event_espresso_form_wrapper .rect-items .valign h1.submit, .rect-items .valign .event_espresso_form_wrapper h1.submit, .event_espresso_form_wrapper .rect-items #history .meta span h1.submit, .rect-items #history .meta span .event_espresso_form_wrapper h1.submit, .event_espresso_form_wrapper #history .meta .rect-items span h1.submit, #history .meta .rect-items span .event_espresso_form_wrapper h1.submit, .event_espresso_form_wrapper .rect-items .valign h2.submit, .rect-items .valign .event_espresso_form_wrapper h2.submit, .event_espresso_form_wrapper .rect-items #history .meta span h2.submit, .rect-items #history .meta span .event_espresso_form_wrapper h2.submit, .event_espresso_form_wrapper #history .meta .rect-items span h2.submit, #history .meta .rect-items span .event_espresso_form_wrapper h2.submit, .event_espresso_form_wrapper .rect-items .valign h3.submit, .rect-items .valign .event_espresso_form_wrapper h3.submit, .event_espresso_form_wrapper .rect-items #history .meta span h3.submit, .rect-items #history .meta span .event_espresso_form_wrapper h3.submit, .event_espresso_form_wrapper #history .meta .rect-items span h3.submit, #history .meta .rect-items span .event_espresso_form_wrapper h3.submit, .event_espresso_form_wrapper .rect-items .valign h4.submit, .rect-items .valign .event_espresso_form_wrapper h4.submit, .event_espresso_form_wrapper .rect-items #history .meta span h4.submit, .rect-items #history .meta span .event_espresso_form_wrapper h4.submit, .event_espresso_form_wrapper #history .meta .rect-items span h4.submit, #history .meta .rect-items span .event_espresso_form_wrapper h4.submit, .event_espresso_form_wrapper .rect-items .valign h5.submit, .rect-items .valign .event_espresso_form_wrapper h5.submit, .event_espresso_form_wrapper .rect-items #history .meta span h5.submit, .rect-items #history .meta span .event_espresso_form_wrapper h5.submit, .event_espresso_form_wrapper #history .meta .rect-items span h5.submit, #history .meta .rect-items span .event_espresso_form_wrapper h5.submit, .event_espresso_form_wrapper .rect-items .valign h6.submit, .rect-items .valign .event_espresso_form_wrapper h6.submit, .event_espresso_form_wrapper .rect-items #history .meta span h6.submit, .rect-items #history .meta span .event_espresso_form_wrapper h6.submit, .event_espresso_form_wrapper #history .meta .rect-items span h6.submit, #history .meta .rect-items span .event_espresso_form_wrapper h6.submit, .event_espresso_form_wrapper #events .event-desc .submit.date, #events .event-desc .event_espresso_form_wrapper .submit.date, .event_espresso_form_wrapper .large#stripe_submit, .event_espresso_form_wrapper .hero.flexslider .slides li .slide-content-wrapper .slide-content #stripe_submit.slide-title, .hero.flexslider .slides li .slide-content-wrapper .slide-content .event_espresso_form_wrapper #stripe_submit.slide-title, .event_espresso_form_wrapper .square .valign h1#stripe_submit, .square .valign .event_espresso_form_wrapper h1#stripe_submit, .event_espresso_form_wrapper .square #history .meta span h1#stripe_submit, .square #history .meta span .event_espresso_form_wrapper h1#stripe_submit, .event_espresso_form_wrapper #history .meta .square span h1#stripe_submit, #history .meta .square span .event_espresso_form_wrapper h1#stripe_submit, .event_espresso_form_wrapper .square .valign h2#stripe_submit, .square .valign .event_espresso_form_wrapper h2#stripe_submit, .event_espresso_form_wrapper .square #history .meta span h2#stripe_submit, .square #history .meta span .event_espresso_form_wrapper h2#stripe_submit, .event_espresso_form_wrapper #history .meta .square span h2#stripe_submit, #history .meta .square span .event_espresso_form_wrapper h2#stripe_submit, .event_espresso_form_wrapper .square .valign h3#stripe_submit, .square .valign .event_espresso_form_wrapper h3#stripe_submit, .event_espresso_form_wrapper .square #history .meta span h3#stripe_submit, .square #history .meta span .event_espresso_form_wrapper h3#stripe_submit, .event_espresso_form_wrapper #history .meta .square span h3#stripe_submit, #history .meta .square span .event_espresso_form_wrapper h3#stripe_submit, .event_espresso_form_wrapper .square .valign h4#stripe_submit, .square .valign .event_espresso_form_wrapper h4#stripe_submit, .event_espresso_form_wrapper .square #history .meta span h4#stripe_submit, .square #history .meta span .event_espresso_form_wrapper h4#stripe_submit, .event_espresso_form_wrapper #history .meta .square span h4#stripe_submit, #history .meta .square span .event_espresso_form_wrapper h4#stripe_submit, .event_espresso_form_wrapper .square .valign h5#stripe_submit, .square .valign .event_espresso_form_wrapper h5#stripe_submit, .event_espresso_form_wrapper .square #history .meta span h5#stripe_submit, .square #history .meta span .event_espresso_form_wrapper h5#stripe_submit, .event_espresso_form_wrapper #history .meta .square span h5#stripe_submit, #history .meta .square span .event_espresso_form_wrapper h5#stripe_submit, .event_espresso_form_wrapper .square .valign h6#stripe_submit, .square .valign .event_espresso_form_wrapper h6#stripe_submit, .event_espresso_form_wrapper .square #history .meta span h6#stripe_submit, .square #history .meta span .event_espresso_form_wrapper h6#stripe_submit, .event_espresso_form_wrapper #history .meta .square span h6#stripe_submit, #history .meta .square span .event_espresso_form_wrapper h6#stripe_submit, .event_espresso_form_wrapper .rect-items .valign h1#stripe_submit, .rect-items .valign .event_espresso_form_wrapper h1#stripe_submit, .event_espresso_form_wrapper .rect-items #history .meta span h1#stripe_submit, .rect-items #history .meta span .event_espresso_form_wrapper h1#stripe_submit, .event_espresso_form_wrapper #history .meta .rect-items span h1#stripe_submit, #history .meta .rect-items span .event_espresso_form_wrapper h1#stripe_submit, .event_espresso_form_wrapper .rect-items .valign h2#stripe_submit, .rect-items .valign .event_espresso_form_wrapper h2#stripe_submit, .event_espresso_form_wrapper .rect-items #history .meta span h2#stripe_submit, .rect-items #history .meta span .event_espresso_form_wrapper h2#stripe_submit, .event_espresso_form_wrapper #history .meta .rect-items span h2#stripe_submit, #history .meta .rect-items span .event_espresso_form_wrapper h2#stripe_submit, .event_espresso_form_wrapper .rect-items .valign h3#stripe_submit, .rect-items .valign .event_espresso_form_wrapper h3#stripe_submit, .event_espresso_form_wrapper .rect-items #history .meta span h3#stripe_submit, .rect-items #history .meta span .event_espresso_form_wrapper h3#stripe_submit, .event_espresso_form_wrapper #history .meta .rect-items span h3#stripe_submit, #history .meta .rect-items span .event_espresso_form_wrapper h3#stripe_submit, .event_espresso_form_wrapper .rect-items .valign h4#stripe_submit, .rect-items .valign .event_espresso_form_wrapper h4#stripe_submit, .event_espresso_form_wrapper .rect-items #history .meta span h4#stripe_submit, .rect-items #history .meta span .event_espresso_form_wrapper h4#stripe_submit, .event_espresso_form_wrapper #history .meta .rect-items span h4#stripe_submit, #history .meta .rect-items span .event_espresso_form_wrapper h4#stripe_submit, .event_espresso_form_wrapper .rect-items .valign h5#stripe_submit, .rect-items .valign .event_espresso_form_wrapper h5#stripe_submit, .event_espresso_form_wrapper .rect-items #history .meta span h5#stripe_submit, .rect-items #history .meta span .event_espresso_form_wrapper h5#stripe_submit, .event_espresso_form_wrapper #history .meta .rect-items span h5#stripe_submit, #history .meta .rect-items span .event_espresso_form_wrapper h5#stripe_submit, .event_espresso_form_wrapper .rect-items .valign h6#stripe_submit, .rect-items .valign .event_espresso_form_wrapper h6#stripe_submit, .event_espresso_form_wrapper .rect-items #history .meta span h6#stripe_submit, .rect-items #history .meta span .event_espresso_form_wrapper h6#stripe_submit, .event_espresso_form_wrapper #history .meta .rect-items span h6#stripe_submit, #history .meta .rect-items span .event_espresso_form_wrapper h6#stripe_submit, .event_espresso_form_wrapper #events .event-desc #stripe_submit.date, #events .event-desc .event_espresso_form_wrapper #stripe_submit.date, .espresso_add_attendee .large.submit, .espresso_add_attendee .hero.flexslider .slides li .slide-content-wrapper .slide-content .submit.slide-title, .hero.flexslider .slides li .slide-content-wrapper .slide-content .espresso_add_attendee .submit.slide-title, .espresso_add_attendee .square .valign h1.submit, .square .valign .espresso_add_attendee h1.submit, .espresso_add_attendee .square #history .meta span h1.submit, .square #history .meta span .espresso_add_attendee h1.submit, .espresso_add_attendee #history .meta .square span h1.submit, #history .meta .square span .espresso_add_attendee h1.submit, .espresso_add_attendee .square .valign h2.submit, .square .valign .espresso_add_attendee h2.submit, .espresso_add_attendee .square #history .meta span h2.submit, .square #history .meta span .espresso_add_attendee h2.submit, .espresso_add_attendee #history .meta .square span h2.submit, #history .meta .square span .espresso_add_attendee h2.submit, .espresso_add_attendee .square .valign h3.submit, .square .valign .espresso_add_attendee h3.submit, .espresso_add_attendee .square #history .meta span h3.submit, .square #history .meta span .espresso_add_attendee h3.submit, .espresso_add_attendee #history .meta .square span h3.submit, #history .meta .square span .espresso_add_attendee h3.submit, .espresso_add_attendee .square .valign h4.submit, .square .valign .espresso_add_attendee h4.submit, .espresso_add_attendee .square #history .meta span h4.submit, .square #history .meta span .espresso_add_attendee h4.submit, .espresso_add_attendee #history .meta .square span h4.submit, #history .meta .square span .espresso_add_attendee h4.submit, .espresso_add_attendee .square .valign h5.submit, .square .valign .espresso_add_attendee h5.submit, .espresso_add_attendee .square #history .meta span h5.submit, .square #history .meta span .espresso_add_attendee h5.submit, .espresso_add_attendee #history .meta .square span h5.submit, #history .meta .square span .espresso_add_attendee h5.submit, .espresso_add_attendee .square .valign h6.submit, .square .valign .espresso_add_attendee h6.submit, .espresso_add_attendee .square #history .meta span h6.submit, .square #history .meta span .espresso_add_attendee h6.submit, .espresso_add_attendee #history .meta .square span h6.submit, #history .meta .square span .espresso_add_attendee h6.submit, .espresso_add_attendee .rect-items .valign h1.submit, .rect-items .valign .espresso_add_attendee h1.submit, .espresso_add_attendee .rect-items #history .meta span h1.submit, .rect-items #history .meta span .espresso_add_attendee h1.submit, .espresso_add_attendee #history .meta .rect-items span h1.submit, #history .meta .rect-items span .espresso_add_attendee h1.submit, .espresso_add_attendee .rect-items .valign h2.submit, .rect-items .valign .espresso_add_attendee h2.submit, .espresso_add_attendee .rect-items #history .meta span h2.submit, .rect-items #history .meta span .espresso_add_attendee h2.submit, .espresso_add_attendee #history .meta .rect-items span h2.submit, #history .meta .rect-items span .espresso_add_attendee h2.submit, .espresso_add_attendee .rect-items .valign h3.submit, .rect-items .valign .espresso_add_attendee h3.submit, .espresso_add_attendee .rect-items #history .meta span h3.submit, .rect-items #history .meta span .espresso_add_attendee h3.submit, .espresso_add_attendee #history .meta .rect-items span h3.submit, #history .meta .rect-items span .espresso_add_attendee h3.submit, .espresso_add_attendee .rect-items .valign h4.submit, .rect-items .valign .espresso_add_attendee h4.submit, .espresso_add_attendee .rect-items #history .meta span h4.submit, .rect-items #history .meta span .espresso_add_attendee h4.submit, .espresso_add_attendee #history .meta .rect-items span h4.submit, #history .meta .rect-items span .espresso_add_attendee h4.submit, .espresso_add_attendee .rect-items .valign h5.submit, .rect-items .valign .espresso_add_attendee h5.submit, .espresso_add_attendee .rect-items #history .meta span h5.submit, .rect-items #history .meta span .espresso_add_attendee h5.submit, .espresso_add_attendee #history .meta .rect-items span h5.submit, #history .meta .rect-items span .espresso_add_attendee h5.submit, .espresso_add_attendee .rect-items .valign h6.submit, .rect-items .valign .espresso_add_attendee h6.submit, .espresso_add_attendee .rect-items #history .meta span h6.submit, .rect-items #history .meta span .espresso_add_attendee h6.submit, .espresso_add_attendee #history .meta .rect-items span h6.submit, #history .meta .rect-items span .espresso_add_attendee h6.submit, .espresso_add_attendee #events .event-desc .submit.date, #events .event-desc .espresso_add_attendee .submit.date, .espresso_add_attendee .large#stripe_submit, .espresso_add_attendee .hero.flexslider .slides li .slide-content-wrapper .slide-content #stripe_submit.slide-title, .hero.flexslider .slides li .slide-content-wrapper .slide-content .espresso_add_attendee #stripe_submit.slide-title, .espresso_add_attendee .square .valign h1#stripe_submit, .square .valign .espresso_add_attendee h1#stripe_submit, .espresso_add_attendee .square #history .meta span h1#stripe_submit, .square #history .meta span .espresso_add_attendee h1#stripe_submit, .espresso_add_attendee #history .meta .square span h1#stripe_submit, #history .meta .square span .espresso_add_attendee h1#stripe_submit, .espresso_add_attendee .square .valign h2#stripe_submit, .square .valign .espresso_add_attendee h2#stripe_submit, .espresso_add_attendee .square #history .meta span h2#stripe_submit, .square #history .meta span .espresso_add_attendee h2#stripe_submit, .espresso_add_attendee #history .meta .square span h2#stripe_submit, #history .meta .square span .espresso_add_attendee h2#stripe_submit, .espresso_add_attendee .square .valign h3#stripe_submit, .square .valign .espresso_add_attendee h3#stripe_submit, .espresso_add_attendee .square #history .meta span h3#stripe_submit, .square #history .meta span .espresso_add_attendee h3#stripe_submit, .espresso_add_attendee #history .meta .square span h3#stripe_submit, #history .meta .square span .espresso_add_attendee h3#stripe_submit, .espresso_add_attendee .square .valign h4#stripe_submit, .square .valign .espresso_add_attendee h4#stripe_submit, .espresso_add_attendee .square #history .meta span h4#stripe_submit, .square #history .meta span .espresso_add_attendee h4#stripe_submit, .espresso_add_attendee #history .meta .square span h4#stripe_submit, #history .meta .square span .espresso_add_attendee h4#stripe_submit, .espresso_add_attendee .square .valign h5#stripe_submit, .square .valign .espresso_add_attendee h5#stripe_submit, .espresso_add_attendee .square #history .meta span h5#stripe_submit, .square #history .meta span .espresso_add_attendee h5#stripe_submit, .espresso_add_attendee #history .meta .square span h5#stripe_submit, #history .meta .square span .espresso_add_attendee h5#stripe_submit, .espresso_add_attendee .square .valign h6#stripe_submit, .square .valign .espresso_add_attendee h6#stripe_submit, .espresso_add_attendee .square #history .meta span h6#stripe_submit, .square #history .meta span .espresso_add_attendee h6#stripe_submit, .espresso_add_attendee #history .meta .square span h6#stripe_submit, #history .meta .square span .espresso_add_attendee h6#stripe_submit, .espresso_add_attendee .rect-items .valign h1#stripe_submit, .rect-items .valign .espresso_add_attendee h1#stripe_submit, .espresso_add_attendee .rect-items #history .meta span h1#stripe_submit, .rect-items #history .meta span .espresso_add_attendee h1#stripe_submit, .espresso_add_attendee #history .meta .rect-items span h1#stripe_submit, #history .meta .rect-items span .espresso_add_attendee h1#stripe_submit, .espresso_add_attendee .rect-items .valign h2#stripe_submit, .rect-items .valign .espresso_add_attendee h2#stripe_submit, .espresso_add_attendee .rect-items #history .meta span h2#stripe_submit, .rect-items #history .meta span .espresso_add_attendee h2#stripe_submit, .espresso_add_attendee #history .meta .rect-items span h2#stripe_submit, #history .meta .rect-items span .espresso_add_attendee h2#stripe_submit, .espresso_add_attendee .rect-items .valign h3#stripe_submit, .rect-items .valign .espresso_add_attendee h3#stripe_submit, .espresso_add_attendee .rect-items #history .meta span h3#stripe_submit, .rect-items #history .meta span .espresso_add_attendee h3#stripe_submit, .espresso_add_attendee #history .meta .rect-items span h3#stripe_submit, #history .meta .rect-items span .espresso_add_attendee h3#stripe_submit, .espresso_add_attendee .rect-items .valign h4#stripe_submit, .rect-items .valign .espresso_add_attendee h4#stripe_submit, .espresso_add_attendee .rect-items #history .meta span h4#stripe_submit, .rect-items #history .meta span .espresso_add_attendee h4#stripe_submit, .espresso_add_attendee #history .meta .rect-items span h4#stripe_submit, #history .meta .rect-items span .espresso_add_attendee h4#stripe_submit, .espresso_add_attendee .rect-items .valign h5#stripe_submit, .rect-items .valign .espresso_add_attendee h5#stripe_submit, .espresso_add_attendee .rect-items #history .meta span h5#stripe_submit, .rect-items #history .meta span .espresso_add_attendee h5#stripe_submit, .espresso_add_attendee #history .meta .rect-items span h5#stripe_submit, #history .meta .rect-items span .espresso_add_attendee h5#stripe_submit, .espresso_add_attendee .rect-items .valign h6#stripe_submit, .rect-items .valign .espresso_add_attendee h6#stripe_submit, .espresso_add_attendee .rect-items #history .meta span h6#stripe_submit, .rect-items #history .meta span .espresso_add_attendee h6#stripe_submit, .espresso_add_attendee #history .meta .rect-items span h6#stripe_submit, #history .meta .rect-items span .espresso_add_attendee h6#stripe_submit, .espresso_add_attendee #events .event-desc #stripe_submit.date, #events .event-desc .espresso_add_attendee #stripe_submit.date, .hero.flexslider .slides li .slide-content-wrapper .slide-content .button.slide-title, .square .valign h1.button, .square #history .meta span h1.button, #history .meta .square span h1.button, .square .valign h2.button, .square #history .meta span h2.button, #history .meta .square span h2.button, .square .valign h3.button, .square #history .meta span h3.button, #history .meta .square span h3.button, .square .valign h4.button, .square #history .meta span h4.button, #history .meta .square span h4.button, .square .valign h5.button, .square #history .meta span h5.button, #history .meta .square span h5.button, .square .valign h6.button, .square #history .meta span h6.button, #history .meta .square span h6.button, .rect-items .valign h1.button, .rect-items #history .meta span h1.button, #history .meta .rect-items span h1.button, .rect-items .valign h2.button, .rect-items #history .meta span h2.button, #history .meta .rect-items span h2.button, .rect-items .valign h3.button, .rect-items #history .meta span h3.button, #history .meta .rect-items span h3.button, .rect-items .valign h4.button, .rect-items #history .meta span h4.button, #history .meta .rect-items span h4.button, .rect-items .valign h5.button, .rect-items #history .meta span h5.button, #history .meta .rect-items span h5.button, .rect-items .valign h6.button, .rect-items #history .meta span h6.button, #history .meta .rect-items span h6.button, #events .event-desc .button.date {
+  /* line 90, scss/_buttons.scss */
+  .button.large, input.large[type="submit"], .hero.flexslider .slides li .slide-content-wrapper .slide-content input[type="submit"].slide-title, #events .event-desc input[type="submit"].date, .event_espresso_form_wrapper .large.submit, .event_espresso_form_wrapper .hero.flexslider .slides li .slide-content-wrapper .slide-content .submit.slide-title, .hero.flexslider .slides li .slide-content-wrapper .slide-content .event_espresso_form_wrapper .submit.slide-title, .event_espresso_form_wrapper .square .valign h1.submit, .square .valign .event_espresso_form_wrapper h1.submit, .event_espresso_form_wrapper .square #history .meta span h1.submit, .square #history .meta span .event_espresso_form_wrapper h1.submit, .event_espresso_form_wrapper #history .meta .square span h1.submit, #history .meta .square span .event_espresso_form_wrapper h1.submit, .event_espresso_form_wrapper .square .valign h2.submit, .square .valign .event_espresso_form_wrapper h2.submit, .event_espresso_form_wrapper .square #history .meta span h2.submit, .square #history .meta span .event_espresso_form_wrapper h2.submit, .event_espresso_form_wrapper #history .meta .square span h2.submit, #history .meta .square span .event_espresso_form_wrapper h2.submit, .event_espresso_form_wrapper .square .valign h3.submit, .square .valign .event_espresso_form_wrapper h3.submit, .event_espresso_form_wrapper .square #history .meta span h3.submit, .square #history .meta span .event_espresso_form_wrapper h3.submit, .event_espresso_form_wrapper #history .meta .square span h3.submit, #history .meta .square span .event_espresso_form_wrapper h3.submit, .event_espresso_form_wrapper .square .valign h4.submit, .square .valign .event_espresso_form_wrapper h4.submit, .event_espresso_form_wrapper .square #history .meta span h4.submit, .square #history .meta span .event_espresso_form_wrapper h4.submit, .event_espresso_form_wrapper #history .meta .square span h4.submit, #history .meta .square span .event_espresso_form_wrapper h4.submit, .event_espresso_form_wrapper .square .valign h5.submit, .square .valign .event_espresso_form_wrapper h5.submit, .event_espresso_form_wrapper .square #history .meta span h5.submit, .square #history .meta span .event_espresso_form_wrapper h5.submit, .event_espresso_form_wrapper #history .meta .square span h5.submit, #history .meta .square span .event_espresso_form_wrapper h5.submit, .event_espresso_form_wrapper .square .valign h6.submit, .square .valign .event_espresso_form_wrapper h6.submit, .event_espresso_form_wrapper .square #history .meta span h6.submit, .square #history .meta span .event_espresso_form_wrapper h6.submit, .event_espresso_form_wrapper #history .meta .square span h6.submit, #history .meta .square span .event_espresso_form_wrapper h6.submit,
+  .event_espresso_form_wrapper .rect-items .valign h1.submit,
+  .rect-items .valign .event_espresso_form_wrapper h1.submit,
+  .event_espresso_form_wrapper .rect-items #history .meta span h1.submit,
+  .rect-items #history .meta span .event_espresso_form_wrapper h1.submit,
+  .event_espresso_form_wrapper #history .meta .rect-items span h1.submit,
+  #history .meta .rect-items span .event_espresso_form_wrapper h1.submit,
+  .event_espresso_form_wrapper .rect-items .valign h2.submit,
+  .rect-items .valign .event_espresso_form_wrapper h2.submit,
+  .event_espresso_form_wrapper .rect-items #history .meta span h2.submit,
+  .rect-items #history .meta span .event_espresso_form_wrapper h2.submit,
+  .event_espresso_form_wrapper #history .meta .rect-items span h2.submit,
+  #history .meta .rect-items span .event_espresso_form_wrapper h2.submit,
+  .event_espresso_form_wrapper .rect-items .valign h3.submit,
+  .rect-items .valign .event_espresso_form_wrapper h3.submit,
+  .event_espresso_form_wrapper .rect-items #history .meta span h3.submit,
+  .rect-items #history .meta span .event_espresso_form_wrapper h3.submit,
+  .event_espresso_form_wrapper #history .meta .rect-items span h3.submit,
+  #history .meta .rect-items span .event_espresso_form_wrapper h3.submit,
+  .event_espresso_form_wrapper .rect-items .valign h4.submit,
+  .rect-items .valign .event_espresso_form_wrapper h4.submit,
+  .event_espresso_form_wrapper .rect-items #history .meta span h4.submit,
+  .rect-items #history .meta span .event_espresso_form_wrapper h4.submit,
+  .event_espresso_form_wrapper #history .meta .rect-items span h4.submit,
+  #history .meta .rect-items span .event_espresso_form_wrapper h4.submit,
+  .event_espresso_form_wrapper .rect-items .valign h5.submit,
+  .rect-items .valign .event_espresso_form_wrapper h5.submit,
+  .event_espresso_form_wrapper .rect-items #history .meta span h5.submit,
+  .rect-items #history .meta span .event_espresso_form_wrapper h5.submit,
+  .event_espresso_form_wrapper #history .meta .rect-items span h5.submit,
+  #history .meta .rect-items span .event_espresso_form_wrapper h5.submit,
+  .event_espresso_form_wrapper .rect-items .valign h6.submit,
+  .rect-items .valign .event_espresso_form_wrapper h6.submit,
+  .event_espresso_form_wrapper .rect-items #history .meta span h6.submit,
+  .rect-items #history .meta span .event_espresso_form_wrapper h6.submit,
+  .event_espresso_form_wrapper #history .meta .rect-items span h6.submit,
+  #history .meta .rect-items span .event_espresso_form_wrapper h6.submit, .event_espresso_form_wrapper #events .event-desc .submit.date, #events .event-desc .event_espresso_form_wrapper .submit.date, .event_espresso_form_wrapper .large#stripe_submit, .event_espresso_form_wrapper .hero.flexslider .slides li .slide-content-wrapper .slide-content #stripe_submit.slide-title, .hero.flexslider .slides li .slide-content-wrapper .slide-content .event_espresso_form_wrapper #stripe_submit.slide-title, .event_espresso_form_wrapper .square .valign h1#stripe_submit, .square .valign .event_espresso_form_wrapper h1#stripe_submit, .event_espresso_form_wrapper .square #history .meta span h1#stripe_submit, .square #history .meta span .event_espresso_form_wrapper h1#stripe_submit, .event_espresso_form_wrapper #history .meta .square span h1#stripe_submit, #history .meta .square span .event_espresso_form_wrapper h1#stripe_submit, .event_espresso_form_wrapper .square .valign h2#stripe_submit, .square .valign .event_espresso_form_wrapper h2#stripe_submit, .event_espresso_form_wrapper .square #history .meta span h2#stripe_submit, .square #history .meta span .event_espresso_form_wrapper h2#stripe_submit, .event_espresso_form_wrapper #history .meta .square span h2#stripe_submit, #history .meta .square span .event_espresso_form_wrapper h2#stripe_submit, .event_espresso_form_wrapper .square .valign h3#stripe_submit, .square .valign .event_espresso_form_wrapper h3#stripe_submit, .event_espresso_form_wrapper .square #history .meta span h3#stripe_submit, .square #history .meta span .event_espresso_form_wrapper h3#stripe_submit, .event_espresso_form_wrapper #history .meta .square span h3#stripe_submit, #history .meta .square span .event_espresso_form_wrapper h3#stripe_submit, .event_espresso_form_wrapper .square .valign h4#stripe_submit, .square .valign .event_espresso_form_wrapper h4#stripe_submit, .event_espresso_form_wrapper .square #history .meta span h4#stripe_submit, .square #history .meta span .event_espresso_form_wrapper h4#stripe_submit, .event_espresso_form_wrapper #history .meta .square span h4#stripe_submit, #history .meta .square span .event_espresso_form_wrapper h4#stripe_submit, .event_espresso_form_wrapper .square .valign h5#stripe_submit, .square .valign .event_espresso_form_wrapper h5#stripe_submit, .event_espresso_form_wrapper .square #history .meta span h5#stripe_submit, .square #history .meta span .event_espresso_form_wrapper h5#stripe_submit, .event_espresso_form_wrapper #history .meta .square span h5#stripe_submit, #history .meta .square span .event_espresso_form_wrapper h5#stripe_submit, .event_espresso_form_wrapper .square .valign h6#stripe_submit, .square .valign .event_espresso_form_wrapper h6#stripe_submit, .event_espresso_form_wrapper .square #history .meta span h6#stripe_submit, .square #history .meta span .event_espresso_form_wrapper h6#stripe_submit, .event_espresso_form_wrapper #history .meta .square span h6#stripe_submit, #history .meta .square span .event_espresso_form_wrapper h6#stripe_submit,
+  .event_espresso_form_wrapper .rect-items .valign h1#stripe_submit,
+  .rect-items .valign .event_espresso_form_wrapper h1#stripe_submit,
+  .event_espresso_form_wrapper .rect-items #history .meta span h1#stripe_submit,
+  .rect-items #history .meta span .event_espresso_form_wrapper h1#stripe_submit,
+  .event_espresso_form_wrapper #history .meta .rect-items span h1#stripe_submit,
+  #history .meta .rect-items span .event_espresso_form_wrapper h1#stripe_submit,
+  .event_espresso_form_wrapper .rect-items .valign h2#stripe_submit,
+  .rect-items .valign .event_espresso_form_wrapper h2#stripe_submit,
+  .event_espresso_form_wrapper .rect-items #history .meta span h2#stripe_submit,
+  .rect-items #history .meta span .event_espresso_form_wrapper h2#stripe_submit,
+  .event_espresso_form_wrapper #history .meta .rect-items span h2#stripe_submit,
+  #history .meta .rect-items span .event_espresso_form_wrapper h2#stripe_submit,
+  .event_espresso_form_wrapper .rect-items .valign h3#stripe_submit,
+  .rect-items .valign .event_espresso_form_wrapper h3#stripe_submit,
+  .event_espresso_form_wrapper .rect-items #history .meta span h3#stripe_submit,
+  .rect-items #history .meta span .event_espresso_form_wrapper h3#stripe_submit,
+  .event_espresso_form_wrapper #history .meta .rect-items span h3#stripe_submit,
+  #history .meta .rect-items span .event_espresso_form_wrapper h3#stripe_submit,
+  .event_espresso_form_wrapper .rect-items .valign h4#stripe_submit,
+  .rect-items .valign .event_espresso_form_wrapper h4#stripe_submit,
+  .event_espresso_form_wrapper .rect-items #history .meta span h4#stripe_submit,
+  .rect-items #history .meta span .event_espresso_form_wrapper h4#stripe_submit,
+  .event_espresso_form_wrapper #history .meta .rect-items span h4#stripe_submit,
+  #history .meta .rect-items span .event_espresso_form_wrapper h4#stripe_submit,
+  .event_espresso_form_wrapper .rect-items .valign h5#stripe_submit,
+  .rect-items .valign .event_espresso_form_wrapper h5#stripe_submit,
+  .event_espresso_form_wrapper .rect-items #history .meta span h5#stripe_submit,
+  .rect-items #history .meta span .event_espresso_form_wrapper h5#stripe_submit,
+  .event_espresso_form_wrapper #history .meta .rect-items span h5#stripe_submit,
+  #history .meta .rect-items span .event_espresso_form_wrapper h5#stripe_submit,
+  .event_espresso_form_wrapper .rect-items .valign h6#stripe_submit,
+  .rect-items .valign .event_espresso_form_wrapper h6#stripe_submit,
+  .event_espresso_form_wrapper .rect-items #history .meta span h6#stripe_submit,
+  .rect-items #history .meta span .event_espresso_form_wrapper h6#stripe_submit,
+  .event_espresso_form_wrapper #history .meta .rect-items span h6#stripe_submit,
+  #history .meta .rect-items span .event_espresso_form_wrapper h6#stripe_submit, .event_espresso_form_wrapper #events .event-desc #stripe_submit.date, #events .event-desc .event_espresso_form_wrapper #stripe_submit.date, .espresso_add_attendee .large.submit, .espresso_add_attendee .hero.flexslider .slides li .slide-content-wrapper .slide-content .submit.slide-title, .hero.flexslider .slides li .slide-content-wrapper .slide-content .espresso_add_attendee .submit.slide-title, .espresso_add_attendee .square .valign h1.submit, .square .valign .espresso_add_attendee h1.submit, .espresso_add_attendee .square #history .meta span h1.submit, .square #history .meta span .espresso_add_attendee h1.submit, .espresso_add_attendee #history .meta .square span h1.submit, #history .meta .square span .espresso_add_attendee h1.submit, .espresso_add_attendee .square .valign h2.submit, .square .valign .espresso_add_attendee h2.submit, .espresso_add_attendee .square #history .meta span h2.submit, .square #history .meta span .espresso_add_attendee h2.submit, .espresso_add_attendee #history .meta .square span h2.submit, #history .meta .square span .espresso_add_attendee h2.submit, .espresso_add_attendee .square .valign h3.submit, .square .valign .espresso_add_attendee h3.submit, .espresso_add_attendee .square #history .meta span h3.submit, .square #history .meta span .espresso_add_attendee h3.submit, .espresso_add_attendee #history .meta .square span h3.submit, #history .meta .square span .espresso_add_attendee h3.submit, .espresso_add_attendee .square .valign h4.submit, .square .valign .espresso_add_attendee h4.submit, .espresso_add_attendee .square #history .meta span h4.submit, .square #history .meta span .espresso_add_attendee h4.submit, .espresso_add_attendee #history .meta .square span h4.submit, #history .meta .square span .espresso_add_attendee h4.submit, .espresso_add_attendee .square .valign h5.submit, .square .valign .espresso_add_attendee h5.submit, .espresso_add_attendee .square #history .meta span h5.submit, .square #history .meta span .espresso_add_attendee h5.submit, .espresso_add_attendee #history .meta .square span h5.submit, #history .meta .square span .espresso_add_attendee h5.submit, .espresso_add_attendee .square .valign h6.submit, .square .valign .espresso_add_attendee h6.submit, .espresso_add_attendee .square #history .meta span h6.submit, .square #history .meta span .espresso_add_attendee h6.submit, .espresso_add_attendee #history .meta .square span h6.submit, #history .meta .square span .espresso_add_attendee h6.submit,
+  .espresso_add_attendee .rect-items .valign h1.submit,
+  .rect-items .valign .espresso_add_attendee h1.submit,
+  .espresso_add_attendee .rect-items #history .meta span h1.submit,
+  .rect-items #history .meta span .espresso_add_attendee h1.submit,
+  .espresso_add_attendee #history .meta .rect-items span h1.submit,
+  #history .meta .rect-items span .espresso_add_attendee h1.submit,
+  .espresso_add_attendee .rect-items .valign h2.submit,
+  .rect-items .valign .espresso_add_attendee h2.submit,
+  .espresso_add_attendee .rect-items #history .meta span h2.submit,
+  .rect-items #history .meta span .espresso_add_attendee h2.submit,
+  .espresso_add_attendee #history .meta .rect-items span h2.submit,
+  #history .meta .rect-items span .espresso_add_attendee h2.submit,
+  .espresso_add_attendee .rect-items .valign h3.submit,
+  .rect-items .valign .espresso_add_attendee h3.submit,
+  .espresso_add_attendee .rect-items #history .meta span h3.submit,
+  .rect-items #history .meta span .espresso_add_attendee h3.submit,
+  .espresso_add_attendee #history .meta .rect-items span h3.submit,
+  #history .meta .rect-items span .espresso_add_attendee h3.submit,
+  .espresso_add_attendee .rect-items .valign h4.submit,
+  .rect-items .valign .espresso_add_attendee h4.submit,
+  .espresso_add_attendee .rect-items #history .meta span h4.submit,
+  .rect-items #history .meta span .espresso_add_attendee h4.submit,
+  .espresso_add_attendee #history .meta .rect-items span h4.submit,
+  #history .meta .rect-items span .espresso_add_attendee h4.submit,
+  .espresso_add_attendee .rect-items .valign h5.submit,
+  .rect-items .valign .espresso_add_attendee h5.submit,
+  .espresso_add_attendee .rect-items #history .meta span h5.submit,
+  .rect-items #history .meta span .espresso_add_attendee h5.submit,
+  .espresso_add_attendee #history .meta .rect-items span h5.submit,
+  #history .meta .rect-items span .espresso_add_attendee h5.submit,
+  .espresso_add_attendee .rect-items .valign h6.submit,
+  .rect-items .valign .espresso_add_attendee h6.submit,
+  .espresso_add_attendee .rect-items #history .meta span h6.submit,
+  .rect-items #history .meta span .espresso_add_attendee h6.submit,
+  .espresso_add_attendee #history .meta .rect-items span h6.submit,
+  #history .meta .rect-items span .espresso_add_attendee h6.submit, .espresso_add_attendee #events .event-desc .submit.date, #events .event-desc .espresso_add_attendee .submit.date, .espresso_add_attendee .large#stripe_submit, .espresso_add_attendee .hero.flexslider .slides li .slide-content-wrapper .slide-content #stripe_submit.slide-title, .hero.flexslider .slides li .slide-content-wrapper .slide-content .espresso_add_attendee #stripe_submit.slide-title, .espresso_add_attendee .square .valign h1#stripe_submit, .square .valign .espresso_add_attendee h1#stripe_submit, .espresso_add_attendee .square #history .meta span h1#stripe_submit, .square #history .meta span .espresso_add_attendee h1#stripe_submit, .espresso_add_attendee #history .meta .square span h1#stripe_submit, #history .meta .square span .espresso_add_attendee h1#stripe_submit, .espresso_add_attendee .square .valign h2#stripe_submit, .square .valign .espresso_add_attendee h2#stripe_submit, .espresso_add_attendee .square #history .meta span h2#stripe_submit, .square #history .meta span .espresso_add_attendee h2#stripe_submit, .espresso_add_attendee #history .meta .square span h2#stripe_submit, #history .meta .square span .espresso_add_attendee h2#stripe_submit, .espresso_add_attendee .square .valign h3#stripe_submit, .square .valign .espresso_add_attendee h3#stripe_submit, .espresso_add_attendee .square #history .meta span h3#stripe_submit, .square #history .meta span .espresso_add_attendee h3#stripe_submit, .espresso_add_attendee #history .meta .square span h3#stripe_submit, #history .meta .square span .espresso_add_attendee h3#stripe_submit, .espresso_add_attendee .square .valign h4#stripe_submit, .square .valign .espresso_add_attendee h4#stripe_submit, .espresso_add_attendee .square #history .meta span h4#stripe_submit, .square #history .meta span .espresso_add_attendee h4#stripe_submit, .espresso_add_attendee #history .meta .square span h4#stripe_submit, #history .meta .square span .espresso_add_attendee h4#stripe_submit, .espresso_add_attendee .square .valign h5#stripe_submit, .square .valign .espresso_add_attendee h5#stripe_submit, .espresso_add_attendee .square #history .meta span h5#stripe_submit, .square #history .meta span .espresso_add_attendee h5#stripe_submit, .espresso_add_attendee #history .meta .square span h5#stripe_submit, #history .meta .square span .espresso_add_attendee h5#stripe_submit, .espresso_add_attendee .square .valign h6#stripe_submit, .square .valign .espresso_add_attendee h6#stripe_submit, .espresso_add_attendee .square #history .meta span h6#stripe_submit, .square #history .meta span .espresso_add_attendee h6#stripe_submit, .espresso_add_attendee #history .meta .square span h6#stripe_submit, #history .meta .square span .espresso_add_attendee h6#stripe_submit,
+  .espresso_add_attendee .rect-items .valign h1#stripe_submit,
+  .rect-items .valign .espresso_add_attendee h1#stripe_submit,
+  .espresso_add_attendee .rect-items #history .meta span h1#stripe_submit,
+  .rect-items #history .meta span .espresso_add_attendee h1#stripe_submit,
+  .espresso_add_attendee #history .meta .rect-items span h1#stripe_submit,
+  #history .meta .rect-items span .espresso_add_attendee h1#stripe_submit,
+  .espresso_add_attendee .rect-items .valign h2#stripe_submit,
+  .rect-items .valign .espresso_add_attendee h2#stripe_submit,
+  .espresso_add_attendee .rect-items #history .meta span h2#stripe_submit,
+  .rect-items #history .meta span .espresso_add_attendee h2#stripe_submit,
+  .espresso_add_attendee #history .meta .rect-items span h2#stripe_submit,
+  #history .meta .rect-items span .espresso_add_attendee h2#stripe_submit,
+  .espresso_add_attendee .rect-items .valign h3#stripe_submit,
+  .rect-items .valign .espresso_add_attendee h3#stripe_submit,
+  .espresso_add_attendee .rect-items #history .meta span h3#stripe_submit,
+  .rect-items #history .meta span .espresso_add_attendee h3#stripe_submit,
+  .espresso_add_attendee #history .meta .rect-items span h3#stripe_submit,
+  #history .meta .rect-items span .espresso_add_attendee h3#stripe_submit,
+  .espresso_add_attendee .rect-items .valign h4#stripe_submit,
+  .rect-items .valign .espresso_add_attendee h4#stripe_submit,
+  .espresso_add_attendee .rect-items #history .meta span h4#stripe_submit,
+  .rect-items #history .meta span .espresso_add_attendee h4#stripe_submit,
+  .espresso_add_attendee #history .meta .rect-items span h4#stripe_submit,
+  #history .meta .rect-items span .espresso_add_attendee h4#stripe_submit,
+  .espresso_add_attendee .rect-items .valign h5#stripe_submit,
+  .rect-items .valign .espresso_add_attendee h5#stripe_submit,
+  .espresso_add_attendee .rect-items #history .meta span h5#stripe_submit,
+  .rect-items #history .meta span .espresso_add_attendee h5#stripe_submit,
+  .espresso_add_attendee #history .meta .rect-items span h5#stripe_submit,
+  #history .meta .rect-items span .espresso_add_attendee h5#stripe_submit,
+  .espresso_add_attendee .rect-items .valign h6#stripe_submit,
+  .rect-items .valign .espresso_add_attendee h6#stripe_submit,
+  .espresso_add_attendee .rect-items #history .meta span h6#stripe_submit,
+  .rect-items #history .meta span .espresso_add_attendee h6#stripe_submit,
+  .espresso_add_attendee #history .meta .rect-items span h6#stripe_submit,
+  #history .meta .rect-items span .espresso_add_attendee h6#stripe_submit, .espresso_add_attendee #events .event-desc #stripe_submit.date, #events .event-desc .espresso_add_attendee #stripe_submit.date, .hero.flexslider .slides li .slide-content-wrapper .slide-content .button.slide-title, .square .valign h1.button, .square #history .meta span h1.button, #history .meta .square span h1.button, .square .valign h2.button, .square #history .meta span h2.button, #history .meta .square span h2.button, .square .valign h3.button, .square #history .meta span h3.button, #history .meta .square span h3.button, .square .valign h4.button, .square #history .meta span h4.button, #history .meta .square span h4.button, .square .valign h5.button, .square #history .meta span h5.button, #history .meta .square span h5.button, .square .valign h6.button, .square #history .meta span h6.button, #history .meta .square span h6.button,
+  .rect-items .valign h1.button,
+  .rect-items #history .meta span h1.button,
+  #history .meta .rect-items span h1.button,
+  .rect-items .valign h2.button,
+  .rect-items #history .meta span h2.button,
+  #history .meta .rect-items span h2.button,
+  .rect-items .valign h3.button,
+  .rect-items #history .meta span h3.button,
+  #history .meta .rect-items span h3.button,
+  .rect-items .valign h4.button,
+  .rect-items #history .meta span h4.button,
+  #history .meta .rect-items span h4.button,
+  .rect-items .valign h5.button,
+  .rect-items #history .meta span h5.button,
+  #history .meta .rect-items span h5.button,
+  .rect-items .valign h6.button,
+  .rect-items #history .meta span h6.button,
+  #history .meta .rect-items span h6.button, #events .event-desc .button.date {
     font-size: 1.5em; }
-  /* line 104, scss/_buttons.scss */
+  /* line 94, scss/_buttons.scss */
   .button.margin, input.margin[type="submit"], .event_espresso_form_wrapper .margin.submit, .event_espresso_form_wrapper .margin#stripe_submit, .espresso_add_attendee .margin.submit, .espresso_add_attendee .margin#stripe_submit {
     margin-left: 1em; }
-    /* line 106, scss/_buttons.scss */
+    /* line 96, scss/_buttons.scss */
     .button.margin:first-child, input.margin[type="submit"]:first-child, .event_espresso_form_wrapper .margin.submit:first-child, .event_espresso_form_wrapper .margin#stripe_submit:first-child, .espresso_add_attendee .margin.submit:first-child, .espresso_add_attendee .margin#stripe_submit:first-child {
       margin-left: 0; }
 
-/* line 111, scss/_buttons.scss */
+/* line 101, scss/_buttons.scss */
 #event_espresso_refresh_total > a, #event_espresso_edit_cart > a,
 .event_espresso_refresh_total > a, .choose-diff-pay-option-pg > a {
   border: 1px solid #A268BE !important;
@@ -1513,7 +1668,7 @@ button {
   -o-transition: all, 0.3s;
   -webkit-transition: all, 0.3s;
   transition: all, 0.3s; }
-  /* line 115, scss/_buttons.scss */
+  /* line 105, scss/_buttons.scss */
   #event_espresso_refresh_total > a:hover, #event_espresso_edit_cart > a:hover,
   .event_espresso_refresh_total > a:hover, .choose-diff-pay-option-pg > a:hover {
     color: #fff;
@@ -1521,35 +1676,71 @@ button {
 
 /* line 1, scss/_typography.scss */
 body {
-  font-family: 'Garamond Prmr W01 Cap';
-  font-weight: normal; }
+  font-size: 13px;
+  font-family: 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, 'Lucida Grande', sans-serif; }
 
-/* line 4, scss/_typography.scss */
+/* line 5, scss/_typography.scss */
 .white {
   color: #fff; }
 
-/* line 7, scss/_typography.scss */
+/* line 8, scss/_typography.scss */
 .black, #events-single, #booking {
   color: #333; }
 
-/* line 11, scss/_typography.scss */
+/* line 12, scss/_typography.scss */
 .small, input[type="text"], input[type="password"], .login .js-login, .widget_login_wid input[type="text"], .widget_login_wid input[type="password"], .widget_login_wid input[type="submit"] {
   font-size: 0.75em; }
 
-/* line 14, scss/_typography.scss */
+/* line 15, scss/_typography.scss */
 .medium, #team .member-name {
   font-size: 1.5em; }
 
-/* line 17, scss/_typography.scss */
-.large, .hero.flexslider .slides li .slide-content-wrapper .slide-content .slide-title, .square .valign h1, .square #history .meta span h1, #history .meta .square span h1, .square .valign h2, .square #history .meta span h2, #history .meta .square span h2, .square .valign h3, .square #history .meta span h3, #history .meta .square span h3, .square .valign h4, .square #history .meta span h4, #history .meta .square span h4, .square .valign h5, .square #history .meta span h5, #history .meta .square span h5, .square .valign h6, .square #history .meta span h6, #history .meta .square span h6, .rect-items .valign h1, .rect-items #history .meta span h1, #history .meta .rect-items span h1, .rect-items .valign h2, .rect-items #history .meta span h2, #history .meta .rect-items span h2, .rect-items .valign h3, .rect-items #history .meta span h3, #history .meta .rect-items span h3, .rect-items .valign h4, .rect-items #history .meta span h4, #history .meta .rect-items span h4, .rect-items .valign h5, .rect-items #history .meta span h5, #history .meta .rect-items span h5, .rect-items .valign h6, .rect-items #history .meta span h6, #history .meta .rect-items span h6, #events .event-desc .date {
+/* line 18, scss/_typography.scss */
+.large, .hero.flexslider .slides li .slide-content-wrapper .slide-content .slide-title, .square .valign h1, .square #history .meta span h1, #history .meta .square span h1, .square .valign h2, .square #history .meta span h2, #history .meta .square span h2, .square .valign h3, .square #history .meta span h3, #history .meta .square span h3, .square .valign h4, .square #history .meta span h4, #history .meta .square span h4, .square .valign h5, .square #history .meta span h5, #history .meta .square span h5, .square .valign h6, .square #history .meta span h6, #history .meta .square span h6,
+.rect-items .valign h1,
+.rect-items #history .meta span h1,
+#history .meta .rect-items span h1,
+.rect-items .valign h2,
+.rect-items #history .meta span h2,
+#history .meta .rect-items span h2,
+.rect-items .valign h3,
+.rect-items #history .meta span h3,
+#history .meta .rect-items span h3,
+.rect-items .valign h4,
+.rect-items #history .meta span h4,
+#history .meta .rect-items span h4,
+.rect-items .valign h5,
+.rect-items #history .meta span h5,
+#history .meta .rect-items span h5,
+.rect-items .valign h6,
+.rect-items #history .meta span h6,
+#history .meta .rect-items span h6, #events .event-desc .date {
   font-size: 2em; }
 
-/* line 20, scss/_typography.scss */
+/* line 21, scss/_typography.scss */
 .xlarge, #single-cedric .inner .post-title {
   font-size: 3em; }
 
-/* line 24, scss/_typography.scss */
-.title, #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #footer .sitemap .right nav ul.menu a {
+/* line 25, scss/_typography.scss */
+.title, #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, .square .valign h1, .square #history .meta span h1, #history .meta .square span h1, .square .valign h2, .square #history .meta span h2, #history .meta .square span h2, .square .valign h3, .square #history .meta span h3, #history .meta .square span h3, .square .valign h4, .square #history .meta span h4, #history .meta .square span h4, .square .valign h5, .square #history .meta span h5, #history .meta .square span h5, .square .valign h6, .square #history .meta span h6, #history .meta .square span h6,
+.rect-items .valign h1,
+.rect-items #history .meta span h1,
+#history .meta .rect-items span h1,
+.rect-items .valign h2,
+.rect-items #history .meta span h2,
+#history .meta .rect-items span h2,
+.rect-items .valign h3,
+.rect-items #history .meta span h3,
+#history .meta .rect-items span h3,
+.rect-items .valign h4,
+.rect-items #history .meta span h4,
+#history .meta .rect-items span h4,
+.rect-items .valign h5,
+.rect-items #history .meta span h5,
+#history .meta .rect-items span h5,
+.rect-items .valign h6,
+.rect-items #history .meta span h6,
+#history .meta .rect-items span h6, #footer .sitemap .right nav ul.menu a {
   display: inline-block;
   margin: 0;
   font-family: 'GaramondPrmrW01-BdCap';
@@ -1628,7 +1819,7 @@ html, body {
 
 /* line 11, scss/_misc.scss */
 body {
-  font-size: 1em;
+  height: auto;
   line-height: 1.4;
   -webkit-font-smoothing: antialiased; }
 
@@ -1732,6 +1923,45 @@ hr {
     content: '\2666';
     font-size: 0.5em;
     vertical-align: middle; }
+
+/* WORDPRESS IMAGE */
+/* line 117, scss/_misc.scss */
+.alignleft {
+  float: left; }
+
+/* line 120, scss/_misc.scss */
+.alignright {
+  float: right; }
+
+/* line 123, scss/_misc.scss */
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* line 128, scss/_misc.scss */
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="attachment-"] {
+  height: auto;
+  /* Make sure images with WordPress-added height and width attributes are scaled correctly */ }
+
+/* line 133, scss/_misc.scss */
+img.size-full,
+img.size-large,
+img.header-image,
+img.wp-post-image {
+  max-width: 100%;
+  height: auto;
+  /* Make sure images with WordPress-added height and width attributes are scaled correctly */ }
+
+/* Make sure videos and embeds fit their containers */
+/* line 142, scss/_misc.scss */
+embed,
+iframe,
+object,
+video {
+  max-width: 100%; }
 
 /* line 1, scss/_forms.scss */
 fieldset {
@@ -2235,57 +2465,57 @@ body {
     height: 100%;
     z-index: 5;
     *zoom: 1;
-    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF00FFFF', endColorstr='#FFA8FFFF');
-    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSI1NiUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAuMDYiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFFFFF', endColorstr='#FFFFFFFF');
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSI4NSUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAuMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
     background-size: 100%;
-    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(56%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0.06)));
-    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 56%, rgba(255, 255, 255, 0.06) 100%);
-    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 56%, rgba(255, 255, 255, 0.06) 100%);
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 56%, rgba(255, 255, 255, 0.06) 100%); }
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(85%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0.2)));
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 0.2) 100%);
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 0.2) 100%);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 0.2) 100%); }
 
 /* ==========================================================================
    MEGATRON DROPDOWN
    ========================================================================== */
-/* line 180, scss/_layout.scss */
+/* line 181, scss/_layout.scss */
 nav ul {
   margin: 0;
   padding: 0;
   list-style: none; }
 
-/* line 189, scss/_layout.scss */
+/* line 190, scss/_layout.scss */
 #header.mega .logo-big {
   position: relative;
   display: inline-block;
   margin: 1em 0;
   z-index: 10; }
-/* line 196, scss/_layout.scss */
+/* line 197, scss/_layout.scss */
 #header.mega .logo-small {
   display: none; }
 @media screen and (max-width: 1100px) {
-  /* line 200, scss/_layout.scss */
+  /* line 201, scss/_layout.scss */
   #header.mega #nav {
     font-size: 90%; } }
-/* line 206, scss/_layout.scss */
+/* line 207, scss/_layout.scss */
 #header.mega #nav .mobile-menu {
   display: none; }
-/* line 210, scss/_layout.scss */
+/* line 211, scss/_layout.scss */
 #header.mega #nav ul.menu {
   position: relative;
   z-index: 9999; }
-  /* line 215, scss/_layout.scss */
+  /* line 216, scss/_layout.scss */
   #header.mega #nav ul.menu > li.menu-item {
     display: inline-block;
     margin-left: 3em;
     text-align: left;
     line-height: 45px; }
     @media screen and (max-width: 950px) {
-      /* line 215, scss/_layout.scss */
+      /* line 216, scss/_layout.scss */
       #header.mega #nav ul.menu > li.menu-item {
         margin-left: 2em; } }
-    /* line 225, scss/_layout.scss */
+    /* line 226, scss/_layout.scss */
     #header.mega #nav ul.menu > li.menu-item:first-child {
       margin-left: 0; }
-    /* line 229, scss/_layout.scss */
+    /* line 230, scss/_layout.scss */
     #header.mega #nav ul.menu > li.menu-item > a {
       display: inline;
       padding-bottom: 3px;
@@ -2298,10 +2528,10 @@ nav ul {
       -o-transition: border-bottom, 0.3s;
       -webkit-transition: border-bottom, 0.3s;
       transition: border-bottom, 0.3s; }
-      /* line 239, scss/_layout.scss */
+      /* line 240, scss/_layout.scss */
       #header.mega #nav ul.menu > li.menu-item > a:hover {
         border-bottom: 1px solid #fff; }
-    /* line 244, scss/_layout.scss */
+    /* line 245, scss/_layout.scss */
     #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > ul.sub-menu ul.menu > li.menu-item a, #header.mega #nav ul.menu > li.menu-item.menu-item-has-children > ul.sub-menu > li.menu-item a, #header.mega #header.mobile #nav ul.menu > li.menu-item a, #header.mobile #header.mega #nav ul.menu > li.menu-item a {
       display: inline-block;
       margin: 1em 0;
@@ -2316,10 +2546,10 @@ nav ul {
       -o-transition: all, 0.3s;
       -webkit-transition: all, 0.3s;
       transition: all, 0.3s; }
-      /* line 256, scss/_layout.scss */
+      /* line 257, scss/_layout.scss */
       #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > ul.sub-menu ul.menu > li.menu-item a:hover, #header.mega #nav ul.menu > li.menu-item.menu-item-has-children > ul.sub-menu > li.menu-item a:hover, #header.mega #header.mobile #nav ul.menu > li.menu-item a:hover, #header.mobile #header.mega #nav ul.menu > li.menu-item a:hover {
         border-bottom: 1px solid #454545; }
-    /* line 265, scss/_layout.scss */
+    /* line 266, scss/_layout.scss */
     #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu {
       left: 0;
       width: 100%;
@@ -2327,7 +2557,7 @@ nav ul {
       background-image: url(../img/megadrop-dove.png), url(../img/bg-megadrop-bottom-repeat.png), url(../img/bg-megadrop-cloud-left.png), url(../img/bg-megadrop-cloud-right.png), url(../img/bg-megadrop.jpg);
       background-position: 90% 60%, 0 107%, bottom left, bottom right;
       background-repeat: no-repeat, repeat-x, no-repeat, no-repeat,  repeat; }
-      /* line 278, scss/_layout.scss */
+      /* line 279, scss/_layout.scss */
       #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu:after {
         content: "";
         display: inline-block;
@@ -2339,36 +2569,36 @@ nav ul {
         margin-left: -365px;
         background-image: url(../img/bg-megadrop-bottom-center.png); }
       @media screen and (max-width: 1000px) {
-        /* line 265, scss/_layout.scss */
+        /* line 266, scss/_layout.scss */
         #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu {
           padding: 0 10%; } }
       @media screen and (max-width: 800px) {
-        /* line 265, scss/_layout.scss */
+        /* line 266, scss/_layout.scss */
         #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu {
           padding: 0; } }
-      /* line 297, scss/_layout.scss */
+      /* line 298, scss/_layout.scss */
       #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item {
         margin: 3em 0;
         padding: 1em 1.5em;
         line-height: 1;
         border-top: none;
         border-right: 1px solid #c4c4c4; }
-        /* line 304, scss/_layout.scss */
+        /* line 305, scss/_layout.scss */
         #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item:first-child {
           border-left: 1px solid #c4c4c4; }
         @media screen and (max-width: 800px) {
-          /* line 297, scss/_layout.scss */
+          /* line 298, scss/_layout.scss */
           #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item {
             border: none; } }
-        /* line 312, scss/_layout.scss */
+        /* line 313, scss/_layout.scss */
         #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a {
           margin: 0;
           font-size: 1em;
           color: #000; }
-        /* line 319, scss/_layout.scss */
+        /* line 320, scss/_layout.scss */
         #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > ul.sub-menu {
           margin-top: 1em; }
-          /* line 325, scss/_layout.scss */
+          /* line 326, scss/_layout.scss */
           #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > ul.sub-menu li.menu-item a:after {
             content: ">";
             display: inline-block;
@@ -2376,7 +2606,7 @@ nav ul {
             margin-left: 5px;
             font-size: 0.5em;
             vertical-align: middle; }
-    /* line 340, scss/_layout.scss */
+    /* line 341, scss/_layout.scss */
     #header.mega #nav ul.menu > li.menu-item.menu-item-has-children > ul.sub-menu {
       z-index: 9999;
       position: absolute;
@@ -2387,7 +2617,7 @@ nav ul {
       -o-transition: opacity, 0.2s;
       -webkit-transition: opacity, 0.2s;
       transition: opacity, 0.2s; }
-      /* line 350, scss/_layout.scss */
+      /* line 351, scss/_layout.scss */
       #header.mega #nav ul.menu > li.menu-item.menu-item-has-children > ul.sub-menu:after {
         content: "";
         display: inline-block;
@@ -2400,20 +2630,20 @@ nav ul {
         background-image: url(../img/bg-drop-bottom.png);
         background-repeat: repeat-x;
         background-position: center; }
-      /* line 364, scss/_layout.scss */
+      /* line 365, scss/_layout.scss */
       #header.mega #nav ul.menu > li.menu-item.menu-item-has-children > ul.sub-menu > li.menu-item {
         border-top: 1px solid #c4c4c4; }
-        /* line 368, scss/_layout.scss */
+        /* line 369, scss/_layout.scss */
         #header.mega #nav ul.menu > li.menu-item.menu-item-has-children > ul.sub-menu > li.menu-item:first-child {
           border-top: none; }
-        /* line 372, scss/_layout.scss */
+        /* line 373, scss/_layout.scss */
         #header.mega #nav ul.menu > li.menu-item.menu-item-has-children > ul.sub-menu > li.menu-item a {
           line-height: 1; }
-        /* line 377, scss/_layout.scss */
+        /* line 378, scss/_layout.scss */
         #header.mega #nav ul.menu > li.menu-item.menu-item-has-children > ul.sub-menu > li.menu-item.menu-item-has-children {
           float: left; }
 
-/* line 395, scss/_layout.scss */
+/* line 396, scss/_layout.scss */
 #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > ul.sub-menu li.menu-item a, #header.mega #nav ul.menu > li.menu-item.menu-item-has-children > ul.sub-menu > li.menu-item a, #header.mobile #nav ul.menu > li.menu-item a {
   display: inline-block;
   margin: 1em 0;
@@ -2423,51 +2653,51 @@ nav ul {
   text-transform: uppercase;
   text-decoration: none; }
 
-/* line 405, scss/_layout.scss */
+/* line 406, scss/_layout.scss */
 #header.mobile {
   padding: 0; }
-  /* line 409, scss/_layout.scss */
+  /* line 410, scss/_layout.scss */
   #header.mobile .logo-big {
     display: none; }
-  /* line 413, scss/_layout.scss */
+  /* line 414, scss/_layout.scss */
   #header.mobile .logo-small {
     display: inline-block;
     z-index: 10; }
-  /* line 418, scss/_layout.scss */
+  /* line 419, scss/_layout.scss */
   #header.mobile #nav {
     text-align: left; }
-    /* line 421, scss/_layout.scss */
+    /* line 422, scss/_layout.scss */
     #header.mobile #nav .mobile-menu {
       display: inline-block;
       position: relative;
       line-height: 60px;
       z-index: 10; }
-      /* line 427, scss/_layout.scss */
+      /* line 428, scss/_layout.scss */
       #header.mobile #nav .mobile-menu .mob-button {
         padding: 0.5em 1em;
         color: #fff;
         font-size: 0.75em;
         text-transform: uppercase; }
-        /* line 433, scss/_layout.scss */
+        /* line 434, scss/_layout.scss */
         #header.mobile #nav .mobile-menu .mob-button i {
           display: inline-block;
           font-size: 2em;
           margin-top: -1px;
           vertical-align: middle; }
-        /* line 440, scss/_layout.scss */
+        /* line 441, scss/_layout.scss */
         #header.mobile #nav .mobile-menu .mob-button span {
           display: inline-block;
           vertical-align: middle; }
         @media screen and (max-width: 500px) {
-          /* line 427, scss/_layout.scss */
+          /* line 428, scss/_layout.scss */
           #header.mobile #nav .mobile-menu .mob-button {
             color: #fff;
             font-size: 120%;
             background-color: transparent; }
-            /* line 450, scss/_layout.scss */
+            /* line 451, scss/_layout.scss */
             #header.mobile #nav .mobile-menu .mob-button span {
               display: none; } }
-    /* line 457, scss/_layout.scss */
+    /* line 458, scss/_layout.scss */
     #header.mobile #nav ul.menu {
       display: none;
       position: absolute;
@@ -2476,38 +2706,38 @@ nav ul {
       text-align: center;
       background: url(../img/bg-megadrop.jpg);
       z-index: 9999; }
-      /* line 466, scss/_layout.scss */
+      /* line 467, scss/_layout.scss */
       #header.mobile #nav ul.menu.open {
         display: block; }
-      /* line 470, scss/_layout.scss */
+      /* line 471, scss/_layout.scss */
       #header.mobile #nav ul.menu > li.menu-item {
         display: block;
         float: none; }
-        /* line 474, scss/_layout.scss */
+        /* line 475, scss/_layout.scss */
         #header.mobile #nav ul.menu > li.menu-item a {
           width: 100%;
           margin: 0;
           line-height: 45px;
           border-bottom: 1px solid #c4c4c4; }
           @media screen and (max-width: 500px) {
-            /* line 474, scss/_layout.scss */
+            /* line 475, scss/_layout.scss */
             #header.mobile #nav ul.menu > li.menu-item a {
               font-size: 120%; } }
-        /* line 486, scss/_layout.scss */
+        /* line 487, scss/_layout.scss */
         #header.mobile #nav ul.menu > li.menu-item > ul.sub-menu {
           display: none; }
-      /* line 491, scss/_layout.scss */
+      /* line 492, scss/_layout.scss */
       #header.mobile #nav ul.menu li.column {
         float: none;
         padding: 0; }
-        /* line 495, scss/_layout.scss */
+        /* line 496, scss/_layout.scss */
         #header.mobile #nav ul.menu li.column.col-1-3 {
           width: initial; }
 
 /* ==========================================================================
    HERO & FLEXSLIDER
    ========================================================================== */
-/* line 506, scss/_layout.scss */
+/* line 507, scss/_layout.scss */
 #modal-video {
   position: fixed;
   top: 0;
@@ -2516,19 +2746,19 @@ nav ul {
   left: 0;
   background-color: rgba(0, 0, 0, 0.85);
   z-index: 9999; }
-  /* line 512, scss/_layout.scss */
+  /* line 513, scss/_layout.scss */
   #modal-video .valign, #modal-video #history .meta span, #history .meta #modal-video span {
     width: 90%;
     margin-left: 5%;
     text-align: center; }
-  /* line 518, scss/_layout.scss */
+  /* line 519, scss/_layout.scss */
   #modal-video video {
     position: relative;
     display: inline-block;
     width: 100% !important;
     height: auto !important; }
 
-/* line 527, scss/_layout.scss */
+/* line 528, scss/_layout.scss */
 .hero .arrow-wrap {
   position: fixed;
   bottom: 10px;
@@ -2539,42 +2769,230 @@ nav ul {
   background-image: url("../img/scroll-arrow.png");
   background-position: center;
   background-repeat: no-repeat;
-  z-index: 9999; }
-/* line 540, scss/_layout.scss */
+  z-index: 9999;
+  -moz-transition: opacity, 0.5s;
+  -o-transition: opacity, 0.5s;
+  -webkit-transition: opacity, 0.5s;
+  transition: opacity, 0.5s; }
+  /* line 541, scss/_layout.scss */
+  .hero .arrow-wrap.fadeOut {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
+/* line 546, scss/_layout.scss */
 .hero .hero-content {
   width: 90%;
   margin-left: 5%;
   text-align: center;
   z-index: 100; }
   @media screen and (max-width: 500px) {
-    /* line 540, scss/_layout.scss */
+    /* line 546, scss/_layout.scss */
     .hero .hero-content {
       width: 80%;
       margin-left: 10%; } }
-  /* line 551, scss/_layout.scss */
-  .hero .hero-content .title, .hero .hero-content #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav .hero .hero-content ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, .hero .hero-content #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu .hero .hero-content a {
+  /* line 557, scss/_layout.scss */
+  .hero .hero-content .title, .hero .hero-content #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav .hero .hero-content ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, .hero .hero-content .square .valign h1, .square .valign .hero .hero-content h1, .hero .hero-content .square #history .meta span h1, .square #history .meta span .hero .hero-content h1, .hero .hero-content #history .meta .square span h1, #history .meta .square span .hero .hero-content h1, .hero .hero-content .square .valign h2, .square .valign .hero .hero-content h2, .hero .hero-content .square #history .meta span h2, .square #history .meta span .hero .hero-content h2, .hero .hero-content #history .meta .square span h2, #history .meta .square span .hero .hero-content h2, .hero .hero-content .square .valign h3, .square .valign .hero .hero-content h3, .hero .hero-content .square #history .meta span h3, .square #history .meta span .hero .hero-content h3, .hero .hero-content #history .meta .square span h3, #history .meta .square span .hero .hero-content h3, .hero .hero-content .square .valign h4, .square .valign .hero .hero-content h4, .hero .hero-content .square #history .meta span h4, .square #history .meta span .hero .hero-content h4, .hero .hero-content #history .meta .square span h4, #history .meta .square span .hero .hero-content h4, .hero .hero-content .square .valign h5, .square .valign .hero .hero-content h5, .hero .hero-content .square #history .meta span h5, .square #history .meta span .hero .hero-content h5, .hero .hero-content #history .meta .square span h5, #history .meta .square span .hero .hero-content h5, .hero .hero-content .square .valign h6, .square .valign .hero .hero-content h6, .hero .hero-content .square #history .meta span h6, .square #history .meta span .hero .hero-content h6, .hero .hero-content #history .meta .square span h6, #history .meta .square span .hero .hero-content h6,
+  .hero .hero-content .rect-items .valign h1,
+  .rect-items .valign .hero .hero-content h1,
+  .hero .hero-content .rect-items #history .meta span h1,
+  .rect-items #history .meta span .hero .hero-content h1,
+  .hero .hero-content #history .meta .rect-items span h1,
+  #history .meta .rect-items span .hero .hero-content h1,
+  .hero .hero-content .rect-items .valign h2,
+  .rect-items .valign .hero .hero-content h2,
+  .hero .hero-content .rect-items #history .meta span h2,
+  .rect-items #history .meta span .hero .hero-content h2,
+  .hero .hero-content #history .meta .rect-items span h2,
+  #history .meta .rect-items span .hero .hero-content h2,
+  .hero .hero-content .rect-items .valign h3,
+  .rect-items .valign .hero .hero-content h3,
+  .hero .hero-content .rect-items #history .meta span h3,
+  .rect-items #history .meta span .hero .hero-content h3,
+  .hero .hero-content #history .meta .rect-items span h3,
+  #history .meta .rect-items span .hero .hero-content h3,
+  .hero .hero-content .rect-items .valign h4,
+  .rect-items .valign .hero .hero-content h4,
+  .hero .hero-content .rect-items #history .meta span h4,
+  .rect-items #history .meta span .hero .hero-content h4,
+  .hero .hero-content #history .meta .rect-items span h4,
+  #history .meta .rect-items span .hero .hero-content h4,
+  .hero .hero-content .rect-items .valign h5,
+  .rect-items .valign .hero .hero-content h5,
+  .hero .hero-content .rect-items #history .meta span h5,
+  .rect-items #history .meta span .hero .hero-content h5,
+  .hero .hero-content #history .meta .rect-items span h5,
+  #history .meta .rect-items span .hero .hero-content h5,
+  .hero .hero-content .rect-items .valign h6,
+  .rect-items .valign .hero .hero-content h6,
+  .hero .hero-content .rect-items #history .meta span h6,
+  .rect-items #history .meta span .hero .hero-content h6,
+  .hero .hero-content #history .meta .rect-items span h6,
+  #history .meta .rect-items span .hero .hero-content h6, .hero .hero-content #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu .hero .hero-content a {
     font-size: 5em;
     line-height: 1; }
     @media screen and (min-width: 1440px) {
-      /* line 551, scss/_layout.scss */
-      .hero .hero-content .title, .hero .hero-content #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav .hero .hero-content ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, .hero .hero-content #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu .hero .hero-content a {
-        font-size: 5em; } }
-    @media screen and (max-width: 1440px) {
-      /* line 551, scss/_layout.scss */
-      .hero .hero-content .title, .hero .hero-content #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav .hero .hero-content ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, .hero .hero-content #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu .hero .hero-content a {
+      /* line 557, scss/_layout.scss */
+      .hero .hero-content .title, .hero .hero-content #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav .hero .hero-content ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, .hero .hero-content .square .valign h1, .square .valign .hero .hero-content h1, .hero .hero-content .square #history .meta span h1, .square #history .meta span .hero .hero-content h1, .hero .hero-content #history .meta .square span h1, #history .meta .square span .hero .hero-content h1, .hero .hero-content .square .valign h2, .square .valign .hero .hero-content h2, .hero .hero-content .square #history .meta span h2, .square #history .meta span .hero .hero-content h2, .hero .hero-content #history .meta .square span h2, #history .meta .square span .hero .hero-content h2, .hero .hero-content .square .valign h3, .square .valign .hero .hero-content h3, .hero .hero-content .square #history .meta span h3, .square #history .meta span .hero .hero-content h3, .hero .hero-content #history .meta .square span h3, #history .meta .square span .hero .hero-content h3, .hero .hero-content .square .valign h4, .square .valign .hero .hero-content h4, .hero .hero-content .square #history .meta span h4, .square #history .meta span .hero .hero-content h4, .hero .hero-content #history .meta .square span h4, #history .meta .square span .hero .hero-content h4, .hero .hero-content .square .valign h5, .square .valign .hero .hero-content h5, .hero .hero-content .square #history .meta span h5, .square #history .meta span .hero .hero-content h5, .hero .hero-content #history .meta .square span h5, #history .meta .square span .hero .hero-content h5, .hero .hero-content .square .valign h6, .square .valign .hero .hero-content h6, .hero .hero-content .square #history .meta span h6, .square #history .meta span .hero .hero-content h6, .hero .hero-content #history .meta .square span h6, #history .meta .square span .hero .hero-content h6,
+      .hero .hero-content .rect-items .valign h1,
+      .rect-items .valign .hero .hero-content h1,
+      .hero .hero-content .rect-items #history .meta span h1,
+      .rect-items #history .meta span .hero .hero-content h1,
+      .hero .hero-content #history .meta .rect-items span h1,
+      #history .meta .rect-items span .hero .hero-content h1,
+      .hero .hero-content .rect-items .valign h2,
+      .rect-items .valign .hero .hero-content h2,
+      .hero .hero-content .rect-items #history .meta span h2,
+      .rect-items #history .meta span .hero .hero-content h2,
+      .hero .hero-content #history .meta .rect-items span h2,
+      #history .meta .rect-items span .hero .hero-content h2,
+      .hero .hero-content .rect-items .valign h3,
+      .rect-items .valign .hero .hero-content h3,
+      .hero .hero-content .rect-items #history .meta span h3,
+      .rect-items #history .meta span .hero .hero-content h3,
+      .hero .hero-content #history .meta .rect-items span h3,
+      #history .meta .rect-items span .hero .hero-content h3,
+      .hero .hero-content .rect-items .valign h4,
+      .rect-items .valign .hero .hero-content h4,
+      .hero .hero-content .rect-items #history .meta span h4,
+      .rect-items #history .meta span .hero .hero-content h4,
+      .hero .hero-content #history .meta .rect-items span h4,
+      #history .meta .rect-items span .hero .hero-content h4,
+      .hero .hero-content .rect-items .valign h5,
+      .rect-items .valign .hero .hero-content h5,
+      .hero .hero-content .rect-items #history .meta span h5,
+      .rect-items #history .meta span .hero .hero-content h5,
+      .hero .hero-content #history .meta .rect-items span h5,
+      #history .meta .rect-items span .hero .hero-content h5,
+      .hero .hero-content .rect-items .valign h6,
+      .rect-items .valign .hero .hero-content h6,
+      .hero .hero-content .rect-items #history .meta span h6,
+      .rect-items #history .meta span .hero .hero-content h6,
+      .hero .hero-content #history .meta .rect-items span h6,
+      #history .meta .rect-items span .hero .hero-content h6, .hero .hero-content #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu .hero .hero-content a {
         font-size: 4em; } }
+    @media screen and (max-width: 1440px) {
+      /* line 557, scss/_layout.scss */
+      .hero .hero-content .title, .hero .hero-content #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav .hero .hero-content ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, .hero .hero-content .square .valign h1, .square .valign .hero .hero-content h1, .hero .hero-content .square #history .meta span h1, .square #history .meta span .hero .hero-content h1, .hero .hero-content #history .meta .square span h1, #history .meta .square span .hero .hero-content h1, .hero .hero-content .square .valign h2, .square .valign .hero .hero-content h2, .hero .hero-content .square #history .meta span h2, .square #history .meta span .hero .hero-content h2, .hero .hero-content #history .meta .square span h2, #history .meta .square span .hero .hero-content h2, .hero .hero-content .square .valign h3, .square .valign .hero .hero-content h3, .hero .hero-content .square #history .meta span h3, .square #history .meta span .hero .hero-content h3, .hero .hero-content #history .meta .square span h3, #history .meta .square span .hero .hero-content h3, .hero .hero-content .square .valign h4, .square .valign .hero .hero-content h4, .hero .hero-content .square #history .meta span h4, .square #history .meta span .hero .hero-content h4, .hero .hero-content #history .meta .square span h4, #history .meta .square span .hero .hero-content h4, .hero .hero-content .square .valign h5, .square .valign .hero .hero-content h5, .hero .hero-content .square #history .meta span h5, .square #history .meta span .hero .hero-content h5, .hero .hero-content #history .meta .square span h5, #history .meta .square span .hero .hero-content h5, .hero .hero-content .square .valign h6, .square .valign .hero .hero-content h6, .hero .hero-content .square #history .meta span h6, .square #history .meta span .hero .hero-content h6, .hero .hero-content #history .meta .square span h6, #history .meta .square span .hero .hero-content h6,
+      .hero .hero-content .rect-items .valign h1,
+      .rect-items .valign .hero .hero-content h1,
+      .hero .hero-content .rect-items #history .meta span h1,
+      .rect-items #history .meta span .hero .hero-content h1,
+      .hero .hero-content #history .meta .rect-items span h1,
+      #history .meta .rect-items span .hero .hero-content h1,
+      .hero .hero-content .rect-items .valign h2,
+      .rect-items .valign .hero .hero-content h2,
+      .hero .hero-content .rect-items #history .meta span h2,
+      .rect-items #history .meta span .hero .hero-content h2,
+      .hero .hero-content #history .meta .rect-items span h2,
+      #history .meta .rect-items span .hero .hero-content h2,
+      .hero .hero-content .rect-items .valign h3,
+      .rect-items .valign .hero .hero-content h3,
+      .hero .hero-content .rect-items #history .meta span h3,
+      .rect-items #history .meta span .hero .hero-content h3,
+      .hero .hero-content #history .meta .rect-items span h3,
+      #history .meta .rect-items span .hero .hero-content h3,
+      .hero .hero-content .rect-items .valign h4,
+      .rect-items .valign .hero .hero-content h4,
+      .hero .hero-content .rect-items #history .meta span h4,
+      .rect-items #history .meta span .hero .hero-content h4,
+      .hero .hero-content #history .meta .rect-items span h4,
+      #history .meta .rect-items span .hero .hero-content h4,
+      .hero .hero-content .rect-items .valign h5,
+      .rect-items .valign .hero .hero-content h5,
+      .hero .hero-content .rect-items #history .meta span h5,
+      .rect-items #history .meta span .hero .hero-content h5,
+      .hero .hero-content #history .meta .rect-items span h5,
+      #history .meta .rect-items span .hero .hero-content h5,
+      .hero .hero-content .rect-items .valign h6,
+      .rect-items .valign .hero .hero-content h6,
+      .hero .hero-content .rect-items #history .meta span h6,
+      .rect-items #history .meta span .hero .hero-content h6,
+      .hero .hero-content #history .meta .rect-items span h6,
+      #history .meta .rect-items span .hero .hero-content h6, .hero .hero-content #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu .hero .hero-content a {
+        font-size: 3.5em; } }
     @media screen and (max-width: 1000px) {
-      /* line 551, scss/_layout.scss */
-      .hero .hero-content .title, .hero .hero-content #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav .hero .hero-content ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, .hero .hero-content #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu .hero .hero-content a {
-        font-size: 3em; } }
+      /* line 557, scss/_layout.scss */
+      .hero .hero-content .title, .hero .hero-content #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav .hero .hero-content ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, .hero .hero-content .square .valign h1, .square .valign .hero .hero-content h1, .hero .hero-content .square #history .meta span h1, .square #history .meta span .hero .hero-content h1, .hero .hero-content #history .meta .square span h1, #history .meta .square span .hero .hero-content h1, .hero .hero-content .square .valign h2, .square .valign .hero .hero-content h2, .hero .hero-content .square #history .meta span h2, .square #history .meta span .hero .hero-content h2, .hero .hero-content #history .meta .square span h2, #history .meta .square span .hero .hero-content h2, .hero .hero-content .square .valign h3, .square .valign .hero .hero-content h3, .hero .hero-content .square #history .meta span h3, .square #history .meta span .hero .hero-content h3, .hero .hero-content #history .meta .square span h3, #history .meta .square span .hero .hero-content h3, .hero .hero-content .square .valign h4, .square .valign .hero .hero-content h4, .hero .hero-content .square #history .meta span h4, .square #history .meta span .hero .hero-content h4, .hero .hero-content #history .meta .square span h4, #history .meta .square span .hero .hero-content h4, .hero .hero-content .square .valign h5, .square .valign .hero .hero-content h5, .hero .hero-content .square #history .meta span h5, .square #history .meta span .hero .hero-content h5, .hero .hero-content #history .meta .square span h5, #history .meta .square span .hero .hero-content h5, .hero .hero-content .square .valign h6, .square .valign .hero .hero-content h6, .hero .hero-content .square #history .meta span h6, .square #history .meta span .hero .hero-content h6, .hero .hero-content #history .meta .square span h6, #history .meta .square span .hero .hero-content h6,
+      .hero .hero-content .rect-items .valign h1,
+      .rect-items .valign .hero .hero-content h1,
+      .hero .hero-content .rect-items #history .meta span h1,
+      .rect-items #history .meta span .hero .hero-content h1,
+      .hero .hero-content #history .meta .rect-items span h1,
+      #history .meta .rect-items span .hero .hero-content h1,
+      .hero .hero-content .rect-items .valign h2,
+      .rect-items .valign .hero .hero-content h2,
+      .hero .hero-content .rect-items #history .meta span h2,
+      .rect-items #history .meta span .hero .hero-content h2,
+      .hero .hero-content #history .meta .rect-items span h2,
+      #history .meta .rect-items span .hero .hero-content h2,
+      .hero .hero-content .rect-items .valign h3,
+      .rect-items .valign .hero .hero-content h3,
+      .hero .hero-content .rect-items #history .meta span h3,
+      .rect-items #history .meta span .hero .hero-content h3,
+      .hero .hero-content #history .meta .rect-items span h3,
+      #history .meta .rect-items span .hero .hero-content h3,
+      .hero .hero-content .rect-items .valign h4,
+      .rect-items .valign .hero .hero-content h4,
+      .hero .hero-content .rect-items #history .meta span h4,
+      .rect-items #history .meta span .hero .hero-content h4,
+      .hero .hero-content #history .meta .rect-items span h4,
+      #history .meta .rect-items span .hero .hero-content h4,
+      .hero .hero-content .rect-items .valign h5,
+      .rect-items .valign .hero .hero-content h5,
+      .hero .hero-content .rect-items #history .meta span h5,
+      .rect-items #history .meta span .hero .hero-content h5,
+      .hero .hero-content #history .meta .rect-items span h5,
+      #history .meta .rect-items span .hero .hero-content h5,
+      .hero .hero-content .rect-items .valign h6,
+      .rect-items .valign .hero .hero-content h6,
+      .hero .hero-content .rect-items #history .meta span h6,
+      .rect-items #history .meta span .hero .hero-content h6,
+      .hero .hero-content #history .meta .rect-items span h6,
+      #history .meta .rect-items span .hero .hero-content h6, .hero .hero-content #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu .hero .hero-content a {
+        font-size: 2.5em; } }
     @media screen and (max-width: 750px) {
-      /* line 551, scss/_layout.scss */
-      .hero .hero-content .title, .hero .hero-content #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav .hero .hero-content ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, .hero .hero-content #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu .hero .hero-content a {
-        font-size: 2em; } }
-  /* line 569, scss/_layout.scss */
+      /* line 557, scss/_layout.scss */
+      .hero .hero-content .title, .hero .hero-content #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav .hero .hero-content ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, .hero .hero-content .square .valign h1, .square .valign .hero .hero-content h1, .hero .hero-content .square #history .meta span h1, .square #history .meta span .hero .hero-content h1, .hero .hero-content #history .meta .square span h1, #history .meta .square span .hero .hero-content h1, .hero .hero-content .square .valign h2, .square .valign .hero .hero-content h2, .hero .hero-content .square #history .meta span h2, .square #history .meta span .hero .hero-content h2, .hero .hero-content #history .meta .square span h2, #history .meta .square span .hero .hero-content h2, .hero .hero-content .square .valign h3, .square .valign .hero .hero-content h3, .hero .hero-content .square #history .meta span h3, .square #history .meta span .hero .hero-content h3, .hero .hero-content #history .meta .square span h3, #history .meta .square span .hero .hero-content h3, .hero .hero-content .square .valign h4, .square .valign .hero .hero-content h4, .hero .hero-content .square #history .meta span h4, .square #history .meta span .hero .hero-content h4, .hero .hero-content #history .meta .square span h4, #history .meta .square span .hero .hero-content h4, .hero .hero-content .square .valign h5, .square .valign .hero .hero-content h5, .hero .hero-content .square #history .meta span h5, .square #history .meta span .hero .hero-content h5, .hero .hero-content #history .meta .square span h5, #history .meta .square span .hero .hero-content h5, .hero .hero-content .square .valign h6, .square .valign .hero .hero-content h6, .hero .hero-content .square #history .meta span h6, .square #history .meta span .hero .hero-content h6, .hero .hero-content #history .meta .square span h6, #history .meta .square span .hero .hero-content h6,
+      .hero .hero-content .rect-items .valign h1,
+      .rect-items .valign .hero .hero-content h1,
+      .hero .hero-content .rect-items #history .meta span h1,
+      .rect-items #history .meta span .hero .hero-content h1,
+      .hero .hero-content #history .meta .rect-items span h1,
+      #history .meta .rect-items span .hero .hero-content h1,
+      .hero .hero-content .rect-items .valign h2,
+      .rect-items .valign .hero .hero-content h2,
+      .hero .hero-content .rect-items #history .meta span h2,
+      .rect-items #history .meta span .hero .hero-content h2,
+      .hero .hero-content #history .meta .rect-items span h2,
+      #history .meta .rect-items span .hero .hero-content h2,
+      .hero .hero-content .rect-items .valign h3,
+      .rect-items .valign .hero .hero-content h3,
+      .hero .hero-content .rect-items #history .meta span h3,
+      .rect-items #history .meta span .hero .hero-content h3,
+      .hero .hero-content #history .meta .rect-items span h3,
+      #history .meta .rect-items span .hero .hero-content h3,
+      .hero .hero-content .rect-items .valign h4,
+      .rect-items .valign .hero .hero-content h4,
+      .hero .hero-content .rect-items #history .meta span h4,
+      .rect-items #history .meta span .hero .hero-content h4,
+      .hero .hero-content #history .meta .rect-items span h4,
+      #history .meta .rect-items span .hero .hero-content h4,
+      .hero .hero-content .rect-items .valign h5,
+      .rect-items .valign .hero .hero-content h5,
+      .hero .hero-content .rect-items #history .meta span h5,
+      .rect-items #history .meta span .hero .hero-content h5,
+      .hero .hero-content #history .meta .rect-items span h5,
+      #history .meta .rect-items span .hero .hero-content h5,
+      .hero .hero-content .rect-items .valign h6,
+      .rect-items .valign .hero .hero-content h6,
+      .hero .hero-content .rect-items #history .meta span h6,
+      .rect-items #history .meta span .hero .hero-content h6,
+      .hero .hero-content #history .meta .rect-items span h6,
+      #history .meta .rect-items span .hero .hero-content h6, .hero .hero-content #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu .hero .hero-content a {
+        font-size: 1.8em; } }
+  /* line 575, scss/_layout.scss */
   .hero .hero-content .button, .hero .hero-content input[type="submit"], .hero .hero-content .event_espresso_form_wrapper .submit, .event_espresso_form_wrapper .hero .hero-content .submit, .hero .hero-content .event_espresso_form_wrapper #stripe_submit, .event_espresso_form_wrapper .hero .hero-content #stripe_submit, .hero .hero-content .espresso_add_attendee .submit, .espresso_add_attendee .hero .hero-content .submit, .hero .hero-content .espresso_add_attendee #stripe_submit, .espresso_add_attendee .hero .hero-content #stripe_submit {
     margin-top: 1em; }
-/* line 574, scss/_layout.scss */
+/* line 580, scss/_layout.scss */
 .hero.flexslider {
   height: 700px;
   margin: 0;
@@ -2583,28 +3001,28 @@ nav ul {
   border-bottom: 5px solid black;
   overflow: hidden; }
   @media screen and (max-width: 700px) {
-    /* line 574, scss/_layout.scss */
+    /* line 580, scss/_layout.scss */
     .hero.flexslider {
       height: 350px; } }
   @media screen and (max-width: 400px) {
-    /* line 574, scss/_layout.scss */
+    /* line 580, scss/_layout.scss */
     .hero.flexslider {
       height: 250px; } }
-  /* line 590, scss/_layout.scss */
+  /* line 596, scss/_layout.scss */
   .hero.flexslider .slides li {
     position: relative;
     height: 700px;
     background-size: cover;
     background-position: center; }
-    /* line 596, scss/_layout.scss */
+    /* line 602, scss/_layout.scss */
     .hero.flexslider .slides li .slide-content-wrapper {
       width: 450px;
       height: 700px; }
       @media screen and (max-width: 700px) {
-        /* line 596, scss/_layout.scss */
+        /* line 602, scss/_layout.scss */
         .hero.flexslider .slides li .slide-content-wrapper {
           display: none; } }
-      /* line 604, scss/_layout.scss */
+      /* line 610, scss/_layout.scss */
       .hero.flexslider .slides li .slide-content-wrapper .slide-content {
         position: relative;
         top: 10%;
@@ -2614,40 +3032,40 @@ nav ul {
         padding: 6em 3em;
         background-repeat: repeat;
         border: 1px solid #555555; }
-        /* line 614, scss/_layout.scss */
+        /* line 620, scss/_layout.scss */
         .hero.flexslider .slides li .slide-content-wrapper .slide-content .heading {
           text-transform: uppercase; }
-        /* line 618, scss/_layout.scss */
+        /* line 624, scss/_layout.scss */
         .hero.flexslider .slides li .slide-content-wrapper .slide-content .slide-title {
           margin: 0;
           padding: 0.2em 0;
           text-transform: uppercase;
           border-bottom: 2px dotted #fff; }
     @media screen and (max-width: 700px) {
-      /* line 590, scss/_layout.scss */
+      /* line 596, scss/_layout.scss */
       .hero.flexslider .slides li {
         height: 350px; } }
     @media screen and (max-width: 400px) {
-      /* line 590, scss/_layout.scss */
+      /* line 596, scss/_layout.scss */
       .hero.flexslider .slides li {
         height: 250px; } }
-    /* line 635, scss/_layout.scss */
+    /* line 641, scss/_layout.scss */
     .hero.flexslider .slides li img {
       width: 100%;
       height: 100%;
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
       opacity: 0; }
-  /* line 643, scss/_layout.scss */
+  /* line 649, scss/_layout.scss */
   .hero.flexslider .flex-control-nav {
     bottom: 25px; }
     @media screen and (max-width: 500px) {
-      /* line 643, scss/_layout.scss */
+      /* line 649, scss/_layout.scss */
       .hero.flexslider .flex-control-nav {
         bottom: 0; } }
-    /* line 652, scss/_layout.scss */
+    /* line 658, scss/_layout.scss */
     .hero.flexslider .flex-control-nav.flex-control-paging li {
       vertical-align: middle; }
-    /* line 656, scss/_layout.scss */
+    /* line 662, scss/_layout.scss */
     .hero.flexslider .flex-control-nav.flex-control-paging a {
       height: 10px;
       width: 10px;
@@ -2656,20 +3074,20 @@ nav ul {
       -o-transition: all, 0.3s;
       -webkit-transition: all, 0.3s;
       transition: all, 0.3s; }
-      /* line 662, scss/_layout.scss */
+      /* line 668, scss/_layout.scss */
       .hero.flexslider .flex-control-nav.flex-control-paging a.flex-active {
         background: white; }
       @media screen and (max-width: 500px) {
-        /* line 656, scss/_layout.scss */
+        /* line 662, scss/_layout.scss */
         .hero.flexslider .flex-control-nav.flex-control-paging a {
           width: 5px;
           height: 5px; } }
-/* line 675, scss/_layout.scss */
+/* line 681, scss/_layout.scss */
 .hero.image {
   position: relative;
   height: 500px;
   background-size: cover; }
-  /* line 680, scss/_layout.scss */
+  /* line 686, scss/_layout.scss */
   .hero.image:after {
     content: "";
     display: block;
@@ -2679,37 +3097,37 @@ nav ul {
     bottom: 0;
     left: 0; }
   @media screen and (max-width: 700px) {
-    /* line 675, scss/_layout.scss */
+    /* line 681, scss/_layout.scss */
     .hero.image {
       height: 350px; } }
   @media screen and (max-width: 400px) {
-    /* line 675, scss/_layout.scss */
+    /* line 681, scss/_layout.scss */
     .hero.image {
       height: 200px; } }
-  /* line 694, scss/_layout.scss */
+  /* line 700, scss/_layout.scss */
   .hero.image img {
     width: 100%;
     height: 100%;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0; }
-  /* line 700, scss/_layout.scss */
+  /* line 706, scss/_layout.scss */
   .single-espresso_event .hero.image {
     height: 500px;
     background-size: cover;
     background-position: center; }
     @media screen and (max-width: 700px) {
-      /* line 700, scss/_layout.scss */
+      /* line 706, scss/_layout.scss */
       .single-espresso_event .hero.image {
         height: 350px; } }
     @media screen and (max-width: 400px) {
-      /* line 700, scss/_layout.scss */
+      /* line 706, scss/_layout.scss */
       .single-espresso_event .hero.image {
         height: 200px; } }
 
 /* ==========================================================================
    HOME SLIDER
    ========================================================================== */
-/* line 719, scss/_layout.scss */
+/* line 725, scss/_layout.scss */
 .slide-content-wrapper {
   position: absolute;
   top: 0;
@@ -2721,16 +3139,16 @@ nav ul {
   -o-transition: left, 1.2s;
   -webkit-transition: left, 1.2s;
   transition: left, 1.2s; }
-  /* line 727, scss/_layout.scss */
+  /* line 733, scss/_layout.scss */
   .flex-active-slide .slide-content-wrapper {
     left: 0;
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     opacity: 1; }
-  /* line 732, scss/_layout.scss */
+  /* line 738, scss/_layout.scss */
   .slide-content-wrapper .inner {
     position: relative;
     z-index: 50; }
-  /* line 737, scss/_layout.scss */
+  /* line 743, scss/_layout.scss */
   .slide-content-wrapper:after {
     content: "";
     position: absolute;
@@ -2742,90 +3160,90 @@ nav ul {
     background-repeat: no-repeat;
     z-index: 10; }
 
-/* line 750, scss/_layout.scss */
+/* line 756, scss/_layout.scss */
 .house19-slide {
   background-image: url(../img/house19-slide.jpg); }
-  /* line 754, scss/_layout.scss */
+  /* line 760, scss/_layout.scss */
   .house19-slide .slide-content-wrapper:after {
     background-image: url(../img/deco-carousel-house-19.png);
     background-position: 100% 100%; }
-  /* line 760, scss/_layout.scss */
+  /* line 766, scss/_layout.scss */
   .house19-slide .slide-content {
     position: relative;
     background-image: url(../img/purple-flower-pattern.jpg); }
 
-/* line 766, scss/_layout.scss */
+/* line 772, scss/_layout.scss */
 .house20-slide {
   background-image: url(../img/house20-slide.jpg); }
-  /* line 770, scss/_layout.scss */
+  /* line 776, scss/_layout.scss */
   .house20-slide .slide-content-wrapper:after {
     background-image: url(../img/deco-carousel-house-20.png);
     background-position: 100% 100%; }
-  /* line 776, scss/_layout.scss */
+  /* line 782, scss/_layout.scss */
   .house20-slide .slide-content {
     background-image: url(../img/green-pattern.jpg); }
 
-/* line 781, scss/_layout.scss */
+/* line 787, scss/_layout.scss */
 .house21-slide {
   background-image: url(../img/house21-slide.jpg); }
-  /* line 785, scss/_layout.scss */
+  /* line 791, scss/_layout.scss */
   .house21-slide .slide-content-wrapper:after {
     background-image: url(../img/deco-carousel-house-21.png);
     background-position: 100% 100%; }
-  /* line 791, scss/_layout.scss */
+  /* line 797, scss/_layout.scss */
   .house21-slide .slide-content {
     background-image: url(../img/purple-pattern.jpg); }
 
-/* line 796, scss/_layout.scss */
+/* line 802, scss/_layout.scss */
 .restaurants-slide {
   background-image: url(../img/restaurants-slide.jpg); }
-  /* line 800, scss/_layout.scss */
+  /* line 806, scss/_layout.scss */
   .restaurants-slide .slide-content-wrapper:after {
     background-image: url(../img/deco-carousel-restaurants.png);
     background-position: 100% 100%; }
-  /* line 806, scss/_layout.scss */
+  /* line 812, scss/_layout.scss */
   .restaurants-slide .slide-content {
     background-image: url(../img/green-pattern.jpg); }
 
-/* line 811, scss/_layout.scss */
+/* line 817, scss/_layout.scss */
 .bedrooms-slide {
   background-image: url(../img/bedrooms-slide.jpg); }
-  /* line 816, scss/_layout.scss */
+  /* line 822, scss/_layout.scss */
   .bedrooms-slide .slide-content-wrapper .slide-content {
     padding-top: 16em !important; }
-  /* line 820, scss/_layout.scss */
+  /* line 826, scss/_layout.scss */
   .bedrooms-slide .slide-content-wrapper:after {
     background-image: url(../img/deco-carousel-bedrooms.png);
     background-position: 85% 0; }
-  /* line 826, scss/_layout.scss */
+  /* line 832, scss/_layout.scss */
   .bedrooms-slide .slide-content {
     background-image: url(../img/grey-pattern.jpg); }
 
-/* line 831, scss/_layout.scss */
+/* line 837, scss/_layout.scss */
 .bars-slide {
   background-image: url(../img/bars-slide.jpg); }
-  /* line 835, scss/_layout.scss */
+  /* line 841, scss/_layout.scss */
   .bars-slide .slide-content-wrapper:after {
     background-image: url(../img/deco-carousel-bars.png);
     background-position: 100% 100%; }
-  /* line 841, scss/_layout.scss */
+  /* line 847, scss/_layout.scss */
   .bars-slide .slide-content {
     background-image: url(../img/purple-pattern.jpg); }
 
 /* ==========================================================================
    HAS SIDEBAR
    ========================================================================== */
-/* line 849, scss/_layout.scss */
+/* line 855, scss/_layout.scss */
 .has-sidebar {
   height: 100%; }
-  /* line 852, scss/_layout.scss */
+  /* line 858, scss/_layout.scss */
   .has-sidebar .inner-content {
-    width: 80%;
+    width: 60%;
     -moz-transition: all, 0.3s;
     -o-transition: all, 0.3s;
     -webkit-transition: all, 0.3s;
     transition: all, 0.3s; }
-    /* line 856, scss/_layout.scss */
+    /* line 862, scss/_layout.scss */
     .sidebar-visible .has-sidebar .inner-content {
       width: 100%;
       -moz-transform: translateX(200px);
@@ -2833,7 +3251,7 @@ nav ul {
       -webkit-transform: translateX(200px);
       transform: translateX(200px); }
     @media screen and (max-width: 750px) {
-      /* line 852, scss/_layout.scss */
+      /* line 858, scss/_layout.scss */
       .has-sidebar .inner-content {
         width: 100%;
         margin: 0 auto; } }
@@ -2841,11 +3259,11 @@ nav ul {
 /* ==========================================================================
    SIDENAV
    ========================================================================== */
-/* line 873, scss/_layout.scss */
+/* line 879, scss/_layout.scss */
 .sidebar {
   padding: 5em 0; }
   @media screen and (max-width: 750px) {
-    /* line 873, scss/_layout.scss */
+    /* line 879, scss/_layout.scss */
     .sidebar {
       position: absolute;
       top: 0;
@@ -2858,38 +3276,38 @@ nav ul {
       -o-transition: all, 0.3s;
       -webkit-transition: all, 0.3s;
       transition: all, 0.3s; } }
-  /* line 887, scss/_layout.scss */
+  /* line 893, scss/_layout.scss */
   .sidebar-visible .sidebar {
     margin-left: 0; }
     @media screen and (min-width: 751px) {
-      /* line 887, scss/_layout.scss */
+      /* line 893, scss/_layout.scss */
       .sidebar-visible .sidebar {
         position: relative;
         margin-left: 0;
         min-width: auto;
         background-color: transparent; } }
-  /* line 898, scss/_layout.scss */
+  /* line 904, scss/_layout.scss */
   .sidebar .sidenav-title {
     margin-top: 0;
     font-family: 'GaramondPrmrW01-BdCap';
     font-weight: 300;
     text-transform: uppercase; }
-    /* line 904, scss/_layout.scss */
+    /* line 910, scss/_layout.scss */
     .sidebar .sidenav-title a {
       color: #fff;
       text-decoration: none; }
-  /* line 912, scss/_layout.scss */
+  /* line 918, scss/_layout.scss */
   .sidebar .widget_nav_menu .menu {
     margin: 0;
     padding: 0;
     list-style-type: none; }
-    /* line 918, scss/_layout.scss */
+    /* line 924, scss/_layout.scss */
     .sidebar .widget_nav_menu .menu > .menu-item-has-children > .sub-menu {
       display: none; }
-    /* line 923, scss/_layout.scss */
+    /* line 929, scss/_layout.scss */
     .sidebar .widget_nav_menu .menu li {
       margin-bottom: 0.5em; }
-      /* line 926, scss/_layout.scss */
+      /* line 932, scss/_layout.scss */
       .sidebar .widget_nav_menu .menu li a {
         display: inline-block;
         color: #fff;
@@ -2898,7 +3316,7 @@ nav ul {
         -o-transition: background-color 0.3s;
         -webkit-transition: background-color 0.3s;
         transition: background-color 0.3s; }
-        /* line 932, scss/_layout.scss */
+        /* line 938, scss/_layout.scss */
         .sidebar .widget_nav_menu .menu li a:before {
           display: inline-block;
           content: "\2023";
@@ -2911,68 +3329,106 @@ nav ul {
           -o-transition: all, 0.3s;
           -webkit-transition: all, 0.3s;
           transition: all, 0.3s; }
-        /* line 943, scss/_layout.scss */
+        /* line 949, scss/_layout.scss */
         .sidebar .widget_nav_menu .menu li a:hover:before {
           left: -15px;
           filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
           opacity: 1; }
-      /* line 952, scss/_layout.scss */
+      /* line 958, scss/_layout.scss */
       .sidebar .widget_nav_menu .menu li.current-menu-item > a:before {
         left: -15px;
         filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
         opacity: 1; }
-      /* line 960, scss/_layout.scss */
+      /* line 966, scss/_layout.scss */
       .sidebar .widget_nav_menu .menu li.current_page_item > .sub-menu {
         display: block; }
-      /* line 966, scss/_layout.scss */
+      /* line 972, scss/_layout.scss */
       .sidebar .widget_nav_menu .menu li.current-page-parent > .sub-menu {
         display: block; }
-    /* line 972, scss/_layout.scss */
+    /* line 978, scss/_layout.scss */
     .sidebar .widget_nav_menu .menu .sub-menu {
       padding-left: 20px; }
 
 /* ==========================================================================
    PAGE
    ========================================================================== */
-/* line 983, scss/_layout.scss */
+/* line 989, scss/_layout.scss */
 #page {
   overflow: hidden; }
 
-/* line 987, scss/_layout.scss */
+/* line 993, scss/_layout.scss */
 #content-wrapper {
   position: relative; }
-  /* line 990, scss/_layout.scss */
+  /* line 996, scss/_layout.scss */
+  #content-wrapper .container {
+    max-width: 980px; }
+  /* line 1000, scss/_layout.scss */
   #content-wrapper .inner-content {
     margin: 0 auto;
     padding: 5em 1em; }
-    /* line 994, scss/_layout.scss */
+    /* line 1004, scss/_layout.scss */
     #content-wrapper .inner-content .mob-button {
       display: none;
       position: absolute;
       top: 2em;
       color: #000;
       background-color: #fff; }
-      /* line 1001, scss/_layout.scss */
+      /* line 1011, scss/_layout.scss */
       #content-wrapper .inner-content .mob-button i {
         display: inline-block;
         vertical-align: middle; }
       @media screen and (max-width: 750px) {
-        /* line 994, scss/_layout.scss */
+        /* line 1004, scss/_layout.scss */
         #content-wrapper .inner-content .mob-button {
           display: inline-block; } }
-    /* line 1011, scss/_layout.scss */
+    /* line 1021, scss/_layout.scss */
     #content-wrapper .inner-content header {
       margin-bottom: 2em;
       border-bottom: 1px solid #fff; }
-      /* line 1014, scss/_layout.scss */
-      #content-wrapper .inner-content header .title, #content-wrapper .inner-content header #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav #content-wrapper .inner-content header ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #content-wrapper .inner-content header #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu #content-wrapper .inner-content header a {
+      /* line 1024, scss/_layout.scss */
+      #content-wrapper .inner-content header .title, #content-wrapper .inner-content header #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav #content-wrapper .inner-content header ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #content-wrapper .inner-content header .square .valign h1, .square .valign #content-wrapper .inner-content header h1, #content-wrapper .inner-content header .square #history .meta span h1, .square #history .meta span #content-wrapper .inner-content header h1, #content-wrapper .inner-content header #history .meta .square span h1, #history .meta .square span #content-wrapper .inner-content header h1, #content-wrapper .inner-content header .square .valign h2, .square .valign #content-wrapper .inner-content header h2, #content-wrapper .inner-content header .square #history .meta span h2, .square #history .meta span #content-wrapper .inner-content header h2, #content-wrapper .inner-content header #history .meta .square span h2, #history .meta .square span #content-wrapper .inner-content header h2, #content-wrapper .inner-content header .square .valign h3, .square .valign #content-wrapper .inner-content header h3, #content-wrapper .inner-content header .square #history .meta span h3, .square #history .meta span #content-wrapper .inner-content header h3, #content-wrapper .inner-content header #history .meta .square span h3, #history .meta .square span #content-wrapper .inner-content header h3, #content-wrapper .inner-content header .square .valign h4, .square .valign #content-wrapper .inner-content header h4, #content-wrapper .inner-content header .square #history .meta span h4, .square #history .meta span #content-wrapper .inner-content header h4, #content-wrapper .inner-content header #history .meta .square span h4, #history .meta .square span #content-wrapper .inner-content header h4, #content-wrapper .inner-content header .square .valign h5, .square .valign #content-wrapper .inner-content header h5, #content-wrapper .inner-content header .square #history .meta span h5, .square #history .meta span #content-wrapper .inner-content header h5, #content-wrapper .inner-content header #history .meta .square span h5, #history .meta .square span #content-wrapper .inner-content header h5, #content-wrapper .inner-content header .square .valign h6, .square .valign #content-wrapper .inner-content header h6, #content-wrapper .inner-content header .square #history .meta span h6, .square #history .meta span #content-wrapper .inner-content header h6, #content-wrapper .inner-content header #history .meta .square span h6, #history .meta .square span #content-wrapper .inner-content header h6,
+      #content-wrapper .inner-content header .rect-items .valign h1,
+      .rect-items .valign #content-wrapper .inner-content header h1,
+      #content-wrapper .inner-content header .rect-items #history .meta span h1,
+      .rect-items #history .meta span #content-wrapper .inner-content header h1,
+      #content-wrapper .inner-content header #history .meta .rect-items span h1,
+      #history .meta .rect-items span #content-wrapper .inner-content header h1,
+      #content-wrapper .inner-content header .rect-items .valign h2,
+      .rect-items .valign #content-wrapper .inner-content header h2,
+      #content-wrapper .inner-content header .rect-items #history .meta span h2,
+      .rect-items #history .meta span #content-wrapper .inner-content header h2,
+      #content-wrapper .inner-content header #history .meta .rect-items span h2,
+      #history .meta .rect-items span #content-wrapper .inner-content header h2,
+      #content-wrapper .inner-content header .rect-items .valign h3,
+      .rect-items .valign #content-wrapper .inner-content header h3,
+      #content-wrapper .inner-content header .rect-items #history .meta span h3,
+      .rect-items #history .meta span #content-wrapper .inner-content header h3,
+      #content-wrapper .inner-content header #history .meta .rect-items span h3,
+      #history .meta .rect-items span #content-wrapper .inner-content header h3,
+      #content-wrapper .inner-content header .rect-items .valign h4,
+      .rect-items .valign #content-wrapper .inner-content header h4,
+      #content-wrapper .inner-content header .rect-items #history .meta span h4,
+      .rect-items #history .meta span #content-wrapper .inner-content header h4,
+      #content-wrapper .inner-content header #history .meta .rect-items span h4,
+      #history .meta .rect-items span #content-wrapper .inner-content header h4,
+      #content-wrapper .inner-content header .rect-items .valign h5,
+      .rect-items .valign #content-wrapper .inner-content header h5,
+      #content-wrapper .inner-content header .rect-items #history .meta span h5,
+      .rect-items #history .meta span #content-wrapper .inner-content header h5,
+      #content-wrapper .inner-content header #history .meta .rect-items span h5,
+      #history .meta .rect-items span #content-wrapper .inner-content header h5,
+      #content-wrapper .inner-content header .rect-items .valign h6,
+      .rect-items .valign #content-wrapper .inner-content header h6,
+      #content-wrapper .inner-content header .rect-items #history .meta span h6,
+      .rect-items #history .meta span #content-wrapper .inner-content header h6,
+      #content-wrapper .inner-content header #history .meta .rect-items span h6,
+      #history .meta .rect-items span #content-wrapper .inner-content header h6, #content-wrapper .inner-content header #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu #content-wrapper .inner-content header a {
         line-height: 1; }
-    /* line 1019, scss/_layout.scss */
+    /* line 1029, scss/_layout.scss */
     #content-wrapper .inner-content .body {
-      padding: 0 1em;
       line-height: 1.7; }
 
-/* line 1027, scss/_layout.scss */
+/* line 1036, scss/_layout.scss */
 .inner-content a {
   color: #A268BE;
   text-decoration: none;
@@ -2981,24 +3437,24 @@ nav ul {
   -o-transition: all, 0.3s;
   -webkit-transition: all, 0.3s;
   transition: all, 0.3s; }
-  /* line 1033, scss/_layout.scss */
+  /* line 1042, scss/_layout.scss */
   .inner-content a:hover {
     border-bottom: 1px solid #A268BE; }
 
 /* ==========================================================================
    GRID ITEMS
    ========================================================================== */
-/* line 1043, scss/_layout.scss */
+/* line 1052, scss/_layout.scss */
 .row {
   margin: 0; }
   @media screen and (max-width: 750px) {
-    /* line 1047, scss/_layout.scss */
+    /* line 1056, scss/_layout.scss */
     .row .column.col-1-3.expand {
       width: 100%; }
-      /* line 1052, scss/_layout.scss */
+      /* line 1061, scss/_layout.scss */
       .row .column.col-1-3.expand .square {
         padding: 2em; }
-        /* line 1055, scss/_layout.scss */
+        /* line 1064, scss/_layout.scss */
         .row .column.col-1-3.expand .square .valign, .row .column.col-1-3.expand .square #history .meta span, #history .meta .row .column.col-1-3.expand .square span {
           position: relative;
           top: 0;
@@ -3007,59 +3463,87 @@ nav ul {
           -webkit-transform: translateY(0);
           transform: translateY(0); } }
   @media screen and (max-width: 750px) and (max-width: 750px) {
-    /* line 1062, scss/_layout.scss */
+    /* line 1071, scss/_layout.scss */
     .row .column.col-1-3.expand .content {
       height: 200px; } }
   @media screen and (max-width: 750px) {
-      /* line 1067, scss/_layout.scss */
+      /* line 1076, scss/_layout.scss */
       .row .column.col-1-3.expand .content .valign, .row .column.col-1-3.expand .content #history .meta span, #history .meta .row .column.col-1-3.expand .content span {
         padding: 0 3em; } }
   @media screen and (max-width: 750px) {
-    /* line 1074, scss/_layout.scss */
+    /* line 1083, scss/_layout.scss */
     .row .column.col-2-3.expand {
       width: 100%; } }
 
-/* line 1084, scss/_layout.scss */
-.square .valign, .square #history .meta span, #history .meta .square span, .rect-items .valign, .rect-items #history .meta span, #history .meta .rect-items span {
+/* line 1094, scss/_layout.scss */
+.square .valign, .square #history .meta span, #history .meta .square span,
+.rect-items .valign,
+.rect-items #history .meta span,
+#history .meta .rect-items span {
   width: 100%;
   text-align: center;
   z-index: 10; }
-  /* line 1089, scss/_layout.scss */
-  .square .valign h1, .square #history .meta span h1, #history .meta .square span h1, .square .valign h2, .square #history .meta span h2, #history .meta .square span h2, .square .valign h3, .square #history .meta span h3, #history .meta .square span h3, .square .valign h4, .square #history .meta span h4, #history .meta .square span h4, .square .valign h5, .square #history .meta span h5, #history .meta .square span h5, .square .valign h6, .square #history .meta span h6, #history .meta .square span h6, .rect-items .valign h1, .rect-items #history .meta span h1, #history .meta .rect-items span h1, .rect-items .valign h2, .rect-items #history .meta span h2, #history .meta .rect-items span h2, .rect-items .valign h3, .rect-items #history .meta span h3, #history .meta .rect-items span h3, .rect-items .valign h4, .rect-items #history .meta span h4, #history .meta .rect-items span h4, .rect-items .valign h5, .rect-items #history .meta span h5, #history .meta .rect-items span h5, .rect-items .valign h6, .rect-items #history .meta span h6, #history .meta .rect-items span h6 {
-    margin: 0;
-    padding-bottom: 0.3em;
-    line-height: 1; }
+  /* line 1099, scss/_layout.scss */
+  .square .valign h1, .square #history .meta span h1, #history .meta .square span h1, .square .valign h2, .square #history .meta span h2, #history .meta .square span h2, .square .valign h3, .square #history .meta span h3, #history .meta .square span h3, .square .valign h4, .square #history .meta span h4, #history .meta .square span h4, .square .valign h5, .square #history .meta span h5, #history .meta .square span h5, .square .valign h6, .square #history .meta span h6, #history .meta .square span h6,
+  .rect-items .valign h1,
+  .rect-items #history .meta span h1,
+  #history .meta .rect-items span h1,
+  .rect-items .valign h2,
+  .rect-items #history .meta span h2,
+  #history .meta .rect-items span h2,
+  .rect-items .valign h3,
+  .rect-items #history .meta span h3,
+  #history .meta .rect-items span h3,
+  .rect-items .valign h4,
+  .rect-items #history .meta span h4,
+  #history .meta .rect-items span h4,
+  .rect-items .valign h5,
+  .rect-items #history .meta span h5,
+  #history .meta .rect-items span h5,
+  .rect-items .valign h6,
+  .rect-items #history .meta span h6,
+  #history .meta .rect-items span h6 {
+    display: inline-block;
+    margin: 0 0 0.3em 0;
+    padding: 0.5em 0;
+    line-height: 1;
+    background-color: rgba(0, 0, 0, 0.25);
+    box-shadow: 0.5em 0 0 rgba(0, 0, 0, 0.25), -0.5em 0 0 rgba(0, 0, 0, 0.25);
+    -moz-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    -webkit-transition: all, 0.3s;
+    transition: all, 0.3s; }
 
-/* line 1099, scss/_layout.scss */
+/* line 1114, scss/_layout.scss */
 .square {
   position: relative;
   padding-top: 100%; }
 
-/* line 1105, scss/_layout.scss */
+/* line 1120, scss/_layout.scss */
 .rect-items .image, .rect-items .content {
   position: relative;
   height: 350px; }
   @media screen and (min-width: 1600px) {
-    /* line 1105, scss/_layout.scss */
+    /* line 1120, scss/_layout.scss */
     .rect-items .image, .rect-items .content {
       height: 500px; } }
-/* line 1117, scss/_layout.scss */
+/* line 1132, scss/_layout.scss */
 .rect-items .image .valign, .rect-items .image #history .meta span, #history .meta .rect-items .image span {
   padding: 0 2em; }
 
-/* line 1123, scss/_layout.scss */
-.bg, .rect-items .image {
+/* line 1138, scss/_layout.scss */
+.rect-items .image {
   background-size: cover;
   background-position: center; }
-  /* line 1128, scss/_layout.scss */
-  .bg:hover .highlight, .rect-items .image:hover .highlight {
+  /* line 1144, scss/_layout.scss */
+  .rect-items .image:hover .valign h1, .rect-items .image:hover #history .meta span h1, #history .meta .rect-items .image:hover span h1, .rect-items .image:hover .valign h2, .rect-items .image:hover #history .meta span h2, #history .meta .rect-items .image:hover span h2, .rect-items .image:hover .valign h3, .rect-items .image:hover #history .meta span h3, #history .meta .rect-items .image:hover span h3, .rect-items .image:hover .valign h4, .rect-items .image:hover #history .meta span h4, #history .meta .rect-items .image:hover span h4, .rect-items .image:hover .valign h5, .rect-items .image:hover #history .meta span h5, #history .meta .rect-items .image:hover span h5, .rect-items .image:hover .valign h6, .rect-items .image:hover #history .meta span h6, #history .meta .rect-items .image:hover span h6 {
     background: none;
-    box-shadow: 10px 0 0 transparent, -10px 0 0 transparent; }
-  /* line 1133, scss/_layout.scss */
-  .bg:hover:after, .rect-items .image:hover:after {
+    box-shadow: 0.5em 0 0 transparent, -0.5em 0 0 transparent; }
+  /* line 1150, scss/_layout.scss */
+  .rect-items .image:hover:after {
     background-color: rgba(51, 51, 51, 0.7); }
-  /* line 1138, scss/_layout.scss */
-  .bg:after, .rect-items .image:after {
+  /* line 1155, scss/_layout.scss */
+  .rect-items .image:after {
     content: "";
     display: inline-block;
     position: absolute;
@@ -3073,52 +3557,34 @@ nav ul {
     transition: all, 0.3s;
     z-index: 5; }
 
-/* line 1151, scss/_layout.scss */
-.highlight {
-  display: inline-block;
-  padding: 1em 3em;
-  background-color: rgba(0, 0, 0, 0.25);
-  box-shadow: 10px 0 0 rgba(0, 0, 0, 0.25), -10px 0 0 rgba(0, 0, 0, 0.25);
-  -moz-transition: all, 0.3s;
-  -o-transition: all, 0.3s;
-  -webkit-transition: all, 0.3s;
-  transition: all, 0.3s; }
-  @media screen and (max-width: 600px) {
-    /* line 1151, scss/_layout.scss */
-    .highlight {
-      padding: 0 2em; } }
-  /* line 1162, scss/_layout.scss */
-  .highlight p {
-    margin: 0; }
-
-/* line 1167, scss/_layout.scss */
+/* line 1184, scss/_layout.scss */
 .flow {
   position: relative; }
   @media screen and (max-width: 750px) {
-    /* line 1167, scss/_layout.scss */
+    /* line 1184, scss/_layout.scss */
     .flow {
       overflow-y: hidden;
       overflow-x: scroll; } }
-  /* line 1175, scss/_layout.scss */
+  /* line 1192, scss/_layout.scss */
   .flow .grid-flow {
     overflow-y: hidden;
     overflow-x: scroll;
     width: 100%;
     background-color: black; }
     @media screen and (max-width: 750px) {
-      /* line 1175, scss/_layout.scss */
+      /* line 1192, scss/_layout.scss */
       .flow .grid-flow {
         width: 900px; } }
     @media screen and (max-width: 480px) {
-      /* line 1175, scss/_layout.scss */
+      /* line 1192, scss/_layout.scss */
       .flow .grid-flow {
         width: 720px; } }
     @media screen and (max-width: 320px) {
-      /* line 1175, scss/_layout.scss */
+      /* line 1192, scss/_layout.scss */
       .flow .grid-flow {
         width: 480px; } }
 
-/* line 1202, scss/_layout.scss */
+/* line 1219, scss/_layout.scss */
 .pattern {
   background-image: url(../img/grey-pattern.jpg);
   background-repeat: repeat; }
@@ -3126,86 +3592,87 @@ nav ul {
 /* ==========================================================================
    FOOTER
    ========================================================================== */
-/* line 1211, scss/_layout.scss */
+/* line 1228, scss/_layout.scss */
 #footer {
-  position: relative; }
-  /* line 1214, scss/_layout.scss */
+  position: relative;
+  max-width: 1600px; }
+  /* line 1232, scss/_layout.scss */
   #footer .certificates {
     padding: 1em 0;
     text-align: center;
     background-color: #181319; }
     @media screen and (max-width: 600px) {
-      /* line 1214, scss/_layout.scss */
+      /* line 1232, scss/_layout.scss */
       #footer .certificates {
         display: none; } }
-    /* line 1223, scss/_layout.scss */
+    /* line 1241, scss/_layout.scss */
     #footer .certificates ul {
       display: inline-block;
       margin: 0;
       padding: 0;
       list-style-type: none; }
-      /* line 1229, scss/_layout.scss */
+      /* line 1247, scss/_layout.scss */
       #footer .certificates ul li {
         display: inline-block;
         height: 70px;
         padding: 0 2em; }
         @media screen and (max-width: 800px) {
-          /* line 1229, scss/_layout.scss */
+          /* line 1247, scss/_layout.scss */
           #footer .certificates ul li {
             height: 40px; } }
-        /* line 1238, scss/_layout.scss */
+        /* line 1256, scss/_layout.scss */
         #footer .certificates ul li img {
           max-height: 100%;
           width: auto; }
-  /* line 1246, scss/_layout.scss */
+  /* line 1264, scss/_layout.scss */
   #footer .sitemap {
     position: relative;
     padding: 1em;
     background-image: url(../img/black-bg.png);
     background-repeat: repeat; }
     @media screen and (max-width: 500px) {
-      /* line 1252, scss/_layout.scss */
+      /* line 1270, scss/_layout.scss */
       #footer .sitemap > .left {
         float: none; } }
-    /* line 1258, scss/_layout.scss */
+    /* line 1276, scss/_layout.scss */
     #footer .sitemap > .left .logo {
       display: inline-block;
       vertical-align: top; }
-    /* line 1263, scss/_layout.scss */
+    /* line 1281, scss/_layout.scss */
     #footer .sitemap > .left .contact-details {
       overflow: hidden; }
       @media screen and (max-width: 600px) {
-        /* line 1263, scss/_layout.scss */
+        /* line 1281, scss/_layout.scss */
         #footer .sitemap > .left .contact-details {
           display: inline-block;
           margin-left: 1em; } }
-      /* line 1271, scss/_layout.scss */
+      /* line 1289, scss/_layout.scss */
       #footer .sitemap > .left .contact-details .detail {
         margin-left: 2em; }
-        /* line 1274, scss/_layout.scss */
+        /* line 1292, scss/_layout.scss */
         #footer .sitemap > .left .contact-details .detail:first-child {
           margin-left: 0; }
-      /* line 1279, scss/_layout.scss */
+      /* line 1297, scss/_layout.scss */
       #footer .sitemap > .left .contact-details p {
         margin: 0; }
     @media screen and (max-width: 500px) {
-      /* line 1285, scss/_layout.scss */
+      /* line 1303, scss/_layout.scss */
       #footer .sitemap .right {
         float: none; } }
-    /* line 1291, scss/_layout.scss */
+    /* line 1309, scss/_layout.scss */
     #footer .sitemap .right nav {
       display: inline-block;
       text-align: right; }
-      /* line 1295, scss/_layout.scss */
+      /* line 1313, scss/_layout.scss */
       #footer .sitemap .right nav ul.menu {
         display: inline-block;
         vertical-align: middle;
         margin-right: 2em; }
-        /* line 1300, scss/_layout.scss */
+        /* line 1318, scss/_layout.scss */
         #footer .sitemap .right nav ul.menu li {
           display: inline-block;
           margin-left: 1em; }
-        /* line 1305, scss/_layout.scss */
+        /* line 1323, scss/_layout.scss */
         #footer .sitemap .right nav ul.menu a {
           padding-bottom: 3px;
           color: #fff;
@@ -3216,34 +3683,34 @@ nav ul {
           -o-transition: all, 0.3s;
           -webkit-transition: all, 0.3s;
           transition: all, 0.3s; }
-          /* line 1314, scss/_layout.scss */
+          /* line 1332, scss/_layout.scss */
           #footer .sitemap .right nav ul.menu a:hover {
             border-bottom: 1px solid #fff; }
-      /* line 1320, scss/_layout.scss */
+      /* line 1338, scss/_layout.scss */
       #footer .sitemap .right nav ul.social {
         display: inline-block; }
-        /* line 1323, scss/_layout.scss */
+        /* line 1341, scss/_layout.scss */
         #footer .sitemap .right nav ul.social li {
           display: inline-block;
           line-height: 50px; }
-          /* line 1327, scss/_layout.scss */
+          /* line 1345, scss/_layout.scss */
           #footer .sitemap .right nav ul.social li a {
             color: #fff; }
-          /* line 1331, scss/_layout.scss */
+          /* line 1349, scss/_layout.scss */
           #footer .sitemap .right nav ul.social li .icon {
             display: inline-block;
             vertical-align: middle;
             font-size: 2em;
             text-decoration: none; }
       @media screen and (max-width: 500px) {
-        /* line 1291, scss/_layout.scss */
+        /* line 1309, scss/_layout.scss */
         #footer .sitemap .right nav {
           display: block;
           text-align: center; }
-          /* line 1344, scss/_layout.scss */
+          /* line 1362, scss/_layout.scss */
           #footer .sitemap .right nav ul.menu {
             display: block; }
-            /* line 1346, scss/_layout.scss */
+            /* line 1364, scss/_layout.scss */
             #footer .sitemap .right nav ul.menu li {
               display: block;
               margin-left: 0; } }
@@ -3251,13 +3718,13 @@ nav ul {
 /* ==========================================================================
    MISC
    ========================================================================== */
-/* line 1361, scss/_layout.scss */
+/* line 1379, scss/_layout.scss */
 .header-fancy {
   position: relative;
   height: 400px;
   background-image: url(../img/page-bg.jpg);
   background-repeat: repeat; }
-  /* line 1367, scss/_layout.scss */
+  /* line 1385, scss/_layout.scss */
   .header-fancy:after {
     content: "";
     display: inline-block;
@@ -3275,13 +3742,13 @@ nav ul {
     background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.88) 62%, rgba(0, 0, 0, 0.88) 100%);
     background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.88) 62%, rgba(0, 0, 0, 0.88) 100%);
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.88) 62%, rgba(0, 0, 0, 0.88) 100%); }
-  /* line 1381, scss/_layout.scss */
+  /* line 1399, scss/_layout.scss */
   .header-fancy .valign, .header-fancy #history .meta span, #history .meta .header-fancy span {
     width: 100%;
     padding: 0 20%;
     z-index: 10; }
     @media screen and (max-width: 600px) {
-      /* line 1381, scss/_layout.scss */
+      /* line 1399, scss/_layout.scss */
       .header-fancy .valign, .header-fancy #history .meta span, #history .meta .header-fancy span {
         padding: 0 5%; } }
 
@@ -3289,7 +3756,7 @@ nav ul {
    HOME
    ========================================================================== */
 /* line 5, scss/_templates.scss */
-.page-pattern-white, #events-single, #booking {
+.page-pattern-white, #events-single, #booking, #blog, #single {
   background-image: url(../img/white-bg.jpg) !important; }
 
 /* line 9, scss/_templates.scss */
@@ -3477,7 +3944,79 @@ nav ul {
     margin: 0;
     border: none; }
     /* line 243, scss/_templates.scss */
-    #events-single .inner-content header .title, #booking .inner-content header .title, #events-single .inner-content header #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav #events-single .inner-content header ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #booking .inner-content header #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav #booking .inner-content header ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #events-single .inner-content header #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu #events-single .inner-content header a, #booking .inner-content header #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu #booking .inner-content header a {
+    #events-single .inner-content header .title, #booking .inner-content header .title, #events-single .inner-content header #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav #events-single .inner-content header ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #booking .inner-content header #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav #booking .inner-content header ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #events-single .inner-content header .square .valign h1, .square .valign #events-single .inner-content header h1, #booking .inner-content header .square .valign h1, .square .valign #booking .inner-content header h1, #events-single .inner-content header .square #history .meta span h1, .square #history .meta span #events-single .inner-content header h1, #booking .inner-content header .square #history .meta span h1, .square #history .meta span #booking .inner-content header h1, #events-single .inner-content header #history .meta .square span h1, #history .meta .square span #events-single .inner-content header h1, #booking .inner-content header #history .meta .square span h1, #history .meta .square span #booking .inner-content header h1, #events-single .inner-content header .square .valign h2, .square .valign #events-single .inner-content header h2, #booking .inner-content header .square .valign h2, .square .valign #booking .inner-content header h2, #events-single .inner-content header .square #history .meta span h2, .square #history .meta span #events-single .inner-content header h2, #booking .inner-content header .square #history .meta span h2, .square #history .meta span #booking .inner-content header h2, #events-single .inner-content header #history .meta .square span h2, #history .meta .square span #events-single .inner-content header h2, #booking .inner-content header #history .meta .square span h2, #history .meta .square span #booking .inner-content header h2, #events-single .inner-content header .square .valign h3, .square .valign #events-single .inner-content header h3, #booking .inner-content header .square .valign h3, .square .valign #booking .inner-content header h3, #events-single .inner-content header .square #history .meta span h3, .square #history .meta span #events-single .inner-content header h3, #booking .inner-content header .square #history .meta span h3, .square #history .meta span #booking .inner-content header h3, #events-single .inner-content header #history .meta .square span h3, #history .meta .square span #events-single .inner-content header h3, #booking .inner-content header #history .meta .square span h3, #history .meta .square span #booking .inner-content header h3, #events-single .inner-content header .square .valign h4, .square .valign #events-single .inner-content header h4, #booking .inner-content header .square .valign h4, .square .valign #booking .inner-content header h4, #events-single .inner-content header .square #history .meta span h4, .square #history .meta span #events-single .inner-content header h4, #booking .inner-content header .square #history .meta span h4, .square #history .meta span #booking .inner-content header h4, #events-single .inner-content header #history .meta .square span h4, #history .meta .square span #events-single .inner-content header h4, #booking .inner-content header #history .meta .square span h4, #history .meta .square span #booking .inner-content header h4, #events-single .inner-content header .square .valign h5, .square .valign #events-single .inner-content header h5, #booking .inner-content header .square .valign h5, .square .valign #booking .inner-content header h5, #events-single .inner-content header .square #history .meta span h5, .square #history .meta span #events-single .inner-content header h5, #booking .inner-content header .square #history .meta span h5, .square #history .meta span #booking .inner-content header h5, #events-single .inner-content header #history .meta .square span h5, #history .meta .square span #events-single .inner-content header h5, #booking .inner-content header #history .meta .square span h5, #history .meta .square span #booking .inner-content header h5, #events-single .inner-content header .square .valign h6, .square .valign #events-single .inner-content header h6, #booking .inner-content header .square .valign h6, .square .valign #booking .inner-content header h6, #events-single .inner-content header .square #history .meta span h6, .square #history .meta span #events-single .inner-content header h6, #booking .inner-content header .square #history .meta span h6, .square #history .meta span #booking .inner-content header h6, #events-single .inner-content header #history .meta .square span h6, #history .meta .square span #events-single .inner-content header h6, #booking .inner-content header #history .meta .square span h6, #history .meta .square span #booking .inner-content header h6,
+    #events-single .inner-content header .rect-items .valign h1,
+    .rect-items .valign #events-single .inner-content header h1,
+    #booking .inner-content header .rect-items .valign h1,
+    .rect-items .valign #booking .inner-content header h1,
+    #events-single .inner-content header .rect-items #history .meta span h1,
+    .rect-items #history .meta span #events-single .inner-content header h1,
+    #booking .inner-content header .rect-items #history .meta span h1,
+    .rect-items #history .meta span #booking .inner-content header h1,
+    #events-single .inner-content header #history .meta .rect-items span h1,
+    #history .meta .rect-items span #events-single .inner-content header h1,
+    #booking .inner-content header #history .meta .rect-items span h1,
+    #history .meta .rect-items span #booking .inner-content header h1,
+    #events-single .inner-content header .rect-items .valign h2,
+    .rect-items .valign #events-single .inner-content header h2,
+    #booking .inner-content header .rect-items .valign h2,
+    .rect-items .valign #booking .inner-content header h2,
+    #events-single .inner-content header .rect-items #history .meta span h2,
+    .rect-items #history .meta span #events-single .inner-content header h2,
+    #booking .inner-content header .rect-items #history .meta span h2,
+    .rect-items #history .meta span #booking .inner-content header h2,
+    #events-single .inner-content header #history .meta .rect-items span h2,
+    #history .meta .rect-items span #events-single .inner-content header h2,
+    #booking .inner-content header #history .meta .rect-items span h2,
+    #history .meta .rect-items span #booking .inner-content header h2,
+    #events-single .inner-content header .rect-items .valign h3,
+    .rect-items .valign #events-single .inner-content header h3,
+    #booking .inner-content header .rect-items .valign h3,
+    .rect-items .valign #booking .inner-content header h3,
+    #events-single .inner-content header .rect-items #history .meta span h3,
+    .rect-items #history .meta span #events-single .inner-content header h3,
+    #booking .inner-content header .rect-items #history .meta span h3,
+    .rect-items #history .meta span #booking .inner-content header h3,
+    #events-single .inner-content header #history .meta .rect-items span h3,
+    #history .meta .rect-items span #events-single .inner-content header h3,
+    #booking .inner-content header #history .meta .rect-items span h3,
+    #history .meta .rect-items span #booking .inner-content header h3,
+    #events-single .inner-content header .rect-items .valign h4,
+    .rect-items .valign #events-single .inner-content header h4,
+    #booking .inner-content header .rect-items .valign h4,
+    .rect-items .valign #booking .inner-content header h4,
+    #events-single .inner-content header .rect-items #history .meta span h4,
+    .rect-items #history .meta span #events-single .inner-content header h4,
+    #booking .inner-content header .rect-items #history .meta span h4,
+    .rect-items #history .meta span #booking .inner-content header h4,
+    #events-single .inner-content header #history .meta .rect-items span h4,
+    #history .meta .rect-items span #events-single .inner-content header h4,
+    #booking .inner-content header #history .meta .rect-items span h4,
+    #history .meta .rect-items span #booking .inner-content header h4,
+    #events-single .inner-content header .rect-items .valign h5,
+    .rect-items .valign #events-single .inner-content header h5,
+    #booking .inner-content header .rect-items .valign h5,
+    .rect-items .valign #booking .inner-content header h5,
+    #events-single .inner-content header .rect-items #history .meta span h5,
+    .rect-items #history .meta span #events-single .inner-content header h5,
+    #booking .inner-content header .rect-items #history .meta span h5,
+    .rect-items #history .meta span #booking .inner-content header h5,
+    #events-single .inner-content header #history .meta .rect-items span h5,
+    #history .meta .rect-items span #events-single .inner-content header h5,
+    #booking .inner-content header #history .meta .rect-items span h5,
+    #history .meta .rect-items span #booking .inner-content header h5,
+    #events-single .inner-content header .rect-items .valign h6,
+    .rect-items .valign #events-single .inner-content header h6,
+    #booking .inner-content header .rect-items .valign h6,
+    .rect-items .valign #booking .inner-content header h6,
+    #events-single .inner-content header .rect-items #history .meta span h6,
+    .rect-items #history .meta span #events-single .inner-content header h6,
+    #booking .inner-content header .rect-items #history .meta span h6,
+    .rect-items #history .meta span #booking .inner-content header h6,
+    #events-single .inner-content header #history .meta .rect-items span h6,
+    #history .meta .rect-items span #events-single .inner-content header h6,
+    #booking .inner-content header #history .meta .rect-items span h6,
+    #history .meta .rect-items span #booking .inner-content header h6, #events-single .inner-content header #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu #events-single .inner-content header a, #booking .inner-content header #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu #booking .inner-content header a {
       width: 80%; }
   /* line 248, scss/_templates.scss */
   #events-single .inner-content .body, #booking .inner-content .body {
@@ -3720,7 +4259,79 @@ nav ul {
     #cedric #isotope .grid-sizer .meta, #cedric #isotope .item .meta {
       padding: 1em; }
       /* line 502, scss/_templates.scss */
-      #cedric #isotope .grid-sizer .meta .title, #cedric #isotope .grid-sizer .meta #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav #cedric #isotope .grid-sizer .meta ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #cedric #isotope .grid-sizer .meta #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu #cedric #isotope .grid-sizer .meta a, #cedric #isotope .item .meta .title, #cedric #isotope .item .meta #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav #cedric #isotope .item .meta ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #cedric #isotope .item .meta #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu #cedric #isotope .item .meta a {
+      #cedric #isotope .grid-sizer .meta .title, #cedric #isotope .grid-sizer .meta #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav #cedric #isotope .grid-sizer .meta ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #cedric #isotope .grid-sizer .meta .square .valign h1, .square .valign #cedric #isotope .grid-sizer .meta h1, #cedric #isotope .grid-sizer .square #history .meta span h1, .square #history #cedric #isotope .grid-sizer .meta span h1, #cedric #isotope .grid-sizer #history .meta .square span h1, #history #cedric #isotope .grid-sizer .meta .square span h1, #cedric #isotope .grid-sizer .meta .square .valign h2, .square .valign #cedric #isotope .grid-sizer .meta h2, #cedric #isotope .grid-sizer .square #history .meta span h2, .square #history #cedric #isotope .grid-sizer .meta span h2, #cedric #isotope .grid-sizer #history .meta .square span h2, #history #cedric #isotope .grid-sizer .meta .square span h2, #cedric #isotope .grid-sizer .meta .square .valign h3, .square .valign #cedric #isotope .grid-sizer .meta h3, #cedric #isotope .grid-sizer .square #history .meta span h3, .square #history #cedric #isotope .grid-sizer .meta span h3, #cedric #isotope .grid-sizer #history .meta .square span h3, #history #cedric #isotope .grid-sizer .meta .square span h3, #cedric #isotope .grid-sizer .meta .square .valign h4, .square .valign #cedric #isotope .grid-sizer .meta h4, #cedric #isotope .grid-sizer .square #history .meta span h4, .square #history #cedric #isotope .grid-sizer .meta span h4, #cedric #isotope .grid-sizer #history .meta .square span h4, #history #cedric #isotope .grid-sizer .meta .square span h4, #cedric #isotope .grid-sizer .meta .square .valign h5, .square .valign #cedric #isotope .grid-sizer .meta h5, #cedric #isotope .grid-sizer .square #history .meta span h5, .square #history #cedric #isotope .grid-sizer .meta span h5, #cedric #isotope .grid-sizer #history .meta .square span h5, #history #cedric #isotope .grid-sizer .meta .square span h5, #cedric #isotope .grid-sizer .meta .square .valign h6, .square .valign #cedric #isotope .grid-sizer .meta h6, #cedric #isotope .grid-sizer .square #history .meta span h6, .square #history #cedric #isotope .grid-sizer .meta span h6, #cedric #isotope .grid-sizer #history .meta .square span h6, #history #cedric #isotope .grid-sizer .meta .square span h6,
+      #cedric #isotope .grid-sizer .meta .rect-items .valign h1,
+      .rect-items .valign #cedric #isotope .grid-sizer .meta h1,
+      #cedric #isotope .grid-sizer .rect-items #history .meta span h1,
+      .rect-items #history #cedric #isotope .grid-sizer .meta span h1,
+      #cedric #isotope .grid-sizer #history .meta .rect-items span h1,
+      #history #cedric #isotope .grid-sizer .meta .rect-items span h1,
+      #cedric #isotope .grid-sizer .meta .rect-items .valign h2,
+      .rect-items .valign #cedric #isotope .grid-sizer .meta h2,
+      #cedric #isotope .grid-sizer .rect-items #history .meta span h2,
+      .rect-items #history #cedric #isotope .grid-sizer .meta span h2,
+      #cedric #isotope .grid-sizer #history .meta .rect-items span h2,
+      #history #cedric #isotope .grid-sizer .meta .rect-items span h2,
+      #cedric #isotope .grid-sizer .meta .rect-items .valign h3,
+      .rect-items .valign #cedric #isotope .grid-sizer .meta h3,
+      #cedric #isotope .grid-sizer .rect-items #history .meta span h3,
+      .rect-items #history #cedric #isotope .grid-sizer .meta span h3,
+      #cedric #isotope .grid-sizer #history .meta .rect-items span h3,
+      #history #cedric #isotope .grid-sizer .meta .rect-items span h3,
+      #cedric #isotope .grid-sizer .meta .rect-items .valign h4,
+      .rect-items .valign #cedric #isotope .grid-sizer .meta h4,
+      #cedric #isotope .grid-sizer .rect-items #history .meta span h4,
+      .rect-items #history #cedric #isotope .grid-sizer .meta span h4,
+      #cedric #isotope .grid-sizer #history .meta .rect-items span h4,
+      #history #cedric #isotope .grid-sizer .meta .rect-items span h4,
+      #cedric #isotope .grid-sizer .meta .rect-items .valign h5,
+      .rect-items .valign #cedric #isotope .grid-sizer .meta h5,
+      #cedric #isotope .grid-sizer .rect-items #history .meta span h5,
+      .rect-items #history #cedric #isotope .grid-sizer .meta span h5,
+      #cedric #isotope .grid-sizer #history .meta .rect-items span h5,
+      #history #cedric #isotope .grid-sizer .meta .rect-items span h5,
+      #cedric #isotope .grid-sizer .meta .rect-items .valign h6,
+      .rect-items .valign #cedric #isotope .grid-sizer .meta h6,
+      #cedric #isotope .grid-sizer .rect-items #history .meta span h6,
+      .rect-items #history #cedric #isotope .grid-sizer .meta span h6,
+      #cedric #isotope .grid-sizer #history .meta .rect-items span h6,
+      #history #cedric #isotope .grid-sizer .meta .rect-items span h6, #cedric #isotope .grid-sizer .meta #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu #cedric #isotope .grid-sizer .meta a, #cedric #isotope .item .meta .title, #cedric #isotope .item .meta #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav #cedric #isotope .item .meta ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #cedric #isotope .item .meta .square .valign h1, .square .valign #cedric #isotope .item .meta h1, #cedric #isotope .item .square #history .meta span h1, .square #history #cedric #isotope .item .meta span h1, #cedric #isotope .item #history .meta .square span h1, #history #cedric #isotope .item .meta .square span h1, #cedric #isotope .item .meta .square .valign h2, .square .valign #cedric #isotope .item .meta h2, #cedric #isotope .item .square #history .meta span h2, .square #history #cedric #isotope .item .meta span h2, #cedric #isotope .item #history .meta .square span h2, #history #cedric #isotope .item .meta .square span h2, #cedric #isotope .item .meta .square .valign h3, .square .valign #cedric #isotope .item .meta h3, #cedric #isotope .item .square #history .meta span h3, .square #history #cedric #isotope .item .meta span h3, #cedric #isotope .item #history .meta .square span h3, #history #cedric #isotope .item .meta .square span h3, #cedric #isotope .item .meta .square .valign h4, .square .valign #cedric #isotope .item .meta h4, #cedric #isotope .item .square #history .meta span h4, .square #history #cedric #isotope .item .meta span h4, #cedric #isotope .item #history .meta .square span h4, #history #cedric #isotope .item .meta .square span h4, #cedric #isotope .item .meta .square .valign h5, .square .valign #cedric #isotope .item .meta h5, #cedric #isotope .item .square #history .meta span h5, .square #history #cedric #isotope .item .meta span h5, #cedric #isotope .item #history .meta .square span h5, #history #cedric #isotope .item .meta .square span h5, #cedric #isotope .item .meta .square .valign h6, .square .valign #cedric #isotope .item .meta h6, #cedric #isotope .item .square #history .meta span h6, .square #history #cedric #isotope .item .meta span h6, #cedric #isotope .item #history .meta .square span h6, #history #cedric #isotope .item .meta .square span h6,
+      #cedric #isotope .item .meta .rect-items .valign h1,
+      .rect-items .valign #cedric #isotope .item .meta h1,
+      #cedric #isotope .item .rect-items #history .meta span h1,
+      .rect-items #history #cedric #isotope .item .meta span h1,
+      #cedric #isotope .item #history .meta .rect-items span h1,
+      #history #cedric #isotope .item .meta .rect-items span h1,
+      #cedric #isotope .item .meta .rect-items .valign h2,
+      .rect-items .valign #cedric #isotope .item .meta h2,
+      #cedric #isotope .item .rect-items #history .meta span h2,
+      .rect-items #history #cedric #isotope .item .meta span h2,
+      #cedric #isotope .item #history .meta .rect-items span h2,
+      #history #cedric #isotope .item .meta .rect-items span h2,
+      #cedric #isotope .item .meta .rect-items .valign h3,
+      .rect-items .valign #cedric #isotope .item .meta h3,
+      #cedric #isotope .item .rect-items #history .meta span h3,
+      .rect-items #history #cedric #isotope .item .meta span h3,
+      #cedric #isotope .item #history .meta .rect-items span h3,
+      #history #cedric #isotope .item .meta .rect-items span h3,
+      #cedric #isotope .item .meta .rect-items .valign h4,
+      .rect-items .valign #cedric #isotope .item .meta h4,
+      #cedric #isotope .item .rect-items #history .meta span h4,
+      .rect-items #history #cedric #isotope .item .meta span h4,
+      #cedric #isotope .item #history .meta .rect-items span h4,
+      #history #cedric #isotope .item .meta .rect-items span h4,
+      #cedric #isotope .item .meta .rect-items .valign h5,
+      .rect-items .valign #cedric #isotope .item .meta h5,
+      #cedric #isotope .item .rect-items #history .meta span h5,
+      .rect-items #history #cedric #isotope .item .meta span h5,
+      #cedric #isotope .item #history .meta .rect-items span h5,
+      #history #cedric #isotope .item .meta .rect-items span h5,
+      #cedric #isotope .item .meta .rect-items .valign h6,
+      .rect-items .valign #cedric #isotope .item .meta h6,
+      #cedric #isotope .item .rect-items #history .meta span h6,
+      .rect-items #history #cedric #isotope .item .meta span h6,
+      #cedric #isotope .item #history .meta .rect-items span h6,
+      #history #cedric #isotope .item .meta .rect-items span h6, #cedric #isotope .item .meta #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu #cedric #isotope .item .meta a {
         font-size: 1.125em;
         line-height: 1; }
       /* line 507, scss/_templates.scss */
@@ -3926,34 +4537,154 @@ nav ul {
   text-transform: uppercase; }
 
 /* ==========================================================================
+   BLOG
+   ========================================================================== */
+/* line 763, scss/_templates.scss */
+#blog .article-row {
+  padding: 1em 0; }
+  /* line 766, scss/_templates.scss */
+  #blog .article-row .post:first-child {
+    width: 40%; }
+  /* line 769, scss/_templates.scss */
+  #blog .article-row .post:last-child {
+    width: 60%; }
+  /* line 774, scss/_templates.scss */
+  #blog .article-row:nth-child(2n) .post:first-child {
+    width: 60%; }
+  /* line 777, scss/_templates.scss */
+  #blog .article-row:nth-child(2n) .post:last-child {
+    width: 40%; }
+  @media screen and (max-width: 700px) {
+    /* line 783, scss/_templates.scss */
+    #blog .article-row .post {
+      width: 100% !important; } }
+/* line 789, scss/_templates.scss */
+#blog article.post {
+  padding: 0 10px; }
+  /* line 792, scss/_templates.scss */
+  #blog article.post .image {
+    position: relative;
+    height: 350px;
+    background-position: center;
+    background-size: cover; }
+    /* line 798, scss/_templates.scss */
+    #blog article.post .image:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: transparent;
+      -moz-transition: all, 0.3s;
+      -o-transition: all, 0.3s;
+      -webkit-transition: all, 0.3s;
+      transition: all, 0.3s; }
+    @media screen and (min-width: 1600px) {
+      /* line 792, scss/_templates.scss */
+      #blog article.post .image {
+        height: 500px; } }
+    @media screen and (max-width: 600px) {
+      /* line 792, scss/_templates.scss */
+      #blog article.post .image {
+        height: 250px; } }
+  /* line 816, scss/_templates.scss */
+  #blog article.post .article-meta {
+    padding: 1em 0;
+    color: #000; }
+    /* line 820, scss/_templates.scss */
+    #blog article.post .article-meta h2 {
+      margin: 0;
+      font-family: 'GaramondPrmrW01-BdCap';
+      font-weight: normal; }
+    /* line 826, scss/_templates.scss */
+    #blog article.post .article-meta p {
+      margin: 0; }
+  /* line 831, scss/_templates.scss */
+  #blog article.post a {
+    text-decoration: none; }
+    /* line 835, scss/_templates.scss */
+    #blog article.post a:hover .image:after {
+      background-color: rgba(51, 51, 51, 0.7); }
+
+/* line 847, scss/_templates.scss */
+#single .inner {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2em 0;
+  color: #333333; }
+/* line 855, scss/_templates.scss */
+#single .title, #single #header.mega #nav ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #header.mega #nav #single ul.menu > li.menu-item.menu-item-has-children.megatron > ul.sub-menu > li.menu-item > a, #single .square .valign h1, .square .valign #single h1, #single .square #history .meta span h1, .square #history .meta span #single h1, #single #history .meta .square span h1, #history .meta .square span #single h1, #single .square .valign h2, .square .valign #single h2, #single .square #history .meta span h2, .square #history .meta span #single h2, #single #history .meta .square span h2, #history .meta .square span #single h2, #single .square .valign h3, .square .valign #single h3, #single .square #history .meta span h3, .square #history .meta span #single h3, #single #history .meta .square span h3, #history .meta .square span #single h3, #single .square .valign h4, .square .valign #single h4, #single .square #history .meta span h4, .square #history .meta span #single h4, #single #history .meta .square span h4, #history .meta .square span #single h4, #single .square .valign h5, .square .valign #single h5, #single .square #history .meta span h5, .square #history .meta span #single h5, #single #history .meta .square span h5, #history .meta .square span #single h5, #single .square .valign h6, .square .valign #single h6, #single .square #history .meta span h6, .square #history .meta span #single h6, #single #history .meta .square span h6, #history .meta .square span #single h6,
+#single .rect-items .valign h1,
+.rect-items .valign #single h1,
+#single .rect-items #history .meta span h1,
+.rect-items #history .meta span #single h1,
+#single #history .meta .rect-items span h1,
+#history .meta .rect-items span #single h1,
+#single .rect-items .valign h2,
+.rect-items .valign #single h2,
+#single .rect-items #history .meta span h2,
+.rect-items #history .meta span #single h2,
+#single #history .meta .rect-items span h2,
+#history .meta .rect-items span #single h2,
+#single .rect-items .valign h3,
+.rect-items .valign #single h3,
+#single .rect-items #history .meta span h3,
+.rect-items #history .meta span #single h3,
+#single #history .meta .rect-items span h3,
+#history .meta .rect-items span #single h3,
+#single .rect-items .valign h4,
+.rect-items .valign #single h4,
+#single .rect-items #history .meta span h4,
+.rect-items #history .meta span #single h4,
+#single #history .meta .rect-items span h4,
+#history .meta .rect-items span #single h4,
+#single .rect-items .valign h5,
+.rect-items .valign #single h5,
+#single .rect-items #history .meta span h5,
+.rect-items #history .meta span #single h5,
+#single #history .meta .rect-items span h5,
+#history .meta .rect-items span #single h5,
+#single .rect-items .valign h6,
+.rect-items .valign #single h6,
+#single .rect-items #history .meta span h6,
+.rect-items #history .meta span #single h6,
+#single #history .meta .rect-items span h6,
+#history .meta .rect-items span #single h6, #single #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu #single a {
+  display: block;
+  text-align: center; }
+
+/* ==========================================================================
    CONTACT
    ========================================================================== */
-/* line 760, scss/_templates.scss */
+/* line 865, scss/_templates.scss */
 #contact {
   position: relative;
   height: 100%; }
-  /* line 765, scss/_templates.scss */
+  /* line 870, scss/_templates.scss */
   #contact.feedback-visible .feedback-overlay {
     display: block;
     background-color: rgba(0, 0, 0, 0.4);
     z-index: 200; }
-  /* line 771, scss/_templates.scss */
+  /* line 876, scss/_templates.scss */
   #contact.feedback-visible .feedback {
     top: 0; }
-  /* line 777, scss/_templates.scss */
+  /* line 882, scss/_templates.scss */
   #contact #map {
     position: relative;
     top: 0;
     bottom: 0; }
-    /* line 781, scss/_templates.scss */
+    /* line 886, scss/_templates.scss */
     #contact #map img {
       max-width: inherit; }
     @media screen and (max-width: 1400px) {
-      /* line 777, scss/_templates.scss */
+      /* line 882, scss/_templates.scss */
       #contact #map {
         height: 500px;
         width: 100%; } }
-  /* line 791, scss/_templates.scss */
+  /* line 896, scss/_templates.scss */
   #contact .contact-info {
     height: 100%;
     z-index: 100;
@@ -3961,27 +4692,27 @@ nav ul {
     color: #202020;
     font-size: 0.875em;
     background-color: #fff; }
-    /* line 800, scss/_templates.scss */
+    /* line 905, scss/_templates.scss */
     #contact .contact-info header h2 {
       margin: 0; }
     @media screen and (max-width: 1400px) {
-      /* line 791, scss/_templates.scss */
+      /* line 896, scss/_templates.scss */
       #contact .contact-info {
         width: 100%; } }
-  /* line 809, scss/_templates.scss */
+  /* line 914, scss/_templates.scss */
   #contact .opening {
     margin-top: 4em; }
-    /* line 811, scss/_templates.scss */
+    /* line 916, scss/_templates.scss */
     #contact .opening .row {
       margin: 0 -10px; }
-    /* line 814, scss/_templates.scss */
+    /* line 919, scss/_templates.scss */
     #contact .opening .column {
       padding: 10px; }
       @media screen and (max-width: 500px) {
-        /* line 814, scss/_templates.scss */
+        /* line 919, scss/_templates.scss */
         #contact .opening .column {
           width: 100%; } }
-  /* line 823, scss/_templates.scss */
+  /* line 928, scss/_templates.scss */
   #contact .feedback-overlay {
     display: none;
     position: absolute;
@@ -3993,7 +4724,7 @@ nav ul {
     -o-transition: all, 0.3s;
     -webkit-transition: all, 0.3s;
     transition: all, 0.3s; }
-  /* line 833, scss/_templates.scss */
+  /* line 938, scss/_templates.scss */
   #contact .feedback {
     position: absolute;
     top: -5em;
@@ -4008,11 +4739,11 @@ nav ul {
     -webkit-transition: all, 0.3s;
     transition: all, 0.3s; }
     @media screen and (max-width: 1000px) {
-      /* line 833, scss/_templates.scss */
+      /* line 938, scss/_templates.scss */
       #contact .feedback {
         width: 75%;
         left: 12.5%; } }
-    /* line 850, scss/_templates.scss */
+    /* line 955, scss/_templates.scss */
     #contact .feedback > button {
       position: absolute;
       top: 0;

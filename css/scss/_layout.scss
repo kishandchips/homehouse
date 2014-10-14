@@ -166,9 +166,10 @@ body{
 		width: 100%;
 		height: 100%;
 		z-index: 5;
-		@include filter-gradient(#00ffff, #a8ffff, vertical); // IE6-8
-		$experimental-support-for-svg: true;
-		@include background-image(linear-gradient(top,  rgba(255,255,255,0) 56%,rgba(255,255,255,0.06) 100%));
+		// needs latest Compass, add '@import "compass"' to your scss
+		@include filter-gradient(#ffffff, #ffffff, vertical); // IE6-9
+		@include background-image(linear-gradient(top,  rgba(255,255,255,0) 85%,rgba(255,255,255,0.2) 100%));
+
 	}
 }   
 
@@ -535,6 +536,11 @@ nav{
 		background-position: center;
 		background-repeat: no-repeat;
 		z-index: 9999;
+		@include transition(opacity,0.5s);
+
+		&.fadeOut{
+			@include opacity(0);
+		}
 	}
 
 	.hero-content{
@@ -553,16 +559,16 @@ nav{
 			line-height: 1;
 			
 			@media screen and (min-width: 1440px){
-				font-size: 5em;
-			}
-			@media screen and (max-width: 1440px){
 				font-size: 4em;
 			}
+			@media screen and (max-width: 1440px){
+				font-size: 3.5em;
+			}
 			@media screen and (max-width: 1000px){
-				font-size: 3em;
+				font-size: 2.5em;
 			}
 			@media screen and (max-width: 750px){
-				font-size: 2em;
+				font-size: 1.8em;
 			}
 		}
 
@@ -850,7 +856,7 @@ nav{
 	height: 100%;
 
 	.inner-content{
-		width: 80%;
+		width: 60%;
 		@include transition(all,.3s);
 
 		.sidebar-visible &{
@@ -987,6 +993,10 @@ nav{
 #content-wrapper{
 	position: relative;
 
+	.container{
+		max-width: 980px;
+	}
+
 	.inner-content{
 		margin: 0 auto ;
 		padding: 5em 1em;
@@ -1017,7 +1027,6 @@ nav{
 		}
 
 		.body{
-			padding: 0 1em;
 			line-height: 1.7;
 		}
 	}// .inner-content
@@ -1079,7 +1088,8 @@ nav{
 	}
 }// .row
 
-.square, .rect-items{
+.square,
+.rect-items{
 	
 	.valign{
 		width: 100%;
@@ -1087,10 +1097,15 @@ nav{
 		z-index: 10;
 
 		h1,h2,h3,h4,h5,h6{
-			margin: 0;
-			padding-bottom: 0.3em;
+			display: inline-block;
+			margin: 0 0 0.3em 0;
+			padding: 0.5em 0;
+			@extend .title;
 			@extend .large;
 			line-height: 1;
+			background-color: rgba(#000, 0.25);
+			box-shadow: 0.5em 0 0 rgba(#000, 0.25), -0.5em 0 0 rgba(#000, 0.25);
+			@include transition(all,.3s);
 		}// stop wordpress styles overriding title
 	}
 
@@ -1112,7 +1127,7 @@ nav{
 	}
 
 	.image{
-		@extend .bg;
+		@extend %bg;
 
 		.valign{
 			padding: 0 2em;
@@ -1120,14 +1135,16 @@ nav{
 	}
 }// .rect-item
 
-.bg{
+%bg{
 	background-size:cover;
 	background-position: center;
 	
 	&:hover{
-		.highlight{
-			background:none;
-			box-shadow:10px 0 0 rgba(#000, 0), -10px 0 0 rgba(#000, 0);
+		.valign{
+			h1,h2,h3,h4,h5,h6{
+				background:none;
+				box-shadow:0.5em 0 0 rgba(#000, 0), -0.5em 0 0 rgba(#000, 0);				
+			}
 		}
 
 		&:after{
@@ -1148,21 +1165,21 @@ nav{
 	}
 }// .bg
 
-.highlight{
-	display: inline-block;
-	padding: 1em 3em;
-	background-color: rgba(#000, 0.25);
-		box-shadow: 10px 0 0 rgba(#000, 0.25), -10px 0 0 rgba(#000, 0.25);
-	@include transition(all,.3s);
+// .highlight{
+// 	display: inline-block;
+// 	padding: 1em;
+// 	background-color: rgba(#000, 0.25);
+// 	box-shadow: 10px 0 0 rgba(#000, 0.25), -10px 0 0 rgba(#000, 0.25);
+// 	@include transition(all,.3s);
 
-	@media screen and (max-width: 600px){
-		padding: 0 2em;
-	}
+// 	@media screen and (max-width: 600px){
+// 		padding: 0 2em;
+// 	}
 
-	p{
-		margin: 0;
-	}
-}// .highlight
+// 	p{
+// 		margin: 0;
+// 	}
+// }// .highlight
 
 .flow{
     position: relative;
@@ -1210,6 +1227,7 @@ nav{
 
 #footer{
 	position: relative;
+	max-width: 1600px;
 
 	.certificates{
 		padding: 1em 0;

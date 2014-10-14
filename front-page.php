@@ -24,8 +24,26 @@
 
 	<section class="hero flexslider">
 		<ul class="slides">
+			
+			<?php if(have_rows('slides')): while(have_rows('slides')): the_row(); ?>
+				<li class="slide" style="background-image:url(<?php the_sub_field('slide_image'); ?>)">
+					<div class="slide-content-wrapper">
+						<div class="slide-content" style="background-image:url(<?php the_sub_field('slide_pattern'); ?>)">
+							<div class="inner">
+								<span class="heading">
+									<?php the_sub_field('slide_heading') ?>
+								</span>
+								<p class="slide-title"><?php the_sub_field('slide_title'); ?></p>
+								<p><?php the_sub_field('slide_description'); ?></p>
+								<a href="<?php the_sub_field('slide_link'); ?>" class="button primary invert small"><?php the_sub_field('slide_link_text') ?></a>							
+							</div>
+						</div>
+					</div>
+				</li>
 
-			<li class="house19-slide">
+			<?php endwhile; endif;?>
+
+<!-- 			<li class="house19-slide">
 				<div class="slide-content-wrapper">
 					<div class="slide-content">
 						<div class="inner">
@@ -39,7 +57,7 @@
 					</div>
 				</div>
 			</li>
-
+			
 			<li class="house20-slide">
 				<div class="slide-content-wrapper">
 					<div class="slide-content">
@@ -68,7 +86,7 @@
 						</div>
 					</div>
 				</div>
-			</li>
+			</li> -->
 
 			<li class="restaurants-slide">
 				<div class="slide-content-wrapper">
@@ -116,6 +134,8 @@
 			</li>
 
 		</ul>
+
+		<div class="arrow-wrap"></div>
 	</section><!-- HERO SLIDER -->
 
 	<div id="content-wrapper">

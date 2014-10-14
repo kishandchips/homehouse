@@ -16,6 +16,7 @@
 			main.vars.contact = $('#contact');
 
 			this.header.init();
+			this.slider.init();
 			this.sidebar.init();
 			this.cedric.init();
 			this.contact.init();
@@ -84,6 +85,21 @@
 
 			}// header.megatron
 		},// main.header
+
+		slider: {
+			element: $('.flexslider'),
+
+			init: function(){
+				var element = main.slider.element;
+				if(!element.length){return;}
+
+				$(document).scroll(function() {
+		        	if($(document).scrollTop() > 350) {
+		            	$(".arrow-wrap").addClass('fadeOut');
+		        	}
+		    	});
+			}
+		},// main.slider
 
 		sidebar: {
 			element: $('.sidebar'),

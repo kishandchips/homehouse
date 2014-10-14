@@ -95,7 +95,7 @@
 						<div class="valign">
 							<h3 class="title">Events at house No 19</h3>
 							<p>There is an abundance of events to suit all in June: screening both the World Cup and Wimbledon.</p>
-							<p><a href="<?php echo bloginfo('url'); ?>/events-calendar" class="button primary small" title="Full Events Calendar">Full events calendar</a></p>
+							<p><a href="<?php echo bloginfo('url'); ?>/events" class="button primary small" title="Full Events Calendar">Full events calendar</a></p>
 						</div>
 					</div>
 				</div>

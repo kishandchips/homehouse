@@ -27,6 +27,8 @@
 								</li>
 							<?php endforeach; ?>
 						</ul>
+
+						<div class="arrow-wrap"></div>
 					</section><!-- hero flexslider -->
 
 				<?php else: ?>
@@ -68,7 +70,7 @@
 					</div><!-- sidenav -->
 				
 
-					<section class="inner-content column col-4-5">
+					<section class="inner-content column">
 					    <button aria-role="Mobile Sidebar Button" class="mob-button">
 		                    <i class="icon-menu"></i>
 		                    <span>Sidebar</span>
