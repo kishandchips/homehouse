@@ -6,18 +6,22 @@
 <?php get_header(); ?>
 
 <?php if(get_field('sidebar')): ?>
-	<div id="reservation" class="has-sidebar">
+	<div id="reservation" class="flex-page has-sidebar page-pattern" <?php if(get_field('page_pattern')): ?>style="background-image: url(<?php the_field('page_pattern') ?>)"<?php endif; ?> >
 <?php else: ?>
-	<div id="reservation">
+	<div id="reservation" class="flex-page page-pattern" <?php if(get_field('page_pattern')): ?>style="background-image: url(<?php the_field('page_pattern') ?>)"<?php endif; ?> >
 <?php endif; ?>
 	
-	<div id="content-wrapper" class="pattern">
+	<div id="content-wrapper">
 
 		<div class="container">
+			<?php if ( function_exists('yoast_breadcrumb') ) {
+				yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+			} ?><!-- .breadcrumbs -->
+			
             	<section class="inner-content">
             
 					<header>
-						<h3 class="title large">Make a reservation</h3>						
+						<h2>Make a reservation</h2>
 					</header>
 
 					<div class="column col-1-2">

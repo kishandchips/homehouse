@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 
-<div id="home">
+<div id="home" class="flex-page">
 
 	<?php  
 		$video = '<div id="modal-video">';
 		$video .= '<div class="valign">';
-		$video .= '<video id="intro-video" class="video-js vjs-default-skin" autoplay preload="auto" width="100%" height="auto" data-setup="{}">';
+		$video .= '<video id="intro-video" class="video-js vjs-default-skin" controls preload="auto" width="100%" height="auto" data-setup="{"nativeControlsForTouch": false}">';
 		$video .= '<source src="' . get_template_directory_uri() . '/video/homehouse-intro.mp4" type="video/mp4">';
 		$video .= '<source src="' . get_template_directory_uri() . '/video/homehouse-intro.ogv" type="video/ogg">';
 		$video .= '<source src="' . get_template_directory_uri() . '/video/homehouse-intro-animation.swf" type="video/swf">';
@@ -34,7 +34,7 @@
 									<?php the_sub_field('slide_heading') ?>
 								</span>
 								<p class="slide-title"><?php the_sub_field('slide_title'); ?></p>
-								<p><?php the_sub_field('slide_description'); ?></p>
+								<div class="slide-description"><?php the_sub_field('slide_description'); ?></div>
 								<a href="<?php the_sub_field('slide_link'); ?>" class="button primary invert small"><?php the_sub_field('slide_link_text') ?></a>							
 							</div>
 						</div>
@@ -42,51 +42,6 @@
 				</li>
 
 			<?php endwhile; endif;?>
-
-<!-- 			<li class="house19-slide">
-				<div class="slide-content-wrapper">
-					<div class="slide-content">
-						<div class="inner">
-							<span class="heading">
-								Explore
-							</span>
-							<p class="slide-title">House No 19</p>
-							<p>The ultimate sophisticated, yet relaxed entertaining space. This is the perfect place to enjoy sumptuous Brasserie style dining or long cocktail soirees, where spontaneous outbursts of revelry abound.</p>
-							<a href="#" class="button primary invert small">See the House</a>							
-						</div>
-					</div>
-				</div>
-			</li>
-			
-			<li class="house20-slide">
-				<div class="slide-content-wrapper">
-					<div class="slide-content">
-						<div class="inner">
-							<span class="heading">
-								Explore
-							</span>
-							<p class="slide-title">House No 20</p>
-							<p>The sumptuous Drawing Rooms provide the ideal setting for a quintessentially British Afternoon Tea, a casual dinner or a decadent cocktail...</p>
-							<a href="#" class="button primary invert small">See the House</a>							
-						</div>
-					</div>
-				</div>
-			</li>
-
-			<li class="house21-slide">
-				<div class="slide-content-wrapper">
-					<div class="slide-content">
-						<div class="inner">
-							<span class="heading">
-								Explore
-							</span>
-							<p class="slide-title">House No 21</p>
-							<p>Where Georgian grandeur meets cutting edge design... creating a unique space that is perfect for work, rest or play...</p>
-							<a href="#" class="button primary invert small">See the House</a>							
-						</div>
-					</div>
-				</div>
-			</li> -->
 
 			<li class="restaurants-slide">
 				<div class="slide-content-wrapper">
@@ -96,7 +51,7 @@
 								The
 							</span>
 							<p class="slide-title">Restaurants</p>
-							<p>From British classics to Asian delights, there is a taste to suit every bud.</p>
+							<p class="slide-description">From British classics to Asian delights, there is a taste to suit every bud.</p>
 							<a href="#" class="button primary invert small">See the Restaurants</a>							
 						</div>
 					</div>
@@ -111,7 +66,7 @@
 								The
 							</span>
 							<p class="slide-title">Bedrooms</p>
-							<p>The 20 luxurious rooms and suites are beautifully spacious and offer guests a warm and exclusive living space with the highest standards in comfort and technology...</p>
+							<p class="slide-description">The 20 luxurious rooms and suites are beautifully spacious and offer guests a warm and exclusive living space with the highest standards in comfort and technology...</p>
 							<a href="#" class="button primary invert small">See the Bedrooms</a>							
 						</div>
 					</div>
@@ -126,7 +81,7 @@
 								The
 							</span>
 							<p class="slide-title">Bars</p>
-							<p>From the futuristic Zaha Hadid designed bar in House 21 to the classic Bison Bar, there are myriad opportunities to socialise and celebrate...</p>
+							<p class="slide-description">From the futuristic Zaha Hadid designed bar in House 21 to the classic Bison Bar, there are myriad opportunities to socialise and celebrate...</p>
 							<a href="#" class="button primary invert small">See the Bars</a>							
 						</div>
 					</div>
@@ -149,13 +104,11 @@
 					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'grid-square' ); ?>
 					<div class="square bg" style="background-image:url(<?php echo $image[0]; ?>)">
 						<div class="valign">
-							<div class="highlight">
-								<h3 class="title">
-									<?php the_title(); ?>
-								</h3>
-								<p>
-									<a href="<?php the_permalink(); ?>" class="button primary small" title="Explore <?php the_title(); ?>">Explore</a>								
-								</p>								
+							<h3 class="highlight large">
+								<?php the_title(); ?>
+							</h3>
+							<div>
+								<a href="<?php the_permalink(); ?>" class="button primary small" title="Explore <?php the_title(); ?>">Explore</a>								
 							</div>
 						</div>
 					</div>
@@ -178,14 +131,12 @@
 				<div class="column col-2-3 pad expand">
 					<div class="image" style="background-image:url(<?php echo $event_thumbnail_url; ?>)">
 						<div class="valign">
-							<div class="highlight">
-								<h3 class="title">
-									<?php the_title(); ?>
-								</h3>
-								<p>
-									<a href="<?php the_permalink(); ?>" class="button primary small" title="View <?php the_title(); ?>">View Event</a>
-								</p>							
-							</div>
+							<h3 class="highlight large">
+								<?php the_title(); ?>
+							</h3>
+							<div>
+								<a href="<?php the_permalink(); ?>" class="button primary small" title="View <?php the_title(); ?>">View Event</a>
+							</div>							
 						</div>
 					</div>
 				</div>
@@ -195,15 +146,15 @@
 				<div class="column col-1-3 pad expand">
 					<div class="content pattern-img">
 						<div class="valign">
-							<h3 class="title">
+							<h3 class="title large">
 								Upcoming Events
 							</h3>
-							<p>
+							<p class="small">
 								There is an abundance of events to suit all in June: screening both the World Cup & Wimbledon.
 							</p>
-							<p>
-								<a href="<?php echo bloginfo('url'); ?>/events" class="button primary small" title="View Events Calendar">Full Events Calendar</a>
-							</p>
+							<div>
+								<a href="<?php echo bloginfo('url'); ?>/events" class="button primary small" title="View Events Calendar">View Events</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -229,13 +180,11 @@
 				<?php endif; ?>
 					
 						<div class="valign">
-							<div class="highlight">
-								<h3 class="title">
-									<?php the_title(); ?>
-								</h3>
-								<p>
-									<a href="<?php the_permalink(); ?>" class="button primary small" title="Explore <?php the_title(); ?>">Explore</a>								
-								</p>							
+							<h3 class="highlight large">
+								<?php the_title(); ?>
+							</h3>
+							<div>
+								<a href="<?php the_permalink(); ?>" class="button primary small" title="Explore <?php the_title(); ?>">Explore</a>								
 							</div>
 						</div>
 					</div>
@@ -257,11 +206,11 @@
 
 						<div class="image" style="background-image:url(<?php echo $image[0]; ?>)">
 							<div class="valign">
-								<div class="highlight">
-									<h2 class="title"><?php the_sub_field('title_text') ?></h2>
-									<p>
-										<a href="<?php the_permalink(); ?>" class="button primary small"><?php the_sub_field('button') ?></a>
-									</p>									
+								<h3 class="highlight large">
+									<?php the_sub_field('title_text') ?>
+								</h3>
+								<div>
+									<a href="<?php the_permalink(); ?>" class="button primary small"><?php the_sub_field('button') ?></a>
 								</div>
 							</div>
 						</div>

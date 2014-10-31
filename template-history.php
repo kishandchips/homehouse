@@ -6,30 +6,45 @@
 <?php get_header(); ?>
 
 <?php if(get_field('sidebar')): ?>
-	<div id="history" class="has-sidebar">
+	<div id="history" class="flex-page has-sidebar page-pattern" <?php if(get_field('page_pattern')): ?>style="background-image: url(<?php the_field('page_pattern') ?>)"<?php endif; ?> >
 <?php else: ?>
-	<div id="history">
+	<div id="history" class="flex-page page-pattern" <?php if(get_field('page_pattern')): ?>style="background-image: url(<?php the_field('page_pattern') ?>)"<?php endif; ?> >
 <?php endif; ?>
 
-	<div id="content-wrapper" class="page-pattern">
+	<div id="content-wrapper">
 		<div class="container">
+			<?php if ( function_exists('yoast_breadcrumb') ) {
+				yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+			} ?><!-- .breadcrumbs -->
 
+				<?php if(get_field('sidebar')): ?>
+					<div class="sidebar column">
 
-			<?php if(get_field('sidebar')): ?>
-				<div class="sidebar column col-1-5">
-	 				<?php
-						$parent = array_reverse(get_post_ancestors($post->ID));
-						$first_parent = get_page($parent[0]);
-					?>
-					<h3 class="sidenav-title"><a href="<?php echo $first_parent->guid; ?>"><?php echo $first_parent->post_title; ?></a></h3>
-					<?php get_sidebar(); ?>
-				</div><!-- sidenav -->
-			<?php endif; ?>
+		 				<?php $parent = array_reverse(get_post_ancestors($post->ID)); ?>
+						<?php if(count($parent)): ?>	
+							<?php $first_parent = get_page($parent[0]); ?>
+							<h3 class="sidenav-title"><a href="<?php echo $first_parent->guid; ?>"><?php echo $first_parent->post_title; ?></a></h3>
+						<?php else: ?>
+							<h3 class="sidenav-title"><a href="<?php get_page_link($post->ID );; ?>"><?php the_title(); ?></a></h3>
+						<?php endif; ?>
 
+						<?php get_sidebar(); ?>
+					</div><!-- sidenav -->
 
-				<section class="inner-content column col-4-5">
+					<section class="inner-content column">
+						<div class="mob-bar">
+							<button aria-role="Mobile Sidebar Button" class="mob-button">
+			                    <i class="icon-menu"></i>
+			                    <span>Side Menu</span>
+			                </button>						
+						</div>
+	            <?php else: ?>
+
+	            	<section class="inner-content">
+	            <?php endif; ?>
+
 					<header>
-						<h3 class="title large"><?php the_title(); ?></h3>						
+						<h2><?php the_title(); ?></h2>
 					</header>
 					<?php if( have_rows('history_snippet')): while( have_rows('history_snippet')) : the_row(); ?>
 						<article class="history-snippet">

@@ -6,9 +6,9 @@
 <?php get_header(); ?>
 
 <?php if(get_field('sidebar')): ?>
-	<div id="house-single" class="has-sidebar">
+	<div id="house-single" class="flex-page has-sidebar page-pattern" <?php if(get_field('page_pattern')): ?>style="background-image: url(<?php the_field('page_pattern') ?>)"<?php endif; ?> >
 <?php else: ?>
-	<div id="house-single">
+	<div id="house-single" class="flex-page page-pattern"  <?php if(get_field('page_pattern')): ?>style="background-image: url(<?php the_field('page_pattern') ?>)"<?php endif; ?> >
 <?php endif; ?>
 
 		<?php if(get_field('hero')): ?>
@@ -20,9 +20,7 @@
 					<section class="hero flexslider thumbnails">
 						
 						<div class="hero-content valign">
-							<div class="highlight">
-								<h2 class="title"><?php the_title(); ?></h2>
-							</div>
+							<h2 class="title"><?php the_title(); ?></h2>
 						</div>
 
 						<ul class="slides">
@@ -40,9 +38,7 @@
 						<div class="hero image" style="background-image:url(<?php echo $image['sizes']['slider']; ?>)">
 	
 							<div class="hero-content valign">
-								<div class="highlight">
-									<h2 class="title"><?php the_title(); ?></h2>
-								</div>
+								<h2 class="title"><?php the_title(); ?></h2>
 							</div>
 
 							<img src="<?php echo $image['url']; ?>">
@@ -55,25 +51,37 @@
 
 		<?php endif; ?>
 
-	<div id="content-wrapper" class="page-pattern">
+	<div id="content-wrapper">
 		<div class="container">
+			<?php if ( function_exists('yoast_breadcrumb') ) {
+				yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+			} ?><!-- .breadcrumbs -->
 
 			<?php if(get_field('sidebar')): ?>
-				<div class="sidebar column col-1-5">
-	 				<?php
-						$parent = array_reverse(get_post_ancestors($post->ID));
-						$first_parent = get_page($parent[0]);
-					?>
-					<h3 class="sidenav-title"><a href="<?php echo $first_parent->guid; ?>"><?php echo $first_parent->post_title; ?></a></h3>
+				<div class="sidebar column">
+
+	 				<?php $parent = array_reverse(get_post_ancestors($post->ID)); ?>
+					<?php if(count($parent)): ?>	
+						<?php $first_parent = get_page($parent[0]); ?>
+						<h3 class="sidenav-title"><a href="<?php echo $first_parent->guid; ?>"><?php echo $first_parent->post_title; ?></a></h3>
+					<?php else: ?>
+						<h3 class="sidenav-title"><a href="<?php get_page_link($post->ID );; ?>"><?php the_title(); ?></a></h3>
+					<?php endif; ?>
+
 					<?php get_sidebar(); ?>
 				</div><!-- sidenav -->
-			<?php endif; ?>
 
-			<section class="inner-content column col-4-5">
-			    <button aria-role="Mobile Sidebar Button" class="mob-button">
-                    <i class="icon-menu"></i>
-                    <span>Sidebar</span>
-                </button>
+				<section class="inner-content column">
+					<div class="mob-bar">
+						<button aria-role="Mobile Sidebar Button" class="mob-button">
+		                    <i class="icon-menu"></i>
+		                    <span>Side Menu</span>
+		                </button>						
+					</div>
+            <?php else: ?>
+
+            	<section class="inner-content">
+            <?php endif; ?>
 
 				<header>
 					<h3 class="title large"><?php the_title(); ?></h3>						
@@ -93,9 +101,9 @@
 				<div class="column col-1-3 pad">
 					<div class="content pattern">
 						<div class="valign">
-							<h3 class="title">Events at house No 19</h3>
-							<p>There is an abundance of events to suit all in June: screening both the World Cup and Wimbledon.</p>
-							<p><a href="<?php echo bloginfo('url'); ?>/events" class="button primary small" title="Full Events Calendar">Full events calendar</a></p>
+							<h3 class="title large">Events at <?php the_title(); ?></h3>
+							<p class="small">There is an abundance of events to suit all at HomeHouse.</p>
+							<p><a href="<?php echo bloginfo('url'); ?>/events" class="button primary small" title="Full Events Calendar">View Events</a></p>
 						</div>
 					</div>
 				</div>
@@ -126,10 +134,8 @@
 					<?php $event_thumbnail_url = get_post_meta($post->ID, 'event_thumbnail_url', true); ?>
 					<div class="image" style="background-image:url(<?php echo $event_thumbnail_url; ?>)">
 						<div class="valign">
-							<div class="highlight">
-								<h3 class="title"><?php the_title(); ?></h3>
-								<p><a href="<?php the_permalink(); ?>" class="button primary small">View Event</a></p>								
-							</div>
+							<h3 class="highlight medium"><?php the_title(); ?></h3>
+							<p><a href="<?php the_permalink(); ?>" class="button primary small">View Event</a></p>
 						</div>
 					</div>
 				</div>

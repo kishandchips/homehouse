@@ -19,7 +19,7 @@ $template_directory_uri = get_template_directory_uri();
 
 // Scripts Etc
 function custom_styles(){
-	wp_enqueue_style('fonts', 'http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic' );
+	wp_enqueue_style('fonts', 'http://fonts.googleapis.com/css?family=Crimson+Text');
 	wp_enqueue_style('main', get_template_directory_uri() . '/css/main.css');
 }
 
@@ -29,7 +29,7 @@ function custom_scripts(){
 	wp_register_script('mapkey', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCHQcusxyrL3CHhKQ_Ui_MF78sMeOs84es', array('jquery'), '', false);
 
 	wp_enqueue_script('modernizr', $template_directory_uri . '/js/vendor/modernizr-2.6.1.min.js', array('jquery'), '', false);
-	wp_enqueue_script('videojs', $template_directory_uri . '/js/plugins/video.js', array('jquery'), '');
+	wp_enqueue_script('videojs', '//vjs.zencdn.net/4.9/video.js', array('jquery'), '');
 	wp_enqueue_script('flexslider', $template_directory_uri . '/js/plugins/jquery.flexslider.js', array('jquery'), '', true);
 	wp_enqueue_script('imagesloaded', $template_directory_uri . '/js/plugins/imagesloaded.js', array('jquery'), '', true);
 	wp_enqueue_script('isotope', $template_directory_uri . '/js/plugins/isotope.js', array('jquery'), '', true);
@@ -124,12 +124,12 @@ function my_sidebars() {
 			'after_title' => '</h3>'
 		)
 	);
-	/* Register the 'header' sidebar. */
+	/* Register the 'blog' sidebar. */
 	register_sidebar(
 		array(
-			'id' => 'header',
-			'name' => __( 'Header' ),
-			'description' => __( 'Header Sidebar' ),
+			'id' => 'blog',
+			'name' => __( 'Blog' ),
+			'description' => __( 'Blog Sidebar' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget' => '</div>',
 			'before_title' => '<h3 class="widget-title">',
@@ -137,6 +137,15 @@ function my_sidebars() {
 		)
 	);
 }
+
+// EXCLUDE CATEGORIES FROM CATEGORIES WIDGET
+function exclude_widget_categories($args){
+$exclude = "13,14,15"; //House 19,20,21 - The IDs of the excluding categories 
+$args["exclude"] = $exclude;
+return $args;
+}
+add_filter("widget_categories_args","exclude_widget_categories");
+
 
 // WORDPRESS COOKIE
 
@@ -186,3 +195,21 @@ add_shortcode('loggedin', 'check_user' );
 
 // Filters
 add_filter( 'widget_title', '__return_false' );
+
+add_action( 'profile_update', 'hh_profile_update', 10, 2);
+
+function hh_profile_update($user_id, $old_user_data ) {
+	$new_data = get_userdata($user_id);
+	$membership_id = get_user_meta($user_id, 'membership_id', true);
+	$phone = get_user_meta($user_id, 'event_espresso_phone', true);
+
+	$admin_email = "last-spartan@hotmail.com";
+	$headers[] = 'From: HomeHouse <info@homehouse.co.uk>';
+    $message = sprintf( __( 'This user has updated their profile on the HomeHouse.' ) ) . "\r\n\r\n";
+    $message .= sprintf( __( 'Display Name: %s' ), $new_data->display_name ). "\r\n\r\n";
+    $message .= sprintf( __( 'Membership ID: %s' ), $membership_id ). "\r\n\r\n";
+    $message .= sprintf( __( 'Email: %s' ), $new_data->user_email ). "\r\n\r\n";
+    $message .= sprintf( __( 'Phone: %s' ), $phone ). "\r\n\r\n";
+
+    wp_mail( $admin_email, sprintf( __( 'User Profile Update' ), get_option('blogname') ), $message, $headers );
+}

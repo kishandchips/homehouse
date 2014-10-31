@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div id="single-cedric">
+<div id="single-cedric" class="flex-page page-pattern" <?php if(get_field('page_pattern')): ?>style="background-image: url(<?php the_field('page_pattern') ?>)"<?php endif; ?> >
 
 	<?php if(get_field('header_image')): ?>
 		<?php $image = get_field('header_image'); ?>

@@ -72,13 +72,7 @@ button{
 	}
 
 	&.booking{
-		color: #fff;
-		background-color: #004A09;
-		border: none;
-
-		&:hover{
-			background-color: #27ae60;
-		}
+		@extend .ticket-button;
 	}
 	
 	&.small{
@@ -98,12 +92,57 @@ button{
 		}
 	}
 }
-%cart-functions{
-	border: 1px solid #A268BE !important;
-	@include transition(all,.3s);
 
+.ticket-button{
+	position:relative;
+	display: inline-block;
+	padding: 0 2em;
+	color:#fff;
+	@include garamond-bold;
+	line-height:42px;
+	background-color: #333333;
+	border-bottom: none;
+	@include transition(all,0s);
+	
 	&:hover{
-		color: #fff;
-		background-color: #A268BE;
+		background-color: #000;
+		border-bottom: none;
+
+		&:before{
+			background-position: 0 0;
+		}
+
+		&:after{
+			background-position: 0 -42px;
+		}
+	}
+
+	&:before{
+		content:"";
+		display: inline-block;
+		width:12px;
+		height: 42px;
+		position: absolute;
+		top: 0;
+		left: -12px;
+		background-image:url(../img/ticket-sprite.png);
+		background-repeat: no-repeat;
+		background-position: -12px 0;
+		
+
+	}
+
+	&:after{
+		content:"";
+		display: inline-block;
+		width: 12px;
+		height: 42px;
+		position: absolute;
+		top: 0;
+		right: -12px;
+		background-image:url(../img/ticket-sprite.png);
+		background-repeat: no-repeat;
+		background-position: -12px -42px;
+
 	}
 }

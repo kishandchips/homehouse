@@ -7,21 +7,21 @@ fieldset{
 label{
 	display: block;
 	font-size: 0.8em;
-	@include playfair;
 	font-weight: 300;
-	letter-spacing: 2px;
 	text-transform: uppercase;
 }
 
 input[type="text"], input[type="password"]{
-	@extend .small;
-	width: 100%;
 	max-width: 320px;
+	width: 100% !important;
+	max-width: initial;
 	margin-bottom: 0.5em;
 	padding: 0.5em;
-	color: #9d9d9d;
-	background-color: #f6f6f6;
-	border: 2px solid #949494;
+	color: #fff;
+	font-size: 1em;
+	letter-spacing: 1px;
+	background-color: #1f1f1f;
+	border:1px solid #2c2c2c;
 	@include border-radius(3px);
 	outline: none;
 
@@ -33,12 +33,36 @@ input[type="text"], input[type="password"]{
 	}
 }
 
+textarea{
+	width: 100% !important;
+	color: #fff;
+	font-size: 1em;
+	letter-spacing: 1px;
+	background-color: #1f1f1f;
+	border:1px solid #2c2c2c;
+	@include border-radius(3px);
+}
+
 input[type="text"]:focus, textarea:focus{
-	@include single-box-shadow(rgba(#A268BF,1),0, 0, 5px, false, false);
+	@include single-box-shadow(0, 0, 5px, false,rgba(#A268BF,1), false);
 }
 
 input[type="submit"]{
 	@extend .button;
+	background-color:transparent;
+	border: none;
+}
+
+input.button-primary{
+	color: #000;
+	background-color: #fff;
+	border: 1px solid #fff;
+	
+	&:hover{
+		color: #fff;
+		background-color: #573168;
+		border: 1px solid #573168;
+	}
 }
 
 /* ==========================================================================
@@ -67,13 +91,10 @@ input[type="submit"]{
 						}
 					}
 
-					&.small-print{
-						width: 75%;
-					}
-
 					&.small-print-check{
 						label{
-							width: 75%;
+							font-size: 1em;
+							letter-spacing: 0;
 							text-transform: none;
 						}
 					}
@@ -94,7 +115,6 @@ input[type="submit"]{
 
 					label{
 						font-size: 0.8em;
-						@include playfair;
 						font-weight: 300;
 						letter-spacing: 2px;
 						text-transform: uppercase;
@@ -117,40 +137,43 @@ input[type="submit"]{
 					margin-left: 0;
 				}
 
-				input[type="text"]{
-					width: 100% !important;
-					max-width: initial;
-					padding: 0.5em;
-					color: #fff;
-					font-size: 1em;
-					letter-spacing: 1px;
-					background-color: #1f1f1f;
-					border:1px solid #2c2c2c;
-				}
+				// input[type="text"]{
+				// 	width: 100% !important;
+				// 	max-width: initial;
+				// 	padding: 0.5em;
+				// 	color: #fff;
+				// 	font-size: 1em;
+				// 	letter-spacing: 1px;
+				// 	background-color: #1f1f1f;
+				// 	border:1px solid #2c2c2c;
+				// }
 
-				textarea{
-					width: 100% !important;
-					color: #fff;
-					font-size: 1em;
-					letter-spacing: 1px;
-					background-color: #1f1f1f;
-					border:1px solid #2c2c2c;
-					@include border-radius(3px);
+				// textarea{
+				// 	width: 100% !important;
+				// 	color: #fff;
+				// 	font-size: 1em;
+				// 	letter-spacing: 1px;
+				// 	background-color: #1f1f1f;
+				// 	border:1px solid #2c2c2c;
+				// 	@include border-radius(3px);
+				// }
+
+				select{
+					margin-bottom: 0.5em;
 				}
 			}
 		}//.gform_body
 
 		.gform_footer{
 			input[type="submit"]{
-				color: #fff;
-				font-size: 0.8em;
-				letter-spacing: 2px;
-				background-color: #503B5A;
-				border: 1px solid #503B5A;
-				@include transition(all,.3s);
-
+				color: #000;
+				background-color: #fff;
+				border: 1px solid #fff;
+				
 				&:hover{
-					background-color: #573169;
+					color: #fff;
+					background-color: #573168;
+					border: 1px solid #573168;
 				}
 			}
 		}
@@ -177,84 +200,75 @@ input[type="submit"]{
    ========================================================================== */
 
 .event_title{
-	display: inline-block;
-	margin-bottom: 0 !important;
-	padding: 1em 2em;
-	color: #fff;
+	margin: 0.5em 0 0 0 !important;
+	padding: 0.5em;
+	color:#fff;
+	@include garamond;
+	font-size: 2.5em;
 	text-transform: uppercase;
-	background-image: url(../img/header-bg.png);
+	background-color: #000;
 }
 
 .event-data-display{
-	padding: 1em 2em;
+	padding: 2em;
 	background-color: rgba(254, 255, 245, 1);
+
+	.section-heading:first-child{
+		margin-top: 0;
+	}
 }
 
-#event_espresso_refresh_total, #event_espresso_edit_cart, 
-.event_espresso_refresh_total, .choose-diff-pay-option-pg{
-	margin: 0;
+input.submit{
 	padding: 0;
-	text-align: left;
-
-	>a{
-		display: inline-block;
-		font-size: 1em;
-		margin-top: 2em;
-		padding: 0.3em 0.5em;
-		@extend %cart-functions;
-	}
+	color: #fff;
+	text-transform: capitalize;
 }
 
 .event_espresso_form_wrapper, .espresso_add_attendee{
 	margin-bottom: 1em;
 	
 	label{
+		float:none;
+		display: inline-block;
 		padding-bottom:0.5em;
 		font-size: 1em;
-		font-weight: 600;
 		text-transform: inherit;
+		text-align: left;
+		vertical-align: middle;
 	}
 
 	input[type="text"]{
-		padding: 1em;
-		color: #414141;
+		display: inline-block;
+		margin: 0;
+		padding: 0.5em;
+		color: #000;
 		font-size: 1em;
-		@include garamond-bold;
-		letter-spacing: 1px;
-	}
-
-	.submit, #stripe_submit{
-		float: none;
-		@extend .button;
-		color: #fff;
-		background-color: #004A09;
-		border: none;
-
-		&:hover{
-			background-color: #27ae60;
-		}
+		background-color: #f5f5f5;
+		border: 1px solid #e8e8e8;
+		vertical-align: middle;
 	}
 }// .event_espresso_form_wrapper, .espresso_add_attendee
 
 .event_espresso_form_wrapper{
-	
+
 	select{
 		display: inline-block;
 		height: 35px;
-		max-width: 320px;
+		width: 60px;
 		padding: 1em 2em;
-		color: #fff;
-		background-color: #444444;
+		color: #000;
+		background-color: #DBD2D2;
 		@include border-radius(0);
-	}	
+	}
 
 	.multi_regis_wrapper_attendee-primary, .multi_regis_wrapper_attendee-additional{
-		padding: 2em;
+		width: 80%;
+		padding:0;
 		background-color: rgba(254, 255, 245, 1);
 	}
 
 	#event_espresso_edit_cart{
-		margin: 2em 0 0 0;
+		margin: 0;
 		padding: 0;
 		font-size: 1em;
 	}
@@ -263,99 +277,53 @@ input[type="submit"]{
 		width: 100px;
 	}
 
+	label.error,
+	span.error{
+		margin:0;
+	}
 }
 
-// EVENT ESPRESSO REG FORM
-#registration_form{
-	
-	.section-title{
-		margin-top: 0;
-	}
-
-	label{
-		&.error{
-			color: #e74c3c;
-		}
-	}
-
-	.additional-attendee-div{
-		display: inline-block;
-
-		img{
-			display: none;
-		}
-	}
-	
-	.add-additional-attendee-lnk{
-		width: 100%;
-		max-width: 320px;
-		padding: 0.3em 1em;
-		color: #fff !important;
-		text-align: center;
-		background-color: #2ecc71;
-		border: 1px solid #27ae60;
-		@include single-text-shadow(none);
-	}
-
-	.remove-additional-attendee-lnk{
-		padding: 0.3em 1em;
-		color: #fff !important;
-		background-color: #e74c3c;
-		border: 1px solid #c0392b;
-		@include single-text-shadow(none);
-	}
-
-	.espresso_add_attendee{
-		border-bottom: 1px dotted rgba(0,0,0,0.2);
-	}
-
-	.event_form_submit{
-		max-width: 320px;
-		padding: 0;
-		text-align: center;
-	}
-}// #registration-form
-
-// EVENT ESPRESSO SHOPPING CART
+/* ==========================================================================
+   EVENT ESPRESSO CART
+   ========================================================================== */
 
 #event_espresso_shopping_cart{
-
-	.remove-cart-item{
-		color: #c0392b;
-
-		span{
-			display: inline-block;
-			font-size: 0.6em;
-			vertical-align: middle;
-		}
-		
-		.ee_delete_item_from_cart{
-			display: inline-block;
-			margin-left: 1em;
-			vertical-align: middle;
-			cursor: pointer;
-		}
-	}
 
 	.multi_reg_cart_block{
 		margin: 0;
 		padding: 0;
 	}
 
+	table#cart-reg-details{
+		width: 80%;
+		padding-bottom: 2em;
+		border-bottom: 3px solid #000;
+		
+		@media screen and (max-width:650px){
+			width: 100%;
+		}
+	}
+
 	.price_list{
+		width: 100%;
+
 		tr{
-			border-top: 1px solid #E2E2E2;
+			&:first-child{
+				border-top: 1px solid #000;
+			}
+			border-top: 1px solid #eaeaea;
 		}
 
 		td{
-			padding: 10px 0 10px 0;
-		}
+			padding: 10px 20px;
 
-		.price{
-			font-weight: bold;
+			&.price_type{
+				font-weight: bold;
+			}
 		}
 
 		.reg-allowed-limit{
+			@extend .small;
 			font-style: italic;
 		}
 
@@ -364,8 +332,8 @@ input[type="submit"]{
 			height: 35px;
 			width: 60px;
 			padding: 1em 2em;
-			color: #fff;
-			background-color: #444444;
+			color: #000;
+			background-color: #DBD2D2;
 			@include border-radius(0);
 		}
 	}
@@ -382,11 +350,32 @@ input[type="submit"]{
 	}
 
 	#event_espresso_submit_cart{
+		margin-top: 2em;
+		margin-left: 12px;
+		padding: 0;
 		text-align: left;
+	}
+
+	.remove-cart-item{
+		display: inline-block;
+		margin-top: 1em;
+		color: #c8c8c8;
+		font-size: 14px;
+		cursor: pointer;
+
+		i{
+			margin-right: 0.5em;
+		}
+
+		&:hover{
+			color: #333;
+		}
 	}
 }// .event_espresso_shopping_cart
 
-// EVENT ESPRESSO CHECKOUT FORM
+/* ==========================================================================
+   EVENT ESPRESSO CHECKOUT FORM
+   ========================================================================== */
 
 #event_espresso_checkout_form{
 	margin: 0;
@@ -395,29 +384,294 @@ input[type="submit"]{
 	#event_espresso_registration_form{
 		margin: 0;
 	}
-
-	.mer-event-submit{
-		margin-top: 1em;
+	
+	.reg-quest-title{
+		padding-bottom: 0.5em;
+		border-bottom: 1px solid #000;
 	}
 
 	.copy-all-button-wrapper,
 	.copy_dropdown_wrapper {
 		display:none;
-	}
-}
+	}	
 
-// EVENT ESPRESSO PAYMENT OVERVIEW
+	#event_espresso_edit_cart{
+		position: relative;
+		top:-45px;
+		left: 2em;
 
-.espresso_payment_overview{
-	table{
-		tr{
-			border-top: 1px solid #E2E2E2;;
+		a{
+			color: #333;
 
-			td{
-				padding: 10px 0;
-				vertical-align: bottom;
+			&:hover{
+				border-bottom: 1px dotted #333;
 			}
 		}
 	}
+
+	.mer-event-submit{
+		margin-top: 1em;
+		margin-left: 12px;
+	}
 }
 
+/* ==========================================================================
+   EVENT ESPRESSO REGISTRATION FORM
+   ========================================================================== */
+
+// #registration_form{
+	
+// 	.section-title{
+// 		margin-top: 0;
+// 	}
+
+// 	label{
+// 		&.error{
+// 			color: #e74c3c;
+// 		}
+// 	}
+
+// 	.additional-attendee-div{
+// 		display: inline-block;
+
+// 		img{
+// 			display: none;
+// 		}
+// 	}
+	
+// 	.add-additional-attendee-lnk{
+// 		width: 100%;
+// 		max-width: 320px;
+// 		padding: 0.3em 1em;
+// 		color: #fff !important;
+// 		text-align: center;
+// 		background-color: #2ecc71;
+// 		border: 1px solid #27ae60;
+// 		@include single-text-shadow(none);
+// 	}
+
+// 	.remove-additional-attendee-lnk{
+// 		padding: 0.3em 1em;
+// 		color: #fff !important;
+// 		background-color: #e74c3c;
+// 		border: 1px solid #c0392b;
+// 		@include single-text-shadow(none);
+// 	}
+
+// 	.espresso_add_attendee{
+// 		border-bottom: 1px dotted rgba(0,0,0,0.2);
+// 	}
+
+// 	.event_form_submit{
+// 		max-width: 320px;
+// 		padding: 0;
+// 		text-align: center;
+// 	}
+// }
+
+/* ==========================================================================
+   EVENT ESPRESSO PAYMENT OVERVIEW
+   ========================================================================== */
+
+.espresso_payment_overview{
+
+	.section-heading{
+		margin: 1em 0 0.5em 0;
+		font-size: 2em;
+		@include garamond-bold;
+		font-weight: normal;
+		line-height: 1;
+	}
+
+	.instruct{
+		width: 80%;
+		margin-top: 0;
+		padding-bottom: 1.5em;
+		border-bottom: 3px solid #000;
+
+		@media screen and (max-width:650px){
+			width: 100%;
+		}
+	}
+
+	table{
+		width: 80%;
+
+		@media screen and (max-width:650px){
+			width: 100%;
+		}
+
+		tr{
+			border-top: 1px solid #E2E2E2;
+
+			&:first-child{
+				border-top: none;
+			}
+
+			&:last-child{
+				border-top: 3px solid #000;
+			}
+
+			td{
+				padding: 20px 0;
+				vertical-align: bottom;
+			}
+		}
+	}// table
+
+	.event_espresso_refresh_total{
+		a{
+			margin:0 10px;
+			color: #C8C8C8;
+			
+			&:first-child{
+				margin-left: 0;
+			}
+
+			&:hover{
+				color: #333;
+			}
+		}
+	}
+
+}// .espresso_payment_overview
+
+#payment-options-dv{
+
+	.section-heading{
+		margin-bottom: 0.5em;
+		font-size: 2em;
+		@include garamond-bold;
+		font-weight: normal;
+		line-height: 1;
+	}
+	
+	.event_form_submit{
+		margin: 2em 0 0 12px;
+		padding: 0;
+	}
+
+	#stripe_submit{
+		display: inline-block !important;
+		float: none !important;
+		margin: 0;
+		padding: 0;
+		text-transform: capitalize;
+		background-color: rgba(0, 0, 0, 0);
+		background: rgba(0, 0, 0, 0);
+		border: none;
+	}
+
+	.choose-diff-pay-option-pg{
+		margin-bottom: 0;
+
+		a{
+			color: #c8c8c8;
+			
+			&:hover{
+				color: #000;
+				border-bottom: 1px solid #000;
+			}
+		}
+	}
+
+}// #payment-options-dv
+
+#stripe-payment-option-lnk:hover{
+	display: inline-block !important;
+	border: none !important;
+}
+
+.confirmation-message{
+	margin-bottom: 2em;
+	
+	h2{
+		margin-bottom: 0;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	p{
+		margin-top: 0;
+		text-align: center;
+	}
+}
+
+/* ==========================================================================
+   EVENT ESPRESSO EDIT PROFILE
+   ========================================================================== */
+.notice.updated{
+	color: #fff;
+	background-color: #503B5A;
+	border: none;
+}
+
+form.edit-profile{
+
+	.ui-widget-header{
+		border-bottom: 1px dotted #CCC;
+		padding: 0 0 8px 0;
+		margin: 0  0 2em 0;
+	}
+
+	.event-data-display{
+		padding: 0;
+		background-color: transparent;
+
+		label{
+			margin: 10px 0 4px 0;
+			line-height:1.3em;
+		}
+
+		input[type="text"],
+		input[type="password"],
+		textarea{
+			width: 100% !important;
+			max-width: initial;
+			padding: 0.5em;
+			color: #000;
+			font-size: 1em;
+			background-color: #f5f5f5;
+			border: 1px solid #e8e8e8;
+		}
+
+		.submit{
+			padding: 0.7em 1.4em;
+			color: #fff;
+			@include garamond;
+			font-size: 0.8em;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			background-color: #503B5A;
+			border: 1px solid #503B5A;
+			@include transition(all,.3s);
+
+			&:hover{
+				border: 1px solid #573169;
+				background-color: #573169;
+			}
+		}
+
+		.form-address,
+		.form-address2,
+		.form-city,
+		.form-state,
+		.form-zip,
+		.form-country,
+		.form-url,
+		.form-password,
+		.form-textarea,
+		{
+			display: none;
+		}
+
+	}//.event-data-display
+
+	fieldset.last-child{
+		display: none;
+	}
+
+	div.updated {
+		background-color: #00FF9E;
+		border: 1px solid #E6DB55;
+	}
+}// .edit-profile

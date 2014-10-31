@@ -5,7 +5,7 @@
 ?>
 <?php get_header(); ?>
 
-<div id="contact" class="row">
+<div id="contact" class="flex-page row page-pattern">
 	<div id="map" class="column col-3-5 equal-height">
 		<?php wp_enqueue_script('mapkey'); ?>
 	</div><!-- .map -->
@@ -15,7 +15,7 @@
 			<header>
 				<h2>Where to find us</h3>
 			</header>
-			<div class="body">
+			<div class="body small">
 				<?php the_field('address_info'); ?>
 			</div>		
 		</div>
@@ -24,7 +24,7 @@
 			<header>
 				<h2>Opening Hours</h3>
 			</header>
-			<div class="body">
+			<div class="body small">
 				<div class="row">
 					<div class="column col-1-2">
 						<?php the_field('opening_info1'); ?>
@@ -36,8 +36,8 @@
 			</div>
 		</div>
 
-		<button class="button secondary small feedback-toggle">
-			Feedback
+		<button class="button primary small feedback-toggle">
+			Contact Us
 		</button>
 	</div><!-- .contact-info -->
 

@@ -5,52 +5,65 @@
 ?>
 <?php get_header(); ?>
 
-<div id="cedric">
+<div id="cedric" class="flex-page ">
 
-	<header class="header-fancy">
-		<?php if(have_posts()): while(have_posts()): the_post(); ?>
-			<div class="valign">
-				<?php the_content(); ?>
-			</div>
-		<?php endwhile; endif; ?>
-		<?php wp_reset_postdata(); ?>	
-	</header><!-- header -->
+	<section class="hero flexslider thumbnails">
+		<ul class="slides">
+			<?php $featured = get_field('featured_offer'); ?>
 
-	<div id="content-wrapper">
-		<section class="inner">
-
-			<article class="featured">
-				<?php $featured = get_field('featured_offer'); ?>
-
-				<?php foreach($featured as $post): ?>
+			<?php foreach($featured as $post): ?>
 				<?php setup_postdata( $post ); ?>
 				<?php $featured_id = $post->ID; ?>
 				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'slider' ); ?>
 				<?php $terms = get_the_terms( $post->ID, 'offer-category' ); ?>
 
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?> ">
-						<figure style="background-image: url(<?php echo $image[0] ?>)">
-							<div class="meta">
-								<h2 class="title"><?php the_title(); ?></h2>
-								<?php foreach ($terms as $term): ?>
-									<p class="cat"><?php echo $term->name ?></p>
-								<?php endforeach; ?>						
+				<li class="slide" style="background-image: url(<?php echo $image[0] ?>)">
+					<div class="slide-content-wrapper">
+						<div class="slide-content">
+							<div class="inner">
+								<span class="heading">
+									<?php foreach ($terms as $term): ?>
+										<?php echo $term->name ?>
+									<?php endforeach; ?>	
+								</span>
+								<p class="slide-title"><?php the_title(); ?></p>
+								<div class="slide-description"><?php the_excerpt(); ?></div>
+								<a href="<?php the_permalink(); ?>" class="button primary invert small">View Offer</a>							
 							</div>
-						</figure>
+						</div>
+					</div>
+				</li>
+			<?php endforeach; ?>
+			<?php wp_reset_postdata(); ?>
+		</ul>
+		<div class="arrow-wrap"></div>
+	</section><!-- hero flexslider -->
 
-					</a>
-
-				<?php endforeach; ?>
-				<?php wp_reset_postdata(); ?>
-			</article><!-- .featured -->
+	<div id="content-wrapper">
+		<section class="inner">
 
 			<div id="filters">
-				<p>Filter Offers:</p>
-				<?php $terms = get_terms('offer-category') ?>
-				<?php foreach ($terms as $term): ?>
-					<button data-filter=".<?php echo $term->term_id ?>" class="button filter-button primary"><?php echo $term->name ?></button>
-				<?php endforeach; ?>
-					<button data-filter="*" class="button filter-button primary">Show All</button>		
+				<button class="button filter-heading js-toggle">
+					Filter Offers
+					<i class='icon-arrow-down'></i>
+				</button>
+
+				<div class="filters-menu">
+					<ul>
+						<li>
+							<b class="filter-heading">Filter by Type</b>
+							<ul class="filter-list">
+							<?php $terms = get_terms('offer-category') ?>
+							<?php foreach ($terms as $term): ?>
+							
+							<li><button data-filter=".<?php echo $term->term_id ?>" class="button filter"><?php echo $term->name ?></button></li>
+							
+							<?php endforeach; ?>
+							
+							<li><button data-filter="*" class="button filter">Show All</button>	</li>
+						</li>
+					</ul>
+				</div>
 			</div><!-- #filters -->
 
 			<div id="isotope">
@@ -59,6 +72,20 @@
 						'post_type'              => 'love-from-cedric',
 						'orderby'                => 'date',
 						'post__not_in'			 =>  array($featured_id),
+						'meta_query' => array(
+							'relation' => 'OR',
+							array(
+								'key' => 'unpublish_date',
+								'compare' => '=',
+								'value' => '',
+							 ),
+							array(
+								'key' => 'unpublish_date',
+								'compare' => '>=', // compares the event_start_date against today's date so we only display events that haven't happened yet
+								'value' => date('Y-m-d'),
+								'type' => 'DATE'
+							),
+						),
 					);
 					$query = new WP_Query( $args ); 
 				?>
@@ -69,7 +96,7 @@
 						<?php $term_id = $term->term_id; ?>
 						<?php $cat = $term->name; ?>
 					<?php endforeach; ?>
-						<article class="item <?php the_field('item_size'); ?> <?php echo $term_id ?>">
+						<article class="item <?php the_field('item_size'); ?> <?php foreach($terms as $term){ echo $term->term_id." "; } ?>">
 							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?> ">
 								<figure style="background-image: url(<?php echo $image[0] ?>)">
 									<div class="meta">
@@ -81,7 +108,7 @@
 						</article><!-- .item -->
 
 				<?php endwhile; endif; ?>
-				<?php wp_reset_postdata(); ?>	
+				<?php wp_reset_query(); ?>	
 			</div><!-- #isotope -->
 
 		</section><!-- .inner -->

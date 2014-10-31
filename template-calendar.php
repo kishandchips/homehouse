@@ -6,9 +6,9 @@
 <?php get_header(); ?>
 
 <?php if(get_field('sidebar')): ?>
-	<div id="calendar" class="has-sidebar">
+	<div id="calendar" class="flex-page has-sidebar page-pattern" <?php if(get_field('page_pattern')): ?>style="background-image: url(<?php the_field('page_pattern') ?>)"<?php endif; ?> >
 <?php else: ?>
-	<div id="calendar">
+	<div id="calendar" class="flex-page page-pattern" <?php if(get_field('page_pattern')): ?>style="background-image: url(<?php the_field('page_pattern') ?>)"<?php endif; ?> >
 <?php endif; ?>
 
 	<div id="content-wrapper">
@@ -29,18 +29,20 @@
 				</div><!-- sidenav -->
 			
 
-				<section class="inner-content column col-4-5">
-				    <button aria-role="Mobile Sidebar Button" class="mob-button">
-	                    <i class="icon-menu"></i>
-	                    <span>Sidebar</span>
-	                </button>
+				<section class="inner-content column">
+					<div class="mob-bar">
+						<button aria-role="Mobile Sidebar Button" class="mob-button">
+		                    <i class="icon-menu"></i>
+		                    <span>Side Menu</span>
+		                </button>						
+					</div>
             <?php else: ?>
 
             	<section class="inner-content">
             <?php endif; ?>
             
 					<header>
-						<h3 class="title large"><?php the_title(); ?></h3>						
+						<h2><?php the_title(); ?></h2>						
 					</header>
 
 					<?php if(have_posts()): while(have_posts()): the_post(); ?>

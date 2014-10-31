@@ -7,7 +7,6 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title><?php wp_title('-','true','right'); ?><?php bloginfo('name'); ?></title>
-        <meta name="description" content="">
         <meta name="format-detection" content="telephone=no">
         <meta name="viewport" content="width=device-width">
         <?php wp_head(); ?>
@@ -16,8 +15,20 @@
 
     <div id="kanye-west">
         
-        <div class="login clearfix">
-            <?php dynamic_sidebar('header' ); ?>
+        <div id="login-wrapper" class="clearfix">
+
+            <div class="login">
+
+                <?php if ( !is_user_logged_in() ) : ?>
+                    <?php wp_login_form(); ?>
+                <?php endif; ?>
+               
+                <ul class="login-options clearfix">
+                    <li><a href="<?php bloginfo('url' ); ?>/my-membership">Profile</a></li>
+                    <li><a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Logout">Logout</a></li>
+                </ul>                
+            </div>
+
             <button class="js-login">
                 <i class="icon-login"></i>
                 <span>Members Login</span>

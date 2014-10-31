@@ -12,7 +12,6 @@
 			main.vars.wrapper = $('#kanye-west'),
 			main.vars.page = $('#page'),
 			main.vars.sidebar = $('.sidebar'),
-			main.vars.footer = $('#footer'),
 			main.vars.contact = $('#contact');
 
 			this.header.init();
@@ -20,14 +19,15 @@
 			this.sidebar.init();
 			this.cedric.init();
 			this.contact.init();
-			this.footer.init();
 			this.video.init();
 
 			main.w.on('load', function(){
 				$('.flexslider').flexslider({
-			    	animation: "slide",
+			    	animation: "fade",
 			    	controlNav: true,
+			    	slideshowSpeed: 4000
 			  	});
+			  	main.sidebar.resize();
 			});
 
 			$('.equal-height').matchHeight();	
@@ -43,7 +43,7 @@
 				this.megatron.init();
 
 				$('.js-login').on('click', function(){
-					$('.login').toggleClass('visible');
+					$('#login-wrapper').toggleClass('visible');
 				});
 
 			},
@@ -119,7 +119,7 @@
 
 			triggers: function(){
 				// Menu Trigger
-				$('.inner-content .mob-button').on('click', function(){
+				$('.mob-bar .mob-button').on('click', function(){
 					$('body').toggleClass('sidebar-visible');
 				});
 
@@ -130,13 +130,14 @@
 				var element = main.vars.sidebar;
 				if(!element.length){return;}
 
-				var sidebarHeight = main.vars.sidebar.outerHeight();
-				var containerHeight = $('.inner-content').outerHeight();
+				var sidebarHeight = main.vars.sidebar.outerHeight(),
+					containerHeight = $('.inner-content').outerHeight(),
+					breadcrumbHeight = $('#breadcrumbs').outerHeight(true);
 
 				if(containerHeight < sidebarHeight){
-					main.sidebar.container.css('height', sidebarHeight);
+					main.sidebar.container.css('height', sidebarHeight+breadcrumbHeight+32);
 				}else{
-					main.sidebar.container.css('height', containerHeight);
+					main.sidebar.container.css('height', containerHeight+breadcrumbHeight);
 				}
 
 			}// sidebar.resize
@@ -184,10 +185,11 @@
 					var center = new google.maps.LatLng(51.516098, -0.156354);
 					var mapOptions = {
 					    zoom: 15,
-					    disableDefaultUI: true,
+					    draggable: false,
+					    disableDefaultUI: false,
 					    scrollwheel: false,
 					    center: center, // Homehouse
-					    styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]}]
+					    styles: [{"featureType":"water","elementType":"all","stylers":[{"hue":"#e9ebed"},{"saturation":-78},{"lightness":67},{"visibility":"simplified"}]},{"featureType":"landscape","elementType":"all","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"geometry","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":31},{"visibility":"simplified"}]},{"featureType":"poi","elementType":"all","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"off"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"hue":"#e9ebed"},{"saturation":-90},{"lightness":-8},{"visibility":"simplified"}]},{"featureType":"transit","elementType":"all","stylers":[{"hue":"#e9ebed"},{"saturation":10},{"lightness":69},{"visibility":"on"}]},{"featureType":"administrative.locality","elementType":"all","stylers":[{"hue":"#2c2e33"},{"saturation":7},{"lightness":19},{"visibility":"on"}]},{"featureType":"road","elementType":"labels","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":31},{"visibility":"on"}]},{"featureType":"road.arterial","elementType":"labels","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":-2},{"visibility":"simplified"}]}]
 					};
 
 					var element = $('#map');
@@ -300,7 +302,7 @@
 							},
 							getSortData: {
 								date: '[data-date]',
-							    name: '.title',
+							    name: '.highlight',
 							},
 						});
 					});
@@ -308,29 +310,6 @@
 			
 			}// cedric.isotope
 		},// main.cedric
-
-		footer: {
-			element: $('#footer'),
-
-			init: function(){
-				var element = main.footer.element;
-				if(!element.length){return;}
-
-				this.sticky();
-			},
-
-			sticky: function(){
-				var footerHeight = main.footer.element.outerHeight();
-				main.vars.wrapper.css('margin-bottom', -footerHeight);
-				$('.push').css('height', footerHeight);
-			},
-
-			resize: function(){
-				var footerHeight = main.footer.element.outerHeight();
-				main.vars.wrapper.css('margin-bottom', -footerHeight);
-				$('.push').css('height', footerHeight);
-			}
-		},
 
 		video: {
 			element: $('.video-js'),

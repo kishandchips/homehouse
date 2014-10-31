@@ -1,38 +1,56 @@
 @import "//fast.fonts.net/jsapi/7c3154b6-84d1-41cf-880b-8d493e275dd8.js";
 /* line 1, scss/_typography.scss */
 body {
-  font-size: 13px;
   font-family: 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, 'Lucida Grande', sans-serif; }
 
 /* line 5, scss/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+/* line 9, scss/_typography.scss */
 .white {
   color: #fff; }
 
-/* line 8, scss/_typography.scss */
+/* line 12, scss/_typography.scss */
 .black {
   color: #333; }
 
-/* line 12, scss/_typography.scss */
+/* line 16, scss/_typography.scss */
 .small {
   font-size: 0.75em; }
 
-/* line 15, scss/_typography.scss */
+/* line 19, scss/_typography.scss */
 .medium {
   font-size: 1.5em; }
 
-/* line 18, scss/_typography.scss */
+/* line 22, scss/_typography.scss */
 .large {
   font-size: 2em; }
 
-/* line 21, scss/_typography.scss */
+/* line 25, scss/_typography.scss */
 .xlarge {
   font-size: 3em; }
 
-/* line 25, scss/_typography.scss */
-.title {
+/* line 29, scss/_typography.scss */
+.title, .highlight {
   display: inline-block;
   margin: 0;
-  font-family: 'GaramondPrmrW01-BdCap';
+  font-family: 'Simoncini Garamond W01';
+  font-weight: 700;
   font-weight: normal;
   text-transform: uppercase;
-  text-decoration: none; }
+  text-decoration: none;
+  line-height: 1.2; }
+
+/* line 39, scss/_typography.scss */
+.highlight {
+  display: inline-block;
+  margin: 0 0 0.3em 0;
+  padding: 0.2em 0;
+  line-height: 1;
+  background-color: rgba(0, 0, 0, 0.25);
+  box-shadow: 0.5em 0 0 rgba(0, 0, 0, 0.25), -0.5em 0 0 rgba(0, 0, 0, 0.25);
+  -moz-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  -webkit-transition: all, 0.3s;
+  transition: all, 0.3s; }

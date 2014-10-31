@@ -1,7 +1,7 @@
 /* ==================== 
     BASE
    ==================== */
-html, body {
+html{
     height: 100%;
     margin:0;
     padding: 0;
@@ -9,7 +9,9 @@ html, body {
 }
 
 body {
-    height: auto;
+    margin:0;
+    padding: 0;
+    font-size: 1em;
     line-height: 1.4;
     -webkit-font-smoothing: antialiased;
 }
@@ -61,6 +63,10 @@ hr{
     @media screen and (max-width: 750px){
         display:none;
     }
+}
+
+.scrollx{
+    overflow-x:auto; 
 }
 
 .hidden {
@@ -116,19 +122,25 @@ hr{
 
 .alignleft {
     float: left;
+    margin-top: 1em;
+    margin-right: 2em;
+    margin-bottom: 1em;
 }
 .alignright {
     float: right;
+    margin-top: 1em;
+    margin-left: 2em;
+    margin-bottom: 1em;
 }
 .aligncenter {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 2em auto;
 }
 img[class*="align"],
 img[class*="wp-image-"],
 img[class*="attachment-"] {
     height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+    border: 1px solid #ddd;
 }
 img.size-full,
 img.size-large,
@@ -144,4 +156,21 @@ iframe,
 object,
 video {
     max-width: 100%;
+}
+
+.wp-caption {
+    /*background: #fff;*/
+    /*border: 1px solid #f0f0f0;*/
+    max-width: 96%; /* Image does not overflow the content area */
+    /*padding: 5px 3px 10px;*/
+    /*text-align: center;*/
+}
+
+.wp-caption-text{
+    margin-bottom: 0;
+    padding: 0 0.5em;
+    color: #333;
+    font-size: 0.75em;
+    font-style: italic;
+    line-height: 1.1;
 }

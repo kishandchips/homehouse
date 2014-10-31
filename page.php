@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
 <?php if(get_field('sidebar')): ?>
-	<div id="page" class="has-sidebar">
+	<div id="page" class="flex-page has-sidebar page-pattern" <?php if(get_field('page_pattern')): ?> style="background-image: url(<?php the_field('page_pattern') ?>)"<?php endif; ?> >
 <?php else: ?>
-	<div id="page">
+	<div id="page" class="flex-page page-pattern" <?php if(get_field('page_pattern')): ?>style="background-image: url(<?php the_field('page_pattern') ?>)"<?php endif; ?> >
 <?php endif; ?>
 
 		<?php if(get_field('hero')): ?>
@@ -15,9 +15,7 @@
 					<section class="hero flexslider thumbnails">
 						
 						<div class="hero-content valign">
-							<div class="highlight">
-								<h2 class="title"><?php the_title(); ?></h2>
-							</div>
+							<h2 class="title"><?php the_title(); ?></h2>
 						</div>
 
 						<ul class="slides">
@@ -27,7 +25,10 @@
 								</li>
 							<?php endforeach; ?>
 						</ul>
-
+						
+<!-- 						<div class="slider-gallery">
+							<span class="button primary">View Gallery</span>
+						</div> -->
 						<div class="arrow-wrap"></div>
 					</section><!-- hero flexslider -->
 
@@ -37,9 +38,7 @@
 						<div class="hero image" style="background-image:url(<?php echo $image['sizes']['slider']; ?>)">
 	
 							<div class="hero-content valign">
-								<div class="highlight">
-									<h2 class="title"><?php the_title(); ?></h2>
-								</div>
+								<h2 class="title"><?php the_title(); ?></h2>
 							</div>
 
 							<img src="<?php echo $image['sizes']['slider']; ?>">
@@ -54,9 +53,12 @@
 
 		<div id="content-wrapper">	
 			<div class="container">
+				<?php if ( function_exists('yoast_breadcrumb') ) {
+					yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+				} ?><!-- .breadcrumbs -->
 
 				<?php if(get_field('sidebar')): ?>
-					<div class="sidebar column col-1-5">
+					<div class="sidebar column">
 
 		 				<?php $parent = array_reverse(get_post_ancestors($post->ID)); ?>
 						<?php if(count($parent)): ?>	
@@ -69,19 +71,20 @@
 						<?php get_sidebar(); ?>
 					</div><!-- sidenav -->
 				
-
 					<section class="inner-content column">
-					    <button aria-role="Mobile Sidebar Button" class="mob-button">
-		                    <i class="icon-menu"></i>
-		                    <span>Sidebar</span>
-		                </button>
+						<div class="mob-bar">
+							<button aria-role="Mobile Sidebar Button" class="mob-button">
+			                    <i class="icon-menu"></i>
+			                    <span>Side Menu</span>
+			                </button>						
+						</div>
 	            <?php else: ?>
 
 	            	<section class="inner-content">
 	            <?php endif; ?>
 	            
 						<header>
-							<h3 class="title large"><?php the_title(); ?></h3>						
+							<h2><?php the_title(); ?></h2>
 						</header>
 
 						<?php if(have_posts()): while(have_posts()): the_post(); ?>
@@ -115,6 +118,9 @@
 							case 4:
 							echo '<div class="column col-1-2 pad">';
 							break;
+							case 6:
+							echo '<div class="column col-1-3 pad">';
+							break;
 					}?>
 					
 					<?php if(get_field('display_background')): ?>
@@ -125,23 +131,18 @@
 					<?php endif; ?>
 
 							<div class="valign">
-								<div class="highlight">
-									<?php the_sub_field('grid_content') ?>
-									<div class="buttons">
-										<?php $buttons = get_sub_field('buttons'); ?>
-										<?php foreach ($buttons as $button):?>
-											<?php $post_object = $button['button_link'] ?>
-											<?php $post = $post_object; ?>
-											<?php setup_postdata( $post ); ?>
-											<?php 	$url = get_the_permalink();
-													$text = (!empty($button['button_text'])) ? $button['button_text'] : null;
-													$style =  (!empty($button['button_style'])) ? $button['button_style'] : null;
-											?>
-											<a href="<?php echo $url ?>" class="button small <?php echo $style?>"><?php echo $text ?></a>
-											<?php wp_reset_postdata(); ?>
-										<?php endforeach; ?>
-									</div>									
-								</div>
+								<?php the_sub_field('grid_content') ?>
+								<div class="buttons">
+									<?php $buttons = get_sub_field('buttons'); ?>
+									<?php foreach ($buttons as $button):?>
+										<?php
+												$url = $button['button_link'];
+												$text = (!empty($button['button_text'])) ? $button['button_text'] : null;
+												$style =  (!empty($button['button_style'])) ? $button['button_style'] : null;
+										?>
+										<a href="<?php echo $url['url']; ?>" class="button small <?php echo $style?>"><?php echo $text ?></a>
+									<?php endforeach; ?>
+								</div>									
 							</div>
 
 						</div><!-- .image -->

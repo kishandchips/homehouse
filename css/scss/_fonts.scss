@@ -1,20 +1,23 @@
 @import '//fast.fonts.net/jsapi/7c3154b6-84d1-41cf-880b-8d493e275dd8.js';
 
 @mixin garamond{
-	font-family:'Garamond Prmr W01 Cap';
-	font-weight: normal;
+	font-family:'Simoncini Garamond W01';
+	font-weight: 400;
 }
 
-@mixin garamond-semi{
-	font-family:'GaramondPrmrW01-SmBdCap';
+@mixin garamond-italic{
+	font-family:'Simoncini Garamond W01';
+	font-weight: 400;
+	font-style: italic;
 }
 
 @mixin garamond-bold{
-	font-family:'GaramondPrmrW01-BdCap';
+	font-family:'Simoncini Garamond W01';
+	font-weight: 700;
 }
 
-@mixin playfair{
-	font-family: 'Playfair Display', serif;
+@mixin crimson{
+	font-family: 'Crimson Text', serif;
 }
 
 
