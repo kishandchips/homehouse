@@ -2,24 +2,27 @@
 
 <div id="home" class="flex-page">
 
-	<?php  
-		$video = '<div id="modal-video">';
-		$video .= '<div class="valign">';
-		$video .= '<video id="intro-video" class="video-js vjs-default-skin" controls preload="auto" width="100%" height="auto" data-setup="{"nativeControlsForTouch": false}">';
-		$video .= '<source src="' . get_template_directory_uri() . '/video/homehouse-intro.mp4" type="video/mp4">';
-		$video .= '<source src="' . get_template_directory_uri() . '/video/homehouse-intro.ogv" type="video/ogg">';
-		$video .= '<source src="' . get_template_directory_uri() . '/video/homehouse-intro-animation.swf" type="video/swf">';
-		$video .= '<source src="' . get_template_directory_uri() . '/video/homehouse-intro-animation.webm" type="video/webm">';
-		$video .= '</video>';
-		$video .= '<p>';
-		$video .= '<button class="button primary small">Skip Intro</button>';
-		$video .= '</p>';
-		$video .= '</div>';
-		$video .= '</div>';
+	<?php
+		if(!wp_is_mobile()){
+			$video = '<div id="modal-video">';
+			$video .= '<div class="valign">';
+			$video .= '<video id="intro-video" class="video-js vjs-default-skin vjs-big-play-centered" width="100%" height="auto" poster="' . get_template_directory_uri() . '/img/video-poster.png" data-setup="{}">';
+			$video .= '<source src="' . get_template_directory_uri() . '/video/homehouse-intro.mp4" type="video/mp4">';
+			$video .= '<source src="' . get_template_directory_uri() . '/video/homehouse-intro.ogv" type="video/ogg">';
+			$video .= '<source src="' . get_template_directory_uri() . '/video/homehouse-intro-animation.swf" type="video/swf">';
+			$video .= '<source src="' . get_template_directory_uri() . '/video/homehouse-intro-animation.webm" type="video/webm">';
+			$video .= '</video>';
+			$video .= '<p>';
+			$video .= '<button class="button primary small">Skip Intro</button>';
+			$video .= '</p>';
+			$video .= '</div>';
+			$video .= '</div>';
 
-		if(!isset($_COOKIE['HomehouseVisit'])) {
-			echo $video;
-		}
+			if(!isset($_COOKIE['HomehouseVisit'])) {
+				echo $video;
+			}			
+		}  
+
 	?>
 
 	<section class="hero flexslider">
@@ -52,7 +55,7 @@
 							</span>
 							<p class="slide-title">Restaurants</p>
 							<p class="slide-description">From British classics to Asian delights, there is a taste to suit every bud.</p>
-							<a href="#" class="button primary invert small">See the Restaurants</a>							
+							<a href="<?php bloginfo('url'); ?>/?p=18" class="button primary invert small">See the Restaurants</a>							
 						</div>
 					</div>
 				</div>
@@ -66,8 +69,8 @@
 								The
 							</span>
 							<p class="slide-title">Bedrooms</p>
-							<p class="slide-description">The 20 luxurious rooms and suites are beautifully spacious and offer guests a warm and exclusive living space with the highest standards in comfort and technology...</p>
-							<a href="#" class="button primary invert small">See the Bedrooms</a>							
+							<p class="slide-description">The 21 luxurious rooms and suites are beautifully spacious and offer guests a warm and exclusive living space with the highest standards in comfort and technology...</p>
+							<a href="<?php bloginfo('url'); ?>/?p=27" class="button primary invert small">See the Bedrooms</a>							
 						</div>
 					</div>
 				</div>
@@ -82,7 +85,7 @@
 							</span>
 							<p class="slide-title">Bars</p>
 							<p class="slide-description">From the futuristic Zaha Hadid designed bar in House 21 to the classic Bison Bar, there are myriad opportunities to socialise and celebrate...</p>
-							<a href="#" class="button primary invert small">See the Bars</a>							
+							<a href="<?php bloginfo('url'); ?>/?p=20" class="button primary invert small">See the Bars</a>							
 						</div>
 					</div>
 				</div>
@@ -102,7 +105,7 @@
 					<?php setup_postdata($post); ?>
 				<div class="column col-1-3 pad">
 					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'grid-square' ); ?>
-					<div class="square bg" style="background-image:url(<?php echo $image[0]; ?>)">
+					<div class="square bg b-lazy" data-src="<?php echo $image[0]; ?>">
 						<div class="valign">
 							<h3 class="highlight large">
 								<?php the_title(); ?>
@@ -129,7 +132,7 @@
 		<div class="events">
 			<div class="rect-items row">
 				<div class="column col-2-3 pad expand">
-					<div class="image" style="background-image:url(<?php echo $event_thumbnail_url; ?>)">
+					<div class="image b-lazy" data-src="<?php echo $event_thumbnail_url; ?>">
 						<div class="valign">
 							<h3 class="highlight large">
 								<?php the_title(); ?>
@@ -150,7 +153,7 @@
 								Upcoming Events
 							</h3>
 							<p class="small">
-								There is an abundance of events to suit all in June: screening both the World Cup & Wimbledon.
+								Daylight hours are growing shorter and that means more time for after-dark delights at the House this November.
 							</p>
 							<div>
 								<a href="<?php echo bloginfo('url'); ?>/events" class="button primary small" title="View Events Calendar">View Events</a>
@@ -170,12 +173,12 @@
 				<?php if(count($posts)== 2): ?>
 					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'grid-rect-med' ); ?>
 					<div class="column col-1-2 pad">
-					<div class="image" style="background-image:url(<?php echo $image[0]; ?>)">
+					<div class="image b-lazy" data-src="<?php echo $image[0]; ?>">
 
 				<?php else : ?>
 					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'grid-square' ); ?>
 					<div class="column col-1-3 pad">
-					<div class="square bg" style="background-image:url(<?php echo $image[0]; ?>)">
+					<div class="square bg b-lazy" data-src="<?php echo $image[0]; ?>">
 
 				<?php endif; ?>
 					
@@ -204,7 +207,7 @@
 					<?php foreach ($posts as $post): setup_postdata( $post );?>
 						<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'grid-rect-med' ); ?>
 
-						<div class="image" style="background-image:url(<?php echo $image[0]; ?>)">
+						<div class="image b-lazy" data-src="<?php echo $image[0]; ?>">
 							<div class="valign">
 								<h3 class="highlight large">
 									<?php the_sub_field('title_text') ?>

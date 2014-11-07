@@ -1,6 +1,6 @@
 (function($){
 
-	window.main = {
+	var main = {
 		
 		vars: {},
 		w : $(window),
@@ -324,14 +324,19 @@
 					});
 				});
 
-				player = videojs('#intro-video');
-				
+				var player = videojs('intro-video');
+
 				player.ready(function(){
+					this.preload('auto');
+
+					this.on('play', function(){
+						$('.vjs-poster').remove();
+					});
+
 					this.on("ended", function() {
 						$("#intro-video").fadeOut(500, function() {
 							$("#modal-video").remove();
 						});
-						// $('.flexslider .slides').addClass('visible');
 					});
 				});
 			}
@@ -339,6 +344,14 @@
 
 	};//main
 
-	main.init();
+	window.main = main;
+
+	$(function(){
+		window.main.init();
+		var bLazy = new Blazy({
+			container: '.flow'
+		});
+
+	});
 	
 })(jQuery);

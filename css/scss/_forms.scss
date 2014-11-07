@@ -33,6 +33,10 @@ input[type="text"], input[type="password"]{
 	}
 }
 
+input:-webkit-autofill {
+    color: #fff !important;
+}
+
 textarea{
 	width: 100% !important;
 	color: #fff;
@@ -198,6 +202,21 @@ input.button-primary{
 /* ==========================================================================
    EVENT ESPRESSO
    ========================================================================== */
+.event_espresso_error{
+	color: #fff;
+	background-color: rgba(128, 0, 128, 0.33);
+	@include text-shadow(none);
+	border: none;
+	
+	em{
+		color: #fff !important;
+	}
+
+	p{
+		color: #fff;
+		@include text-shadow(none);
+	}
+}
 
 .event_title{
 	margin: 0.5em 0 0 0 !important;
@@ -221,7 +240,7 @@ input.button-primary{
 input.submit{
 	padding: 0;
 	color: #fff;
-	text-transform: capitalize;
+	text-transform: inherit;
 }
 
 .event_espresso_form_wrapper, .espresso_add_attendee{
@@ -255,7 +274,7 @@ input.submit{
 		display: inline-block;
 		height: 35px;
 		width: 60px;
-		padding: 1em 2em;
+		/*padding: 1em 2em;*/
 		color: #000;
 		background-color: #DBD2D2;
 		@include border-radius(0);
@@ -331,7 +350,7 @@ input.submit{
 			display: inline-block;
 			height: 35px;
 			width: 60px;
-			padding: 1em 2em;
+			// padding: 1em 2em;
 			color: #000;
 			background-color: #DBD2D2;
 			@include border-radius(0);
@@ -379,7 +398,20 @@ input.submit{
 
 #event_espresso_checkout_form{
 	margin: 0;
-	padding: 0;	
+	padding: 0;
+
+	.espresso_event_full{
+		padding-bottom: 2em;
+		background-color: #fff;
+
+		p.event_full{
+			margin:0;
+			padding: 1em 2em;
+		}
+		p.num_attendees{
+			padding: 1em 2em;	
+		}
+	}
 
 	#event_espresso_registration_form{
 		margin: 0;
@@ -580,6 +612,10 @@ input.submit{
 #stripe-payment-option-lnk:hover{
 	display: inline-block !important;
 	border: none !important;
+}
+
+.stripe-payment-option-form-dv{
+	display: block;
 }
 
 .confirmation-message{

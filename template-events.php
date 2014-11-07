@@ -78,19 +78,20 @@
 			<?php $args = array( 
 				'post_type' => 'espresso_event',
 				'posts_per_page' => 50,
-				'order' => 'ASC',
 				'meta_key' => 'event_start_date',
+				'orderby' => 'meta_value', 
+           		'order' => 'ASC',
 				'meta_query' => array(
 					array(
-						'key' => 'event_registration_start',
-						'compare' => '<=', // compares the event_start_date against today's date so we only display events that haven't happened yet
+						'key' => 'event_start_date',
+						'compare' => '>=', 
 						'value' => date('Y-m-d'),
 						'type' => 'DATE'
 					),
 					array(
-						'key' => 'event_registration_end',
-						'compare' => '>=', // compares the event_start_date against today's date so we only display events that haven't happened yet
-						'value' => date('Y-m-d'),
+						'key' => 'event_end_date',
+						'compare' => '<=', 
+						'value' => date('Y-m-d',strtotime("+60 days")),
 						'type' => 'DATE'
 					),
 
@@ -110,9 +111,9 @@
 					<div class="rect-items row">
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 							<div class="column col-2-3 pad expand">
-								<?php $event_thumbnail_url = get_post_meta($post->ID, 'event_thumbnail_url', true); ?>
+								<?php $event_thumbnail_url = get_post_meta($post->ID, 'event_thumbnail_url','thumbnail', true); ?>
 
-								<div class="image" style="background-image:url(<?php echo $event_thumbnail_url; ?>)">
+								<div class="image b-lazy" data-src="<?php echo $event_thumbnail_url; ?>">
 									<div class="valign">
 										<h3 id="event_title-<?php echo $event_id ?>" class="highlight large">
 											<?php the_title(); ?>
@@ -141,4 +142,5 @@
 
 	</div><!-- #content-wrapper -->
 </div><!-- #events -->
+
 <?php get_footer(); ?>

@@ -69,6 +69,7 @@
 			<div id="isotope">
 				<div class="grid-sizer"></div>
 				<?php $args = array (
+						'posts_per_page'	=> 99,
 						'post_type'              => 'love-from-cedric',
 						'orderby'                => 'date',
 						'post__not_in'			 =>  array($featured_id),
@@ -81,7 +82,7 @@
 							 ),
 							array(
 								'key' => 'unpublish_date',
-								'compare' => '>=', // compares the event_start_date against today's date so we only display events that haven't happened yet
+								'compare' => '>=',
 								'value' => date('Y-m-d'),
 								'type' => 'DATE'
 							),
@@ -92,10 +93,12 @@
 				<?php if($query->have_posts()): while($query->have_posts()): $query->the_post(); ?>
 					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'full' ); ?>
 					<?php $terms = get_the_terms( $post->ID, 'offer-category' ); ?>
+					
 					<?php foreach ($terms as $term): ?>
 						<?php $term_id = $term->term_id; ?>
 						<?php $cat = $term->name; ?>
 					<?php endforeach; ?>
+
 						<article class="item <?php the_field('item_size'); ?> <?php foreach($terms as $term){ echo $term->term_id." "; } ?>">
 							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?> ">
 								<figure style="background-image: url(<?php echo $image[0] ?>)">

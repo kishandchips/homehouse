@@ -6,7 +6,7 @@
     <head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title><?php wp_title('-','true','right'); ?><?php bloginfo('name'); ?></title>
+		<title><?php bloginfo('name'); ?></title>
         <meta name="format-detection" content="telephone=no">
         <meta name="viewport" content="width=device-width">
         <?php wp_head(); ?>
@@ -24,7 +24,7 @@
                 <?php endif; ?>
                
                 <ul class="login-options clearfix">
-                    <li><a href="<?php bloginfo('url' ); ?>/my-membership">Profile</a></li>
+                    <li><a href="<?php bloginfo('url' ); ?>/my-membership">Members Area</a></li>
                     <li><a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Logout">Logout</a></li>
                 </ul>                
             </div>

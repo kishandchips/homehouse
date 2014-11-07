@@ -36,7 +36,14 @@ hr{
     border: 1px solid black;
 }
 /* POSITIONING */
+.b-lazy{
+    @include opacity(0);
+    @include transition(opacity,.3s);
 
+    &.b-loaded{
+        @include opacity(1);
+    }
+}
 .left{
 	float:left;
 }

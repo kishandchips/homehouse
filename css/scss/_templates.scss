@@ -16,30 +16,26 @@
 	
 	.events{
 		.pattern-img{
-			background-image:url(../img/head.png),url(../img/grey-pattern.jpg);
+			background-image:url(../img/bells.png),url(../img/grey-pattern.jpg);
+			background-size: 80%, auto;
 			background-repeat: no-repeat,repeat;
-			background-position: 50% 95%;
-
-			@media screen and (max-width: 1200px){
-				background-size:25%;
-			}
+			background-position: 125% 75%;
 		}
 
 	}//.events
 
 	.members{
 		.pattern-img{
-			background-image:url(../img/bells.png),url(../img/grey-pattern.jpg);
-			background-size: 80%, auto;
+			background-image:url(../img/head.png),url(../img/grey-pattern.jpg);
 			background-repeat: no-repeat,repeat;
-			background-position: 125% 75%;
+			background-position: 50%;
 		}
 	}//.members
 
 	.bedrooms{
 		.pattern-img{
 			background-image:url(../img/deco-carousel-bedrooms.png),url(../img/grey-pattern.jpg);
-			background-size:80%, auto;
+			background-size:100%, auto;
 			background-repeat: no-repeat,repeat;
 			background-position: 50% -5%;
 
@@ -163,6 +159,10 @@
 				color:#aaa;
 				font-size: 1.45em;
 				vertical-align: middle;
+			}
+
+			.notice{
+				color: #A268BE;
 			}
 		}
 
@@ -793,7 +793,6 @@ blockquote{
 
 #contact{
 	position:relative;
-	height: 100%;
 
 	&.feedback-visible{
 		.feedback-overlay{
@@ -986,3 +985,23 @@ blockquote{
 	}
 
 }// .login
+
+#login{
+	.container{
+		width: 100%;
+		max-width: 500px;
+		margin: 0 auto;
+	}
+}
+
+.login-msg, div.warning{
+	padding: 1em !important;
+	color: #fff !important;
+	background-color: #c0392b !important;
+	border: none !important;
+	@include border-radius(1px);
+
+	p{
+		font-size: 1em !important;
+	}
+}

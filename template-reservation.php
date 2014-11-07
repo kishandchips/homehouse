@@ -18,27 +18,26 @@
 				yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 			} ?><!-- .breadcrumbs -->
 			
-            	<section class="inner-content">
-            
-					<header>
-						<h2>Make a reservation</h2>
-					</header>
+        	<section class="inner-content">
+        
+				<header>
+					<h2>Make a reservation</h2>
+				</header>
 
-					<div class="column col-1-2">
-						<div class="frame-dark">
-							<iframe id="reservation_widget" name="widget" src="<?php the_field('reservation_widget'); ?>"></iframe>
-						</div>
-						
+				<div class="column col-1-2">
+					<div class="frame-dark">
+						<iframe id="reservation_widget" name="widget" src="<?php the_field('reservation_widget'); ?>"></iframe>
 					</div>
-					<div class="column col-1-2">
-						<?php if(have_posts()): while(have_posts()): the_post(); ?>
-							<?php the_content(); ?>
-						<?php endwhile; endif; ?>
-					</div>					
-				</section><!-- .inner-content -->
-
+					
+				</div>
+				<div class="column col-1-2">
+					<?php if(have_posts()): while(have_posts()): the_post(); ?>
+						<?php the_content(); ?>
+					<?php endwhile; endif; ?>
+				</div>
+				
+			</section><!-- .inner-content -->
 		</div><!-- .container -->
-
 	</div><!-- #content-wrapper -->
 </div><!-- #reservation -->
 

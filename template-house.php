@@ -11,45 +11,11 @@
 	<div id="house-single" class="flex-page page-pattern"  <?php if(get_field('page_pattern')): ?>style="background-image: url(<?php the_field('page_pattern') ?>)"<?php endif; ?> >
 <?php endif; ?>
 
-		<?php if(get_field('hero')): ?>
-			
-			<?php $images = get_field('slider_images'); ?>
-			<?php if($images): ?>
-				<?php if(count($images)>1): ?>
+	<?php if(get_field('hero')): ?>
+		
+		<?php get_template_part( 'content', 'slider' ); ?>
 
-					<section class="hero flexslider thumbnails">
-						
-						<div class="hero-content valign">
-							<h2 class="title"><?php the_title(); ?></h2>
-						</div>
-
-						<ul class="slides">
-							<?php foreach ($images as $image): ?>
-								<li style='background-image: url(<?php echo $image['sizes']['slider']; ?>)'>
-									<img src="<?php echo $image['url']; ?>">
-								</li>
-							<?php endforeach; ?>
-						</ul>
-					</section><!-- hero flexslider -->
-
-				<?php else: ?>
-					<?php foreach ($images as $image): ?>
-
-						<div class="hero image" style="background-image:url(<?php echo $image['sizes']['slider']; ?>)">
-	
-							<div class="hero-content valign">
-								<h2 class="title"><?php the_title(); ?></h2>
-							</div>
-
-							<img src="<?php echo $image['url']; ?>">
-						</div><!-- hero image -->
-
-					<?php endforeach; ?>
-
-				<?php endif; ?>
-			<?php endif; ?>
-
-		<?php endif; ?>
+	<?php endif; ?>
 
 	<div id="content-wrapper">
 		<div class="container">
@@ -58,26 +24,9 @@
 			} ?><!-- .breadcrumbs -->
 
 			<?php if(get_field('sidebar')): ?>
-				<div class="sidebar column">
-
-	 				<?php $parent = array_reverse(get_post_ancestors($post->ID)); ?>
-					<?php if(count($parent)): ?>	
-						<?php $first_parent = get_page($parent[0]); ?>
-						<h3 class="sidenav-title"><a href="<?php echo $first_parent->guid; ?>"><?php echo $first_parent->post_title; ?></a></h3>
-					<?php else: ?>
-						<h3 class="sidenav-title"><a href="<?php get_page_link($post->ID );; ?>"><?php the_title(); ?></a></h3>
-					<?php endif; ?>
-
-					<?php get_sidebar(); ?>
-				</div><!-- sidenav -->
-
-				<section class="inner-content column">
-					<div class="mob-bar">
-						<button aria-role="Mobile Sidebar Button" class="mob-button">
-		                    <i class="icon-menu"></i>
-		                    <span>Side Menu</span>
-		                </button>						
-					</div>
+				
+				<?php get_template_part( 'content', 'sidebar' ); ?>
+				
             <?php else: ?>
 
             	<section class="inner-content">
@@ -102,7 +51,7 @@
 					<div class="content pattern">
 						<div class="valign">
 							<h3 class="title large">Events at <?php the_title(); ?></h3>
-							<p class="small">There is an abundance of events to suit all at HomeHouse.</p>
+							<p>There is an abundance of events to suit all at HomeHouse.</p>
 							<p><a href="<?php echo bloginfo('url'); ?>/events" class="button primary small" title="Full Events Calendar">View Events</a></p>
 						</div>
 					</div>

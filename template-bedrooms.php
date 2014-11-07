@@ -12,50 +12,36 @@
 <?php endif; ?>
 
 	<div id="content-wrapper">
-			<div class="container">
-				<?php if ( function_exists('yoast_breadcrumb') ) {
-					yoast_breadcrumb('<p id="breadcrumbs">','</p>');
-				} ?><!-- .breadcrumbs -->
+		<div class="container">
 
-				<?php if(get_field('sidebar')): ?>
-					<div class="sidebar column">
+			<?php if ( function_exists('yoast_breadcrumb') ) {
+				yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+			} ?><!-- .breadcrumbs -->
 
-		 				<?php $parent = array_reverse(get_post_ancestors($post->ID)); ?>
-						<?php if(count($parent)): ?>	
-							<?php $first_parent = get_page($parent[0]); ?>
-							<h3 class="sidenav-title"><a href="<?php echo $first_parent->guid; ?>"><?php echo $first_parent->post_title; ?></a></h3>
-						<?php else: ?>
-							<h3 class="sidenav-title"><a href="<?php get_page_link($post->ID );; ?>"><?php the_title(); ?></a></h3>
-						<?php endif; ?>
+			<?php if(get_field('sidebar')): ?>
 
-						<?php get_sidebar(); ?>
-					</div><!-- sidenav -->
+				<?php get_template_part( 'content', 'sidebar' ); ?>
 				
+            <?php else: ?>
 
-					<section class="inner-content column">
-						<div class="mob-bar">
-							<button aria-role="Mobile Sidebar Button" class="mob-button">
-			                    <i class="icon-menu"></i>
-			                    <span>Side Menu</span>
-			                </button>						
-						</div>
-	            <?php else: ?>
+            	<section class="inner-content">
+            <?php endif; ?>
+            
+					<header>
+						<h2><?php the_title(); ?></h2>
+					</header>
 
-	            	<section class="inner-content">
-	            <?php endif; ?>
-	            
-						<header>
-							<h2><?php the_title(); ?></h2>
-						</header>
+					<?php if(have_posts()): while(have_posts()): the_post(); ?>
+					
+					<div class="body">
+						<?php the_content(); ?>
+					</div>
 
-						<?php if(have_posts()): while(have_posts()): the_post(); ?>
-						<div class="body">
-							<?php the_content(); ?>
-						</div>
-						<?php endwhile; endif; ?>						
-					</section><!-- .inner-content -->
+					<?php endwhile; endif; ?>
+					
+				</section><!-- .inner-content -->
 
-			</div><!-- .container -->
+		</div><!-- .container -->
 
 		<?php $pages = get_pages( array('sort_column'=>'menu_order','child_of'=>$post->ID) ); ?>
 		<?php foreach ($pages as $post ): ?>
@@ -64,7 +50,7 @@
 			<div class="rect-items row">
 				<a href="<?php echo get_the_permalink($post->ID); ?>" title="<?php the_title(); ?>">
 					<div class="column col-2-3 pad expand">
-						<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'slider' ); ?>
+						<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'grid-rect-large' ); ?>
 						<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
 						</div>
 					</div>
