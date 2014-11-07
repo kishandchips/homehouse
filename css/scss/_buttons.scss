@@ -7,7 +7,7 @@ button{
 .button{
 	position: relative;
 	display: inline-block;
-	padding: 0.7em 1.4em;
+	padding: 0.7em 1.4em 0.4em;
 	@include garamond-bold;
 	text-transform: uppercase;
 	text-decoration: none;

@@ -324,11 +324,11 @@
 					});
 				});
 
-				var player = videojs('intro-video');
+				var player = videojs('intro-video',{
+					autoplay: true
+				});
 
 				player.ready(function(){
-					this.preload('auto');
-
 					this.on('play', function(){
 						$('.vjs-poster').remove();
 					});

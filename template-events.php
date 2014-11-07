@@ -115,10 +115,10 @@
 
 								<div class="image b-lazy" data-src="<?php echo $event_thumbnail_url; ?>">
 									<div class="valign">
-										<h3 id="event_title-<?php echo $event_id ?>" class="highlight large">
+<!-- 										<h3 id="event_title-<?php echo $event_id ?>" class="highlight large">
 											<?php the_title(); ?>
-										</h3>
-										<div class="event-date">
+										</h3> -->
+										<div class="event-date highlight large">
 											<?php echo $event_date ?>
 										</div>
 									</div>
@@ -127,6 +127,7 @@
 							<div class="column col-1-3 pad expand">
 								<div class="content pattern">
 									<div class="event-desc valign">
+										<h3 class="large title"><?php the_title(); ?></h3>
 										<?php the_field('event_excerpt') ?>
 										<div>
 											<span class="button primary small">Read More</span>

@@ -152,7 +152,7 @@
 							<h3 class="title large">
 								Upcoming Events
 							</h3>
-							<p class="small">
+							<p>
 								Daylight hours are growing shorter and that means more time for after-dark delights at the House this November.
 							</p>
 							<div>

@@ -19,7 +19,7 @@
 			background-image:url(../img/bells.png),url(../img/grey-pattern.jpg);
 			background-size: 80%, auto;
 			background-repeat: no-repeat,repeat;
-			background-position: 125% 75%;
+			background-position: 125% 95%;
 		}
 
 	}//.events
@@ -113,14 +113,7 @@
 	}
 
 	.event-desc{
-		@extend .small;
-
-		.date{
-			margin:0;
-			@extend .large;
-			@include garamond-bold;
-			font-weight: 300;
-		}
+		font-size: 0.9em;
 	}//.event-desc
 
 }// #events
