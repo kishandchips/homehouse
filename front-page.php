@@ -105,7 +105,7 @@
 					<?php setup_postdata($post); ?>
 				<div class="column col-1-3 pad">
 					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'grid-square' ); ?>
-					<div class="square bg b-lazy" data-src="<?php echo $image[0]; ?>">
+					<div class="square bg" style="background-image:url(<?php echo $image[0]; ?>)">
 						<div class="valign">
 							<h3 class="highlight large">
 								<?php the_title(); ?>

@@ -40,14 +40,6 @@
 							WHERE a.event_id = '%d' AND a.payment_status = 'Completed' AND m.user_id = '%s' ", 
 						$event_id, $current_user->ID )
 					);
-
-						// echo '<pre>';
-						// echo('EE Event ID :' 	. $event_id);
-						// echo('<br>');
-						// echo('WP User ID :' 	. $current_user->ID);
-						// echo('<br>');
-						// var_dump($user_booked);
-						// echo '</pre>';
 				?>
 				<div class="body">
 
