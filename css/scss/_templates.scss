@@ -78,7 +78,14 @@
 	.rect-items{
 		.content{
 			@media screen and (max-width: 750px){
-				display: none;
+				height: auto;
+
+				.event-desc.valign{
+					padding: 1em;
+					top:auto;
+					position: relative;
+					@include translateY(0);
+				}
 			}
 		}
 	}
@@ -140,7 +147,7 @@
 
 		.body{
 			padding: 2em;
-			background-color: #fff;
+			background-color: #fefff5;
 
 			p:first-child{
 				margin-top: 0;

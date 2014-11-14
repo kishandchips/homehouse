@@ -238,6 +238,15 @@ function login_failed() {
 }
 add_action( 'wp_login_failed', 'login_failed' );
 
+function verify_username_password( $user, $username, $password ) {  
+    $login_page  = home_url( '/login/' );  
+    if( $username == "" || $password == "" ) {  
+        wp_redirect( $login_page . "?login=empty" );  
+        exit;  
+    }  
+}  
+add_filter( 'authenticate', 'verify_username_password', 1, 3); 
+
 // SHORTCODES
 function button($atts, $content = null) {
    extract(shortcode_atts(array('link' => '#','style' => 'primary', 'size'=> 'small'), $atts));

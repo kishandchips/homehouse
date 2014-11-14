@@ -38,14 +38,26 @@
 							FROM wp_events_attendee a
 							JOIN wp_events_member_rel m ON m.attendee_id = a.id 
 							WHERE a.event_id = '%d' AND a.payment_status = 'Completed' AND m.user_id = '%s' ", 
-						$event_id, $current_user->ID )
+							$event_id, $current_user->ID 
+						)
 					);
+					
+					$attendee_limit = $wpdb->get_row(
+						$wpdb->prepare(
+							"SELECT additional_limit
+							FROM wp_events_detail
+							WHERE id = '%d' ",
+							$event_id
+						)
+					);
+
+					var_dump($attendee_limit->additional_limit);
 				?>
 				<div class="body">
 
 					<p>
 						<i class="icon-calendar"></i>
-						<b>Date:</b> <?php echo $event_start_date ?>
+						<b>Date:</b> <?php echo date('d-m-Y', strtotime($event_start_date); ?>
 					</p>
 					<?php if ($event_location != ""): ?>
 					<p>
@@ -59,7 +71,7 @@
 					</p>
 					<p>
 						<i class="icon-ticket"></i>
-						<b>Price:</b><?php echo $event_price ?>
+						<b>Price:</b> <?php echo $event_price ?>
 					</p>
 					<div class="description">
 						<?php the_content(); ?>

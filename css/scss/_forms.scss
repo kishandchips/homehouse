@@ -220,12 +220,16 @@ input.button-primary{
 
 .event_title{
 	margin: 0.5em 0 0 0 !important;
-	padding: 0.5em;
+	padding: 0.5em 0.5em 0.4em;
 	color:#fff;
 	@include garamond;
 	font-size: 2.5em;
 	text-transform: uppercase;
 	background-color: #000;
+
+	@media screen and (max-width: 400px){
+		font-size: 1.5em;
+	}
 }
 
 .event-data-display{
@@ -234,6 +238,10 @@ input.button-primary{
 
 	.section-heading:first-child{
 		margin-top: 0;
+	}
+
+	@media screen and (max-width: 400px){
+		padding: 1em;
 	}
 }
 
@@ -336,6 +344,10 @@ input.submit{
 		td{
 			padding: 10px 20px;
 
+			@media screen and (max-width: 500px){
+				padding: 5px;
+			}
+
 			&.price_type{
 				font-weight: bold;
 			}
@@ -384,6 +396,10 @@ input.submit{
 
 		i{
 			margin-right: 0.5em;
+
+			&:before{
+				margin-right: 0.5em;
+			}
 		}
 
 		&:hover{
@@ -448,65 +464,17 @@ input.submit{
 }
 
 /* ==========================================================================
-   EVENT ESPRESSO REGISTRATION FORM
-   ========================================================================== */
-
-// #registration_form{
-	
-// 	.section-title{
-// 		margin-top: 0;
-// 	}
-
-// 	label{
-// 		&.error{
-// 			color: #e74c3c;
-// 		}
-// 	}
-
-// 	.additional-attendee-div{
-// 		display: inline-block;
-
-// 		img{
-// 			display: none;
-// 		}
-// 	}
-	
-// 	.add-additional-attendee-lnk{
-// 		width: 100%;
-// 		max-width: 320px;
-// 		padding: 0.3em 1em;
-// 		color: #fff !important;
-// 		text-align: center;
-// 		background-color: #2ecc71;
-// 		border: 1px solid #27ae60;
-// 		@include single-text-shadow(none);
-// 	}
-
-// 	.remove-additional-attendee-lnk{
-// 		padding: 0.3em 1em;
-// 		color: #fff !important;
-// 		background-color: #e74c3c;
-// 		border: 1px solid #c0392b;
-// 		@include single-text-shadow(none);
-// 	}
-
-// 	.espresso_add_attendee{
-// 		border-bottom: 1px dotted rgba(0,0,0,0.2);
-// 	}
-
-// 	.event_form_submit{
-// 		max-width: 320px;
-// 		padding: 0;
-// 		text-align: center;
-// 	}
-// }
-
-/* ==========================================================================
    EVENT ESPRESSO PAYMENT OVERVIEW
    ========================================================================== */
 
 .espresso_payment_overview{
+	overflow-x: scroll;
 
+	.event-data-display{
+		@media screen and (max-width: 500px){
+			width: 400px;
+		}
+	}
 	.section-heading{
 		margin: 1em 0 0.5em 0;
 		font-size: 2em;

@@ -475,7 +475,7 @@ nav{
 				font-size: 2em;
 			}
 			@media screen and (max-width: 750px){
-				font-size: 1.8em;
+				font-size: 1.2em;
 			}
 		}
 
@@ -707,11 +707,13 @@ nav{
 	}
 }
 
-li.slide:first-child{
-	.slide-content-wrapper:after{
-		background-image: url(../img/welcome-illustration.png);
-		background-position:100% 100%;
-	}
+#home{
+	li.slide:first-child{
+		.slide-content-wrapper:after{
+			background-image: url(../img/welcome-illustration.png);
+			background-position:100% 100%;
+		}
+	}	
 }
 
 .house19-slide{
@@ -1169,7 +1171,7 @@ li.slide:first-child{
 		}
 
 		@media screen and (max-width:500px){
-			font-size: 90%;
+			font-size: 50%;
 		}
 	}
 
