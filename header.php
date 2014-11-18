@@ -14,34 +14,61 @@
 	<body <?php body_class(); ?>>
 
     <div id="kanye-west">
-        
-        <div id="login-wrapper" class="clearfix">
 
-            <div class="login">
+        <div id="login">
+
+            <div class="login-overlay"></div><!-- .login overlay -->
+            <div class="login-modal valign">
+                <button class="button login-close" aria-role="toggle login form">
+                    <i class="icon-cross"></i>
+                </button>
 
                 <?php if ( !is_user_logged_in() ) : ?>
+                    
+                    <p class="heading">Registered Members</p>
+
                     <?php wp_login_form(); ?>
+                    
+                    <p class="instructions-prompt">If you have trouble signing in, click on the info icon for login instructions. 
+                        <button class="button info-toggle" aria-role="toggle login info">
+                            <i  class="icon-info"></i>
+                        </button>
+                    </p>
+
+                    <ul class="instructions">
+                        <li>Your username is your <b>name</b> as written on your membership card.</li>
+                        <li>Your password is your <b>membership number</b> as written on your membership card.</li>
+                        <li>If you do not have access to your card, or have trouble logging into the site,
+                        please <a href="mailto:oana@homehouse.co.uk?subject:Website%20Login">get in touch.</a></li>
+                    </ul>
                 <?php endif; ?>
-               
-                <ul class="login-options clearfix">
+
+            </div><!-- .login -->   
+        </div><!-- #login -->
+
+        <div id="login-bar" class="clearfix">
+            <div class="login-options">
+                <ul class="clearfix">
                     <li><a href="<?php bloginfo('url' ); ?>/my-membership">Members Area</a></li>
-                    <li><a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Logout">Logout</a></li>
+                    <?php $user = wp_get_current_user(); ?>
+                    <li>
+                        <a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Logout">Logout - <?php echo $user->display_name; ?></a>
+                    </li>
                 </ul>                
-            </div>
+            </div>   
+        </div><!-- #login-bar -->
 
+        <header id="header">
             <button class="js-login">
-                <i class="icon-login"></i>
-                <span>Members Login</span>
-            </button>    
-        </div><!-- .login -->
+                <span>Login</span>
+            </button> 
 
-        <header id="header" class="mega">
             <div class="logo-big">
                 <a href="<?php echo bloginfo('url'); ?> ">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/logo-header.png" alt="">
                 </a>
             </div>
-            <div class="logo-small halign">
+            <div class="logo-small">
                 <a href="<?php echo bloginfo('url'); ?> ">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/logo-footer.png" alt="">
                 </a>

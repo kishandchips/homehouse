@@ -25,7 +25,8 @@
 				$('.flexslider').flexslider({
 			    	animation: "fade",
 			    	controlNav: true,
-			    	slideshowSpeed: 4000
+			    	slideshowSpeed: 4000,
+			    	pauseOnHover: true
 			  	});
 			  	main.sidebar.resize();
 			});
@@ -43,8 +44,16 @@
 				this.megatron.init();
 
 				$('.js-login').on('click', function(){
-					$('#login-wrapper').toggleClass('visible');
+					$('#login').toggleClass('visible');
 				});
+
+				$('.login-close').on('click', function(){
+					$('#login').toggleClass('visible');
+				});
+
+				$('.info-toggle').on('click', function(){
+					$('.login-modal .instructions').toggleClass('visible');
+				})
 
 			},
 
@@ -67,17 +76,9 @@
 				resize: function(){
 
 					var header = main.vars.header;
-					// Add mob classes
-					if(main.w.width() < 800){
-						header.removeClass('mega');
-						header.addClass('mobile');
-					} else {
-						header.removeClass('mobile');
-						header.addClass('mega');
-					}
 					
 					// Equalise columns on desktop
-					if($('html').hasClass('no-touch') && header.hasClass('mega')){
+					if($('html').hasClass('no-touch')){
 						$('nav .equal-height').matchHeight();		
 					}
 

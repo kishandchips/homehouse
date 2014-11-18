@@ -466,19 +466,28 @@
 		background-color: #fff;
 		@include single-box-shadow(0,5px,20px,8px,rgba(0,0,0,0.2));
 	}
-}
+}// #single-cedric
 
 /* ==========================================================================
    RESERVATION
    ========================================================================== */
 
 #reservation{
+
+	.body{
+		@media screen and (max-width: 600px){
+			.column.col-1-2{
+				width: 100%;
+			}
+		}		
+	}
+
 	#reservation_widget{
 		width:100%;
 		height: 450px;
 		border: none;
 	}	
-}
+}// #reservation
 
 /* ==========================================================================
    HISTORY
@@ -534,7 +543,7 @@
 			margin-top: 0;
 		}
 	}
-}
+}// #history
 
 /* ==========================================================================
    TEAM
@@ -558,7 +567,7 @@
 		margin:0.2em 0;
 		text-transform: uppercase;
 	}
-}
+}// #team
 
 /* ==========================================================================
    BLOG
@@ -896,97 +905,222 @@ blockquote{
 /* ==========================================================================
    LOGIN
    ========================================================================== */
+body.logged-in{
+	.js-login{
+		display: none;
+	}
 
-#login-wrapper{
+	#login{
+		display: none;
+	}
+
+	#login-bar{
+		display: block;
+	}
+}
+
+.js-login{
 	position: absolute;
+	top: 1em;
+	right: 1em;
+	height: 35px;
+	padding: 0.5em 1em;
+	color: #fff;
+	@extend .small;
+	background-color: #131313;
+	@include border-radius(5px);
+	@include transition(all,.3s);
+	z-index: 9998;
+
+	&:hover{
+		background-color: #272727;
+	}
+}
+
+
+#login{
+	position: fixed;
 	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	@include transition(all, .3s);
+
+	&.visible{
+		z-index: 9999;
+
+		.login-overlay{
+			display: block;
+			background-color: rgba(0, 0, 0, 0.4);
+			z-index: 200;
+		}
+
+		.login-modal{
+			top:50%;
+			@include translateY(-50%);
+			@extend .visible;
+		}		
+	}
+
+	.login-overlay{
+		display: none;
+		position:absolute;
+		top:0;
+		left:0;
+		width: 100%;
+		height: 100%;
+	}// .login-overlay
+
+	.login-modal{
+		position: absolute;
+		top: 30%;
+		left: 35%;
+		z-index: 200;
+		width: 30%;
+		margin: 0 auto;
+		padding: 2em;
+		background-color: #202020;
+		overflow-y: auto;
+		@extend .invisible;
+		@include transition(all,.3s);
+
+		@media screen and (max-width: 1000px){
+			width: 50%;
+			left: 25%;
+		}
+		@media screen and (max-width: 600px){
+			width: 80%;
+			left: 10%;
+		}
+
+		>button{
+			position: absolute;
+			top:0;right:0;
+			color: #fff;
+		}
+
+		p{
+			@include garamond;
+		}
+
+		a{
+			color: #A268BE;
+			text-decoration: none;
+		}
+
+		.heading{
+			margin-top: 0;
+			font-size: 1.3125em;
+		}
+
+		.instructions-prompt{
+			margin-top: 2em;
+			margin-bottom: 0;
+			font-size: 0.75em;
+
+			button{
+				padding: 0;
+
+				i{
+					color: #fff;
+					display: inline-block;
+					vertical-align: middle;
+				}
+			}
+		}
+
+		.instructions{
+			max-height: 0;
+			width: 80%;
+			margin: 1em 0 0 0;
+			@extend .small;
+			@extend .invisible;
+			@include transition(all,.3s);
+
+			&.visible{
+				max-height: 500px;
+				@extend .visible;
+			}
+
+			@media screen and (max-width: 500px){
+				width: 100%;
+				padding: 0;
+			}
+		}
+
+		.login-remember{
+			label{
+				text-transform: inherit;
+			}
+		}
+
+		.login-submit{
+			.button-primary{
+				@extend .small;
+			}
+		}
+
+		input[type="text"],
+		input[type="password"]{
+			@include garamond;
+
+			@media screen and (max-width: 1600px){
+				max-width: 300px;
+			}
+		}
+
+	}// .login-modal
+	
+}// #login
+
+#login-bar{
+	display: none;
 	width: 100%;
 	padding: 0 1em;
 	text-align: right;
-	background-color: #131313;
+	background-color: rgba(#131313, .8);
 	z-index: 9999;
-	@include translateY(-100%);
-	@include transition(all, .3s);
 
 	@media screen and (max-width: 600px){
 		text-align: center;
 	}
 
-	&.visible{
-		@include translateY(0);	
-	}
-
-	.login{
-		display: inline-block;
-	}
-
-	.js-login{
-		position: absolute;
-		bottom: -35px;
-		right: 1em;
-		height: 35px;
-		padding: 0 0.5em;
-		color: #fff;
-		@extend .small;
-		background-color: #131313;
-		@include border-bottom-left-radius(5px);
-		@include border-bottom-right-radius(5px);
-
-		i{
-			margin-right: 0.5em;
-		}
-	}
-
-	a{
-		color: #A268BB;
-		text-decoration:none;
-		border-bottom:1px solid transparent;
-
-		&:hover{
-			border-bottom: 1px solid #A268BE;
-		}
-	}
-
 	.login-options{
-		display: none;
-		float:left;
-		margin: 0;
-		padding: 10px 0;
-		list-style-type: none;
+		padding: 0.5em;
 
-		.logged-in &{
-			display: inline-block;
+		ul{
+			margin: 0;
+			padding: 0;
+
+			li{
+				display: inline-block;
+				padding: 0 0.5em;
+				border-left: 1px solid rgba(#A268BE, 0.5);
+
+				&:first-child{
+					border-left: none;
+				}
+			}
 		}
 
-		li{
-			float:left;
-			padding: 0 10px;
-			border-left: 1px solid #fff;
+		a{
+			display: inline-block;
+			padding-bottom: 2px;
+			color: #A268BE;
+			@extend .small;
+			text-decoration: none;
+			border-bottom: 1px dotted transparent;
+			@include transition(all,.3s);
 
-			&:first-child{
-				border-left: none;
+			&:hover{
+				border-bottom: 1px dotted #A268BE;
 			}
 		}
 	}
 
-	.login-username, .login-password{
-		display: inline-block;
-		margin-bottom: 0;
-	}
+}// #login-bar
 
-	.login-remember{
-		margin-top: 0;
-	}
-
-	.login-submit{
-		input[type="submit"]{
-			@extend .small;
-		}
-	}
-
-}// .login
-
-#login{
+#login-page{
 	.container{
 		width: 100%;
 		max-width: 500px;

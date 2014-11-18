@@ -32,7 +32,7 @@
 
 					// Get list of attendees for the event and then check to see if
 					// the current user exists on the list AND has Completed payment.
-					$user_booked = $wpdb->get_row(
+					$user_booked = $wpdb->get_results(
 						$wpdb->prepare(
 							"SELECT user_id 
 							FROM wp_events_attendee a
@@ -42,7 +42,7 @@
 						)
 					);
 					
-					$attendee_limit = $wpdb->get_row(
+					$user_limit = $wpdb->get_row(
 						$wpdb->prepare(
 							"SELECT additional_limit
 							FROM wp_events_detail
@@ -51,13 +51,15 @@
 						)
 					);
 
-					var_dump($attendee_limit->additional_limit);
+					( ($user_limit->additional_limit - count($user_booked) ) > 0 ) ? $ticket_available = true : $ticket_available = false;
+
+					$available_spaces = get_number_of_attendees_reg_limit($event_id, 'number_available_spaces');
 				?>
 				<div class="body">
 
 					<p>
 						<i class="icon-calendar"></i>
-						<b>Date:</b> <?php echo date('d-m-Y', strtotime($event_start_date); ?>
+						<b>Date:</b> <?php echo date('d-m-Y', strtotime($event_start_date)) ?>
 					</p>
 					<?php if ($event_location != ""): ?>
 					<p>
@@ -77,14 +79,21 @@
 						<?php the_content(); ?>
 					</div>
 					
-					<?php if($user_booked != null): ?>
-							<p class="notice">
-								<b>You have already reserved your place for this event.</b>
-							</p>
+					<?php if(!$ticket_available): ?>
+						<p class="notice">
+							<b>You have already booked all your allocated tickets for this event.</b>
+						</p>
 					<?php endif; ?>
+
+					<?php if(!$available_spaces): ?>
+						<p class="notice">
+							<b>Event is full.</b>
+						</p>
+					<?php endif; ?>
+
 				</div>
 
-					<?php if($user_booked == null): ?>
+					<?php if($ticket_available && $available_spaces): ?>
 						<span class="ticket-wrap">
 							<?php echo do_shortcode('[ESPRESSO_CART_LINK event_id="'.$event_id.'" direct_to_cart=1 moving_to_cart="Redirecting to cart..."]' ); ?>	
 						</span>
