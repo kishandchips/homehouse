@@ -3167,6 +3167,20 @@ nav ul {
   background-color: #181818; }
   #events .event:nth-of-type(2n) .pattern {
     background-image: url(../img/lightgrey-pattern.jpg); }
+  #events .rect-items .image {
+    overflow: hidden; }
+    #events .rect-items .image span.notice {
+      position: absolute;
+      top: -20px;
+      right: -50px;
+      display: inline-block;
+      padding: 50px 35px 5px;
+      background-color: black;
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      z-index: 10; }
   @media screen and (max-width: 750px) {
     #events .rect-items .content {
       height: auto; }
@@ -3752,7 +3766,7 @@ body.logged-in #login-bar {
   height: 35px;
   padding: 0.5em 1em;
   color: #fff;
-  background-color: #131313;
+  background-color: rgba(87, 49, 104, 0.5);
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -3841,7 +3855,7 @@ body.logged-in #login-bar {
           vertical-align: middle; }
     #login .login-modal .instructions {
       max-height: 0;
-      width: 80%;
+      width: 100%;
       margin: 1em 0 0 0;
       -moz-transition: all, 0.3s;
       -o-transition: all, 0.3s;
@@ -3851,7 +3865,6 @@ body.logged-in #login-bar {
         max-height: 500px; }
       @media screen and (max-width: 500px) {
         #login .login-modal .instructions {
-          width: 100%;
           padding: 0; } }
     #login .login-modal .login-remember label {
       text-transform: inherit; }

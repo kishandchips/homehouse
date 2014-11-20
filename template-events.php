@@ -105,6 +105,7 @@
 				<?php $event_date = do_shortcode('[EVENT_TIME event_id="'.$event_id.'" type="start_date" format="F j"]'); ?>
 				<?php $filter_date = do_shortcode('[EVENT_TIME event_id="'.$event_id.'" type="start_date" format="m"]'); ?>
 				<?php $catArray = get_the_terms($post,'category'); ?>
+				<?php $available_spaces = get_number_of_attendees_reg_limit($event_id, 'number_available_spaces'); ?>
 
 				<article id="event_data-<?php echo $event_id ?>" class="item event <?php echo $filter_date; ?> <?php foreach ($catArray as $cat): ?><?php echo $cat->slug; ?><?php endforeach; ?>">
 
@@ -122,6 +123,10 @@
 											<?php echo $event_date ?>
 										</div>
 									</div>
+
+									<?php if(!$available_spaces): ?>
+										<span class="notice"><b>Sold Out</b></span>
+									<?php endif; ?>
 								</div>
 							</div>
 							<div class="column col-1-3 pad expand">

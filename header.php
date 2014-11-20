@@ -29,16 +29,16 @@
 
                     <?php wp_login_form(); ?>
                     
-                    <p class="instructions-prompt">If you have trouble signing in, click on the info icon for login instructions. 
+                    <p class="instructions-prompt">If you have trouble logging in, click on the info icon for login instructions. It would be helpful to have your membership card handy.  
                         <button class="button info-toggle" aria-role="toggle login info">
                             <i  class="icon-info"></i>
                         </button>
                     </p>
 
                     <ul class="instructions">
-                        <li>Your username is your <b>name</b> as written on your membership card.</li>
+                        <li>Your username is your name, <b>only</b> as is written on your membership card.</li>
                         <li>Your password is your <b>membership number</b> as written on your membership card.</li>
-                        <li>If you do not have access to your card, or have trouble logging into the site,
+                        <li>If after trying the instructions above, you still have trouble logging into the site,
                         please <a href="mailto:oana@homehouse.co.uk?subject:Website%20Login">get in touch.</a></li>
                     </ul>
                 <?php endif; ?>

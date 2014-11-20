@@ -87,7 +87,7 @@
 
 					<?php if(!$available_spaces): ?>
 						<p class="notice">
-							<b>Event is full.</b>
+							<b>We’re terribly sorry but this event has Sold Out</b>
 						</p>
 					<?php endif; ?>
 

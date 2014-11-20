@@ -76,6 +76,20 @@
 	}
 
 	.rect-items{
+		.image{
+			overflow: hidden;
+
+			span.notice{
+				position: absolute;
+				top: -20px;
+				right: -50px;
+				display: inline-block;
+				padding: 50px 35px 5px;
+				background-color: black;
+				@include rotate(45deg);
+				z-index: 10;
+			}
+		}
 		.content{
 			@media screen and (max-width: 750px){
 				height: auto;
@@ -927,7 +941,7 @@ body.logged-in{
 	padding: 0.5em 1em;
 	color: #fff;
 	@extend .small;
-	background-color: #131313;
+	background-color: rgba(#573168, 0.5);
 	@include border-radius(5px);
 	@include transition(all,.3s);
 	z-index: 9998;
@@ -1031,7 +1045,7 @@ body.logged-in{
 
 		.instructions{
 			max-height: 0;
-			width: 80%;
+			width: 100%;
 			margin: 1em 0 0 0;
 			@extend .small;
 			@extend .invisible;
@@ -1043,7 +1057,6 @@ body.logged-in{
 			}
 
 			@media screen and (max-width: 500px){
-				width: 100%;
 				padding: 0;
 			}
 		}
