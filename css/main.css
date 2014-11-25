@@ -3846,7 +3846,7 @@ body.logged-in #login-bar {
     #login .login-modal .instructions-prompt {
       margin-top: 2em;
       margin-bottom: 0;
-      font-size: 0.75em; }
+      /*font-size: 0.75em;*/ }
       #login .login-modal .instructions-prompt button {
         padding: 0; }
         #login .login-modal .instructions-prompt button i {

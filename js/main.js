@@ -43,6 +43,18 @@
 
 				this.megatron.init();
 
+				$('form').find('input[name="log"]').each(function(ev){
+				  	if(!$(this).val()) {
+				 		$(this).attr("placeholder", "Membership Name");
+					}
+				});
+
+				$('form').find('input[name="pwd"]').each(function(ev){
+				  	if(!$(this).val()) {
+				 		$(this).attr("placeholder", "Membership Number");
+					}
+				});
+
 				$('.js-login').on('click', function(){
 					$('#login').toggleClass('visible');
 				});
