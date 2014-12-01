@@ -1,0 +1,148 @@
+button{
+	outline: none;
+	background-color: transparent;
+	border: none;
+}
+
+.button{
+	position: relative;
+	display: inline-block;
+	padding: 0.7em 1.4em 0.4em;
+	@include garamond-bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing:1px;
+	@include border-radius(2px);
+	@include transition(all,.3s);
+
+	&.primary{
+		color: #000;
+		background-color: #fff;
+		border: 1px solid #fff;
+		
+		&:hover{
+			color: #fff;
+			background-color: #573168;
+			border: 1px solid #573168;
+		}
+	}
+
+	&.secondary{
+		color: #000;
+		border: 1px solid #000;
+		@include border-radius(0);
+
+		&:hover{
+			color: #fff;
+			background-color: #000;
+		}
+	}
+
+	&.download{
+		padding-right: 3em;
+		color: #fff;
+		background-color: #503B5A;
+		border: 1px solid #503B5A !important;
+
+		&:hover{
+			background-color: #573169;
+			border: 1px solid #573169 !important;
+		}
+
+		&:after{
+			position: absolute;
+			top: 0.4em;
+			right:0.5em;
+			display: inline-block;
+			content: "\f0f6";
+			font-size: 1.4em;
+			@extend [class*=" icon-"];
+		}
+	}
+
+	&.cta{
+		color: #fff;
+		background-color: #2ecc71;
+		border:1px solid #27ae60;
+
+		&:hover{
+			background-color: #27ae60;
+			border: 1px solid #27ae60;
+		}
+	}
+
+	&.booking{
+		@extend .ticket-button;
+	}
+	
+	&.small{
+		font-size: 0.75em;
+	}
+	&.med{
+		font-size: 1.125em;
+	}
+	&.large{
+		font-size: 1.5em;
+	}
+
+	&.margin{
+		margin-left: 1em;
+		&:first-child{
+			margin-left: 0;
+		}
+	}
+}
+
+.ticket-button{
+	position:relative;
+	display: inline-block;
+	padding: 0 2em;
+	color:#fff;
+	@include garamond-bold;
+	line-height:42px;
+	background-color: #333333;
+	border-bottom: none;
+	@include transition(all,0s);
+	
+	&:hover{
+		background-color: #000;
+		border-bottom: none;
+
+		&:before{
+			background-position: 0 0;
+		}
+
+		&:after{
+			background-position: 0 -42px;
+		}
+	}
+
+	&:before{
+		content:"";
+		display: inline-block;
+		width:12px;
+		height: 42px;
+		position: absolute;
+		top: 0;
+		left: -12px;
+		background-image:url(../img/ticket-sprite.png);
+		background-repeat: no-repeat;
+		background-position: -12px 0;
+		
+
+	}
+
+	&:after{
+		content:"";
+		display: inline-block;
+		width: 12px;
+		height: 42px;
+		position: absolute;
+		top: 0;
+		right: -12px;
+		background-image:url(../img/ticket-sprite.png);
+		background-repeat: no-repeat;
+		background-position: -12px -42px;
+
+	}
+}

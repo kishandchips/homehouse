@@ -1,0 +1,183 @@
+/* ==================== 
+    BASE
+   ==================== */
+html{
+    height: 100%;
+    margin:0;
+    padding: 0;
+    overflow: inherit;
+}
+
+body {
+    margin:0;
+    padding: 0;
+    font-size: 1em;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+hr{
+    border: 1px solid black;
+}
+/* POSITIONING */
+.b-lazy{
+    @include opacity(0);
+    @include transition(opacity,.3s);
+
+    &.b-loaded{
+        @include opacity(1);
+    }
+}
+.left{
+	float:left;
+}
+
+.right{
+	float:right;
+}
+
+.valign{
+	position: absolute;
+	top:50%;
+	@include translateY(-50%);
+}
+
+.halign{
+    position: absolute;
+    left:50%;
+    @include translateX(-50%);
+}
+
+/* DISPLAY */
+
+.med-hide{
+    @media screen and (max-width: 750px){
+        display:none;
+    }
+}
+
+.scrollx{
+    overflow-x:auto; 
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.invisible {
+    @include opacity(0);
+    visibility: hidden;
+}
+
+.visible{
+    @include opacity(1);
+    visibility: visible;
+}
+
+
+%icon{
+    display: inline-block;
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.separator{
+    padding: 1em 0;
+    text-align: center;
+
+    &:before{
+        display: inline-block;
+        content: '\2666';
+        font-size: 0.5em;
+        vertical-align: middle;
+    }
+    &:after{
+        display: inline-block;
+        content: '\2666';
+        font-size: 0.5em;
+        vertical-align: middle;
+    }
+}
+
+/* WORDPRESS IMAGE */
+
+.alignleft {
+    float: left;
+    margin-top: 1em;
+    margin-right: 2em;
+    margin-bottom: 1em;
+}
+.alignright {
+    float: right;
+    margin-top: 1em;
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+.aligncenter {
+    display: block;
+    margin: 2em auto;
+}
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="attachment-"] {
+    height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+    border: 1px solid #ddd;
+}
+img.size-full,
+img.size-large,
+img.header-image,
+img.wp-post-image {
+    max-width: 100%;
+    height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+
+/* Make sure videos and embeds fit their containers */
+embed,
+iframe,
+object,
+video {
+    max-width: 100%;
+}
+
+.wp-caption {
+    /*background: #fff;*/
+    /*border: 1px solid #f0f0f0;*/
+    max-width: 96%; /* Image does not overflow the content area */
+    /*padding: 5px 3px 10px;*/
+    /*text-align: center;*/
+}
+
+.wp-caption-text{
+    margin-bottom: 0;
+    padding: 0 0.5em;
+    color: #333;
+    font-size: 0.75em;
+    font-style: italic;
+    line-height: 1.1;
+}

@@ -1,0 +1,682 @@
+fieldset{
+	margin:0 0 1em 0;
+	padding: 0;
+	border: none;
+}
+
+label{
+	display: block;
+	font-size: 0.8em;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+input[type="text"], input[type="password"]{
+	max-width: 320px;
+	width: 100% !important;
+	max-width: initial;
+	margin-bottom: 0.5em;
+	padding: 0.5em;
+	color: #fff;
+	font-size: 1em;
+	letter-spacing: 1px;
+	background-color: #1f1f1f;
+	border:1px solid #2c2c2c;
+	@include border-radius(3px);
+	outline: none;
+
+	&.large-input{
+		max-width: 310px;
+	}
+	&.med-input{
+		max-width: 155px;
+	}
+}
+
+input:-webkit-autofill {
+    color: #fff !important;
+}
+
+textarea{
+	width: 100% !important;
+	color: #fff;
+	font-size: 1em;
+	letter-spacing: 1px;
+	background-color: #1f1f1f;
+	border:1px solid #2c2c2c;
+	@include border-radius(3px);
+}
+
+input[type="text"]:focus, textarea:focus{
+	@include single-box-shadow(0, 0, 5px, false,rgba(#A268BF,1), false);
+}
+
+input[type="submit"]{
+	@extend .button;
+	background-color:transparent;
+	border: none;
+}
+
+input.button-primary{
+	color: #000;
+	background-color: #fff;
+	border: 1px solid #fff;
+	
+	&:hover{
+		color: #fff;
+		background-color: #573168;
+		border: 1px solid #573168;
+	}
+}
+
+/* ==========================================================================
+   GRAVITY FORMS
+   ========================================================================== */
+
+.gform_wrapper{
+	form{
+		.gform_body{
+			ul.gform_fields{
+				li.gfield{
+
+					&.gsection{
+						padding-top: 2em;
+						
+						&:first-child{
+							padding-top: none;
+						}
+					}
+
+					&.address{
+						#input_3_2_3_container{
+							label{
+								visibility: hidden;
+							}
+						}
+					}
+
+					&.small-print-check{
+						label{
+							font-size: 1em;
+							letter-spacing: 0;
+							text-transform: none;
+						}
+					}
+
+					&.member-no,&.tel,&.email{
+						width: 40%;
+					}
+
+					&.gfield_error{
+						background-color: #fff;
+						border: none;
+						@include border-radius(3px);
+
+						label{
+							color: #333;
+						}
+					}
+
+					label{
+						font-size: 0.8em;
+						font-weight: 300;
+						letter-spacing: 2px;
+						text-transform: uppercase;
+					}					
+				}
+			}
+			.ginput_container{
+				.ginput_left, .ginput_right{
+					float: none;
+					display: inline-block;
+					width: 49%;
+					margin-left: 2%;
+
+					label{
+						font-size: 0.8em;
+					}
+				}
+
+				.ginput_left{
+					margin-left: 0;
+				}
+
+				// input[type="text"]{
+				// 	width: 100% !important;
+				// 	max-width: initial;
+				// 	padding: 0.5em;
+				// 	color: #fff;
+				// 	font-size: 1em;
+				// 	letter-spacing: 1px;
+				// 	background-color: #1f1f1f;
+				// 	border:1px solid #2c2c2c;
+				// }
+
+				// textarea{
+				// 	width: 100% !important;
+				// 	color: #fff;
+				// 	font-size: 1em;
+				// 	letter-spacing: 1px;
+				// 	background-color: #1f1f1f;
+				// 	border:1px solid #2c2c2c;
+				// 	@include border-radius(3px);
+				// }
+
+				select{
+					margin-bottom: 0.5em;
+				}
+			}
+		}//.gform_body
+
+		.gform_footer{
+			input[type="submit"]{
+				color: #000;
+				background-color: #fff;
+				border: 1px solid #fff;
+				
+				&:hover{
+					color: #fff;
+					background-color: #573168;
+					border: 1px solid #573168;
+				}
+			}
+		}
+
+		.validation_error{
+			position: relative;
+			padding-left: 25px;
+			color: #fff;
+
+			&:after{
+				@extend %icon;
+				content: "\f071";
+				position: absolute;
+				left: 0;
+				bottom: 6px;
+				color: #e74c3c;
+			}
+		}
+	}
+}//.gform_wrapper
+
+/* ==========================================================================
+   EVENT ESPRESSO
+   ========================================================================== */
+.event_espresso_error{
+	color: #fff;
+	background-color: rgba(128, 0, 128, 0.33);
+	@include text-shadow(none);
+	border: none;
+	
+	em{
+		color: #fff !important;
+	}
+
+	p{
+		color: #fff;
+		@include text-shadow(none);
+	}
+}
+
+.event_title{
+	margin: 0.5em 0 0 0 !important;
+	padding: 0.5em 0.5em 0.4em;
+	color:#fff;
+	@include garamond;
+	font-weight: 400 !important;
+	font-size: 2.5em;
+	text-transform: uppercase;
+	background-color: #000;
+
+	@media screen and (max-width: 400px){
+		font-size: 1.5em;
+	}
+}
+
+.event-data-display{
+	padding: 2em;
+	background-color: rgba(254, 255, 245, 1);
+
+	.section-heading:first-child{
+		margin-top: 0;
+	}
+
+	@media screen and (max-width: 400px){
+		padding: 1em;
+	}
+}
+
+input.submit{
+	padding: 0;
+	color: #fff;
+	text-transform: inherit;
+}
+
+.event_espresso_form_wrapper, .espresso_add_attendee{
+	margin-bottom: 1em;
+	
+	label{
+		float:none;
+		display: inline-block;
+		padding-bottom:0.5em;
+		font-size: 1em;
+		text-transform: inherit;
+		text-align: left;
+		vertical-align: middle;
+	}
+
+	input[type="text"]{
+		display: inline-block;
+		margin: 0;
+		padding: 0.5em;
+		color: #000;
+		font-size: 1em;
+		background-color: #f5f5f5;
+		border: 1px solid #e8e8e8;
+		vertical-align: middle;
+	}
+}// .event_espresso_form_wrapper, .espresso_add_attendee
+
+.event_espresso_form_wrapper{
+
+	select{
+		display: inline-block;
+		height: 35px;
+		width: 60px;
+		/*padding: 1em 2em;*/
+		color: #000;
+		background-color: #DBD2D2;
+		@include border-radius(0);
+	}
+
+	.multi_regis_wrapper_attendee-primary, .multi_regis_wrapper_attendee-additional{
+		width: 80%;
+		padding:0;
+		background-color: rgba(254, 255, 245, 1);
+	}
+
+	#event_espresso_edit_cart{
+		margin: 0;
+		padding: 0;
+		font-size: 1em;
+	}
+
+	.event_espresso_form_wrapper input.small{
+		width: 100px;
+	}
+
+	label.error,
+	span.error{
+		margin:0;
+	}
+}
+
+/* ==========================================================================
+   EVENT ESPRESSO CART
+   ========================================================================== */
+
+#event_espresso_shopping_cart{
+
+	.multi_reg_cart_block{
+		margin: 0;
+		padding: 0;
+	}
+
+	table#cart-reg-details{
+		width: 80%;
+		padding-bottom: 2em;
+		border-bottom: 3px solid #000;
+		
+		@media screen and (max-width:650px){
+			width: 100%;
+		}
+	}
+
+	.price_list{
+		width: 100%;
+
+		tr{
+			&:first-child{
+				border-top: 1px solid #000;
+			}
+			border-top: 1px solid #eaeaea;
+		}
+
+		td{
+			padding: 10px 20px;
+
+			@media screen and (max-width: 500px){
+				padding: 5px;
+			}
+
+			&.price_type{
+				font-weight: bold;
+			}
+		}
+
+		.reg-allowed-limit{
+			@extend .small;
+			font-style: italic;
+		}
+
+		select{
+			display: inline-block;
+			height: 35px;
+			width: 60px;
+			// padding: 1em 2em;
+			color: #000;
+			background-color: #DBD2D2;
+			@include border-radius(0);
+		}
+	}
+
+	#event_espresso_total_wrapper{
+		margin: 0;
+		padding: 1em 2em;
+		text-align: left;
+		background-color: rgba(254, 255, 245, 1);
+
+		.event_total_price{
+			float: none;
+		}
+	}
+
+	#event_espresso_submit_cart{
+		margin-top: 2em;
+		margin-left: 12px;
+		padding: 0;
+		text-align: left;
+	}
+
+	.remove-cart-item{
+		display: inline-block;
+		margin-top: 1em;
+		color: #c8c8c8;
+		font-size: 14px;
+		cursor: pointer;
+
+		i{
+			margin-right: 0.5em;
+
+			&:before{
+				margin-right: 0.5em;
+			}
+		}
+
+		&:hover{
+			color: #333;
+		}
+	}
+}// .event_espresso_shopping_cart
+
+/* ==========================================================================
+   EVENT ESPRESSO CHECKOUT FORM
+   ========================================================================== */
+
+#event_espresso_checkout_form{
+	margin: 0;
+	padding: 0;
+
+	.espresso_event_full{
+		padding-bottom: 2em;
+		background-color: #fff;
+
+		p.event_full{
+			margin:0;
+			padding: 1em 2em;
+		}
+		p.num_attendees{
+			padding: 1em 2em;	
+		}
+	}
+
+	#event_espresso_registration_form{
+		margin: 0;
+	}
+	
+	.reg-quest-title{
+		padding-bottom: 0.5em;
+		border-bottom: 1px solid #000;
+	}
+
+	.copy-all-button-wrapper,
+	.copy_dropdown_wrapper {
+		display:none;
+	}	
+
+	#event_espresso_edit_cart{
+		position: relative;
+		top:-45px;
+		left: 2em;
+
+		a{
+			color: #333;
+
+			&:hover{
+				border-bottom: 1px dotted #333;
+			}
+		}
+	}
+
+	.mer-event-submit{
+		margin-top: 1em;
+		margin-left: 12px;
+	}
+}
+
+/* ==========================================================================
+   EVENT ESPRESSO PAYMENT OVERVIEW
+   ========================================================================== */
+
+.espresso_payment_overview{
+	overflow-x: scroll;
+
+	.event-data-display{
+		@media screen and (max-width: 500px){
+			width: 400px;
+		}
+	}
+	.section-heading{
+		margin: 1em 0 0.5em 0;
+		font-size: 2em;
+		@include garamond-bold;
+		font-weight: normal;
+		line-height: 1;
+	}
+
+	.instruct{
+		width: 80%;
+		margin-top: 0;
+		padding-bottom: 1.5em;
+		border-bottom: 3px solid #000;
+
+		@media screen and (max-width:650px){
+			width: 100%;
+		}
+	}
+
+	table{
+		width: 80%;
+
+		@media screen and (max-width:650px){
+			width: 100%;
+		}
+
+		tr{
+			border-top: 1px solid #E2E2E2;
+
+			&:first-child{
+				border-top: none;
+			}
+
+			&:last-child{
+				border-top: 3px solid #000;
+			}
+
+			td{
+				padding: 20px 0;
+				vertical-align: bottom;
+			}
+		}
+	}// table
+
+	.event_espresso_refresh_total{
+		a{
+			margin:0 10px;
+			color: #C8C8C8;
+			
+			&:first-child{
+				margin-left: 0;
+			}
+
+			&:hover{
+				color: #333;
+			}
+		}
+	}
+
+}// .espresso_payment_overview
+
+#payment-options-dv{
+
+	.section-heading{
+		margin-bottom: 0.5em;
+		font-size: 2em;
+		@include garamond-bold;
+		font-weight: normal;
+		line-height: 1;
+	}
+	
+	.event_form_submit{
+		margin: 2em 0 0 12px;
+		padding: 0;
+	}
+
+	#stripe_submit{
+		display: inline-block !important;
+		float: none !important;
+		margin: 0;
+		padding: 0;
+		text-transform: capitalize;
+		background-color: rgba(0, 0, 0, 0);
+		background: rgba(0, 0, 0, 0);
+		border: none;
+	}
+
+	.choose-diff-pay-option-pg{
+		margin-bottom: 0;
+
+		a{
+			color: #c8c8c8;
+			
+			&:hover{
+				color: #000;
+				border-bottom: 1px solid #000;
+			}
+		}
+	}
+
+}// #payment-options-dv
+
+#stripe-payment-option-lnk:hover{
+	display: inline-block !important;
+	border: none !important;
+}
+
+.stripe-payment-option-form-dv{
+	display: block;
+}
+
+.confirmation-message{
+	margin-bottom: 2em;
+	
+	h2{
+		margin-bottom: 0;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	p{
+		margin-top: 0;
+		text-align: center;
+	}
+}
+
+/* ==========================================================================
+   EVENT ESPRESSO EDIT PROFILE
+   ========================================================================== */
+.notice.updated{
+	color: #fff;
+	background-color: #503B5A;
+	border: none;
+}
+
+form.edit-profile{
+
+	.ui-widget-header{
+		border-bottom: 1px dotted #CCC;
+		padding: 0 0 8px 0;
+		margin: 0  0 2em 0;
+	}
+
+	.event-data-display{
+		padding: 0;
+		background-color: transparent;
+
+		label{
+			margin: 10px 0 4px 0;
+			line-height:1.3em;
+		}
+
+		input[type="text"],
+		input[type="password"],
+		textarea{
+			width: 100% !important;
+			max-width: initial;
+			padding: 0.5em;
+			color: #000;
+			font-size: 1em;
+			background-color: #f5f5f5;
+			border: 1px solid #e8e8e8;
+		}
+
+		.submit{
+			padding: 0.7em 1.4em;
+			color: #fff;
+			@include garamond;
+			font-size: 0.8em;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			background-color: #503B5A;
+			border: 1px solid #503B5A;
+			@include transition(all,.3s);
+
+			&:hover{
+				border: 1px solid #573169;
+				background-color: #573169;
+			}
+		}
+
+		.form-address,
+		.form-address2,
+		.form-city,
+		.form-state,
+		.form-zip,
+		.form-country,
+		.form-url,
+		.form-password,
+		.form-textarea,
+		{
+			display: none;
+		}
+
+	}//.event-data-display
+
+	fieldset.last-child{
+		display: none;
+	}
+
+	div.updated {
+		background-color: #00FF9E;
+		border: 1px solid #E6DB55;
+	}
+}// .edit-profile

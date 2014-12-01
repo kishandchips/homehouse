@@ -1,0 +1,22 @@
+@mixin garamond{
+	font-family:'Simoncini Garamond W01';
+	font-weight: 400;
+}
+
+@mixin garamond-italic{
+	font-family:'Simoncini Garamond W01';
+	font-weight: 400;
+	font-style: italic;
+}
+
+@mixin garamond-bold{
+	font-family:'Simoncini Garamond W01';
+	font-weight: 700;
+}
+
+@mixin crimson{
+	font-family: 'Crimson Text', serif;
+}
+
+
+
