@@ -50,7 +50,7 @@
 			<div class="rect-items row">
 				<a href="<?php echo get_the_permalink($post->ID); ?>" title="<?php the_title(); ?>">
 					<div class="column col-2-3 pad expand">
-						<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'grid-rect-large' ); ?>
+						<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'slider' ); ?>
 						<div class="image" style="background-image:url(<?php echo $image[0] ?>)">
 						</div>
 					</div>

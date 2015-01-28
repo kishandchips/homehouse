@@ -56,8 +56,7 @@
 					$available_spaces = get_number_of_attendees_reg_limit($event_id, 'number_available_spaces');
 				?>
 				<div class="body">
-
-					<p>
+					<p>	
 						<i class="icon-calendar"></i>
 						<b>Date:</b> <?php echo date('d-m-Y', strtotime($event_start_date)) ?>
 					</p>

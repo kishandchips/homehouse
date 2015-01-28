@@ -211,7 +211,7 @@ function hh_profile_update($user_id, $old_user_data ) {
 	if ( !empty ( $_POST['event_espresso_phone'] ) )
 	$phone 			= esc_attr( $_POST['event_espresso_phone'] );	
 
-	$admin_email = "slefkaditis@gmail.com";
+	$admin_email = "yogesh@homehouse.co.uk";
 	$headers[] = 'From: HomeHouse <info@homehouse.co.uk>';
     $message = sprintf( __( 'This user has updated their profile on the HomeHouse website.' ) ) . "\r\n\r\n";
     $message .= sprintf( __( 'Display Name: %s' ), $name ). "\r\n\r\n";
