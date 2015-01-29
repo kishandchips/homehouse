@@ -267,13 +267,23 @@ function check_user ($params, $content = null){
 }
 add_shortcode('loggedin', 'check_user' );
 
-// REMOVE ADMIN BAR
+// ADMIN BAR
 add_action('after_setup_theme', 'remove_admin_bar');
 function remove_admin_bar() {
 	if (!current_user_can('administrator') && !is_admin()) {
 	  show_admin_bar(false);
 	}
 }
+
+function replace_howdy( $wp_admin_bar ) {
+    $my_account=$wp_admin_bar->get_node('my-account');
+    $newtitle = str_replace( 'Howdy,', 'Hello,', $my_account->title );
+    $wp_admin_bar->add_node( array(
+        'id' => 'my-account',
+        'title' => $newtitle,
+    ) );
+}
+add_filter( 'admin_bar_menu', 'replace_howdy',25 );
 
 // REMOVE MENU ITEMS & UPDATES
 add_action( 'admin_menu', 'my_remove_menu_pages',999 );
