@@ -3,6 +3,7 @@
 		<ul>
 			<li><img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="<?php bloginfo("stylesheet_directory"); ?>/img/securedownload.gif" alt=""></li>
 			<li><img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="<?php bloginfo("stylesheet_directory"); ?>/img/logo-coolbrands.jpg" alt=""></li>
+			<li><img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="<?php bloginfo("stylesheet_directory"); ?>/img/logo-london-lifestyle-awards.jpg" alt=""></li>
 			<li><img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="<?php bloginfo("stylesheet_directory"); ?>/img/logo-baker-street-quarter.jpg" alt=""></li>
 			<li><img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="<?php bloginfo("stylesheet_directory"); ?>/img/logo-the-audit-people.jpg" alt=""></li>
 			<li><img class="b-lazy" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="<?php bloginfo("stylesheet_directory"); ?>/img/logo-verisign.jpg" alt=""></li>
