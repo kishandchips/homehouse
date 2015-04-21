@@ -208,9 +208,8 @@ function hh_profile_update($user_id, $old_user_data ) {
 	$old_email 		= $old_user_data->user_email;
 	$email 			= $user->user_email;
 	$old_phone 		= $user->event_espresso_phone;
-	if ( !empty ( $_POST['event_espresso_phone'] ) )
-	$phone 			= esc_attr( $_POST['event_espresso_phone'] );	
-
+	$phone 			= ( !empty($_POST['event_espresso_phone']) ) ? $_POST['event_espresso_phone'] : null;	
+	
 	$admin_email = "membership@homehouse.co.uk";
 	$headers[] = 'From: HomeHouse <info@homehouse.co.uk>';
     $message = sprintf( __( 'This user has updated their profile on the HomeHouse website.' ) ) . "\r\n\r\n";
@@ -291,6 +290,7 @@ add_action( 'admin_menu', 'my_remove_menu_pages',999 );
 function my_remove_menu_pages() {
     $admins = array( 
         'admin', 
+        'root'
     );
 
     $current_user = wp_get_current_user();
@@ -303,9 +303,147 @@ function my_remove_menu_pages() {
 	}
 }
 
-function remove_core_updates(){
-global $wp_version;return(object) array('last_checked'=> time(),'version_checked'=> $wp_version,);
+// function remove_core_updates(){
+// global $wp_version;return(object) array('last_checked'=> time(),'version_checked'=> $wp_version,);
+// }
+// add_filter('pre_site_transient_update_core','remove_core_updates');
+// add_filter('pre_site_transient_update_plugins','remove_core_updates');
+// add_filter('pre_site_transient_update_themes','remove_core_updates');
+
+
+
+// Creating ,and saving Membership_ID on user profiles
+add_action( 'show_user_profile', 'add_membership_id', 2 );
+add_action( 'edit_user_profile', 'add_membership_id', 2 );
+
+function add_membership_id( $user )
+{
+    ?>
+        <table class="form-table">
+            <tr>
+                <th><label for="membership_id">Membership ID</label></th>
+                <td><input type="text" name="membership_id" value="<?php echo esc_attr(get_the_author_meta( 'membership_id', $user->ID )); ?>" class="regular-text" /></td>
+            </tr>
+        </table>
+    <?php
 }
-add_filter('pre_site_transient_update_core','remove_core_updates');
-add_filter('pre_site_transient_update_plugins','remove_core_updates');
-add_filter('pre_site_transient_update_themes','remove_core_updates');
+
+add_action( 'personal_options_update', 'save_membership_id' );
+add_action( 'edit_user_profile_update', 'save_membership_id' );
+
+function save_membership_id( $user_id )
+{
+    update_user_meta( $user_id,'membership_id', sanitize_text_field( $_POST['membership_id'] ) );
+}
+
+
+// Custom ticket selector
+function custom_ticket_selector( $new_row_content, $ticket, $max, $min, $required_ticket_sold_out, $ticket_price, $ticket_bundle, $ticket_status, $status_class ) {
+	global $wpdb;
+
+	$event_id = get_the_ID();
+
+	if ( is_user_logged_in() ) {
+	
+		$current_user = wp_get_current_user();
+		$attendee_id = get_user_meta( $current_user->ID, 'EE_Attendee_ID', true);
+		$user_booked = false;
+		$ticket_id = $ticket->ID();
+		$ticket_type = $ticket->name();
+		$booked = 0;
+		
+		$user_registrations = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}esp_registration WHERE ATT_ID = {$attendee_id} AND EVT_ID = {$event_id}" );
+
+		if( !empty($user_registrations)) {
+			foreach( $user_registrations as $user_registration ) {
+				$booked += $wpdb->get_var( "SELECT COUNT(*) FROM {$wpdb->prefix}esp_registration WHERE TXN_ID = {$user_registration->TXN_ID} AND TKT_ID = {$ticket_id}" );
+			} 
+		}
+
+		if( $booked >= $max) {
+			$new_row_content = '<td colspan="3">You already booked ' . $booked . ' of your ' . $ticket_type . ' ticket(s)!</td>';
+		}
+	} 
+
+	// user logged in
+	// $sql = "SELECT * ";
+	//    $sql .= "FROM {$wpdb->prefix}esp_attendee_meta ";
+	//    $sql .= "INNER JOIN {$wpdb->prefix}esp_registration ";
+	//    $sql .= "ON {$wpdb->prefix}esp_attendee_meta.ATT_ID = {$wpdb->prefix}esp_registration.ATT_ID ";
+	//    $sql .= "WHERE {$wpdb->prefix}esp_registration.EVT_ID = %d";
+	    
+	//     $attendees = $wpdb->get_results( $wpdb->prepare( $sql, $event_id ));
+
+	//     foreach($attendees as $attendee){
+	//     //	print_r($attendee);
+	//     	echo $booked . '::' . $max.'<br />';
+
+	//     	if( $booked > $max) {
+	// //    		echo 'OVER BOOKED';
+	//     	}
+
+	//     	//$attendee_post = get_post( $attendee->ATT_ID );
+	//     	//print_r($attendee_post);
+	//     }
+
+    //if($user_booked) {
+		//print_r($ticket);
+    //}
+    return $new_row_content;	
+}
+add_filter( 'FHEE__ticket_selector_chart_template__do_ticket_inside_row', 'custom_ticket_selector', 25, 9 );
+
+
+function custom_max_number_ticket_text( $max_atndz ) {
+	$new_text = 'Please note that a maximum number of %d tickets can be purchased for this event.';
+	return $new_text ;
+}
+
+add_filter( 'FHEE__ticket_selector_chart_template__maximum_tickets_purchased_footnote', 'custom_max_number_ticket_text');
+
+
+
+
+
+
+
+add_filter( 'FHEE__EE_Export__report_registrations__reg_csv_array', 'hh_custom_csv', 10, 2);
+function hh_custom_csv($reg_csv_array, $registration) {
+
+	
+	$users = get_users(array('meta_key' => 'EE_Attendee_ID', 'meta_value' => $registration->attendee_ID()));
+	$user = current($users);
+
+	$event_id = $registration->event_ID();
+	$attendee_ID = $registration->attendee_ID();
+	$attendees = array();
+	global $wpdb;
+
+	$user_transactions = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}esp_registration WHERE ATT_ID = {$attendee_ID} AND EVT_ID = {$event_id}" );
+
+	print_r($user_transactions);
+
+	if( !empty($user_transactions)) {
+		foreach( $user_transactions as $transaction ) {	
+			$ticket_id = $transaction->TKT_ID;		
+			$booked = $wpdb->get_row( "SELECT * FROM {$wpdb->prefix}esp_registration WHERE TXN_ID = {$transaction->TXN_ID} AND TKT_ID = {$ticket_id}" );
+			print_r($booked);
+		} 
+	}
+	// print_r($booked);
+
+	// if( !empty($user) ) {
+	// 	$membership_id = get_user_meta($user->ID, 'membership_id', true);
+	// 	$reg_csv_array['membership_id'] = $membership_id;
+	// } else {	
+	// 	//return false;		
+	// }
+
+	// print_r($reg_csv_array);
+
+	// print_r($registration);
+	die;
+}
+
+
+ 

@@ -621,6 +621,7 @@ nav{
 		border-bottom:5px solid black;
 		background-size: cover;
 		-webkit-backface-visibility: hidden;
+		background-position: center center;
 
 		&:after{
 			content:"";

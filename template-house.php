@@ -64,11 +64,11 @@
 				?>
 				<?php 
 					$args = array(
-						'post_type'   => 'espresso_event',
+						'post_type'   => 'espresso_events',
 						'posts_per_page'         => 2,
 						'tax_query' => array(
 							array(
-								'taxonomy'         => 'category',
+								'taxonomy'         => 'espresso_event_categories',
 								'field'            => 'slug',
 								'terms'            => array($slug),
 							)
@@ -80,8 +80,8 @@
 
 				 <?php if($upcoming_events->have_posts()): while($upcoming_events->have_posts()): $upcoming_events->the_post(); ?>
 				<div class="column col-1-3 pad">
-					<?php $event_thumbnail_url = get_post_meta($post->ID, 'event_thumbnail_url', true); ?>
-					<div class="image" style="background-image:url(<?php echo $event_thumbnail_url; ?>)">
+					<?php $event_thumbnail_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
+					<div class="image" style="background-image:url(<?php echo $event_thumbnail_url[0]; ?>)">
 						<div class="valign">
 							<h3 class="highlight medium"><?php the_title(); ?></h3>
 							<p><a href="<?php the_permalink(); ?>" class="button primary small">View Event</a></p>

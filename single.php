@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
 <div id="single" class="flex-page has-sidebar page-pattern">
-
 	<div id="content-wrapper">
 		<div class="container">
 			<?php if ( function_exists('yoast_breadcrumb') ) {
