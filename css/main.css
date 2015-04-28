@@ -2084,10 +2084,10 @@ body {
     content: "";
     display: inline-block;
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 45%;
     z-index: 5;
     *zoom: 1;
     filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFFFFF', endColorstr='#FFFFFFFF');
@@ -2111,6 +2111,24 @@ nav ul {
   display: inline-block;
   margin: 1em 0;
   z-index: 10; }
+#header ul.social {
+  display: inline-block;
+  position: absolute;
+  right: 3em;
+  top: 1.5em; }
+  @media screen and (max-width: 600px) {
+    #header ul.social {
+      top: 0em; } }
+  #header ul.social li {
+    display: inline-block;
+    line-height: 50px; }
+    #header ul.social li a {
+      color: #fff; }
+  #header ul.social .icon {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1em;
+    text-decoration: none; }
 #header .logo-small {
   position: relative;
   display: none;

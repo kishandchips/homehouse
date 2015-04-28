@@ -63,9 +63,9 @@ body{
 		content: "";
 		display: inline-block;
 		position: absolute;
-		top:0;left:0;
+		bottom:0;left:0;
 		width: 100%;
-		height: 100%;
+		height: 45%;
 		z-index: 5;
 		// needs latest Compass, add '@import "compass"' to your scss
 		@include filter-gradient(#ffffff, #ffffff, vertical); // IE6-9
@@ -94,6 +94,33 @@ nav{
 		margin:1em 0;
 		z-index: 10;
 	}
+
+	ul.social{
+		display: inline-block;
+		position: absolute;
+		right: 3em;
+		top: 1.5em;		
+
+		@media screen and (max-width: 600px){
+			top: 0em;
+		}
+
+		li{
+			display: inline-block;
+			line-height: 50px;
+
+			a{
+				color: #fff;
+			}
+		}
+
+		.icon{
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 1em;
+			text-decoration: none;
+		}
+	}	
 
 	.logo-small{
 		position: relative;
