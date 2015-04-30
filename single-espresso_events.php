@@ -31,6 +31,7 @@
 						$event_location = get_post_meta($event_id, 'event_location', true);
 						$event_time = espresso_event_date(' ', '', $event_id, false);
 					?>
+
 				<div class="body">
 					<p>	
 						<i class="icon-calendar"></i>
@@ -45,6 +46,23 @@
 					<p>
 						<i class="icon-time"></i>
 						<b>Time:</b> <?php echo $event_time ?>
+					</p>
+					<p>
+						<i class="icon-ticket"></i>
+						<b>Ticket types available to book:</b>
+						<?php 
+							if ( $post->EE_Event instanceof EE_Event ) {
+								$tickets = $post->EE_Event->first_datetime()->tickets();
+
+								foreach ($tickets as $ticket) {
+
+									echo '<span class="ticket-type">';
+									echo $ticket->name() . ': ';
+									echo $ticket->pretty_price();
+									echo '</span>';
+								}
+							}
+						 ?>										
 					</p>
 
 					<div class="description">

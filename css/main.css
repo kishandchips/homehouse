@@ -2530,15 +2530,15 @@ nav ul {
     height: 100%;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0; }
-  .single-espresso_event .hero.image {
+  .single-espresso_events .hero.image {
     height: 500px;
     background-size: cover;
     background-position: center; }
     @media screen and (max-width: 700px) {
-      .single-espresso_event .hero.image {
+      .single-espresso_events .hero.image {
         height: 350px; } }
     @media screen and (max-width: 400px) {
-      .single-espresso_event .hero.image {
+      .single-espresso_events .hero.image {
         height: 200px; } }
 
 /* ==========================================================================
@@ -3137,6 +3137,10 @@ nav ul {
               margin-left: 0; }
           #footer .sitemap .right nav ul.social .icon {
             font-size: 2em; } }
+
+.ticket-type {
+  display: block;
+  margin-left: 35px; }
 
 .page-pattern {
   background-image: url(../img/page-bg.jpg); }

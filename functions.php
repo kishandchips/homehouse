@@ -198,36 +198,41 @@ function my_login_logo() { ?>
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
 // EMAIL ON USER UPDATE
-// add_action( 'profile_update', 'hh_profile_update', 10, 2);
+add_action( 'profile_update', 'hh_profile_update', 10, 2);
 
-// function hh_profile_update($user_id, $old_user_data ) {
-// 	$user = get_userdata($user_id);
+function hh_profile_update($user_id, $old_user_data ) {
+	$user = get_userdata($user_id);
 
-// 	$membership_id 	= $user->membership_id;
-// 	$name 			= $user->display_name;
-// 	$old_email 		= $old_user_data->user_email;
-// 	$email 			= $user->user_email;
-// 	$old_phone 		= $user->event_espresso_phone;
-// 	$phone 			= ( !empty($_POST['event_espresso_phone']) ) ? $_POST['event_espresso_phone'] : null;	
+	$membership_id 	= $user->membership_id;
+	$name 			= $user->display_name;
+	$old_email 		= $old_user_data->user_email;
+	$email 			= $user->user_email;
+	$old_phone 		= $user->phone;
+	$phone 			= ( !empty($_POST['phone']) ) ? $_POST['phone'] : null;	
+  	$profile_updated = false;
 	
-// 	$admin_email = "membership@homehouse.co.uk";
-// 	$headers[] = 'From: HomeHouse <info@homehouse.co.uk>';
-//     $message = sprintf( __( 'This user has updated their profile on the HomeHouse website.' ) ) . "\r\n\r\n";
-//     $message .= sprintf( __( 'Display Name: %s' ), $name ). "\r\n\r\n";
-//     $message .= sprintf( __( 'Membership ID: %s' ), $membership_id ). "\r\n\r\n";
+	$admin_email = "membership@homehouse.co.uk";
+	$headers[] = 'From: HomeHouse <membership@homehouse.co.uk>';
+    $message = sprintf( __( 'This user has updated their profile on the HomeHouse website.' ) ) . "\r\n\r\n";
+    $message .= sprintf( __( 'Display Name: %s' ), $name ). "\r\n\r\n";
+    $message .= sprintf( __( 'Membership ID: %s' ), $membership_id ). "\r\n\r\n";
 
-//     if($old_email != $email){
-//  		$message .= sprintf( __( 'Old Email: %s' ), $old_email ). "\r\n\r\n";
-// 		$message .= sprintf( __( 'New Email: %s' ), $email ). "\r\n\r\n";   	
-//     }
+    if($old_email != $email){
+ 		$message .= sprintf( __( 'Old Email: %s' ), $old_email ). "\r\n\r\n";
+		$message .= sprintf( __( 'New Email: %s' ), $email ). "\r\n\r\n";
+   		$profile_updated = true;
+    }
 
-//     if($old_phone != $phone){
-// 		$message .= sprintf( __( 'Old Phone: %s' ), $old_phone ). "\r\n\r\n";
-// 		$message .= sprintf( __( 'Phone: %s' ), $phone ). "\r\n\r\n";
-//     }
+    if($old_phone != $phone){
+		$message .= sprintf( __( 'Old Phone: %s' ), $old_phone ). "\r\n\r\n";
+		$message .= sprintf( __( 'Phone: %s' ), $phone ). "\r\n\r\n";
+   		$profile_updated = true;
+    }
 
-//     wp_mail( $admin_email, sprintf( __( 'User Profile Update' ), get_option('blogname') ), $message, $headers );
-// }
+    if( $profile_update ) {
+	    wp_mail( $admin_email, sprintf( __( 'User Profile Update' ), get_option('blogname') ), $message, $headers );
+	}
+}
 
 // LOGIN REDIRECTS
 function login_failed() {
@@ -325,15 +330,46 @@ function add_membership_id( $user )
                 <td><input type="text" name="membership_id" value="<?php echo esc_attr(get_the_author_meta( 'membership_id', $user->ID )); ?>" class="regular-text" /></td>
             </tr>
         </table>
+		<table class="form-table">
+			<tr>
+            	<th><label for="phone">Phone Number</label></th>
+                <td><input type="text" name="phone" id="phone" value="<?php echo esc_attr( get_the_author_meta( 'phone', $user->ID ) ); ?>" class="regular-text" /><br />
+                    <span class="description">Please enter your phone number.</span>
+                </td>
+    	</tr>        
+    	</table>
+    <?php
+}
+
+add_action( 'user_new_form', 'add_membership_id_new', 2 );
+function add_membership_id_new( $user )
+{
+    ?>
+        <table class="form-table">
+            <tr>
+                <th><label for="membership_id">Membership ID</label></th>
+                <td><input type="text" name="membership_id" value="" class="regular-text" /></td>
+            </tr>
+        </table>
+		<table class="form-table">
+			<tr>
+            	<th><label for="phone">Phone Number</label></th>
+                <td><input type="text" name="phone" id="phone" value="" class="regular-text" /><br />
+                    <span class="description">Please enter your phone number.</span>
+                </td>
+    	</tr>        
+    	</table>        
     <?php
 }
 
 add_action( 'personal_options_update', 'save_membership_id' );
 add_action( 'edit_user_profile_update', 'save_membership_id' );
+add_action('user_register', 'save_membership_id');
 
 function save_membership_id( $user_id )
 {
     update_user_meta( $user_id,'membership_id', sanitize_text_field( $_POST['membership_id'] ) );
+    update_user_meta( $user_id,'phone', sanitize_text_field( $_POST['phone'] ) );
 }
 
 
@@ -360,17 +396,8 @@ function custom_ticket_selector( $new_row_content, $ticket, $max, $min, $require
 			} 
 		}
 
-		//print_r($booked);
-
-		$regged = false;
-
 		if( $booked >= $max) {
 			$new_row_content = '<td colspan="3">You already booked ' . $booked . ' of your ' . $ticket_type . ' ticket(s)!</td><input name="name="tkt-slctr-qty-4473[]" value="0" type="hidden" />';
-			$regged = true;
-		}
-
-		if ($regged) {
-			$new_row_content = '<td colspan="3">You already booked ' . $booked . ' of your ' . $ticket_type . ' ticket(s)!</td><input name="name="tkt-slctr-qty-4473[]" value="0" type="hidden" />';			
 		}
 	} 
 
@@ -380,8 +407,7 @@ add_filter( 'FHEE__ticket_selector_chart_template__do_ticket_inside_row', 'custo
 
 
 function custom_max_number_ticket_text( $max_atndz ) {
-	$new_text = 'Please note that a maximum number of %d tickets can be purchased for this event.';
-	return $new_text ;
+	echo $max_atndz;
 }
 
 add_filter( 'FHEE__ticket_selector_chart_template__maximum_tickets_purchased_footnote', 'custom_max_number_ticket_text');

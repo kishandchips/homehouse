@@ -671,7 +671,7 @@ nav{
 			@include opacity(0);
 		}
 
-		.single-espresso_event &{
+		.single-espresso_events &{
 			height:500px;
 			background-size: cover;
 			background-position: center;
@@ -1561,3 +1561,8 @@ nav{
 		}//right
 	}//.sitemap
 }//#footer
+
+.ticket-type {
+	display: block;
+	margin-left: 35px;
+}
