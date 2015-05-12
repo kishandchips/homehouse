@@ -1266,3 +1266,12 @@ body.logged-in{
 		background: url(../img/ee_btn.png) left bottom no-repeat;
 	}
 }
+
+
+#espresso_calendar table.fc-border-separate td {
+	background: #F9F9F9;
+}
+
+#espresso_calendar:not(.ui-widget).calendar_fullsize .fc-other-month {
+	background: none;
+}

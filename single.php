@@ -65,7 +65,7 @@
 
 				</article>
 				<p>
-					<a href="<?php bloginfo(url ); ?>/blog" class="primary button small" title="Back to Homehouse Blog">Back to Blog</a>
+					<a href="<?php bloginfo('url'); ?>/blog" class="primary button small" title="Back to Homehouse Blog">Back to Blog</a>
 				</p>
 				
 			</section><!-- .inner-content -->		

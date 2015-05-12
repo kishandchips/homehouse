@@ -69,10 +69,11 @@
 						<?php the_content(); ?>
 					</div>
 
-
 					<p>
 						<?php echo do_shortcode('[ESPRESSO_TICKET_SELECTOR event_id="'. $event_id .'"]' ); ?>
-					</p>
+					</p>					 	
+
+
 
 				</div>
 

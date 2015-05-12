@@ -397,7 +397,7 @@ function custom_ticket_selector( $new_row_content, $ticket, $max, $min, $require
 		}
 
 		if( $booked >= $max) {
-			$new_row_content = '<td colspan="3">You already booked ' . $booked . ' of your ' . $ticket_type . ' ticket(s)!</td><input name="name="tkt-slctr-qty-4473[]" value="0" type="hidden" />';
+			$new_row_content = '<td colspan="3">You already booked ' . $booked . ' of your ' . $ticket_type . ' ticket(s)!</td>';
 		}
 	} 
 
@@ -418,10 +418,8 @@ add_filter( 'FHEE__ticket_selector_chart_template__maximum_tickets_purchased_foo
 
 
 
-add_filter( 'FHEE__EE_Export__report_registrations__reg_csv_array', 'hh_custom_csv', 10, 2);
+//add_filter( 'FHEE__EE_Export__report_registrations__reg_csv_array', 'hh_custom_csv', 10, 2);
 function hh_custom_csv($reg_csv_array, $registration) {
-
-	//print_r($registration);
 	
 	$users = get_users(array('meta_key' => 'EE_Attendee_ID', 'meta_value' => $registration->attendee_ID()));
 	$user = current($users);
@@ -466,84 +464,4 @@ function hh_custom_csv($reg_csv_array, $registration) {
 	}
 
 	print_r($reg_csv_array);
-	die;
 }
-
-//remove_action('AHEE__EE_Single_Page_Checkout__process_attendee_information__end', array('EED_WP_Users_SPCO', 'process_wpuser_for_attendee'), 10, 2);
-
-//add_action('AHEE__EE_Single_Page_Checkout__process_attendee_information__end', 'custom_process_wpuser_for_attendee', 10, 2);
-
-// function custom_process_wpuser_for_attendee( EE_SPCO_Reg_Step_Attendee_Information $spco, $valid_data) {
-// 	die;
-// 	$user_created = FALSE;
-// 	$att_id = '';
-
-// 	//use spco to get registrations from the
-// 	$registrations = self::_get_registrations( $spco );
-// 	foreach ($registrations as $registration) {
-
-// 		//is this the primary registrant?  If not, continue
-// 		if ( ! $registration->is_primary_registrant() ) {
-// 			continue;
-// 		}
-
-// 		$attendee = $registration->attendee();
-
-// 		if ( ! $attendee instanceof EE_Attendee ) {
-// 			//should always be an attendee, but if not we continue just to prevent errors.
-// 			continue;
-// 		}
-
-// 		//if user logged in, then let's just use that user.  Otherwise we'll attempt to get a
-// 		//user via the attendee info.
-// 		if ( is_user_logged_in() ) {
-// 			$user = get_userdata( get_current_user_id() );
-// 		} else {
-// 			//is there already a user for the given attendee?
-// 			$user = get_user_by( 'email', $attendee->email() );
-
-// 			//does this user have the same att_id as the given att?  If NOT, then we do NOT update because it's possible there was a family member or something sharing the same email address but is a different attendee record.
-// 			$att_id = $user instanceof WP_User ? get_user_meta( $user->ID, 'EE_Attendee_ID', TRUE ) : $att_id;
-// 			if ( ! empty( $att_id ) && $att_id != $attendee->ID() ) {
-// 				return;
-// 			}
-// 		}
-
-// 		$event = $registration->event();
-
-// 		//no existing user? then we'll create the user from the date in the attendee form.
-// 		if ( ! $user instanceof WP_User ) {
-// 			//if this event does NOT allow automatic user creation then let's bail.
-// 			if ( ! EE_WPUsers::is_auto_user_create_on( $event ) ) {
-// 				return; //no we do NOT auto create users please.
-// 			}
-
-// 			$password = wp_generate_password( 12, false );
-// 			//remove our action for creating contacts on creating user because we don't want to loop!
-// 			remove_action( 'user_register', array( 'EED_WP_Users_Admin', 'sync_with_contact') );
-// 			$user_id = wp_create_user( apply_filters( 'FHEE__EED_WP_Users_SPCO__process_wpuser_for_attendee__username', $attendee->email(), $password, $attendee->email() ), $password, $attendee->email() );
-// 			$user_created = TRUE;
-// 			if ( $user_id instanceof WP_Error ) {
-// 				return; //get out because something went wrong with creating the user.
-// 			}
-// 			$user = new WP_User( $user_id );
-// 		}
-
-		
-// 		//if user created then send notification and attach attendee to user
-// 		if ( $user_created ) {
-// 			do_action( 'AHEE__EED_WP_Users_SPCO__process_wpuser_for_attendee__user_user_created', $user, $attendee, $registration, $password );
-// 			//set user role
-// 			$user->set_role( EE_WPUsers::default_user_create_role($event) );
-// 			update_user_meta( $user->ID, 'EE_Attendee_ID', $attendee->ID() );
-// 		}
-
-// 		//failsafe just in case this is a logged in user not created by this system that has never had an attendee record attached.
-// 		$att_id = empty( $att_id ) ? get_user_meta( $user->ID, 'EE_Attendee_ID', true ) : $att_id;
-// 		if ( empty( $att_id ) ) {
-// 			update_user_meta( $user->ID, 'EE_Attendee_ID', $attendee->ID() );
-// 		}
-// 	} //end registrations loop
-// } 
-
-// remove_filter( 'FHEE_EE_Single_Page_Checkout__save_registration_items__find_existing_attendee', array( 'EED_WP_Users_SPCO', 'maybe_sync_existing_attendee' ), 10, 3 );
