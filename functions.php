@@ -424,7 +424,8 @@ function custom_ticket_selector_chart_template__do_ticket_inside_row( $new_row_c
 		$contact = EEM_Attendee::instance()->get_one_by_ID( $att_id );
 
 		//now we can use that to get all the related registrations (an array of EE_Registrations objects)
-		$registrations = $contact->get_registrations();
+		$registrations = $contact->get_many_related( 'Registration', array( array( 'EVT_ID' => $event_id, 'TKT_ID' => $ticket->ID() )) );
+
 		$booked = 0;
 
 		foreach( $registrations as $registration ) {
