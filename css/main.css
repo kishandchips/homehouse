@@ -3142,6 +3142,9 @@ nav ul {
   display: block;
   margin-left: 35px; }
 
+.display-tckt-slctr-tkt-details {
+  display: none; }
+
 .page-pattern {
   background-image: url(../img/page-bg.jpg); }
 

@@ -461,18 +461,21 @@ function custom_EE_Export__report_registrations__reg_csv_array($reg_csv_array, $
 	$last_name = '';
 	$first_name = '';
 	$membership_id = '';
+	$email = '';
 	
 	if( !empty($user->ID) ) {
 		$userdata = get_userdata($user->ID);
 		$first_name = $userdata->first_name;
 		$last_name = $userdata->last_name;
 		$membership_id = get_user_meta($user->ID, 'membership_id', true);
+		$email = $userdata->user_email;
 	}
 	
 	$prepend = array(
 		'Last Name' => $last_name, 
 		'First Name' => $first_name, 
-		'Membership ID' => $membership_id, 
+		'Membership ID' => $membership_id,
+		'Email' => $email, 
 	);
 	
 	$reg_csv_array = $prepend + $reg_csv_array;
@@ -494,36 +497,48 @@ function custom_EE_Export__report_registrations__reg_csv_array($reg_csv_array, $
 	unset($reg_csv_array['State[STA_ID]']);
 	unset($reg_csv_array['Country[CNT_ISO]']);
 	unset($reg_csv_array['Attendee ID[ATT_ID]']);
-	//unset($reg_csv_array['Transaction ID[TXN_ID]']);
+	unset($reg_csv_array['Transaction ID[TXN_ID]']);
 	unset($reg_csv_array['Country[CNT_ISO]']);
-	//unset($reg_csv_array['Registration ID[REG_ID]']);
+	unset($reg_csv_array['Registration ID[REG_ID]']);
 	unset($reg_csv_array['First Name[ATT_fname]']);
 	unset($reg_csv_array['Last Name[ATT_lname]']);
 	unset($reg_csv_array['Datetimes of Ticket']);
+	unset($reg_csv_array['Time registration occurred[REG_date]']);
+	unset($reg_csv_array['Transaction Status']);
+	unset($reg_csv_array['ZIP/Postal Code[ATT_zip]']);
+	unset($reg_csv_array['Phone[ATT_phone]']);
+	unset($reg_csv_array['Email Address[ATT_email]']);
 
 	$event_id = $registration->event_ID();
 	$attendee_id = $registration->attendee_ID();
 	$transaction_id = $registration->transaction_ID();
 	$registration_id = $registration->ID();
+	$reg_group_size = $registration->group_size();
 	
 	$attendees = array();
 	$status_id = EEM_Registration::status_id_approved;
 	$user_registrations = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}esp_registration WHERE TXN_ID = {$transaction_id} AND STS_ID = '" . $status_id . "'" );
 
+	$reg_csv_array['Total Tickets'] = $reg_group_size;
+
+
 	if( !empty($user_registrations) ) {
 		$i = 0;
 		foreach( $user_registrations as $user_registration ) {
+			//if( $user_registration->ATT_ID == $attendee_id ) continue;
+
 			$attendee = $wpdb->get_row( "SELECT * FROM {$wpdb->prefix}esp_attendee_meta WHERE ATT_ID = {$user_registration->ATT_ID}" );
 			$fname = $attendee->ATT_fname;
 			$lname = $attendee->ATT_lname;
 			$attendees[] = $fname . ' ' .  $lname;
 			$i++;
+
+			$reg_csv_array['Attendee ' . $i] = $fname . ' ' .  $lname;
 		}
 	}
-	
-	$reg_csv_array['Attendees'] = implode( ', ', $attendees );
 
 	return $reg_csv_array;
+
 }
 
 
