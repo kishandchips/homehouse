@@ -83,11 +83,13 @@ remove_action('wp_head', 'wp_generator');
 
 add_filter( 'FHEE__ticket_selector_chart_template__do_ticket_inside_row', 'custom_ticket_selector_chart_template__do_ticket_inside_row', 25, 9 );
 
-add_filter( 'FHEE__ticket_selector_chart_template__maximum_tickets_purchased_footnote', 'custom_max_number_ticket_text');
+//add_filter( 'FHEE__ticket_selector_chart_template__maximum_tickets_purchased_footnote', 'custom_max_number_ticket_text');
 
 add_filter( 'FHEE__EE_Export__report_registrations__reg_csv_array', 'custom_EE_Export__report_registrations__reg_csv_array', 10, 2);
 
 add_filter( 'FHEE__EE_Export__report_registration_for_event','custom__EE_Export__report_registration_for_event', 10, 2);
+
+add_filter( 'FHEE__ticket_selector_chart_template__maximum_tickets_purchased_footnote', '__return_false');
 
 add_filter( 'widget_title', '__return_false' );
 
@@ -494,12 +496,16 @@ function custom_EE_Export__report_registrations__reg_csv_array($reg_csv_array, $
 	unset($reg_csv_array['State[STA_ID]']);
 	unset($reg_csv_array['Country[CNT_ISO]']);
 	unset($reg_csv_array['Attendee ID[ATT_ID]']);
-	//unset($reg_csv_array['Transaction ID[TXN_ID]']);
+	unset($reg_csv_array['Transaction ID[TXN_ID]']);
 	unset($reg_csv_array['Country[CNT_ISO]']);
-	//unset($reg_csv_array['Registration ID[REG_ID]']);
+	unset($reg_csv_array['Registration ID[REG_ID]']);
 	unset($reg_csv_array['First Name[ATT_fname]']);
 	unset($reg_csv_array['Last Name[ATT_lname]']);
 	unset($reg_csv_array['Datetimes of Ticket']);
+	unset($reg_csv_array['Time registration occurred[REG_date]']);
+	unset($reg_csv_array['Transaction Status']);
+	unset($reg_csv_array['ZIP/Postal Code[ATT_zip]']);
+	unset($reg_csv_array['Phone[ATT_phone]']);
 
 	$event_id = $registration->event_ID();
 	$attendee_id = $registration->attendee_ID();
@@ -513,6 +519,8 @@ function custom_EE_Export__report_registrations__reg_csv_array($reg_csv_array, $
 	if( !empty($user_registrations) ) {
 		$i = 0;
 		foreach( $user_registrations as $user_registration ) {
+			if( $user_registration->ATT_ID == $attendee_id ) continue;
+
 			$attendee = $wpdb->get_row( "SELECT * FROM {$wpdb->prefix}esp_attendee_meta WHERE ATT_ID = {$user_registration->ATT_ID}" );
 			$fname = $attendee->ATT_fname;
 			$lname = $attendee->ATT_lname;
@@ -520,7 +528,7 @@ function custom_EE_Export__report_registrations__reg_csv_array($reg_csv_array, $
 			$i++;
 		}
 	}
-	
+	$reg_csv_array['Total Attendees'] = count($attendees) + 1;
 	$reg_csv_array['Attendees'] = implode( ', ', $attendees );
 
 	return $reg_csv_array;
