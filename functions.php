@@ -345,10 +345,10 @@ add_action( 'user_new_form', 'add_membership_id_new', 2 );
 function add_membership_id_new( $user )
 {
     ?>
-        <table class="form-table">
+        <table class="form-table form-required">
             <tr>
-                <th><label for="membership_id">Membership ID</label></th>
-                <td><input type="text" name="membership_id" value="" class="regular-text" /></td>
+                <th><label for="membership_id">Membership ID <span class="description">(required)</span></label></th>
+                <td><input type="text" name="membership_id" value="" aria-required="true" class="regular-text" /></td>
             </tr>
         </table>
 		<table class="form-table">
