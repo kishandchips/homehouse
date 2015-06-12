@@ -9,6 +9,7 @@
 		<title><?php bloginfo('name'); ?></title>
         <meta name="format-detection" content="telephone=no">
         <meta name="viewport" content="width=device-width">
+        <link href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.png" rel="shortcut icon" type="image/x-icon">
         <?php wp_head(); ?>
     </head>
 	<body <?php body_class(); ?>>
