@@ -83,13 +83,11 @@ remove_action('wp_head', 'wp_generator');
 
 add_filter( 'FHEE__ticket_selector_chart_template__do_ticket_inside_row', 'custom_ticket_selector_chart_template__do_ticket_inside_row', 25, 9 );
 
-//add_filter( 'FHEE__ticket_selector_chart_template__maximum_tickets_purchased_footnote', 'custom_max_number_ticket_text');
+add_filter( 'FHEE__ticket_selector_chart_template__maximum_tickets_purchased_footnote', 'custom_max_number_ticket_text');
 
 add_filter( 'FHEE__EE_Export__report_registrations__reg_csv_array', 'custom_EE_Export__report_registrations__reg_csv_array', 10, 2);
 
 add_filter( 'FHEE__EE_Export__report_registration_for_event','custom__EE_Export__report_registration_for_event', 10, 2);
-
-add_filter( 'FHEE__ticket_selector_chart_template__maximum_tickets_purchased_footnote', '__return_false');
 
 add_filter( 'widget_title', '__return_false' );
 
@@ -384,10 +382,10 @@ function add_membership_id( $user ) {
 
 function add_membership_id_new( $user ) {
     ?>
-        <table class="form-table">
+        <table class="form-table form-required">
             <tr>
-                <th><label for="membership_id">Membership ID</label></th>
-                <td><input type="text" name="membership_id" value="" class="regular-text" /></td>
+                <th><label for="membership_id">Membership ID <span class="description">(required)</span></label></th>
+                <td><input type="text" name="membership_id" value="" aria-required="true" class="regular-text" /></td>
             </tr>
         </table>
 		<table class="form-table">
@@ -425,26 +423,28 @@ function custom_ticket_selector_chart_template__do_ticket_inside_row( $new_row_c
 		//get the attached contact (EE_Attendee)
 		$contact = EEM_Attendee::instance()->get_one_by_ID( $att_id );
 
-		//now we can use that to get all the related registrations (an array of EE_Registrations objects)
-		$registrations = $contact->get_many_related( 'Registration', array( array( 'EVT_ID' => $event_id, 'TKT_ID' => $ticket->ID() )) );
+		if($contact) {
+			//now we can use that to get all the related registrations (an array of EE_Registrations objects)
+			$registrations = $contact->get_many_related( 'Registration', array( array( 'EVT_ID' => $event_id, 'TKT_ID' => $ticket->ID() )) );
 
-		$booked = 0;
+			$booked = 0;
 
-		foreach( $registrations as $registration ) {
+			foreach( $registrations as $registration ) {
+			
+				$transaction = $registration->transaction();
 		
-			$transaction = $registration->transaction();
-	
-			$status = $transaction instanceof EE_Transaction ? $transaction->status_ID() : EEM_Transaction::failed_status_code;
+				$status = $transaction instanceof EE_Transaction ? $transaction->status_ID() : EEM_Transaction::failed_status_code;
 
-			if( $status == EEM_Transaction::complete_status_code ) {
-				$booked++;
+				if( $status == EEM_Transaction::complete_status_code ) {
+					$booked++;
+				}
 			}
-		}
 
-		if( $booked >= $max) {
-			$new_row_content = '<td colspan="3">You have already booked ' . $max . ' of your ' . $ticket_name . ' ticket(s)!</td>';
-			//$new_row_content .= '<input type="hidden" name="tkt-slctr-qty-'.$event_id.'[]" value="0" />';
-			//$new_row_content .= '<input type="hidden" name="tkt-slctr-ticket-id-'.$event_id.'[]" value="'. $ticket->ID().'" />';
+			if( $booked >= $max) {
+				$new_row_content = '<td colspan="3">You have already booked ' . $max . ' of your ' . $ticket_name . ' ticket(s)!</td>';
+				//$new_row_content .= '<input type="hidden" name="tkt-slctr-qty-'.$event_id.'[]" value="0" />';
+				//$new_row_content .= '<input type="hidden" name="tkt-slctr-ticket-id-'.$event_id.'[]" value="'. $ticket->ID().'" />';
+			}
 		}
 	} 
 
@@ -463,18 +463,21 @@ function custom_EE_Export__report_registrations__reg_csv_array($reg_csv_array, $
 	$last_name = '';
 	$first_name = '';
 	$membership_id = '';
+	$email = '';
 	
 	if( !empty($user->ID) ) {
 		$userdata = get_userdata($user->ID);
 		$first_name = $userdata->first_name;
 		$last_name = $userdata->last_name;
 		$membership_id = get_user_meta($user->ID, 'membership_id', true);
+		$email = $userdata->user_email;
 	}
 	
 	$prepend = array(
 		'Last Name' => $last_name, 
 		'First Name' => $first_name, 
-		'Membership ID' => $membership_id, 
+		'Membership ID' => $membership_id,
+		'Email' => $email, 
 	);
 	
 	$reg_csv_array = $prepend + $reg_csv_array;
@@ -506,32 +509,38 @@ function custom_EE_Export__report_registrations__reg_csv_array($reg_csv_array, $
 	unset($reg_csv_array['Transaction Status']);
 	unset($reg_csv_array['ZIP/Postal Code[ATT_zip]']);
 	unset($reg_csv_array['Phone[ATT_phone]']);
+	unset($reg_csv_array['Email Address[ATT_email]']);
 
 	$event_id = $registration->event_ID();
 	$attendee_id = $registration->attendee_ID();
 	$transaction_id = $registration->transaction_ID();
 	$registration_id = $registration->ID();
+	$reg_group_size = $registration->group_size();
 	
 	$attendees = array();
 	$status_id = EEM_Registration::status_id_approved;
 	$user_registrations = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}esp_registration WHERE TXN_ID = {$transaction_id} AND STS_ID = '" . $status_id . "'" );
 
+	$reg_csv_array['Total Tickets'] = $reg_group_size;
+
+
 	if( !empty($user_registrations) ) {
 		$i = 0;
 		foreach( $user_registrations as $user_registration ) {
-			if( $user_registration->ATT_ID == $attendee_id ) continue;
+			//if( $user_registration->ATT_ID == $attendee_id ) continue;
 
 			$attendee = $wpdb->get_row( "SELECT * FROM {$wpdb->prefix}esp_attendee_meta WHERE ATT_ID = {$user_registration->ATT_ID}" );
 			$fname = $attendee->ATT_fname;
 			$lname = $attendee->ATT_lname;
 			$attendees[] = $fname . ' ' .  $lname;
 			$i++;
+
+			$reg_csv_array['Attendee ' . $i] = $fname . ' ' .  $lname;
 		}
 	}
-	$reg_csv_array['Total Attendees'] = count($attendees) + 1;
-	$reg_csv_array['Attendees'] = implode( ', ', $attendees );
 
 	return $reg_csv_array;
+
 }
 
 
@@ -630,3 +639,18 @@ function custom__EE_Export__report_registration_for_event( $args, $event_id ) {
 		'force_join' => array( 'Transaction', 'Ticket', 'Attendee' )
 	);
 }
+
+// REMOVE POST META BOXES
+function remove_my_post_metaboxes() {
+//remove_meta_box( 'authordiv','post','normal' ); // Author Metabox
+remove_meta_box( 'commentstatusdiv','espresso_events','post','normal' ); // Comments Status Metabox
+remove_meta_box( 'commentsdiv','espresso_events','post','normal' ); // Comments Metabox
+remove_meta_box( 'postcustom','espresso_events','post','normal' ); // Custom Fields Metabox
+remove_meta_box( 'postexcerpt','espresso_events','post','normal' ); // Excerpt Metabox
+remove_meta_box( 'revisionsdiv','espresso_events','post','normal' ); // Revisions Metabox
+remove_meta_box( 'slugdiv','espresso_events','post','normal' ); // Slug Metabox
+remove_meta_box( 'trackbacksdiv','espresso_events','post','normal' ); // Trackback Metabox
+remove_meta_box( 'espresso_events_Venues_Hooks_venue_metabox_metabox','espresso_events','post','normal' ); // Venues Metabox
+
+}
+add_action('admin_menu','remove_my_post_metaboxes');
