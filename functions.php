@@ -637,3 +637,18 @@ function custom__EE_Export__report_registration_for_event( $args, $event_id ) {
 		'force_join' => array( 'Transaction', 'Ticket', 'Attendee' )
 	);
 }
+
+// REMOVE POST META BOXES
+function remove_my_post_metaboxes() {
+//remove_meta_box( 'authordiv','post','normal' ); // Author Metabox
+remove_meta_box( 'commentstatusdiv','espresso_events','post','normal' ); // Comments Status Metabox
+remove_meta_box( 'commentsdiv','espresso_events','post','normal' ); // Comments Metabox
+remove_meta_box( 'postcustom','espresso_events','post','normal' ); // Custom Fields Metabox
+remove_meta_box( 'postexcerpt','espresso_events','post','normal' ); // Excerpt Metabox
+remove_meta_box( 'revisionsdiv','espresso_events','post','normal' ); // Revisions Metabox
+remove_meta_box( 'slugdiv','espresso_events','post','normal' ); // Slug Metabox
+remove_meta_box( 'trackbacksdiv','espresso_events','post','normal' ); // Trackback Metabox
+remove_meta_box( 'espresso_events_Venues_Hooks_venue_metabox_metabox','espresso_events','post','normal' ); // Venues Metabox
+
+}
+add_action('admin_menu','remove_my_post_metaboxes');
