@@ -1261,23 +1261,34 @@ button {
   position: relative;
   display: inline-block;
   padding: 0 2em;
-  color: #fff;
+  color: #fff !important;
   font-family: 'Simoncini Garamond W01';
   font-weight: 700;
-  line-height: 42px;
+  line-height: 41px;
   background-color: #333333;
   border-bottom: none;
-  -moz-transition: all, 0s;
-  -o-transition: all, 0s;
-  -webkit-transition: all, 0s;
-  transition: all, 0s; }
+  -moz-transition: none;
+  -webkit-transition: none;
+  -o-transition: color 0;
+  transition: none;
+  text-transform: uppercase;
+  cursor: pointer; }
   .ticket-button:hover, .button.booking:hover, input.booking[type="submit"]:hover, #events-single .inner-content .ee_view_cart:hover, #booking .inner-content .ee_view_cart:hover {
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: color 0;
+    transition: none;
     background-color: #000;
-    border-bottom: none; }
+    border-bottom: 1px solid #000 !important; }
     .ticket-button:hover:before, .button.booking:hover:before, input.booking[type="submit"]:hover:before, #events-single .inner-content .ee_view_cart:hover:before, #booking .inner-content .ee_view_cart:hover:before {
       background-position: 0 0; }
     .ticket-button:hover:after, .button.booking:hover:after, input.booking[type="submit"]:hover:after, #events-single .inner-content .ee_view_cart:hover:after, #booking .inner-content .ee_view_cart:hover:after {
       background-position: 0 -42px; }
+  .ticket-button:before, .button.booking:before, input.booking[type="submit"]:before, #events-single .inner-content .ee_view_cart:before, #booking .inner-content .ee_view_cart:before, .ticket-button:after, .button.booking:after, input.booking[type="submit"]:after, #events-single .inner-content .ee_view_cart:after, #booking .inner-content .ee_view_cart:after {
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: color 0;
+    transition: none; }
   .ticket-button:before, .button.booking:before, input.booking[type="submit"]:before, #events-single .inner-content .ee_view_cart:before, #booking .inner-content .ee_view_cart:before {
     content: "";
     display: inline-block;
@@ -3141,6 +3152,12 @@ nav ul {
 .ticket-type {
   display: block;
   margin-left: 35px; }
+
+.display-tckt-slctr-tkt-details {
+  display: none; }
+
+.tkt-slctr-tbl-wrap-dv .smaller-text.lt-grey-text {
+  display: none; }
 
 .page-pattern {
   background-image: url(../img/page-bg.jpg); }

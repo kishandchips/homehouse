@@ -55,7 +55,8 @@
 					}
 				});
 
-				$('.js-login').on('click', function(){
+				$('.js-login, .login-trigger').on('click', function(e){
+					e.preventDefault();
 					$('#login').toggleClass('visible');
 				});
 

@@ -79,7 +79,7 @@
 			<div class="grid-sizer"></div>
 			<?php $args = array( 
 				'post_type' => 'espresso_events',
-				'posts_per_page' => 50
+				'posts_per_page' => -1
 			); ?>
 
 			<?php $loop = new WP_Query( $args ); ?>

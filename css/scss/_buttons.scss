@@ -93,20 +93,29 @@ button{
 	}
 }
 
-.ticket-button{
+.ticket-button {
 	position:relative;
 	display: inline-block;
 	padding: 0 2em;
-	color:#fff;
+	color: #fff !important;
 	@include garamond-bold;
-	line-height:42px;
+	line-height: 41px;
 	background-color: #333333;
 	border-bottom: none;
-	@include transition(all,0s);
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: color 0;
+    transition: none;
+	text-transform: uppercase;
+	cursor: pointer;
 	
 	&:hover{
+	    -moz-transition: none;
+	    -webkit-transition: none;
+	    -o-transition: color 0;
+	    transition: none;		
 		background-color: #000;
-		border-bottom: none;
+		border-bottom: 1px solid #000 !important;
 
 		&:before{
 			background-position: 0 0;
@@ -115,6 +124,13 @@ button{
 		&:after{
 			background-position: 0 -42px;
 		}
+	}
+
+	&:before, &:after {
+	    -moz-transition: none;
+	    -webkit-transition: none;
+	    -o-transition: color 0;
+	    transition: none;		
 	}
 
 	&:before{

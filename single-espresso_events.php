@@ -69,9 +69,18 @@
 						<?php the_content(); ?>
 					</div>
 
-					<p>
-						<?php echo do_shortcode('[ESPRESSO_TICKET_SELECTOR event_id="'. $event_id .'"]' ); ?>
-					</p>					 	
+					<?php if ( is_user_logged_in() ): ?> 
+						<p>
+							<?php echo do_shortcode('[ESPRESSO_TICKET_SELECTOR event_id="'. $event_id .'"]' ); ?>
+						</p>					 	
+					<?php else: ?>
+						<p style="text-align: center;">
+							<a class="ticket-button login-trigger">Log In to purchase tickets</a>
+						</p>
+					<?php endif; ?>
+
+					
+
 
 
 
