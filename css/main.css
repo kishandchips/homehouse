@@ -3159,6 +3159,11 @@ nav ul {
 .tkt-slctr-tbl-wrap-dv .smaller-text.lt-grey-text {
   display: none; }
 
+#espresso-thank-you-page-overview-dv .ee-registration-details-dv tbody .tiny-text {
+  display: none; }
+#espresso-thank-you-page-overview-dv .ee-registration-details-dv .small-text.jst-rght {
+  display: none; }
+
 .page-pattern {
   background-image: url(../img/page-bg.jpg); }
 

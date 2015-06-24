@@ -29,7 +29,7 @@
 			    	pauseOnHover: true
 			  	});
 			  	main.sidebar.resize();
-			});
+			});			
 
 			$('.equal-height').matchHeight();	
 		},

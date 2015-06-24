@@ -31,6 +31,8 @@ add_action( 'init', 'create_post_type' );
 
 add_action( 'init', 'offer_category' );
 
+add_action( 'init', 'custom_init' );
+
 add_action( 'widgets_init', 'custom_widgets_init' );
 
 add_filter( 'widget_categories_args', 'exclude_widget_categories');
@@ -49,7 +51,7 @@ add_action('after_setup_theme', 'remove_admin_bar');
 
 add_filter( 'admin_bar_menu', 'replace_howdy',25 );
 
-add_action( 'admin_menu', 'my_remove_menu_pages',999 );
+add_action( 'admin_menu', 'custom_admin_menu',999 );
 
 add_action( 'show_user_profile', 'add_membership_id', 2 );
 
@@ -81,7 +83,7 @@ remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 
 remove_action('wp_head', 'wp_generator'); 
 
-add_filter( 'FHEE__ticket_selector_chart_template__do_ticket_inside_row', 'custom_ticket_selector_chart_template__do_ticket_inside_row', 25, 9 );
+add_filter( 'FHEE__ticket_selector_chart_template__do_ticket_inside_row', 'custom_ticket_selector_chart_template__do_ticket_inside_row', 25, 10 );
 
 add_filter( 'FHEE__ticket_selector_chart_template__maximum_tickets_purchased_footnote', 'custom_max_number_ticket_text');
 
@@ -90,6 +92,8 @@ add_filter( 'FHEE__EE_Export__report_registrations__reg_csv_array', 'custom_EE_E
 add_filter( 'FHEE__EE_Export__report_registration_for_event','custom__EE_Export__report_registration_for_event', 10, 2);
 
 add_filter( 'widget_title', '__return_false' );
+
+add_filter( 'FHEE__EE_Ticket_Selector__display_ticket_selector__template_path' , 'custom_Ticket_Selector__display_ticket_selector__template_path');
 
 add_shortcode('loggedin', 'check_user' );
 
@@ -333,7 +337,7 @@ function replace_howdy( $wp_admin_bar ) {
     ) );
 }
 
-function my_remove_menu_pages() {
+function custom_admin_menu() {
     $admins = array( 
         'admin', 
         'root'
@@ -347,6 +351,16 @@ function my_remove_menu_pages() {
 	    remove_menu_page('tools.php');
 	    remove_menu_page('edit.php?post_type=acf-field-group');
 	}
+
+	//remove_meta_box( 'authordiv','post','normal' ); // Author Metabox
+	remove_meta_box( 'commentstatusdiv','espresso_events','post','normal' ); // Comments Status Metabox
+	remove_meta_box( 'commentsdiv','espresso_events','post','normal' ); // Comments Metabox
+	remove_meta_box( 'postcustom','espresso_events','post','normal' ); // Custom Fields Metabox
+	remove_meta_box( 'postexcerpt','espresso_events','post','normal' ); // Excerpt Metabox
+	remove_meta_box( 'revisionsdiv','espresso_events','post','normal' ); // Revisions Metabox
+	remove_meta_box( 'slugdiv','espresso_events','post','normal' ); // Slug Metabox
+	remove_meta_box( 'trackbacksdiv','espresso_events','post','normal' ); // Trackback Metabox
+	remove_meta_box( 'espresso_events_Venues_Hooks_venue_metabox_metabox','espresso_events','post','normal' ); // Venues Metabox
 }
 
 // function remove_core_updates(){
@@ -408,45 +422,111 @@ function save_membership_id( $user_id ) {
 
 
 // Custom ticket selector
-function custom_ticket_selector_chart_template__do_ticket_inside_row( $new_row_content, $ticket, $max, $min, $required_ticket_sold_out, $ticket_price, $ticket_bundle, $ticket_status, $status_class ) {
+function custom_ticket_selector_chart_template__do_ticket_inside_row( $new_row_content, $ticket, $max, $min, $required_ticket_sold_out, $ticket_price, $ticket_bundle, $ticket_status, $status_class, $max_atndz ) {
 	global $wpdb;
 
 	$event_id = get_the_ID();
 
 	if ( is_user_logged_in() ) {
 	
-		$ticket_name = $ticket->name();
+		// $ticket_name = $ticket->name();
 	
-		$user_id = get_current_user_id();
-		$att_id = get_user_meta( $user_id, 'EE_Attendee_ID', true );
+		// $user_id = get_current_user_id();
+		// $att_id = get_user_meta( $user_id, 'EE_Attendee_ID', true );
 
-		//get the attached contact (EE_Attendee)
-		$contact = EEM_Attendee::instance()->get_one_by_ID( $att_id );
+		// //get the attached contact (EE_Attendee)
+		// $contact = EEM_Attendee::instance()->get_one_by_ID( $att_id );
 
-		if($contact) {
-			//now we can use that to get all the related registrations (an array of EE_Registrations objects)
-			$registrations = $contact->get_many_related( 'Registration', array( array( 'EVT_ID' => $event_id, 'TKT_ID' => $ticket->ID() )) );
+		// if($contact) {
+		// 	//now we can use that to get all the related registrations (an array of EE_Registrations objects)
+		// 	$registrations = $contact->get_many_related( 'Registration', array( array( 'EVT_ID' => $event_id, 'TKT_ID' => $ticket->ID() )) );
 
-			$booked = 0;
+		// 	$booked = 0;
 
-			foreach( $registrations as $registration ) {
+		// 	foreach( $registrations as $registration ) {
 			
-				$transaction = $registration->transaction();
+		// 		$transaction = $registration->transaction();
 		
-				$status = $transaction instanceof EE_Transaction ? $transaction->status_ID() : EEM_Transaction::failed_status_code;
+		// 		$status = $transaction instanceof EE_Transaction ? $transaction->status_ID() : EEM_Transaction::failed_status_code;
 
-				if( $status == EEM_Transaction::complete_status_code ) {
-					$booked++;
-				}
-			}
+		// 		if( $status == EEM_Transaction::complete_status_code ) {
+		// 			$booked++;
+		// 		}
+		// 	}
 
-			if( $booked >= $max) {
-				$new_row_content = '<td colspan="3">You have already booked ' . $max . ' of your ' . $ticket_name . ' ticket(s)!</td>';
-				//$new_row_content .= '<input type="hidden" name="tkt-slctr-qty-'.$event_id.'[]" value="0" />';
-				//$new_row_content .= '<input type="hidden" name="tkt-slctr-ticket-id-'.$event_id.'[]" value="'. $ticket->ID().'" />';
-			}
+		// 	if( $booked >= $max) {
+		// 		$new_row_content = '<td colspan="3">You have already booked your ' . $ticket_name . ' ticket(s)!</td>';
+		// 		//$new_row_content .= '<input type="hidden" name="tkt-slctr-qty-'.$event_id.'[]" value="0" />';
+		// 		//$new_row_content .= '<input type="hidden" name="tkt-slctr-ticket-id-'.$event_id.'[]" value="'. $ticket->ID().'" />';
+		// 	}
+		// }
+
+		$current_user = wp_get_current_user();
+		$attendee_id = get_user_meta( $current_user->ID, 'EE_Attendee_ID', true);
+		$user_booked = false;
+		$ticket_id = $ticket->ID();
+		$ticket_type = $ticket->name();
+		$booked = 0;
+		
+		$user_registrations = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}esp_registration WHERE ATT_ID = {$attendee_id} AND EVT_ID = {$event_id}" );
+		if( !empty($user_registrations)) {
+			foreach( $user_registrations as $user_registration ) {
+				$booked += $wpdb->get_var( "SELECT COUNT(*) FROM {$wpdb->prefix}esp_registration WHERE TXN_ID = {$user_registration->TXN_ID} AND TKT_ID = {$ticket_id}" );
+			} 
 		}
+		if( $booked >= $max) {
+			$new_row_content = '<td colspan="3">You have already booked your ' . $ticket_type . ' ticket(s)!</td>';
+		} 
+		else {
+			$remaining = $max - $booked;
+			ob_start();	 ?>
+
+				<td class="tckt-slctr-tbl-td-name">
+					<b><?php echo $ticket->get_pretty('TKT_name');?></b>
+					<?php if ( $ticket->required() ) { ?>
+						<p class="ticket-required-pg"><?php echo apply_filters( 'FHEE__ticket_selector_chart_template__ticket_required_message', __( 'This ticket is required and must be purchased.', 'event_espresso' )); ?></p>
+					<?php } ?>
+				</td>
+				<?php if ( apply_filters( 'FHEE__ticket_selector_chart_template__display_ticket_price_details', TRUE )) { ?>
+					<td class="tckt-slctr-tbl-td-price jst-rght"><?php echo EEH_Template::format_currency( $ticket_price ); ?>&nbsp;<span class="smaller-text no-bold"><?php
+						if ( $ticket_bundle ) {
+							echo apply_filters( 'FHEE__ticket_selector_chart_template__per_ticket_bundle_text', __( ' / bundle', 'event_espresso' ));
+						} else {
+							echo apply_filters( 'FHEE__ticket_selector_chart_template__per_ticket_text', __( ' / ticket', 'event_espresso' ));
+						}?></span> &nbsp;
+					</td>
+				<?php } ?>								
+				<td class="tckt-slctr-tbl-td-qty cntr">
+				<?php
+					$hidden_input_qty = $max_atndz > 1 ? TRUE : FALSE;
+					add_filter( 'FHEE__EE_Ticket_Selector__display_ticket_selector_submit', '__return_true' );
+				?>
+				<?php 
+					$row = 1;
+				 ?>
+				<select name="tkt-slctr-qty-<?php echo $event_id; ?>[]" id="ticket-selector-tbl-qty-slct-<?php echo $event_id . '-' . $row; ?>" class="ticket-selector-tbl-qty-slct" title="">
+					<?php if ( ! $ticket->required() && $min !== 0 ) { ?>
+						<option value="0">&nbsp;0&nbsp;</option>
+					<?php }
+						for ( $i = $min; $i <= $remaining; $i++) { ?>
+						<option value="<?php echo $i; ?>">&nbsp;<?php echo $i; ?>&nbsp;</option>
+					<?php } ?>
+				</select>
+				<?php
+					$hidden_input_qty = FALSE;
+					if ( $hidden_input_qty ) { ?>					
+						<input type="hidden" name="tkt-slctr-qty-<?php echo $event_id; ?>[]" value="0" />
+					<?php } ?>
+					<input type="hidden" name="tkt-slctr-ticket-id-<?php echo $event_id; ?>[]" value="<?php echo $ticket_id; ?>" />
+				</td>
+
+				<?php $new_row_content = ob_get_clean(); ?>		
+		
+		<?php }
 	} 
+
+	// $remaining = $max - $booked;
+	// echo 'Ticket type: ' . $ticket_type . ', Max: ' . $max . ', Booked: ' . $booked . ', Remaining: ' . $remaining . "\n";
 
     return $new_row_content;	
 }
@@ -458,8 +538,10 @@ function custom_max_number_ticket_text( $max_atndz ) {
 
 function custom_EE_Export__report_registrations__reg_csv_array($reg_csv_array, $registration) {
 	global $wpdb;	
-	$users = get_users(array('meta_key' => 'EE_Attendee_ID', 'meta_value' => $registration->attendee_ID()));
+
+	$users = get_users(array('meta_key' => 'EE_Attendee_ID', 'meta_value' => $registration['Registration.ATT_ID']));
 	$user = current($users);
+
 	$last_name = '';
 	$first_name = '';
 	$membership_id = '';
@@ -477,14 +559,14 @@ function custom_EE_Export__report_registrations__reg_csv_array($reg_csv_array, $
 		'Last Name' => $last_name, 
 		'First Name' => $first_name, 
 		'Membership ID' => $membership_id,
-		'Email' => $email, 
+		'E-mail' => $email, 
 	);
 	
 	$reg_csv_array = $prepend + $reg_csv_array;
 
 	unset($reg_csv_array['Unique Code for this registration[REG_code]']);
 	unset($reg_csv_array['Count of this registration in the group registration [REG_count]']);
-	unset($reg_csv_array['Final Price of registration[REG_final_price]']);
+	unset($reg_csv_array['Final Price of registration after all ticket/price modifications[REG_final_price]']);
 	unset($reg_csv_array['Currency']);
 	unset($reg_csv_array['Registration Status']);
 	unset($reg_csv_array['Transaction Amount Due']);
@@ -510,12 +592,16 @@ function custom_EE_Export__report_registrations__reg_csv_array($reg_csv_array, $
 	unset($reg_csv_array['ZIP/Postal Code[ATT_zip]']);
 	unset($reg_csv_array['Phone[ATT_phone]']);
 	unset($reg_csv_array['Email Address[ATT_email]']);
+	unset($reg_csv_array['fname']);
+	unset($reg_csv_array['lname']);
+	unset($reg_csv_array['email']);
 
-	$event_id = $registration->event_ID();
-	$attendee_id = $registration->attendee_ID();
-	$transaction_id = $registration->transaction_ID();
-	$registration_id = $registration->ID();
-	$reg_group_size = $registration->group_size();
+
+	$event_id = $registration['Registration.EVT_ID'];
+	$attendee_id = $registration['Attendee_CPT.ID'];
+	$transaction_id = $registration['Transaction.TXN_ID'];
+	$registration_id = $registration['Registration.REG_ID'];
+	$reg_group_size = $registration['Registration.REG_group_size'];
 	
 	$attendees = array();
 	$status_id = EEM_Registration::status_id_approved;
@@ -640,17 +726,26 @@ function custom__EE_Export__report_registration_for_event( $args, $event_id ) {
 	);
 }
 
-// REMOVE POST META BOXES
-function remove_my_post_metaboxes() {
-//remove_meta_box( 'authordiv','post','normal' ); // Author Metabox
-remove_meta_box( 'commentstatusdiv','espresso_events','post','normal' ); // Comments Status Metabox
-remove_meta_box( 'commentsdiv','espresso_events','post','normal' ); // Comments Metabox
-remove_meta_box( 'postcustom','espresso_events','post','normal' ); // Custom Fields Metabox
-remove_meta_box( 'postexcerpt','espresso_events','post','normal' ); // Excerpt Metabox
-remove_meta_box( 'revisionsdiv','espresso_events','post','normal' ); // Revisions Metabox
-remove_meta_box( 'slugdiv','espresso_events','post','normal' ); // Slug Metabox
-remove_meta_box( 'trackbacksdiv','espresso_events','post','normal' ); // Trackback Metabox
-remove_meta_box( 'espresso_events_Venues_Hooks_venue_metabox_metabox','espresso_events','post','normal' ); // Venues Metabox
-
+function custom_Ticket_Selector__display_ticket_selector__template_path() {
+	return get_template_directory() . '/event-espresso/ticket_selector_chart.php';
 }
-add_action('admin_menu','remove_my_post_metaboxes');
+
+function custom_init() {
+	if ( isset($_GET['action']) && $_GET['action'] == 'sync_with_user') {
+		$users = get_users( array('meta_key' => 'EE_Attendee_ID', 'meta_compare' => 'NOT EXISTS') );
+
+		foreach ( $users as $user ) {
+			EED_WP_Users_Admin::sync_with_contact( $user->ID, $user->data );
+		}
+
+		die('Sync complete');
+	}
+
+	if ( isset($_GET['action']) && $_GET['action'] == 'count_synced_users') {
+
+		$users = get_users( array('meta_key' => 'EE_Attendee_ID', 'meta_compare' => 'EXISTS') );
+
+		echo count($users).'...';
+		die('Count complete');
+	}
+}

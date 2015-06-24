@@ -85,6 +85,8 @@ foreach ( $tickets as $TKT_ID => $ticket ) {
 			break;
 		}
 
+		$row++;
+
 		/**
 		 * Allow plugins to hook in and abort the generation and display of this row to do
 		 * something else if they want.
@@ -95,7 +97,7 @@ foreach ( $tickets as $TKT_ID => $ticket ) {
 		 *
 		 * @var string|bool
 		 */
-		if ( false !== ( $new_row_content = apply_filters( 'FHEE__ticket_selector_chart_template__do_ticket_entire_row', false, $ticket, $max, $min, $required_ticket_sold_out, $ticket_price, $ticket_bundle, $ticket_status, $status_class ) ) ) {
+		if ( false !== ( $new_row_content = apply_filters( 'FHEE__ticket_selector_chart_template__do_ticket_entire_row', false, $ticket, $max, $min, $required_ticket_sold_out, $ticket_price, $ticket_bundle, $ticket_status, $status_class, $max_atndz ) ) ) {
 			echo $new_row_content;
 			continue;
 		}
@@ -112,7 +114,7 @@ foreach ( $tickets as $TKT_ID => $ticket ) {
 		 *
 		 * @var string|bool
 		 */
-		if ( false !== ( $new_row_cells_content = apply_filters( 'FHEE__ticket_selector_chart_template__do_ticket_inside_row', false, $ticket, $max, $min, $required_ticket_sold_out, $ticket_price, $ticket_bundle, $ticket_status, $status_class ) ) ) {
+		if ( false !== ( $new_row_cells_content = apply_filters( 'FHEE__ticket_selector_chart_template__do_ticket_inside_row', false, $ticket, $max, $min, $required_ticket_sold_out, $ticket_price, $ticket_bundle, $ticket_status, $status_class, $max_atndz ) ) ) {
 			echo $new_row_cells_content;
 			echo '</tr>';
 			continue;
@@ -420,7 +422,7 @@ foreach ( $tickets as $TKT_ID => $ticket ) {
 					</tr>
 				<?php endif;  //end template_settings->show_ticket_details check?>
 	<?php
-			$row++;
+			
 		}
 	}
 ?>
