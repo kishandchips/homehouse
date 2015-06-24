@@ -83,7 +83,9 @@ remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 
 remove_action('wp_head', 'wp_generator'); 
 
-add_filter( 'FHEE__ticket_selector_chart_template__do_ticket_inside_row', 'custom_ticket_selector_chart_template__do_ticket_inside_row', 25, 10 );
+if ( ! is_admin() ) {
+	add_filter( 'FHEE__ticket_selector_chart_template__do_ticket_inside_row', 'custom_ticket_selector_chart_template__do_ticket_inside_row', 25, 10 );
+}
 
 add_filter( 'FHEE__ticket_selector_chart_template__maximum_tickets_purchased_footnote', 'custom_max_number_ticket_text');
 

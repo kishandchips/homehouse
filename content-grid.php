@@ -24,8 +24,10 @@
 				break;
 		}?>
 		
-		<?php if(get_field('display_background')): ?>
-			<?php $image = get_sub_field('grid_image'); ?>
+		<?php if(get_sub_field('display_background')): ?>
+			<?php 
+				$image = get_sub_field('grid_image'); 
+			?>
 			<div class="image"  style="background-image:url(<?php echo $image['sizes']['grid-rect-med']; ?>)">
 		<?php else: ?>
 			<div class="image pattern">

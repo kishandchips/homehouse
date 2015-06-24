@@ -127,12 +127,13 @@
 				$post = $post_object;
 				setup_postdata( $post );
 		?>
-		<?php $event_thumbnail_url = get_post_meta($post->ID, 'event_thumbnail_url', true); ?>
+		<?php $event_thumbnail_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full'); ?>
+
 
 		<div class="events">
 			<div class="rect-items row">
 				<div class="column col-2-3 pad expand">
-					<div class="image b-lazy" data-src="<?php echo $event_thumbnail_url; ?>">
+					<div class="image b-lazy" data-src="<?php echo $event_thumbnail_url[0]; ?>">
 						<div class="valign">
 							<h3 class="highlight large">
 								<?php the_title(); ?>
