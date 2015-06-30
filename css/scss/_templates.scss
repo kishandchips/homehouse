@@ -1163,6 +1163,11 @@ body.logged-in{
 	margin: 0 0 1.6em;
 	/* table-layout: fixed; */ /* Prevents HTML tables from becoming too wide */
 	width: 100%;
+	font-size: 15px;
+
+	h5 {
+		display: none;
+	}
 
 	table,
 	th,
@@ -1178,18 +1183,32 @@ body.logged-in{
 
 }
 
+.big-event-title-hdr {
+	font-family: 'Simoncini Garamond W01';
+	font-size: 25px;
+	font-weight: normal;
+	margin: 1em 0 .5em;	
+}
+
 .spco-steps-pg {
-	/*margin:0 0 2em;*/
+  font-size: 15px;
+  margin: 2em 0;	
 }
 .spco-attendee-panel-dv {
 	width:100%!important;
 }
 .ee-reg-form-attendee-dv {
 	padding:1em 2.5%;
-	margin:1em 0 2em;
+	margin: 2em 0 2em;
 	border: 1px solid #CDCDCD;
 	border-radius: 2px;
+
 }
+
+.spco-whats-next-buttons {
+	padding: 0em 0 1em;
+}
+
 .ee-reg-form-attendee-dv .ee-reg-qstn-input-dv {
 	display: block;
 	clear:both;
@@ -1218,6 +1237,7 @@ body.logged-in{
 	border: none;
 	letter-spacing:1px;
 	font-weight: bold;
+	color: #000;
 }
 .event_questions + .spco-attendee-lgnd {
 	margin-top:2em;
@@ -1226,10 +1246,26 @@ body.logged-in{
 #spco-steps-display-dv {
 	width:99%;
 	padding: 5px .5%;
-	margin:0 0 1em;
-	border-top:1px solid #CDCDCD;
-	border-bottom:1px solid #CDCDCD;
+	margin: 1.5em 0;
+	border:1px solid #CDCDCD;
 }
+
+#spco-steps-big-hdr {
+	display: none;
+}
+
+#ee-single-page-checkout-dv input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=file]) {
+	max-width: 60%;
+}
+
+.ee-reg-qstn {
+	label {
+		text-transform: capitalize;
+		font-weight: bold;
+		font-size: 14px;
+	}
+}
+
 .spco-step-display-dv {
 	float:left;
 	display:inline-block;
@@ -1274,4 +1310,14 @@ body.logged-in{
 
 #espresso_calendar:not(.ui-widget).calendar_fullsize .fc-other-month {
 	background: none;
+}
+
+.ee-spinner {
+	&:before {
+		display: none;
+	}
+	width: 64px;
+	height: 64px;
+	display: block;
+	background: url(../img/loader.gif) center center no-repeat;
 }

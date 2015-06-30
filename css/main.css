@@ -1601,24 +1601,21 @@ label {
   font-weight: 300;
   text-transform: uppercase; }
 
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], input[type="email"] {
   max-width: 320px;
   width: 100% !important;
   max-width: initial;
   margin-bottom: 0.5em;
   padding: 0.5em;
-  color: #fff;
+  color: #000;
   font-size: 1em;
   letter-spacing: 1px;
-  background-color: #1f1f1f;
-  border: 1px solid #2c2c2c;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  background-color: #FFF;
+  border: 1px solid #CCC;
   outline: none; }
-  input[type="text"].large-input, input[type="password"].large-input {
+  input[type="text"].large-input, input[type="password"].large-input, input[type="email"].large-input {
     max-width: 310px; }
-  input[type="text"].med-input, input[type="password"].med-input {
+  input[type="text"].med-input, input[type="password"].med-input, input[type="email"].med-input {
     max-width: 155px; }
 
 input:-webkit-autofill {
@@ -1626,11 +1623,11 @@ input:-webkit-autofill {
 
 textarea {
   width: 100% !important;
-  color: #fff;
+  color: #000;
   font-size: 1em;
   letter-spacing: 1px;
-  background-color: #1f1f1f;
-  border: 1px solid #2c2c2c;
+  background-color: #FFF;
+  border: 1px solid #CCC;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px; }
@@ -3164,6 +3161,22 @@ nav ul {
 #espresso-thank-you-page-overview-dv .ee-registration-details-dv .small-text.jst-rght {
   display: none; }
 
+#spco-go-to-step-finalize_registration-submit {
+  display: none; }
+
+#ee-stripe-button-btn {
+  position: relative;
+  display: inline-block;
+  padding: 0.7em 1.4em 0.4em;
+  font-family: 'Simoncini Garamond W01';
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  border: 1px solid #ccc !important;
+  background: #ccc !important;
+  box-shadow: none !important; }
+
 .page-pattern {
   background-image: url(../img/page-bg.jpg); }
 
@@ -3979,7 +3992,10 @@ body.logged-in #login-bar {
   margin: 0 0 1.6em;
   /* table-layout: fixed; */
   /* Prevents HTML tables from becoming too wide */
-  width: 100%; }
+  width: 100%;
+  font-size: 15px; }
+  .tkt-slctr-tbl h5, .spco-ticket-info-dv h5, #spco-payment-info-table h5, .ee-table h5 {
+    display: none; }
   .tkt-slctr-tbl table,
   .tkt-slctr-tbl th,
   .tkt-slctr-tbl td, .spco-ticket-info-dv table,
@@ -3995,17 +4011,27 @@ body.logged-in #login-bar {
   .tkt-slctr-tbl table, .spco-ticket-info-dv table, #spco-payment-info-table table, .ee-table table {
     width: 100%; }
 
+.big-event-title-hdr {
+  font-family: 'Simoncini Garamond W01';
+  font-size: 25px;
+  font-weight: normal;
+  margin: 1em 0 .5em; }
+
 .spco-steps-pg {
-  /*margin:0 0 2em;*/ }
+  font-size: 15px;
+  margin: 2em 0; }
 
 .spco-attendee-panel-dv {
   width: 100% !important; }
 
 .ee-reg-form-attendee-dv {
   padding: 1em 2.5%;
-  margin: 1em 0 2em;
+  margin: 2em 0 2em;
   border: 1px solid #CDCDCD;
   border-radius: 2px; }
+
+.spco-whats-next-buttons {
+  padding: 0em 0 1em; }
 
 .ee-reg-form-attendee-dv .ee-reg-qstn-input-dv {
   display: block;
@@ -4034,7 +4060,8 @@ body.logged-in #login-bar {
   margin: 0;
   border: none;
   letter-spacing: 1px;
-  font-weight: bold; }
+  font-weight: bold;
+  color: #000; }
 
 .event_questions + .spco-attendee-lgnd {
   margin-top: 2em; }
@@ -4042,9 +4069,19 @@ body.logged-in #login-bar {
 #spco-steps-display-dv {
   width: 99%;
   padding: 5px .5%;
-  margin: 0 0 1em;
-  border-top: 1px solid #CDCDCD;
-  border-bottom: 1px solid #CDCDCD; }
+  margin: 1.5em 0;
+  border: 1px solid #CDCDCD; }
+
+#spco-steps-big-hdr {
+  display: none; }
+
+#ee-single-page-checkout-dv input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=file]) {
+  max-width: 60%; }
+
+.ee-reg-qstn label {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 14px; }
 
 .spco-step-display-dv {
   float: left;
@@ -4084,3 +4121,11 @@ body.logged-in #login-bar {
 
 #espresso_calendar:not(.ui-widget).calendar_fullsize .fc-other-month {
   background: none; }
+
+.ee-spinner {
+  width: 64px;
+  height: 64px;
+  display: block;
+  background: url(../img/loader.gif) center center no-repeat; }
+  .ee-spinner:before {
+    display: none; }

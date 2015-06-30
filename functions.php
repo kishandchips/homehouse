@@ -429,106 +429,78 @@ function custom_ticket_selector_chart_template__do_ticket_inside_row( $new_row_c
 
 	$event_id = get_the_ID();
 
-	if ( is_user_logged_in() ) {
-	
-		// $ticket_name = $ticket->name();
-	
-		// $user_id = get_current_user_id();
-		// $att_id = get_user_meta( $user_id, 'EE_Attendee_ID', true );
+	$status = wp_strip_all_tags($ticket_status);
 
-		// //get the attached contact (EE_Attendee)
-		// $contact = EEM_Attendee::instance()->get_one_by_ID( $att_id );
+	// Do not run our custom code if tickets are Expired
+	if ($status != 'Expired') {
 
-		// if($contact) {
-		// 	//now we can use that to get all the related registrations (an array of EE_Registrations objects)
-		// 	$registrations = $contact->get_many_related( 'Registration', array( array( 'EVT_ID' => $event_id, 'TKT_ID' => $ticket->ID() )) );
+		if ( is_user_logged_in() ) {
 
-		// 	$booked = 0;
-
-		// 	foreach( $registrations as $registration ) {
+			$current_user = wp_get_current_user();
+			$attendee_id = get_user_meta( $current_user->ID, 'EE_Attendee_ID', true);
+			$user_booked = false;
+			$ticket_id = $ticket->ID();
+			$ticket_type = $ticket->name();
+			$booked = 0;
 			
-		// 		$transaction = $registration->transaction();
-		
-		// 		$status = $transaction instanceof EE_Transaction ? $transaction->status_ID() : EEM_Transaction::failed_status_code;
-
-		// 		if( $status == EEM_Transaction::complete_status_code ) {
-		// 			$booked++;
-		// 		}
-		// 	}
-
-		// 	if( $booked >= $max) {
-		// 		$new_row_content = '<td colspan="3">You have already booked your ' . $ticket_name . ' ticket(s)!</td>';
-		// 		//$new_row_content .= '<input type="hidden" name="tkt-slctr-qty-'.$event_id.'[]" value="0" />';
-		// 		//$new_row_content .= '<input type="hidden" name="tkt-slctr-ticket-id-'.$event_id.'[]" value="'. $ticket->ID().'" />';
-		// 	}
-		// }
-
-		$current_user = wp_get_current_user();
-		$attendee_id = get_user_meta( $current_user->ID, 'EE_Attendee_ID', true);
-		$user_booked = false;
-		$ticket_id = $ticket->ID();
-		$ticket_type = $ticket->name();
-		$booked = 0;
-		
-		$user_registrations = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}esp_registration WHERE ATT_ID = {$attendee_id} AND EVT_ID = {$event_id}" );
-		if( !empty($user_registrations)) {
-			foreach( $user_registrations as $user_registration ) {
-				$booked += $wpdb->get_var( "SELECT COUNT(*) FROM {$wpdb->prefix}esp_registration WHERE TXN_ID = {$user_registration->TXN_ID} AND TKT_ID = {$ticket_id}" );
+			$user_registrations = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}esp_registration WHERE ATT_ID = {$attendee_id} AND EVT_ID = {$event_id}" );
+			if( !empty($user_registrations)) {
+				foreach( $user_registrations as $user_registration ) {
+					$booked += $wpdb->get_var( "SELECT COUNT(*) FROM {$wpdb->prefix}esp_registration WHERE TXN_ID = {$user_registration->TXN_ID} AND TKT_ID = {$ticket_id}" );
+				} 
+			}
+			if( $booked >= $max) {
+				$new_row_content = '<td colspan="3">You have already booked your ' . $ticket_type . ' ticket(s)!</td>';
 			} 
-		}
-		if( $booked >= $max) {
-			$new_row_content = '<td colspan="3">You have already booked your ' . $ticket_type . ' ticket(s)!</td>';
-		} 
-		else {
-			$remaining = $max - $booked;
-			ob_start();	 ?>
+			else {
+				$remaining = $max - $booked;
+				ob_start();	 ?>
 
-				<td class="tckt-slctr-tbl-td-name">
-					<b><?php echo $ticket->get_pretty('TKT_name');?></b>
-					<?php if ( $ticket->required() ) { ?>
-						<p class="ticket-required-pg"><?php echo apply_filters( 'FHEE__ticket_selector_chart_template__ticket_required_message', __( 'This ticket is required and must be purchased.', 'event_espresso' )); ?></p>
-					<?php } ?>
-				</td>
-				<?php if ( apply_filters( 'FHEE__ticket_selector_chart_template__display_ticket_price_details', TRUE )) { ?>
-					<td class="tckt-slctr-tbl-td-price jst-rght"><?php echo EEH_Template::format_currency( $ticket_price ); ?>&nbsp;<span class="smaller-text no-bold"><?php
-						if ( $ticket_bundle ) {
-							echo apply_filters( 'FHEE__ticket_selector_chart_template__per_ticket_bundle_text', __( ' / bundle', 'event_espresso' ));
-						} else {
-							echo apply_filters( 'FHEE__ticket_selector_chart_template__per_ticket_text', __( ' / ticket', 'event_espresso' ));
-						}?></span> &nbsp;
+					<td class="tckt-slctr-tbl-td-name">
+						<b><?php echo $ticket->get_pretty('TKT_name');?></b>
+						<?php if ( $ticket->required() ) { ?>
+							<p class="ticket-required-pg"><?php echo apply_filters( 'FHEE__ticket_selector_chart_template__ticket_required_message', __( 'This ticket is required and must be purchased.', 'event_espresso' )); ?></p>
+						<?php } ?>
 					</td>
-				<?php } ?>								
-				<td class="tckt-slctr-tbl-td-qty cntr">
-				<?php
-					$hidden_input_qty = $max_atndz > 1 ? TRUE : FALSE;
-					add_filter( 'FHEE__EE_Ticket_Selector__display_ticket_selector_submit', '__return_true' );
-				?>
-				<?php 
-					$row = 1;
-				 ?>
-				<select name="tkt-slctr-qty-<?php echo $event_id; ?>[]" id="ticket-selector-tbl-qty-slct-<?php echo $event_id . '-' . $row; ?>" class="ticket-selector-tbl-qty-slct" title="">
-					<?php if ( ! $ticket->required() && $min !== 0 ) { ?>
-						<option value="0">&nbsp;0&nbsp;</option>
-					<?php }
-						for ( $i = $min; $i <= $remaining; $i++) { ?>
-						<option value="<?php echo $i; ?>">&nbsp;<?php echo $i; ?>&nbsp;</option>
-					<?php } ?>
-				</select>
-				<?php
-					$hidden_input_qty = FALSE;
-					if ( $hidden_input_qty ) { ?>					
-						<input type="hidden" name="tkt-slctr-qty-<?php echo $event_id; ?>[]" value="0" />
-					<?php } ?>
-					<input type="hidden" name="tkt-slctr-ticket-id-<?php echo $event_id; ?>[]" value="<?php echo $ticket_id; ?>" />
-				</td>
+					<?php if ( apply_filters( 'FHEE__ticket_selector_chart_template__display_ticket_price_details', TRUE )) { ?>
+						<td class="tckt-slctr-tbl-td-price jst-rght"><?php echo EEH_Template::format_currency( $ticket_price ); ?>&nbsp;<span class="smaller-text no-bold"><?php
+							if ( $ticket_bundle ) {
+								echo apply_filters( 'FHEE__ticket_selector_chart_template__per_ticket_bundle_text', __( ' / bundle', 'event_espresso' ));
+							} else {
+								echo apply_filters( 'FHEE__ticket_selector_chart_template__per_ticket_text', __( ' / ticket', 'event_espresso' ));
+							}?></span> &nbsp;
+						</td>
+					<?php } ?>								
+					<td class="tckt-slctr-tbl-td-qty cntr">
+					<?php
+						$hidden_input_qty = $max_atndz > 1 ? TRUE : FALSE;
+						add_filter( 'FHEE__EE_Ticket_Selector__display_ticket_selector_submit', '__return_true' );
+					?>
+					<?php 
+						$row = 1;
+					 ?>
+					<select name="tkt-slctr-qty-<?php echo $event_id; ?>[]" id="ticket-selector-tbl-qty-slct-<?php echo $event_id . '-' . $row; ?>" class="ticket-selector-tbl-qty-slct" title="">
+						<?php if ( ! $ticket->required() && $min !== 0 ) { ?>
+							<option value="0">&nbsp;0&nbsp;</option>
+						<?php }
+							for ( $i = $min; $i <= $remaining; $i++) { ?>
+							<option value="<?php echo $i; ?>">&nbsp;<?php echo $i; ?>&nbsp;</option>
+						<?php } ?>
+					</select>
+					<?php
+						$hidden_input_qty = FALSE;
+						if ( $hidden_input_qty ) { ?>					
+							<input type="hidden" name="tkt-slctr-qty-<?php echo $event_id; ?>[]" value="0" />
+						<?php } ?>
+						<input type="hidden" name="tkt-slctr-ticket-id-<?php echo $event_id; ?>[]" value="<?php echo $ticket_id; ?>" />
+					</td>
 
-				<?php $new_row_content = ob_get_clean(); ?>		
-		
-		<?php }
-	} 
+					<?php $new_row_content = ob_get_clean(); ?>		
+			
+			<?php }
+		} 
 
-	// $remaining = $max - $booked;
-	// echo 'Ticket type: ' . $ticket_type . ', Max: ' . $max . ', Booked: ' . $booked . ', Remaining: ' . $remaining . "\n";
+	}
 
     return $new_row_content;	
 }

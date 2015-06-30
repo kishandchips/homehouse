@@ -11,18 +11,17 @@ label{
 	text-transform: uppercase;
 }
 
-input[type="text"], input[type="password"]{
+input[type="text"], input[type="password"], input[type="email"]{
 	max-width: 320px;
 	width: 100% !important;
 	max-width: initial;
 	margin-bottom: 0.5em;
 	padding: 0.5em;
-	color: #fff;
+	color: #000;
 	font-size: 1em;
 	letter-spacing: 1px;
-	background-color: #1f1f1f;
-	border:1px solid #2c2c2c;
-	@include border-radius(3px);
+	background-color: #FFF;
+	border:1px solid #CCC;
 	outline: none;
 
 	&.large-input{
@@ -39,11 +38,11 @@ input:-webkit-autofill {
 
 textarea{
 	width: 100% !important;
-	color: #fff;
+	color: #000;
 	font-size: 1em;
 	letter-spacing: 1px;
-	background-color: #1f1f1f;
-	border:1px solid #2c2c2c;
+	background-color: #FFF;
+	border:1px solid #CCC;
 	@include border-radius(3px);
 }
 

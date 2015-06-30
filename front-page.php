@@ -153,10 +153,10 @@
 							<h3 class="title large">
 								Upcoming Events
 							</h3>
-							<p>
+<!-- 							<p>
 								Daylight hours are growing shorter and that means more time for after-dark delights at the House this November.
 							</p>
-							<div>
+ -->							<div>
 								<a href="<?php echo bloginfo('url'); ?>/events" class="button primary small" title="View Events">View Events</a>
 							</div>
 						</div>
