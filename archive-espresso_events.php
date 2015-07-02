@@ -14,7 +14,6 @@
     $post_objects= get_field('featured_events', 24);
 
 	if($post_objects): ?>
-
 	<section class="hero flexslider thumbnails">
 
 		<ul class="slides">

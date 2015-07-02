@@ -17,6 +17,21 @@ body{
 	}
 }
 
+#error {
+	padding: 8em;	
+	background-image: url(../img/grey-pattern.jpg);
+	background-repeat: repeat;
+
+	h1 {
+		font-size: 40px;
+  		margin: 1em;
+	}
+
+	.red-btn {
+		color: #FFF;
+	}
+}
+
 #kanye-west{
 	position: relative;
 	width: 100%;
@@ -1072,12 +1087,8 @@ nav{
 		@extend %breadcrumb;
 	}
 
-	> span > span span{
+	.breadcrumb_last{
 		@extend %breadcrumb;
-
-		&.breadcrumb_last{
-			background-color: #000;
-		}
 	}
 }
 
@@ -1595,7 +1606,7 @@ nav{
 }
 
 #spco-go-to-step-finalize_registration-submit {
-	display: none;
+	//display: none;
 }
 
 #ee-stripe-button-btn {
@@ -1610,4 +1621,82 @@ position: relative;
 border: 1px solid #ccc !important;
   background: #ccc !important;
   box-shadow: none !important;  	
+}
+
+#methods-of-payment {
+
+	select {
+		-webkit-appearance: none;
+		border-radius: 0;
+		border: 1px solid #ccc;
+		padding: 8px;
+		background:#FFF url("data:image/png;base64,R0lGODlhDwAUAIABAAAAAP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") no-repeat 98% 50%;		
+	}
+
+	#ee-available-payment-method-inputs {
+		display: none;
+	}
+
+	#method-of-payment-hdr, .ee-form-add-new-state-lnk {
+		display: none;
+	}
+	
+	#ee-Sage_Pay-billing-form-credit-card-input-dv {
+	  padding-top: 30px;
+	  border-top: 1px solid #ccc;
+	  margin-top: 345px;		
+	  clear: left;
+
+	  @media screen and (max-width:500px){
+	  	margin-top: 35px;	
+	  }
+	}
+
+	#ee-Sage_Pay-billing-form-first-name-input-dv, #ee-Sage_Pay-billing-form-last-name-input-dv, #ee-Sage_Pay-billing-form-email-input-dv, #ee-Sage_Pay-billing-form-address-input-dv, #ee-Sage_Pay-billing-form-address2-input-dv, #ee-Sage_Pay-billing-form-city-input-dv, #ee-Sage_Pay-billing-form-zip-input-dv, #ee-Sage_Pay-billing-form-phone-input-dv, #ee-Sage_Pay-billing-form-cvv-input-dv, #ee-Sage_Pay-billing-form-card-holder-input-dv {
+		width: 50%;
+		float: left;
+
+		@media screen and (max-width:500px){
+			float: none;
+			width: 100%;
+		}		
+
+		input {
+			max-width: 90%;
+		}
+	}
+
+	#ee-Sage_Pay-billing-form-state-input-dv, #ee-Sage_Pay-billing-form-country-input-dv {
+		width: 50%;
+		float: left;
+		margin: 1.3em 0;
+
+		select {
+			width: 90%;
+		}		
+	}
+
+	#ee-Sage_Pay-billing-form-credit-card-type-input-dv, #ee-Sage_Pay-billing-form-exp-month-input-dv, #ee-Sage_Pay-billing-form-exp-year-input-dv {
+		width: 33%;
+		float: left;
+
+		@media screen and (max-width:500px){
+			float: none;
+			width: 100%;
+		}
+
+		select {
+			min-width: 70px;
+		}
+	}
+}
+
+#spco-payment_options-whats-next-buttons-dv {
+	padding: 1em 0 1em;
+	border-top: 1px solid #ccc;
+	margin: 148px 2em 0;
+
+	@media screen and (max-width:500px){
+		margin: 14px 2em 0;		
+	}
 }

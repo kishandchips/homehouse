@@ -71,6 +71,8 @@ add_action( 'AHEE__EE_System__core_loaded_and_ready', 'custom_EE_System__core_lo
 
 add_action( 'AHEE__EE_System__set_hooks_for_shortcodes_modules_and_addons', 'custom__EE_System__set_hooks_for_shortcodes_modules_and_addons', 20);
 
+add_action('admin_bar_menu', 'custom_button_example', 80);
+
 remove_action('wp_head', 'feed_links', 2);
 
 remove_action('wp_head', 'feed_links_extra', 3);  
@@ -723,3 +725,19 @@ function custom_init() {
 		die('Count complete');
 	}
 }
+
+function custom_button_example($wp_admin_bar){
+
+	if ( is_post_type_archive('espresso_events') ) {
+
+		$args = array(
+			'id' => 'custom-button',
+			'title' => 'Edit Page',
+			'href' => '/wp-admin/post.php?post=24&action=edit',
+			'meta' => array(
+			'class' => 'custom-button-class'
+		));
+		$wp_admin_bar->add_node($args);			
+	}	
+}
+

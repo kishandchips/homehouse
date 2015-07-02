@@ -178,6 +178,10 @@
 			.notice{
 				color: #A268BE;
 			}
+
+			.currency-code {
+				display: none;
+			}
 		}
 
 		.description{
@@ -1320,4 +1324,8 @@ body.logged-in{
 	height: 64px;
 	display: block;
 	background: url(../img/loader.gif) center center no-repeat;
+}
+
+.single-espresso_events {
+
 }

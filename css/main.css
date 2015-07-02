@@ -1246,7 +1246,7 @@ button {
     .button.cta:hover, input.cta[type="submit"]:hover {
       background-color: #27ae60;
       border: 1px solid #27ae60; }
-  .button.small, input.small[type="submit"], #event_espresso_shopping_cart .price_list input[type="submit"].reg-allowed-limit, .slide-content-wrapper input[type="submit"].slide-description, #cedric #isotope .grid-sizer .meta input[type="submit"].cat, #cedric #isotope .item .meta input[type="submit"].cat, #single .single .single-meta input[type="submit"].author, #single .single .single-meta input[type="submit"].category, input[type="submit"].js-login, #login .login-modal input[type="submit"].instructions, #login .login-modal .login-submit input[type="submit"].button-primary, #event_espresso_shopping_cart .price_list .button.reg-allowed-limit, .slide-content-wrapper .button.slide-description, #breadcrumbs a.button, #breadcrumbs > span > span span.button, #cedric #isotope .grid-sizer .meta .button.cat, #cedric #isotope .item .meta .button.cat, #single .single .single-meta .button.author, #single .single .single-meta .button.category, .button.js-login, #login .login-modal .button.instructions, #login .login-modal .login-submit .button.button-primary, #login-bar .login-options a.button {
+  .button.small, input.small[type="submit"], #event_espresso_shopping_cart .price_list input[type="submit"].reg-allowed-limit, .slide-content-wrapper input[type="submit"].slide-description, #breadcrumbs input[type="submit"].breadcrumb_last, #cedric #isotope .grid-sizer .meta input[type="submit"].cat, #cedric #isotope .item .meta input[type="submit"].cat, #single .single .single-meta input[type="submit"].author, #single .single .single-meta input[type="submit"].category, input[type="submit"].js-login, #login .login-modal input[type="submit"].instructions, #login .login-modal .login-submit input[type="submit"].button-primary, #event_espresso_shopping_cart .price_list .button.reg-allowed-limit, .slide-content-wrapper .button.slide-description, #breadcrumbs a.button, #breadcrumbs .button.breadcrumb_last, #cedric #isotope .grid-sizer .meta .button.cat, #cedric #isotope .item .meta .button.cat, #single .single .single-meta .button.author, #single .single .single-meta .button.category, .button.js-login, #login .login-modal .button.instructions, #login .login-modal .login-submit .button.button-primary, #login-bar .login-options a.button {
     font-size: 0.75em; }
   .button.med, input.med[type="submit"] {
     font-size: 1.125em; }
@@ -1324,7 +1324,7 @@ h1, h2, h3, h4, h5, h6 {
 .black, #events-single, #booking {
   color: #333; }
 
-.small, #event_espresso_shopping_cart .price_list .reg-allowed-limit, .slide-content-wrapper .slide-description, #breadcrumbs a, #breadcrumbs > span > span span, #cedric #isotope .grid-sizer .meta .cat, #cedric #isotope .item .meta .cat, #single .single .single-meta .author, #single .single .single-meta .category, .js-login, #login .login-modal .instructions, #login .login-modal .login-submit .button-primary, #login-bar .login-options a {
+.small, #event_espresso_shopping_cart .price_list .reg-allowed-limit, .slide-content-wrapper .slide-description, #breadcrumbs a, #breadcrumbs .breadcrumb_last, #cedric #isotope .grid-sizer .meta .cat, #cedric #isotope .item .meta .cat, #single .single .single-meta .author, #single .single .single-meta .category, .js-login, #login .login-modal .instructions, #login .login-modal .login-submit .button-primary, #login-bar .login-options a {
   font-size: 0.75em; }
 
 .medium, #team .member-name {
@@ -1336,6 +1336,10 @@ h1, h2, h3, h4, h5, h6 {
 .xlarge, #single-cedric .inner .post-title {
   font-size: 3em; }
 
+.align-center,
+.text-center {
+  text-align: center; }
+
 .title, .highlight, .hero .hero-content .title, #footer .sitemap .right nav ul.menu a {
   display: inline-block;
   margin: 0;
@@ -1345,6 +1349,14 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   text-decoration: none;
   line-height: 1.2; }
+
+.uppercase {
+  letter-spacing: 2px;
+  text-transform: uppercase; }
+
+.uppercase-low {
+  letter-spacing: 2px;
+  text-transform: uppercase; }
 
 .highlight {
   display: inline-block;
@@ -1788,7 +1800,7 @@ input.submit {
   margin: 0;
   padding: 0;
   font-size: 1em; }
-.event_espresso_form_wrapper .event_espresso_form_wrapper input.small, .event_espresso_form_wrapper .event_espresso_form_wrapper #event_espresso_shopping_cart .price_list input.reg-allowed-limit, #event_espresso_shopping_cart .price_list .event_espresso_form_wrapper .event_espresso_form_wrapper input.reg-allowed-limit, .event_espresso_form_wrapper .event_espresso_form_wrapper .slide-content-wrapper input.slide-description, .slide-content-wrapper .event_espresso_form_wrapper .event_espresso_form_wrapper input.slide-description, .event_espresso_form_wrapper .event_espresso_form_wrapper #cedric #isotope .grid-sizer .meta input.cat, #cedric #isotope .grid-sizer .meta .event_espresso_form_wrapper .event_espresso_form_wrapper input.cat, .event_espresso_form_wrapper .event_espresso_form_wrapper #cedric #isotope .item .meta input.cat, #cedric #isotope .item .meta .event_espresso_form_wrapper .event_espresso_form_wrapper input.cat, .event_espresso_form_wrapper .event_espresso_form_wrapper #single .single .single-meta input.author, #single .single .single-meta .event_espresso_form_wrapper .event_espresso_form_wrapper input.author, .event_espresso_form_wrapper .event_espresso_form_wrapper #single .single .single-meta input.category, #single .single .single-meta .event_espresso_form_wrapper .event_espresso_form_wrapper input.category, .event_espresso_form_wrapper .event_espresso_form_wrapper input.js-login, .event_espresso_form_wrapper .event_espresso_form_wrapper #login .login-modal input.instructions, #login .login-modal .event_espresso_form_wrapper .event_espresso_form_wrapper input.instructions, .event_espresso_form_wrapper .event_espresso_form_wrapper #login .login-modal .login-submit input.button-primary, #login .login-modal .login-submit .event_espresso_form_wrapper .event_espresso_form_wrapper input.button-primary {
+.event_espresso_form_wrapper .event_espresso_form_wrapper input.small, .event_espresso_form_wrapper .event_espresso_form_wrapper #event_espresso_shopping_cart .price_list input.reg-allowed-limit, #event_espresso_shopping_cart .price_list .event_espresso_form_wrapper .event_espresso_form_wrapper input.reg-allowed-limit, .event_espresso_form_wrapper .event_espresso_form_wrapper .slide-content-wrapper input.slide-description, .slide-content-wrapper .event_espresso_form_wrapper .event_espresso_form_wrapper input.slide-description, .event_espresso_form_wrapper .event_espresso_form_wrapper #breadcrumbs input.breadcrumb_last, #breadcrumbs .event_espresso_form_wrapper .event_espresso_form_wrapper input.breadcrumb_last, .event_espresso_form_wrapper .event_espresso_form_wrapper #cedric #isotope .grid-sizer .meta input.cat, #cedric #isotope .grid-sizer .meta .event_espresso_form_wrapper .event_espresso_form_wrapper input.cat, .event_espresso_form_wrapper .event_espresso_form_wrapper #cedric #isotope .item .meta input.cat, #cedric #isotope .item .meta .event_espresso_form_wrapper .event_espresso_form_wrapper input.cat, .event_espresso_form_wrapper .event_espresso_form_wrapper #single .single .single-meta input.author, #single .single .single-meta .event_espresso_form_wrapper .event_espresso_form_wrapper input.author, .event_espresso_form_wrapper .event_espresso_form_wrapper #single .single .single-meta input.category, #single .single .single-meta .event_espresso_form_wrapper .event_espresso_form_wrapper input.category, .event_espresso_form_wrapper .event_espresso_form_wrapper input.js-login, .event_espresso_form_wrapper .event_espresso_form_wrapper #login .login-modal input.instructions, #login .login-modal .event_espresso_form_wrapper .event_espresso_form_wrapper input.instructions, .event_espresso_form_wrapper .event_espresso_form_wrapper #login .login-modal .login-submit input.button-primary, #login .login-modal .login-submit .event_espresso_form_wrapper .event_espresso_form_wrapper input.button-primary {
   width: 100px; }
 .event_espresso_form_wrapper label.error,
 .event_espresso_form_wrapper span.error {
@@ -2053,6 +2065,16 @@ body {
 @media screen and (max-width: 750px) {
   .container {
     width: 100%; } }
+
+#error {
+  padding: 8em;
+  background-image: url(../img/grey-pattern.jpg);
+  background-repeat: repeat; }
+  #error h1 {
+    font-size: 40px;
+    margin: 1em; }
+  #error .red-btn {
+    color: #FFF; }
 
 #kanye-west {
   position: relative;
@@ -2791,7 +2813,7 @@ nav ul {
     @media screen and (max-width: 750px) {
       .has-sidebar #breadcrumbs {
         margin-left: 0; } }
-  #breadcrumbs a, #breadcrumbs > span > span span {
+  #breadcrumbs a, #breadcrumbs .breadcrumb_last {
     display: inline-block;
     margin-right: 0.5em;
     padding: 5px 10px 4px 10px;
@@ -2806,11 +2828,9 @@ nav ul {
     -o-transition: all, 0.3s;
     -webkit-transition: all, 0.3s;
     transition: all, 0.3s; }
-    #breadcrumbs a:hover, #breadcrumbs > span > span span:hover {
+    #breadcrumbs a:hover, #breadcrumbs .breadcrumb_last:hover {
       color: #fff;
       background-color: #000; }
-  #breadcrumbs > span > span span.breadcrumb_last {
-    background-color: #000; }
 
 /* ==========================================================================
    PAGE
@@ -3161,9 +3181,6 @@ nav ul {
 #espresso-thank-you-page-overview-dv .ee-registration-details-dv .small-text.jst-rght {
   display: none; }
 
-#spco-go-to-step-finalize_registration-submit {
-  display: none; }
-
 #ee-stripe-button-btn {
   position: relative;
   display: inline-block;
@@ -3176,6 +3193,57 @@ nav ul {
   border: 1px solid #ccc !important;
   background: #ccc !important;
   box-shadow: none !important; }
+
+#methods-of-payment select {
+  -webkit-appearance: none;
+  border-radius: 0;
+  border: 1px solid #ccc;
+  padding: 8px;
+  background: #FFF url("data:image/png;base64,R0lGODlhDwAUAIABAAAAAP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") no-repeat 98% 50%; }
+#methods-of-payment #ee-available-payment-method-inputs {
+  display: none; }
+#methods-of-payment #method-of-payment-hdr, #methods-of-payment .ee-form-add-new-state-lnk {
+  display: none; }
+#methods-of-payment #ee-Sage_Pay-billing-form-credit-card-input-dv {
+  padding-top: 30px;
+  border-top: 1px solid #ccc;
+  margin-top: 345px;
+  clear: left; }
+  @media screen and (max-width: 500px) {
+    #methods-of-payment #ee-Sage_Pay-billing-form-credit-card-input-dv {
+      margin-top: 35px; } }
+#methods-of-payment #ee-Sage_Pay-billing-form-first-name-input-dv, #methods-of-payment #ee-Sage_Pay-billing-form-last-name-input-dv, #methods-of-payment #ee-Sage_Pay-billing-form-email-input-dv, #methods-of-payment #ee-Sage_Pay-billing-form-address-input-dv, #methods-of-payment #ee-Sage_Pay-billing-form-address2-input-dv, #methods-of-payment #ee-Sage_Pay-billing-form-city-input-dv, #methods-of-payment #ee-Sage_Pay-billing-form-zip-input-dv, #methods-of-payment #ee-Sage_Pay-billing-form-phone-input-dv, #methods-of-payment #ee-Sage_Pay-billing-form-cvv-input-dv, #methods-of-payment #ee-Sage_Pay-billing-form-card-holder-input-dv {
+  width: 50%;
+  float: left; }
+  @media screen and (max-width: 500px) {
+    #methods-of-payment #ee-Sage_Pay-billing-form-first-name-input-dv, #methods-of-payment #ee-Sage_Pay-billing-form-last-name-input-dv, #methods-of-payment #ee-Sage_Pay-billing-form-email-input-dv, #methods-of-payment #ee-Sage_Pay-billing-form-address-input-dv, #methods-of-payment #ee-Sage_Pay-billing-form-address2-input-dv, #methods-of-payment #ee-Sage_Pay-billing-form-city-input-dv, #methods-of-payment #ee-Sage_Pay-billing-form-zip-input-dv, #methods-of-payment #ee-Sage_Pay-billing-form-phone-input-dv, #methods-of-payment #ee-Sage_Pay-billing-form-cvv-input-dv, #methods-of-payment #ee-Sage_Pay-billing-form-card-holder-input-dv {
+      float: none;
+      width: 100%; } }
+  #methods-of-payment #ee-Sage_Pay-billing-form-first-name-input-dv input, #methods-of-payment #ee-Sage_Pay-billing-form-last-name-input-dv input, #methods-of-payment #ee-Sage_Pay-billing-form-email-input-dv input, #methods-of-payment #ee-Sage_Pay-billing-form-address-input-dv input, #methods-of-payment #ee-Sage_Pay-billing-form-address2-input-dv input, #methods-of-payment #ee-Sage_Pay-billing-form-city-input-dv input, #methods-of-payment #ee-Sage_Pay-billing-form-zip-input-dv input, #methods-of-payment #ee-Sage_Pay-billing-form-phone-input-dv input, #methods-of-payment #ee-Sage_Pay-billing-form-cvv-input-dv input, #methods-of-payment #ee-Sage_Pay-billing-form-card-holder-input-dv input {
+    max-width: 90%; }
+#methods-of-payment #ee-Sage_Pay-billing-form-state-input-dv, #methods-of-payment #ee-Sage_Pay-billing-form-country-input-dv {
+  width: 50%;
+  float: left;
+  margin: 1.3em 0; }
+  #methods-of-payment #ee-Sage_Pay-billing-form-state-input-dv select, #methods-of-payment #ee-Sage_Pay-billing-form-country-input-dv select {
+    width: 90%; }
+#methods-of-payment #ee-Sage_Pay-billing-form-credit-card-type-input-dv, #methods-of-payment #ee-Sage_Pay-billing-form-exp-month-input-dv, #methods-of-payment #ee-Sage_Pay-billing-form-exp-year-input-dv {
+  width: 33%;
+  float: left; }
+  @media screen and (max-width: 500px) {
+    #methods-of-payment #ee-Sage_Pay-billing-form-credit-card-type-input-dv, #methods-of-payment #ee-Sage_Pay-billing-form-exp-month-input-dv, #methods-of-payment #ee-Sage_Pay-billing-form-exp-year-input-dv {
+      float: none;
+      width: 100%; } }
+  #methods-of-payment #ee-Sage_Pay-billing-form-credit-card-type-input-dv select, #methods-of-payment #ee-Sage_Pay-billing-form-exp-month-input-dv select, #methods-of-payment #ee-Sage_Pay-billing-form-exp-year-input-dv select {
+    min-width: 70px; }
+
+#spco-payment_options-whats-next-buttons-dv {
+  padding: 1em 0 1em;
+  border-top: 1px solid #ccc;
+  margin: 148px 2em 0; }
+  @media screen and (max-width: 500px) {
+    #spco-payment_options-whats-next-buttons-dv {
+      margin: 14px 2em 0; } }
 
 .page-pattern {
   background-image: url(../img/page-bg.jpg); }
@@ -3293,6 +3361,8 @@ nav ul {
       vertical-align: middle; }
     #events-single .inner-content .body .notice, #booking .inner-content .body .notice {
       color: #A268BE; }
+    #events-single .inner-content .body .currency-code, #booking .inner-content .body .currency-code {
+      display: none; }
   #events-single .inner-content .description, #booking .inner-content .description {
     margin: 2em 0;
     padding-top: 2em;

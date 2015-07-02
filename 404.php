@@ -1,29 +1,30 @@
 <?php
 /**
- * The template for displaying 404 pages (Not Found)
+ * The template for displaying 404 pages (Not Found).
  *
- * @package WordPress
- * @subpackage Twenty_Twelve
- * @since Twenty Twelve 1.0
+ * @package homehouse
+ * @since homehouse 1.0
  */
 
 get_header(); ?>
 
-	<div id="primary" class="site-content">
-		<div id="content" role="main">
+<section id="error">
+	<div class="container">
+		<div class="row">
+			<div id="content">
+				<div class="inner">
+					<br />
+					<h4 class="uppercase red text-center"><?php _e("404 error - Page not found", THEME_NAME); ?></h4>
+					<h1 class="uppercase text-center"><?php _e("You appear to have taken a wrong turn...", THEME_NAME); ?></h1>
+					<p class=" text-center"><?php _e("The page you are looking for is not here. It may have been deleted, or the address might have been miss-typed. Either way, let’s get you back on track...", THEME_NAME); ?></p>
+					<p class=" text-center"><?php _e("You can use the navigation bar above, or:", THEME_NAME); ?></p>
+					<p class=" text-center">
+						<a class="red-btn" href="<?php bloginfo('url') ?>"><?php _e("Go to the Homepage", THEME_NAME); ?> </a>
+					</p>
 
-			<article id="post-0" class="post error404 no-results not-found">
-				<header class="entry-header">
-					<h1 class="entry-title"><?php _e( 'This is somewhat embarrassing, isn&rsquo;t it?', 'twentytwelve' ); ?></h1>
-				</header>
-
-				<div class="entry-content">
-					<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'twentytwelve' ); ?></p>
-					<?php get_search_form(); ?>
-				</div><!-- .entry-content -->
-			</article><!-- #post-0 -->
-
-		</div><!-- #content -->
-	</div><!-- #primary -->
-
+				</div>
+			</div><!-- #content .site-content -->
+		</div>
+	</div>
+</section><!-- #error -->
 <?php get_footer(); ?>
