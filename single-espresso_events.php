@@ -30,6 +30,8 @@
 						$event_start_date = espresso_event_date('', ' ', $event_id, false);
 						$event_location = get_post_meta($event_id, 'event_location', true);
 						$event_time = espresso_event_date(' ', '', $event_id, false);
+						$available_tickets = espresso_event_tickets_available( $post->ID, FALSE, FALSE );
+						$status = espresso_clean_event_status();
 					?>
 
 				<div class="body">
@@ -69,6 +71,9 @@
 						<?php the_content(); ?>
 					</div>
 
+					<?php if($status == 'Sold Out' && !$available_tickets): ?>
+							<span class="event-fully-booked">SORRY THIS EVENT IS FULLY BOOKED</span>
+					<?php endif; ?>
 					<?php if ( is_user_logged_in() ): ?> 
 						<p>
 							<?php echo do_shortcode('[ESPRESSO_TICKET_SELECTOR event_id="'. $event_id .'"]' ); ?>

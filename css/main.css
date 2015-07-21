@@ -3245,6 +3245,14 @@ nav ul {
     #spco-payment_options-whats-next-buttons-dv {
       margin: 14px 2em 0; } }
 
+.event-fully-booked {
+  color: #ff0000;
+  text-align: center;
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem; }
+
 .page-pattern {
   background-image: url(../img/page-bg.jpg); }
 

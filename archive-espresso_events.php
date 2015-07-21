@@ -90,6 +90,7 @@
 				<?php $event_date = espresso_event_date('F j', ' ', $event_id, false); ?>
 				<?php $filter_date = espresso_event_date('m', ' ', $event_id, false); ?>
 				<?php $available_spaces = do_shortcode('[[ATTENDEE_NUMBERS event_id='.$event_id.' type=available_spaces]'); ?>
+				<?php $status = espresso_clean_event_status(); ?>
 
 
 				<article id="event_data-<?php echo $event_id ?>" class="item event <?php echo $filter_date; ?>">
@@ -113,7 +114,7 @@
 										</div>
 									</div>
 
-									<?php if(!$available_spaces): ?>
+									<?php if($status == 'Sold Out' ): ?>
 										<span class="notice"><b>Sold Out</b></span>
 									<?php endif; ?>
 								</div>

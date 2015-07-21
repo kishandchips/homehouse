@@ -474,27 +474,34 @@ function custom_ticket_selector_chart_template__do_ticket_inside_row( $new_row_c
 						</td>
 					<?php } ?>								
 					<td class="tckt-slctr-tbl-td-qty cntr">
-					<?php
-						$hidden_input_qty = $max_atndz > 1 ? TRUE : FALSE;
-						add_filter( 'FHEE__EE_Ticket_Selector__display_ticket_selector_submit', '__return_true' );
-					?>
-					<?php 
-						$row = 1;
-					 ?>
-					<select name="tkt-slctr-qty-<?php echo $event_id; ?>[]" id="ticket-selector-tbl-qty-slct-<?php echo $event_id . '-' . $row; ?>" class="ticket-selector-tbl-qty-slct" title="">
-						<?php if ( ! $ticket->required() && $min !== 0 ) { ?>
-							<option value="0">&nbsp;0&nbsp;</option>
-						<?php }
-							for ( $i = $min; $i <= $remaining; $i++) { ?>
-							<option value="<?php echo $i; ?>">&nbsp;<?php echo $i; ?>&nbsp;</option>
-						<?php } ?>
-					</select>
-					<?php
-						$hidden_input_qty = FALSE;
-						if ( $hidden_input_qty ) { ?>					
-							<input type="hidden" name="tkt-slctr-qty-<?php echo $event_id; ?>[]" value="0" />
-						<?php } ?>
-						<input type="hidden" name="tkt-slctr-ticket-id-<?php echo $event_id; ?>[]" value="<?php echo $ticket_id; ?>" />
+
+					<?php if ($status == 'Sold Out'): ?>
+							<span class="sold-out"><?php echo apply_filters( 'FHEE__ticket_selector_chart_template__ticket_sold_out_msg', __( 'Sold&nbsp;Out', 'event_espresso' ));?></span>
+						<?php else: ?>
+
+							<?php
+							$hidden_input_qty = $max_atndz > 1 ? TRUE : FALSE;
+							add_filter( 'FHEE__EE_Ticket_Selector__display_ticket_selector_submit', '__return_true' );
+							?>
+							<?php 
+							$row = 1;
+							?>
+							<select name="tkt-slctr-qty-<?php echo $event_id; ?>[]" id="ticket-selector-tbl-qty-slct-<?php echo $event_id . '-' . $row; ?>" class="ticket-selector-tbl-qty-slct" title="">
+							<?php if ( ! $ticket->required() && $min !== 0 ) { ?>
+								<option value="0">&nbsp;0&nbsp;</option>
+							<?php }
+								for ( $i = $min; $i <= $remaining; $i++) { ?>
+								<option value="<?php echo $i; ?>">&nbsp;<?php echo $i; ?>&nbsp;</option>
+							<?php } ?>
+							</select>
+							<?php
+							$hidden_input_qty = FALSE;
+							if ( $hidden_input_qty ) { ?>					
+								<input type="hidden" name="tkt-slctr-qty-<?php echo $event_id; ?>[]" value="0" />
+							<?php } ?>
+							<input type="hidden" name="tkt-slctr-ticket-id-<?php echo $event_id; ?>[]" value="<?php echo $ticket_id; ?>" />
+
+						<?php endif; ?>
 					</td>
 
 					<?php $new_row_content = ob_get_clean(); ?>		
@@ -518,6 +525,8 @@ function custom_EE_Export__report_registrations__reg_csv_array($reg_csv_array, $
 	$users = get_users(array('meta_key' => 'EE_Attendee_ID', 'meta_value' => $registration['Registration.ATT_ID']));
 	$user = current($users);
 
+	print_r($registration['Registration.ATT_ID']);
+
 	$last_name = '';
 	$first_name = '';
 	$membership_id = '';
@@ -530,6 +539,8 @@ function custom_EE_Export__report_registrations__reg_csv_array($reg_csv_array, $
 		$membership_id = get_user_meta($user->ID, 'membership_id', true);
 		$email = $userdata->user_email;
 	}
+
+
 	
 	$prepend = array(
 		'Last Name' => $last_name, 
@@ -741,3 +752,24 @@ function custom_button_example($wp_admin_bar){
 	}	
 }
 
+
+function custom_admin_ee_sorting( $query ) {
+	if(is_admin()){
+		global $pagenow;
+		if (( $pagenow == 'admin.php' ) && ($_GET['page'] == 'espresso_events') && !isset($_GET['orderby'])) {
+		    $query->set( 'orderby', 'Datetime.DTT_EVT_start' );
+		    $query->set( 'order', 'ASC' );
+		}
+	}
+}
+
+add_action( 'pre_get_posts', 'custom_admin_ee_sorting' );
+
+function espresso_clean_event_status() {
+    global $post;
+    $EVT_ID = $post->ID;
+    $event = EEH_Event_View::get_event( $EVT_ID );
+    $status = $event instanceof EE_Event ? $event->pretty_active_status( FALSE ) : 'inactive';
+    $status_sans_tags = wp_strip_all_tags($status);
+    return $status_sans_tags;
+}
