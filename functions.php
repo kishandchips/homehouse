@@ -112,7 +112,7 @@ function custom_styles(){
 function custom_scripts(){
 	global $template_directory_uri;
 	
-	wp_register_script('mapkey', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCHQcusxyrL3CHhKQ_Ui_MF78sMeOs84es', array('jquery'), '', true);
+	wp_register_script('mapkey', 'https://maps.googleapis.com/maps/api/js?AIzaSyCuRYkwIiSnnkCxvhuS_gbihdm-xyyvTSI', array('jquery'), '', true);
 	wp_enqueue_script('modernizr', $template_directory_uri . '/js/vendor/modernizr-2.6.1.min.js', array('jquery'), '', true);
 	wp_enqueue_script('video', $template_directory_uri . '/js/plugins/video.dev.js', array('jquery'), '', true);
 	wp_enqueue_script('flexslider', $template_directory_uri . '/js/plugins/jquery.flexslider.js', array('jquery'), '', true);
@@ -444,8 +444,9 @@ function custom_ticket_selector_chart_template__do_ticket_inside_row( $new_row_c
 			$ticket_id = $ticket->ID();
 			$ticket_type = $ticket->name();
 			$booked = 0;
+			$approved_status = EEM_Registration::status_id_approved;
 			
-			$user_registrations = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}esp_registration WHERE ATT_ID = {$attendee_id} AND EVT_ID = {$event_id}" );
+			$user_registrations = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}esp_registration WHERE ATT_ID = {$attendee_id} AND EVT_ID = {$event_id} AND STS_ID = '{$approved_status}'" );
 			if( !empty($user_registrations)) {
 				foreach( $user_registrations as $user_registration ) {
 					$booked += $wpdb->get_var( "SELECT COUNT(*) FROM {$wpdb->prefix}esp_registration WHERE TXN_ID = {$user_registration->TXN_ID} AND TKT_ID = {$ticket_id}" );
