@@ -526,8 +526,6 @@ function custom_EE_Export__report_registrations__reg_csv_array($reg_csv_array, $
 	$users = get_users(array('meta_key' => 'EE_Attendee_ID', 'meta_value' => $registration['Registration.ATT_ID']));
 	$user = current($users);
 
-	print_r($registration['Registration.ATT_ID']);
-
 	$last_name = '';
 	$first_name = '';
 	$membership_id = '';
