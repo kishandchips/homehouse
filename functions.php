@@ -446,7 +446,8 @@ function custom_ticket_selector_chart_template__do_ticket_inside_row( $new_row_c
 			$booked = 0;
 			$approved_status = EEM_Registration::status_id_approved;
 			
-			$user_registrations = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}esp_registration WHERE ATT_ID = {$attendee_id} AND EVT_ID = {$event_id} AND STS_ID = '{$approved_status}'" );
+			$user_registrations = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}esp_registration WHERE ATT_ID = {$attendee_id} AND EVT_ID = {$event_id} AND STS_ID = '{$approved_status}' AND REG_count = 1" );
+			
 			if( !empty($user_registrations)) {
 				foreach( $user_registrations as $user_registration ) {
 					$booked += $wpdb->get_var( "SELECT COUNT(*) FROM {$wpdb->prefix}esp_registration WHERE TXN_ID = {$user_registration->TXN_ID} AND TKT_ID = {$ticket_id}" );
@@ -545,7 +546,8 @@ function custom_EE_Export__report_registrations__reg_csv_array($reg_csv_array, $
 		'Last Name' => $last_name, 
 		'First Name' => $first_name, 
 		'Membership ID' => $membership_id,
-		'E-mail' => $email, 
+		'E-mail' => $email,
+		'Registration time' => $reg_csv_array['Time registration occurred[REG_date]']
 	);
 	
 	$reg_csv_array = $prepend + $reg_csv_array;
