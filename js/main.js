@@ -32,6 +32,10 @@
 			});			
 
 			$('.equal-height').matchHeight();	
+
+			if($('#ee-Sage_Pay-billing-form-zip-input-dv').length) {
+				$('#ee-Sage_Pay-billing-form-zip-lbl').html('Postcode <span class="ee-asterisk">*</span>');
+			}
 		},
 
 		header: {

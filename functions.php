@@ -468,7 +468,7 @@ function custom_ticket_selector_chart_template__do_ticket_inside_row( $new_row_c
 					<?php if ( apply_filters( 'FHEE__ticket_selector_chart_template__display_ticket_price_details', TRUE )) { ?>
 						<td class="tckt-slctr-tbl-td-price jst-rght"><?php echo EEH_Template::format_currency( $ticket_price ); ?>&nbsp;<span class="smaller-text no-bold"><?php
 							if ( $ticket_bundle ) {
-								echo apply_filters( 'FHEE__ticket_selector_chart_template__per_ticket_bundle_text', __( ' / bundle', 'event_espresso' ));
+								echo apply_filters( 'FHEE__ticket_selector_chart_template__per_ticket_bundle_text', __( ' / ticket', 'event_espresso' ));
 							} else {
 								echo apply_filters( 'FHEE__ticket_selector_chart_template__per_ticket_text', __( ' / ticket', 'event_espresso' ));
 							}?></span> &nbsp;
