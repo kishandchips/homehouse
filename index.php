@@ -1,76 +1,93 @@
 <?php get_header(); ?>
 
-<div id="blog" class="flex-page has-sidebar page-pattern" <?php if(get_field('page_pattern')): ?> style="background-image: url(<?php the_field('page_pattern') ?>)"<?php endif; ?> >
+<div id="blog" class="flex-page">
 
 	<div id="content-wrapper">
 		<div class="container">
-			<div class="sidebar column">
-				<h3 class="sidenav-title">Categories</h3>
-
-				<?php dynamic_sidebar('blog' ); ?>
-			</div><!-- sidenav -->
-		
+			<section class="blog-header">
+				<div class="top">
+					<a href="https://twitter.com/HomeHouseLondon" target="_blank"><h3><?php _e('@homehouselondon'); ?></h3></a>
+					<?php get_template_part('/inc/socials'); ?>
+				</div>
+				<div class="bottom">
+					<a href="https://instagram.com/explore/tags/homefromhome/" target="_blank"><h4><?php _e('#homefromhome'); ?></h4></a>
+				</div>
+			</section>
 
 			<section class="inner-content column">
-				<div class="mob-bar">
-					<button aria-role="Mobile Sidebar Button" class="mob-button">
-	                    <i class="icon-menu"></i>
-	                    <span>Side Menu</span>
-	                </button>						
-				</div>
 
+			<div id="blog-categories">
+				<span class="filterby">Filter by:</span>
+				<ul>
+					<?php 
+					    $args = array(
+						'show_option_all'    => 'All',
+						'orderby'            => 'name',
+						'order'              => 'ASC',
+						'style'              => 'list',
+						'hide_empty'         => 0,
+						'title_li'           => __( '' ),
+						'echo'               => 1,
+						'depth'              => 0,
+						'taxonomy'           => 'category',
+					    );
+					    wp_list_categories( $args ); 
+					?>
+				</ul>
+			</div>			
+			<div id="post-list">
+				<?php $i = 1; ?>
 				<?php if(have_posts()): while(have_posts()): the_post(); ?>
 					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'grid-rect-med' ); ?>
 
-					<article class="post column col-full">
+					<article class="post-item">	
+
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-							<div class="image" style="background-image:url(<?php echo $image[0]; ?>)">
-							</div>
-							<div class="article-meta">
-								<div class="date">
-									<span class="day">
-										<?php the_time('d'); ?>
-									</span>
-									<span class="month">
-										<?php the_time('F');?>
-									</span>
-								</div>
+							<img class="image" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>">
+						</a>
+						<div class="article-meta">
+							<div class="meta">
 								<div class="categories">
 									<?php the_category(); ?>
 								</div>
-								<h2>
-									<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-										<?php the_title(); ?>
-									</a>
-								</h2>
-								<div class="excerpt">
-									<?php the_excerpt(); ?>
+								<div class="published">
+									<?php the_time('l'); ?>, <?php the_time('d'); ?> <?php the_time('F');?> <?php the_time('Y');?>
 								</div>
-								<p><b><a href="<?php the_permalink();?>">Read More &rsaquo;</a></b></p>
 							</div>
-						</a>
-					</article><!-- post -->
-
+							<a class="title" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+								<h2>
+									<?php the_title(); ?>	
+								</h2>
+							</a>
+							<div class="excerpt">
+								<?php custom_excerpt(20, ' ...'); ?>
+							</div>
+						</div>
+					</article>
+					<?php $i++; ?>
 				<?php endwhile; ?>
-				    <?php if (  $wp_query->max_num_pages > 1 ) : ?>
-					    <div id="posts-navigation" class="navigation">
-					        <div class="nav-previous">
-					            <?php previous_posts_link( '<span class="meta-nav">&larr;</span>&nbsp;&nbsp;Newer posts' ); ?>
-					        </div>
-					        <div class="nav-next">
-					            <?php next_posts_link( 'Older posts&nbsp;&nbsp;<span class="meta-nav">&rarr;</span>' ); ?>
-					        </div>
-					    </div><!-- #nav-below -->
-				    <?php endif; ?>	
-
 			    <?php else: ?>
-			    
-			    <h1>Sorry, no posts found.</h1>
-			    
+				    <h1>Sorry, no posts found.</h1>
 			    <?php endif; ?>	
 			    <?php wp_reset_query(); ?>
+			</div>
+
+			<?php
+				$next_link = get_next_posts_link(__('Newer Entries &raquo;'));
+				if ($next_link) {
+			?>
+				<nav id="infinite">
+					<div id="navbelow">
+						<?php next_posts_link('Next &raquo;'); ?>			
+					</div>
+					<a id="next"><?php _e('Load More Posts'); ?></a>	
+				</nav>
+			<?php } ?>
 
 			</section><!-- .inner-content -->
+			<div class="sidebar column">
+				<?php dynamic_sidebar('blog' ); ?>
+			</div><!-- sidenav -->			
 		</div><!-- .container -->
 	</div><!-- #content-wrapper -->
 </div><!-- #blog -->

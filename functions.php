@@ -1,5 +1,7 @@
 <?php
 define('THEME_NAME', 'homehouse');
+$template_directory = get_template_directory();
+
 $template_directory_uri = get_template_directory_uri();
 
 add_theme_support( 'post-thumbnails' );
@@ -73,6 +75,8 @@ add_action( 'AHEE__EE_System__set_hooks_for_shortcodes_modules_and_addons', 'cus
 
 add_action('admin_bar_menu', 'custom_button_example', 80);
 
+add_action( 'pre_get_posts', 'custom_admin_ee_sorting' );
+
 remove_action('wp_head', 'feed_links', 2);
 
 remove_action('wp_head', 'feed_links_extra', 3);  
@@ -99,6 +103,11 @@ add_filter( 'widget_title', '__return_false' );
 
 add_filter( 'FHEE__EE_Ticket_Selector__display_ticket_selector__template_path' , 'custom_Ticket_Selector__display_ticket_selector__template_path');
 
+add_filter( 'wp_list_categories', 'tax_cat_active', 10, 2 );	
+
+add_filter('widget_text', 'do_shortcode');
+
+
 add_shortcode('loggedin', 'check_user' );
 
 add_shortcode('button', 'button');
@@ -117,6 +126,13 @@ function custom_scripts(){
 	wp_enqueue_script('video', $template_directory_uri . '/js/plugins/video.dev.js', array('jquery'), '', true);
 	wp_enqueue_script('flexslider', $template_directory_uri . '/js/plugins/jquery.flexslider.js', array('jquery'), '', true);
 	wp_enqueue_script('imagesloaded', $template_directory_uri . '/js/plugins/imagesloaded.js', array('jquery'), '', true);
+	if (is_home()) {
+		wp_enqueue_script( 'infinite_scroll',  get_template_directory_uri() . '/js/plugins/jquery.infinitescroll.min.js', array('jquery'),null,true );
+	}
+
+	if (is_single()) {
+		wp_enqueue_script( 'sticky',  get_template_directory_uri() . '/js/plugins/jquery.hc-sticky.min.js', array('jquery'),null,true );
+	}
 	wp_enqueue_script('isotope', $template_directory_uri . '/js/plugins/isotope.js', array('jquery'), '', true);
 	wp_enqueue_script('lazy', $template_directory_uri . '/js/plugins/blazy.min.js', array('jquery'), '', true);
 	wp_enqueue_script('matchheight', $template_directory_uri . '/js/plugins/matchheight.js', array('jquery'), '', true);
@@ -719,6 +735,11 @@ function custom_Ticket_Selector__display_ticket_selector__template_path() {
 }
 
 function custom_init() {
+
+	global $template_directory;
+
+	require( $template_directory . '/inc/classes/bfi-thumb.php' );
+
 	if ( isset($_GET['action']) && $_GET['action'] == 'sync_with_user') {
 		$users = get_users( array('meta_key' => 'EE_Attendee_ID', 'meta_compare' => 'NOT EXISTS') );
 
@@ -764,7 +785,6 @@ function custom_admin_ee_sorting( $query ) {
 	}
 }
 
-add_action( 'pre_get_posts', 'custom_admin_ee_sorting' );
 
 function espresso_clean_event_status() {
     global $post;
@@ -773,4 +793,32 @@ function espresso_clean_event_status() {
     $status = $event instanceof EE_Event ? $event->pretty_active_status( FALSE ) : 'inactive';
     $status_sans_tags = wp_strip_all_tags($status);
     return $status_sans_tags;
+}
+
+function custom_excerpt($new_length = 20, $new_more = '...') {
+  add_filter('excerpt_length', function () use ($new_length) {
+    return $new_length;
+  }, 999);
+  add_filter('excerpt_more', function () use ($new_more) {
+    return $new_more;
+  });
+  $output = get_the_excerpt();
+  $output = apply_filters('wptexturize', $output);
+  $output = apply_filters('convert_chars', $output);
+  $output = '<p>' . $output . '</p>';
+  echo $output;
+}
+
+function tax_cat_active( $output, $args ) {
+
+  if(is_single()){
+    global $post;
+
+    $terms = get_the_terms( $post->ID, $args['taxonomy'] );
+    foreach( $terms as $term )
+        if ( preg_match( '#cat-item-' . $term ->term_id . '#', $output ) )
+            $output = str_replace('cat-item-'.$term ->term_id, 'cat-item-'.$term ->term_id . ' current-cat', $output);
+  }
+
+  return $output;
 }

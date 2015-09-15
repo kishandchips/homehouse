@@ -20,6 +20,7 @@
 			this.cedric.init();
 			this.contact.init();
 			this.video.init();
+			this.infiniteScroll();
 
 			main.w.on('load', function(){
 				$('.flexslider').flexslider({
@@ -29,7 +30,21 @@
 			    	pauseOnHover: true
 			  	});
 			  	main.sidebar.resize();
-			});			
+			});		
+
+			if($('#single .share-bar').length) {
+				if(main.w.width() > 899) {
+					$('#single .share-bar, #single .follow-bar').height($('#single .article-meta').height());
+					$('#single .share-bar .share').hcSticky({
+						top: 10
+					});
+
+					$('#single .follow-bar .follow').hcSticky({
+						top: 10
+					});
+
+				}
+			}				
 
 			$('.equal-height').matchHeight();	
 
@@ -358,7 +373,46 @@
 					});
 				});
 			}
-		}
+		},
+
+		infiniteScroll: function() {
+			var container = $('#post-list');
+
+			if(container.length) {
+				container.infinitescroll({
+					navSelector: "#navbelow",
+					nextSelector: "#navbelow a",
+					itemSelector: ".post-item",
+					extraScrollPx: 150,
+					loading: {
+						finishedMsg: 'No more items to load.',
+						msgText: ' ',
+						img: site_url +'/wp-content/themes/homehouse/img/infloader.gif'
+					}
+				}, function (newElements) {
+					var newElems = $( newElements ).hide();
+						newElems.imagesLoaded(function(){
+						newElems.fadeIn(); // fade in when ready
+					});
+					$( "#infscr-loading" ).remove();
+				});
+
+				if ($('body').hasClass('blog')) {
+					$(window).unbind('.infscr');
+					$('a#next').click(function(e){
+						e.preventDefault();
+					    container.infinitescroll('retrieve');
+					 	return false;
+					});
+				};
+
+
+				$(document).ajaxError(function(e,xhr,opt) {
+					if(xhr.status==404)
+					  $('a#next').remove();
+				});			  	
+			}
+		}		
 
 	};//main
 

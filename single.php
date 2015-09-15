@@ -1,74 +1,91 @@
 <?php get_header(); ?>
 
-<div id="single" class="flex-page has-sidebar page-pattern">
+<div id="single" class="flex-page">
 	<div id="content-wrapper">
-		<div class="container">
-			<?php if ( function_exists('yoast_breadcrumb') ) {
-				yoast_breadcrumb('<p id="breadcrumbs">','</p>');
-			} ?><!-- .breadcrumbs -->
-				
-			<div class="sidebar column">
-				<h3 class="sidenav-title">Categories</h3>
-
-				<?php dynamic_sidebar('blog' ); ?>
-			</div><!-- sidenav -->
-
+		<div class="container">				
 			<section class="inner-content column">
 				<article class="single">
 					<?php if(have_posts()): while(have_posts()): the_post(); ?>
-						<div class="single-meta">
-							<div class="date">
-								<span class="day">
-									<?php the_time('d'); ?>
-								</span>
-								<span class="month">
-									<?php the_time('F');?>
-								</span>	
-							</div>
-							
-							<div class="title">
-								<h3><?php the_title(); ?></h3>
-							</div>
+						<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'full' ); ?>
 
-							<div class="author">
-								<span>Added By </span>
-								<?php the_author(); ?>
+						<article class="post-item">	
+
+							<?php if($image): ?>
+								<div class="image" style="background-image: url(<?php echo $image[0]; ?>)"></div>
+							<?php endif; ?>
+							<div class="share-bar">
+								<?php get_template_part('/inc/share'); ?>			
 							</div>
-							<div class="categories">
-								<span>Filed under </span>
-								<?php the_category(); ?>
+							<div class="article-meta">
+								<div class="meta">
+									<div class="categories">
+										<?php the_category(); ?>
+									</div>
+									<div class="published">
+										<?php the_time('l'); ?>, <?php the_time('d'); ?> <?php the_time('F');?> <?php the_time('Y');?>
+									</div>
+								</div>
+								<h2>
+									<?php the_title(); ?>	
+								</h2>
+								<div class="excerpt">
+									<?php the_content(); ?>
+								</div>
 							</div>
-						</div>
-						<div class="body">
-							<?php the_content(); ?>
-						</div>
-						
+							<div class="follow-bar">
+								<div class="follow">
+									<div class="heading"><?php _e('Follow @homehouselondon'); ?></div>
+									<?php get_template_part('/inc/socials'); ?>				
+								</div>
+								
+							</div>							
+						</article>
+
 					<?php endwhile;endif; ?>
+
 					
-					<div class="separator"><span>&#9830;</span></div>
-
-					<div class="share">
-						<span>Share</span>
-						<ul class="social-icons">
-							<li>
-								<a href="http://www.facebook.com/share.php?u=<?php the_permalink(); ?>" title="Share on Facebook" target="_blank">
-									<i class="icon-facebook"></i>
-								</a>							
-							</li>
-							<li>
-								<a href="http://twitter.com/share?text=<?php the_title(); ?>" title="Share on Twitter" target="_blank">
-									<i class="icon-twitter"></i>
-								</a>
-							</li>
-						</ul>
-					</div>
-
 				</article>
-				<p>
-					<a href="<?php bloginfo('url'); ?>/blog" class="primary button small" title="Back to Homehouse Blog">Back to Blog</a>
-				</p>
 				
-			</section><!-- .inner-content -->		
+			</section><!-- .inner-content -->	
+
+			<div id="related-posts">
+				<h2 class="heading"><?php _e('More Like This'); ?></h2>
+				<?php 
+				$query = new WP_Query( array ( 'orderby' => 'rand', 'posts_per_page' => '3', 'post__not_in' => array($post->ID) ) );
+				while ( $query->have_posts() ) : $query->the_post(); ?>
+
+					<?php 
+						$image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'full' ); 
+						$image_size = array('width' => 370, 'height' => 235);
+						$image = bfi_thumb($image[0], $image_size);
+					?>
+
+					<article class="post-item">	
+
+						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+							<img class="image" src="<?php echo $image; ?>" alt="<?php the_title(); ?>">
+						</a>
+						<div class="article-meta">
+							<div class="meta">
+								<div class="categories">
+									<?php the_category(); ?>
+								</div>
+								<div class="published">
+									<?php the_time('l'); ?>, <?php the_time('d'); ?> <?php the_time('F');?> <?php the_time('Y');?>
+								</div>
+							</div>
+							<a class="title" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+								<h2>
+									<?php the_title(); ?>	
+								</h2>
+							</a>
+						</div>
+					</article>
+				<?php endwhile;
+
+				wp_reset_postdata();
+				 ?>				
+			</div>	
 		</div><!-- .container -->
 	</div><!-- #content-wrapper -->
 </div><!-- #single-cedric -->

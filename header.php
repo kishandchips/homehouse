@@ -14,6 +14,10 @@
     </head>
 	<body <?php body_class(); ?>>
 
+    <script type="text/javascript">
+       var site_url = '<?php bloginfo('url'); ?>';
+    </script>        
+
     <div id="kanye-west">
 
         <div id="login">
@@ -69,10 +73,7 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/img/logo-header.png" alt="">
                 </a>
             </div>
-            <ul class="social">
-                <li><a href="https://www.facebook.com/HomeHouseLondon" class="icon" target="_blank"><i class="icon-facebook"></i></a></li>
-                <li><a href="https://twitter.com/HomeHouseLondon" class="icon" target="_blank"><i class="icon-twitter"></i></a></li>
-            </ul>
+            <?php get_template_part('/inc/socials'); ?>
             <div class="logo-small">
                 <a href="<?php echo bloginfo('url'); ?> ">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/logo-footer.png" alt="">

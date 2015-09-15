@@ -32,10 +32,7 @@
 
 	                wp_nav_menu( $args ); 
 	            ?>
-				<ul class="social">
-					<li><a href="https://www.facebook.com/HomeHouseLondon" class="icon" target="_blank"><i class="icon-facebook"></i></a></li>
-					<li><a href="https://twitter.com/HomeHouseLondon" class="icon" target="_blank"><i class="icon-twitter"></i></a></li>
-				</ul>
+				<?php get_template_part('/inc/socials'); ?>
 			</nav>			
 		</div>
 	</div><!-- .sitemap -->

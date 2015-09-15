@@ -1529,26 +1529,6 @@ nav{
 					}	
 				}//.menu
 
-				ul.social{
-					display: inline-block;
-
-					li{
-						display: inline-block;
-						line-height: 50px;
-
-						a{
-							color: #fff;
-						}
-					}
-
-					.icon{
-						display: inline-block;
-						vertical-align: middle;
-						font-size: 1em;
-						text-decoration: none;
-					}
-				}
-
 				@media screen and (max-width:500px){
 					display: block;
 					text-align: center;
