@@ -116,9 +116,16 @@ nav{
 		right: 3em;
 		top: 1.5em;		
 
+		@media screen and (max-width: 800px){
+			top: 6em;
+			right: 1em;
+		}			
+
 		@media screen and (max-width: 600px){
-			top: 0em;
+			top: 4em;
 		}
+
+	
 
 		li{
 			display: inline-block;

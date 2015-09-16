@@ -31,14 +31,14 @@
 								<div class="excerpt">
 									<?php the_content(); ?>
 								</div>
+								<a href="<?php bloginfo('url'); ?>/blog" class="primary button small" title="Back to @homehouselondon">Back to @homehouselondon</a>
 							</div>
 							<div class="follow-bar">
 								<div class="follow">
 									<div class="heading"><?php _e('Follow @homehouselondon'); ?></div>
 									<?php get_template_part('/inc/socials'); ?>				
 								</div>
-								
-							</div>							
+							</div>	
 						</article>
 
 					<?php endwhile;endif; ?>
@@ -47,6 +47,11 @@
 				</article>
 				
 			</section><!-- .inner-content -->	
+		</div>
+		<div class="container">	
+
+			<?php get_template_part('/inc/post-comments'); ?>			
+
 
 			<div id="related-posts">
 				<h2 class="heading"><?php _e('More Like This'); ?></h2>
@@ -56,7 +61,7 @@
 
 					<?php 
 						$image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID),'full' ); 
-						$image_size = array('width' => 370, 'height' => 235);
+						$image_size = array('width' => 420, 'height' => 255);
 						$image = bfi_thumb($image[0], $image_size);
 					?>
 

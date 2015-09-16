@@ -60,7 +60,10 @@
 								</h2>
 							</a>
 							<div class="excerpt">
-								<?php custom_excerpt(20, ' ...'); ?>
+							<?php
+								$more = ' ... <a href="'. get_the_permalink().'">Click to coninue</a>';
+							?>
+								<?php custom_excerpt(20, $more); ?>
 							</div>
 						</div>
 					</article>

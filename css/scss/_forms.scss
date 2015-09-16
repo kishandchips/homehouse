@@ -679,3 +679,187 @@ form.edit-profile{
 		border: 1px solid #E6DB55;
 	}
 }// .edit-profile
+
+
+#comments {
+	@extend .clearfix;
+	max-width: 90%;
+	margin: 3em auto;
+}
+
+.post-comments {
+	@extend .clearfix;
+	margin: 0;
+	padding: 0;
+
+	.comment-list {
+		margin: 2em 0 0 0;
+	}
+}
+
+.comment-respond {
+	border-top: 4px solid #573168;
+	border-bottom: 4px solid #573168;
+	padding-bottom: 2em;
+
+	.comment-reply-title {
+		position: relative;
+		text-align: center;
+		padding: 1em 0;
+		@include garamond-italic;
+		@include font-size(18);
+	}
+
+}
+
+.comment-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	li {
+		padding: 2em 3em;
+
+		@include device-width(10) {
+			padding: 1em;
+		}
+
+		&:nth-child(2n - 1) {
+			background: #f5f5f5;
+		}
+
+		p {
+			margin: 1em 0;
+		}
+
+		.comment-author {
+			cite {
+				color: #000;
+				@include font-size(18);
+				text-transform: uppercase;
+				letter-spacing: 2px;
+			}
+
+			.says {
+				color: #848484;
+			}
+		}
+
+		.comment-meta {
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-size: 10px;
+
+			a {
+				color: #848484;
+				text-decoration: none;
+
+				&:hover {
+					color: #000;
+				}			
+			}
+		}
+
+		.comment-reply-link {
+			font-size: 10px;
+			letter-spacing: 0.5px;
+			padding: 1em 0;
+			text-decoration: none;
+			color: #573168;
+
+			&:before {
+				@include icon(add);
+				margin: 0 0.6em 0 0;
+			}
+		}
+
+		.children {
+			list-style: none;
+			padding: 0;
+		}
+	}
+}
+
+.comment-form {
+
+	p {
+		margin: 0.5em 0;
+	}
+
+	.comment-form-author,
+	.comment-form-email,
+	.comment-form-url,
+	.comment-form-comment {
+		@extend .clearfix;
+	}
+
+	.comment-form-author,
+	.comment-form-email {
+		float: left;
+		width: 49%;
+
+		@include device-width(6) {
+			float: none;
+			width: auto;
+		}
+	}
+
+	.comment-form-author {
+		margin-right: 2%;
+
+		@include device-width(6) {
+			margin-right: 0;
+		}
+	}
+
+	.comment-form-url {
+		clear: left;
+		margin-bottom: 1em;
+	}
+
+	.comment-form-comment {
+		label {
+			padding-top: 0;
+		}
+	}
+
+	label {
+		width: 80px;
+		display: block;
+		float: left;
+		letter-spacing: 1px;
+		padding: 1.2em 0 0 0;
+		@include garamond;
+	}
+
+	input[type=text],
+	input[type=email],
+	input[type=url],
+	textarea {
+		background: #FFF;
+		border: 1px solid #eeeeee;
+		width: calc(100% - 80px) !important;
+		@include box-sizing(border-box);
+		float: left;
+		font-size: 13px !important;
+		text-transform: none;
+		padding: 1em;
+	}
+
+	.form-submit {
+		text-align: right;
+
+		input[type=submit] {
+			@extend .button;
+			@extend .primary;
+		}
+	}
+
+	.comment-notes {
+		font-style: italic;
+		font-size: 10px;
+	}
+}
+
+
+

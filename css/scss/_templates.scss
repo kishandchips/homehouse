@@ -679,6 +679,10 @@
 			margin-bottom: 40px;
 			text-align: center;
 
+			@include device-width(6) {
+				text-align: center;
+			}
+
 			.top {
 				h3 {
 					@include inline-block;
@@ -689,6 +693,10 @@
 					&:hover {
 						color: rgb(85, 26, 139);
 					}
+
+					@include device-width(6) {
+						@include font-size(20);
+					}					
 				}
 			}
 
@@ -705,6 +713,9 @@
 			}
 
 			ul.social{
+				@include device-width(6) {
+					padding: 0;
+				}					
 
 			    li{
 			    	margin: 0 5px;
@@ -809,7 +820,7 @@
 					@include inline-block;
 					font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;	
 					text-transform: uppercase;
-					@include font-size(7);
+					@include font-size(7);					
 				}
 
 				.published {
@@ -944,10 +955,30 @@
 	}
 
 	.inner-content {
+		@extend .clearfix;
+		clear: both;
+
+		@include device-width(5) {
+			padding: 0;
+		}
+
 		.post-item {
 			float: none;
 			@extend .clearfix;
 			margin-top: 50px;
+
+				@include device-width(5) {
+					margin-top: 0;
+				}			
+
+			.primary.button {
+				background: #573168;
+				color: #FFF;
+				width: 265px;
+				display: block;
+				margin: 5em auto;
+				text-align: center;
+			}
 
 			.image {
 				width: 100%;
@@ -969,7 +1000,8 @@
 				@include device-width(6) {
 					width: 100%;
 					float: none;
-					padding: 0 10%;
+					padding: 0 5%;
+					margin-top: 30px;
 				}
 			}
 
@@ -981,7 +1013,7 @@
 				
 				@include device-width(6) {
 					width: 100%;
-					padding: 0 10%;
+					padding: 0 5%;
 					float: none;
 				}				
 			}
@@ -992,6 +1024,10 @@
 					font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;	
 					text-transform: uppercase;
 					@include font-size(8);
+
+					@include device-width(6) {
+						@include font-size(6);
+					}					
 				}
 
 				.published {
@@ -1007,6 +1043,10 @@
 						padding: 7px 13px;	
 						@include font-size(8);	
 						@include inline-block;
+
+						@include device-width(6) {
+							@include font-size(6);
+						}						
 					}
 				}
 			}			
@@ -1019,12 +1059,20 @@
 				line-height: 1;			
 				margin-top: 25px;
 				@include garamond;
+
+				@include device-width(6) {
+					@include font-size(25);
+				}				
 			}
 
 			.excerpt {
 				color: #333333;
 				line-height: 1.4;
 				@include font-size(11);
+
+				@include device-width(6) {
+					@include font-size(9);
+				}				
 			}		
 		}
 	}
@@ -1035,8 +1083,14 @@
 			margin: 0;
 
 			li {
-				@include inline-block;
+				display: block;
 				margin-right: 5px;
+				@include font-size(17);
+
+				@include device-width(6) {
+					@include inline-block;
+					@include font-size(12);						
+				}				
 
 				i {
 					vertical-align: middle;
@@ -1055,7 +1109,11 @@
 					}
 					&.icon-mail {
 						color: #333;
-						@include font-size(8);
+						@include font-size(10);
+
+						@include device-width(6) {
+							@include font-size(8);						
+						}						
 					}
 				}
 
@@ -1092,6 +1150,7 @@
 
 #related-posts {
 	@extend .clearfix;
+	margin-top: 4em;
 
 	h2.heading {
 		@include garamond;
@@ -1101,7 +1160,9 @@
 		padding-left: 1%;
 
 		@include device-width(5) {
-			@include font-size(20);						
+			@include font-size(20);	
+			text-align: center;
+			margin-bottom: 20px; 
 		}		
 	}
 
@@ -1114,6 +1175,30 @@
 			width: 100%;
 			float: none;
 			margin-bottom: 30px;
+			padding: 0;
+		}
+
+		&:nth-of-type(2), &:nth-of-type(3) {
+			@include device-width(4) {
+				width: 50%;
+				float: left;
+			}
+		} 
+
+		.image {
+			@include device-width(4) {
+				margin-bottom: 0;
+			}			
+		}
+
+		.article-meta {
+			padding: 0 5%
+		}
+
+		.meta {
+			@include device-width(4) {
+				display: none;
+			}			
 		}
 
 
