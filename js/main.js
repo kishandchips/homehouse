@@ -32,6 +32,19 @@
 			  	main.sidebar.resize();
 			});		
 
+			if ($('ul.stream').length) {
+					var amount = 0;
+					var timerId = setInterval(function () {
+						  $('.stream .dcsns-twitter:eq(0), .stream .dcsns-twitter:eq(1) ').addClass('show');
+						  $('.stream .dcsns-instagram:eq(0), .stream .dcsns-instagram:eq(1) ').addClass('show');
+						  $('.stream .dcsns-facebook:eq(0), .stream .dcsns-facebook:eq(1) ').addClass('show');
+					    amount++;
+					    if(amount === 10) {
+					        clearInterval(timerId);
+					    }
+					}, 1 * 1000); // do this every 1 seconds 					
+			}
+
 			if($('#single .share-bar').length) {
 				if(main.w.width() > 899) {
 					$('#single .share-bar, #single .follow-bar').height($('#single .article-meta').height());

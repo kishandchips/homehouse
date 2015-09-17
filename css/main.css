@@ -1638,38 +1638,61 @@ ul.social {
   list-style-type: none; }
   .dcwss-content .stream li {
     margin-bottom: 40px;
-    position: relative; }
-  .dcwss-content .stream .twtimage {
-    width: 111%;
-    display: block;
-    margin: 5% 0 0 -5.5%; }
-    .dcwss-content .stream .twtimage img {
-      margin-bottom: -37px; }
-  .dcwss-content .stream .dcsns-twitter {
+    position: relative;
     background: #212121;
-    color: #FFF; }
-    .dcwss-content .stream .dcsns-twitter .section-text {
-      padding: 30px 17px; }
-    .dcwss-content .stream .dcsns-twitter .section-intro {
+    color: #FFF;
+    display: none;
+    position: relative !important;
+    top: auto !important;
+    opacity: 1;
+    transition-property: transform, opacity;
+    transition-duration: 0.8s; }
+    .dcwss-content .stream li.show {
+      display: block !important; }
+    .dcwss-content .stream li .section-intro {
       padding: 10px;
       width: 100%;
       display: block;
       text-align: right; }
-    .dcwss-content .stream .dcsns-twitter .inner {
+    .dcwss-content .stream li img.icon {
+      position: absolute;
+      bottom: 7px;
+      left: 5px; }
+    .dcwss-content .stream li.dcsns-twitter .section-text {
+      padding: 30px 17px; }
+    .dcwss-content .stream li.dcsns-twitter .inner {
       padding: 5%; }
-    .dcwss-content .stream .dcsns-twitter a {
+    .dcwss-content .stream li.dcsns-twitter a {
       color: #FFF;
       text-decoration: none;
       -moz-transition: all, 0.3s;
       -o-transition: all, 0.3s;
       -webkit-transition: all, 0.3s;
       transition: all, 0.3s; }
-      .dcwss-content .stream .dcsns-twitter a:hover {
+      .dcwss-content .stream li.dcsns-twitter a:hover {
         text-decoration: underline; }
-    .dcwss-content .stream .dcsns-twitter img.icon {
-      position: absolute;
-      bottom: 7px;
-      left: 5px; }
+    .dcwss-content .stream li.dcsns-instagram .section-intro {
+      background: #125688 !important; }
+    .dcwss-content .stream li.dcsns-instagram .section-text {
+      padding: 5%;
+      display: inline-block; }
+    .dcwss-content .stream li.dcsns-instagram .section-user {
+      display: none; }
+    .dcwss-content .stream li.dcsns-facebook .section-intro {
+      background: #3b5998 !important; }
+    .dcwss-content .stream li.dcsns-facebook .section-text {
+      padding: 5%;
+      display: inline-block; }
+      .dcwss-content .stream li.dcsns-facebook .section-text a {
+        color: #FFF; }
+    .dcwss-content .stream li.dcsns-facebook .section-user {
+      display: none; }
+  .dcwss-content .stream .twtimage {
+    width: 111%;
+    display: block;
+    margin: 5% 0 0 -5.5%; }
+    .dcwss-content .stream .twtimage img {
+      margin-bottom: -37px; }
 
 #espresso-notices {
   display: none !important; }

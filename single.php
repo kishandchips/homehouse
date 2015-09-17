@@ -31,7 +31,7 @@
 								<div class="excerpt">
 									<?php the_content(); ?>
 								</div>
-								<a href="<?php bloginfo('url'); ?>/blog" class="primary button small" title="Back to @homehouselondon">Back to @homehouselondon</a>
+								<a href="<?php echo get_permalink(35); ?>" class="primary button small" title="Back to @homehouselondon">Back to @homehouselondon</a>
 							</div>
 							<div class="follow-bar">
 								<div class="follow">

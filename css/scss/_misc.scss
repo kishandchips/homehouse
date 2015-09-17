@@ -221,6 +221,91 @@ ul.social{
         li {
             margin-bottom: 40px;
             position: relative;
+            background: #212121;
+            color: #FFF;
+            display: none;
+            position: relative !important;
+            top: auto !important;
+            opacity: 1;
+            transition-property: transform, opacity;
+            transition-duration: 0.8s;            
+
+            &.show {
+                display: block !important;
+            }
+
+            .section-intro {
+                padding: 10px;
+                width: 100%;
+                display: block;
+                text-align: right;      
+            }    
+            
+            img.icon {
+                position: absolute;
+                bottom: 7px;
+                left: 5px;
+            }     
+
+            &.dcsns-twitter {
+
+                .section-text {
+                    padding: 30px 17px;
+                }
+
+
+
+                .inner {
+                    padding: 5%;
+                }
+
+                a {
+                    color: #FFF;
+                    text-decoration: none;
+                    @include transition(all,.3s);
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            &.dcsns-instagram {
+
+                .section-intro {
+                    background: #125688 !important;
+                }   
+
+                .section-text {
+                    padding: 5%;
+                    display: inline-block;
+                }           
+
+                .section-user {
+                    display: none;
+                }
+
+            }
+
+            &.dcsns-facebook {
+
+                .section-intro {
+                    background: #3b5998 !important;
+                }                 
+                
+                .section-text {
+                    padding: 5%;
+                    display: inline-block;
+
+                    a {
+                        color: #FFF;
+                    }
+                }
+
+                .section-user {
+                    display: none;
+                }
+            }                           
         }
 
         .twtimage {
@@ -231,42 +316,6 @@ ul.social{
             img {
                 margin-bottom: -37px;                
             }         
-        }
-
-        .dcsns-twitter {
-            background: #212121;
-            color: #FFF;
-
-            .section-text {
-                padding: 30px 17px;
-            }
-
-            .section-intro {
-                padding: 10px;
-                width: 100%;
-                display: block;
-                text-align: right;      
-            }
-
-            .inner {
-                padding: 5%;
-            }
-
-            a {
-                color: #FFF;
-                text-decoration: none;
-                @include transition(all,.3s);
-
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-
-            img.icon {
-                position: absolute;
-                bottom: 7px;
-                left: 5px;
-            }
         }
     }
 }

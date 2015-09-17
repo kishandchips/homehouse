@@ -61,7 +61,7 @@
 							</a>
 							<div class="excerpt">
 							<?php
-								$more = ' ... <a href="'. get_the_permalink().'">Click to coninue</a>';
+								$more = ' ... <a href="'. get_the_permalink().'">Click to continue</a>';
 							?>
 								<?php custom_excerpt(20, $more); ?>
 							</div>
