@@ -1,11 +1,11 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('fonts/icomoon.eot?-rqetlj');
-	src:url('fonts/icomoon.eot?#iefix-rqetlj') format('embedded-opentype'),
-		url('fonts/icomoon.woff2?-rqetlj') format('woff2'),
-		url('fonts/icomoon.ttf?-rqetlj') format('truetype'),
-		url('fonts/icomoon.woff?-rqetlj') format('woff'),
-		url('fonts/icomoon.svg?-rqetlj#icomoon') format('svg');
+	src:url('fonts/icomoon.eot?puulei');
+	src:url('fonts/icomoon.eot?puulei#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.woff2?puulei') format('woff2'),
+		url('fonts/icomoon.ttf?puulei') format('truetype'),
+		url('fonts/icomoon.woff?puulei') format('woff'),
+		url('fonts/icomoon.svg?puulei#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -24,6 +24,18 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-chevron-left:before {
+	content: "\e610";
+}
+.icon-chevron-right:before {
+	content: "\e611";
+}
+.icon-fulllscreen:before {
+	content: "\e612";
+}
+.icon-play-btn:before {
+	content: "\e60f";
+}
 .icon-mail:before {
 	content: "\e60d";
 }
@@ -75,3 +87,4 @@
 .icon-cross:before {
 	content: "\e603";
 }
+

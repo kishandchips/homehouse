@@ -25,6 +25,17 @@ button{
 			background-color: #573168;
 			border: 1px solid #573168;
 		}
+
+		&.purple {
+			background: #573168;
+			color: #FFF;
+			border: 1px solid #573168;
+
+			&:hover {
+				background: #000;
+				border: 1px solid #000;
+			}
+		}
 	}
 
 	&.secondary{
@@ -36,6 +47,17 @@ button{
 			color: #fff;
 			background-color: #000;
 		}
+
+		&.white {
+			border: 1px solid #FFF;
+			color: #FFF;
+			@include border-radius(2px);
+
+			&:hover {
+				background: #573168;
+				border: 1px solid #573168;
+			}
+		}		
 	}
 
 	&.download{
@@ -79,7 +101,7 @@ button{
 		font-size: 0.75em;
 	}
 	&.med{
-		font-size: 1.125em;
+		font-size: 1em;
 	}
 	&.large{
 		font-size: 1.5em;

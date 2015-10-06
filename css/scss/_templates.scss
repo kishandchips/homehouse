@@ -1,4 +1,4 @@
-.page-pattern{
+	.page-pattern{
 	background-image: url(../img/page-bg.jpg);
 }
 
@@ -1786,6 +1786,356 @@ body.logged-in{
 	background: url(../img/loader.gif) center center no-repeat;
 }
 
-.single-espresso_events {
 
+// BEDROOM ARCHIVE PAGE STYLES
+.page-bedrooms {
+
+	.hero.image:after {
+		content: none;
+		display: none;
+	}
+
+	.hero.image {
+		height: auto !important;
+	}	
+
+	.hero {
+		.title {
+			text-transform: capitalize;
+			background: none;
+		}
+
+		.image {
+			height: 600px;
+		}
+
+		.fancybox-media.icon {
+			display: block;
+			color: #FFF;
+		    text-decoration: none;
+		    font-size: 70px;	
+		    @include transition(all, 0.5s);
+		    line-height: 1.2;
+		    
+		    &:hover {
+		    	color: #B9B9B9;
+		    }		
+		}
+
+	}
+
+	.column {
+		min-height: 500px;
+
+		@include device-width(8) {
+			width: 100%;
+			float: none;
+			min-height: 2px;
+		}		
+
+		&.pad {
+	    	padding: 10px;
+		}
+
+		&.equal-height {
+			.image {
+				height: 100%;	
+
+				@include device-width(8) {
+					height: 350px;
+				}
+			}
+		}
+
+
+		.highlight {
+		    padding: 2em 2.5em;
+	        background-color: rgba(0, 0, 0, 0.65);
+	        min-width: 350px;
+
+			p {
+			    margin: .3em 0;
+			}
+
+			.button {
+				color: #FFF;
+				@include font-size(7);
+				border: 1px solid #FFF;
+				line-height: 1.5;
+			}
+		}
+	}
+
+	.prologue, .epilogue {
+		position: relative;
+
+		&:after {
+		    z-index: 10;
+
+			@include device-width(13) {
+				display: none;
+			}			
+		}
+
+		.inner {
+			background: url(../img/bg-diamond-black-pattern.jpg) left top repeat;
+			border: 1px solid #7c7c7c;
+			padding: 15%;
+			height: 100%;
+
+			@include device-width(8) {
+				padding: 10%;
+			}
+		}
+
+		p {
+		    font-size: 15px;
+    		line-height: 1.6;
+		}
+
+		h1 {
+			font-size: 33px;
+			font-family: 'Simoncini Garamond W01';
+		}
+	}
+
+	.prologue {
+		&:after {
+			content: '';
+			position: absolute;
+			background-image: url(../img/welcome-illustration.png);
+			background-size: cover;
+			width: 60%;
+			height: 47%;
+			bottom: -1px;
+			right: -23px;
+		}
+	}
+
+	.epilogue {
+		&:after {
+			content: '';
+			position: absolute;
+			background-image: url(../img/bedroom-bells.png);
+			background-size: cover;
+		    width: 72%;
+		    height: 31%;
+		    top: -5%;
+		    left: -20%;		    
+		}
+	}
+
+	@media screen and (max-width: 750px) {}
+	.flow .grid-flow {
+	    width: 100%;
+	}	
+}
+// BEDROOM LIST PAGE STYLES
+.page-template-template-bedrooms {
+	.rect-items {
+
+		.pad {
+			padding: 10px;
+		}
+
+		.content, .image {
+			height: 500px;
+		}
+
+		.content {
+			background: url(../img/bg-diamond-black-pattern.jpg) left top repeat;
+			border: 1px solid #7c7c7c;
+			text-align: left;
+			padding: 13%;
+			position: relative;
+
+			@include device-width(10) {
+				padding: 10%;
+			}
+
+
+			.title {
+				text-transform: none;
+				margin-bottom: .4em;
+			}
+
+			p {
+				font-size: 15px;
+			}
+
+			.buttons {
+				position: absolute;
+				bottom: 4em;
+				width: 100%;
+				text-align: center;
+				left: 0;			
+
+				a {
+					font-size: 14px;
+					padding: 16px 40px;
+				}
+
+				a:first-child {
+					margin-right: 35px;
+				}
+
+				@include device-width(12) {
+					a {
+					    font-size: 10px;
+					    padding: 10px 25px;
+					}
+				}
+
+				@include device-width(10) {
+					width: 86%;
+					left: 7%;
+
+					a:first-child {
+						margin-right: 0px;
+						margin-bottom: 10px;
+					}					
+				}					
+
+				@include device-width(8) {
+					position: static;
+					width: 100%;
+
+					a:first-child {
+						margin-right: 35px;
+					}					
+				}
+			}
+		}
+
+		@include device-width(8) {
+			.column {
+				width: 100%;
+			}
+
+			.content {
+				height: auto !important;
+			    padding: 4%;
+			}	
+		}
+	}
+}
+
+// SINGLE BEDROOM PAGE STYLES
+#single-bedroom {
+	background: url(../img/bg-diamond-black-pattern.jpg) left top repeat;
+
+	.container {
+		max-width: 1600px;
+		width: 100%;
+
+		.inner-content {
+			width: 40%;
+			float :left;
+			padding: 3em;
+			color: #dedede;
+
+			header {
+				border: none;
+
+				h2 {
+					font-size: 44px;
+					margin: 0 0 1.5em 0;
+				}
+			}
+
+			h3 {
+			    margin-top: 2em;
+			}
+
+			.buttons {
+				 margin-top: 2.5em;
+
+				a:first-child {
+					margin: 0 25px 25px 0;
+				}
+			}
+		}
+
+		.images {
+			width: 60%;
+			float: right;
+			height: 90vh;
+			border: none;
+			margin: 0;
+		    border-left: 17px solid #000;
+		    background: #000 url(../img/loader.gif) center center no-repeat;		
+
+			.slides {
+				height: 100%;
+
+				li {
+					height: 100%;	
+					background-position: center;
+					background-size: cover;			
+
+					.fancybox-thumb {
+						position: absolute;
+						top: 20px;
+						right: 20px;
+						color: #FFF;
+						text-decoration: none;
+						background: rgba(0,0,0,0.7);
+						padding: .3em .5em;
+						font-size: 25px;
+	
+						@include device-width(7) {
+							display: none;
+						}
+					}	
+				}
+			}
+
+			.flex-direction-nav {
+				a {
+					opacity: 1;
+					color: #FFF;
+					background: rgba(0,0,0,0.7);
+					padding: 1em;
+					width: 55px;
+					height: 55px;
+					text-align: center;
+
+					&.flex-prev, &.flex-next {
+
+						&:before {
+							margin-bottom: 1em;	
+							font-size: 25px;
+						}
+					}
+
+					&.flex-prev {
+						left: 20px;
+						&:before {
+							@include icon('chevron-left');
+						}
+					}
+
+					&.flex-next {
+						right: 20px;
+
+						&:before {
+							@include icon('chevron-right');	
+						}
+						
+					}
+				}
+			}
+		}
+
+		@include device-width(9) {
+			.inner-content, .images {
+				width: 100%;
+			}
+
+			.images {
+				height: 50vh;
+				padding-left: 0;
+			}
+		}
+	}
 }
