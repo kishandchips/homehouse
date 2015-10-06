@@ -42,7 +42,7 @@
 				<?php foreach ($images as $image): ?>
 
 					<div class="hero image">
-						<div class="videoWrapper">
+						<div class="videoWrapper valign">
 							<div id="ytplayer"></div>
 						</div>
 

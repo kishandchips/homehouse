@@ -1795,10 +1795,6 @@ body.logged-in{
 		display: none;
 	}
 
-	.hero.image {
-		height: auto !important;
-	}	
-
 	.hero {
 		.title {
 			text-transform: capitalize;
@@ -1827,6 +1823,16 @@ body.logged-in{
 	.column {
 		min-height: 500px;
 
+		&:not(.equal-height) {
+			.image {
+				min-height: 500px;
+
+				@include device-width(8) {
+					min-height: 400px;
+				}
+			}
+		}
+
 		@include device-width(8) {
 			width: 100%;
 			float: none;
@@ -1852,6 +1858,10 @@ body.logged-in{
 		    padding: 2em 2.5em;
 	        background-color: rgba(0, 0, 0, 0.65);
 	        min-width: 350px;
+
+	        @include device-width(8) {
+	        	    min-width: 300px;
+	        }
 
 			p {
 			    margin: .3em 0;

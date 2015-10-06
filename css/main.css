@@ -4851,8 +4851,6 @@ body.logged-in #login-bar {
 .page-bedrooms .hero.image:after {
   content: none;
   display: none; }
-.page-bedrooms .hero.image {
-  height: auto !important; }
 .page-bedrooms .hero .title, .page-bedrooms .hero .highlight, .page-bedrooms .hero #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu .page-bedrooms .hero a {
   text-transform: capitalize;
   background: none; }
@@ -4872,6 +4870,11 @@ body.logged-in #login-bar {
     color: #B9B9B9; }
 .page-bedrooms .column {
   min-height: 500px; }
+  .page-bedrooms .column:not(.equal-height) .image {
+    min-height: 500px; }
+    @media only screen and (max-width: 800px) {
+      .page-bedrooms .column:not(.equal-height) .image {
+        min-height: 400px; } }
   @media only screen and (max-width: 800px) {
     .page-bedrooms .column {
       width: 100%;
@@ -4888,6 +4891,9 @@ body.logged-in #login-bar {
     padding: 2em 2.5em;
     background-color: rgba(0, 0, 0, 0.65);
     min-width: 350px; }
+    @media only screen and (max-width: 800px) {
+      .page-bedrooms .column .highlight {
+        min-width: 300px; } }
     .page-bedrooms .column .highlight p {
       margin: .3em 0; }
     .page-bedrooms .column .highlight .button, .page-bedrooms .column .highlight input[type="submit"], .page-bedrooms .column .highlight .comment-form .form-submit input[type=submit], .comment-form .form-submit .page-bedrooms .column .highlight input[type=submit] {
