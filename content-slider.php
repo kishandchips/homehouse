@@ -26,6 +26,9 @@
 
 				<div class="hero-content valign">
 					<h2 class="title"><?php the_title(); ?></h2>
+					<?php if(get_field('description')): ?>
+						<div class="description"><?php the_field('description'); ?></div>
+					<?php endif; ?>
 				</div>
 
 				<img src="<?php echo $image['sizes']['slider']; ?>">

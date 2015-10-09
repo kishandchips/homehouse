@@ -184,3 +184,16 @@ button{
 
 	}
 }
+
+.bottom-back-button {
+	padding: 4em;
+	text-align: center;
+    background-image: url(../img/page-bg.jpg);
+
+	a {
+		&:before {
+			@include icon('chevron-left');
+		    margin-right: 15px;	
+		}
+	}
+}

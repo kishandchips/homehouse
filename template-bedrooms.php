@@ -16,7 +16,6 @@
 		<?php get_template_part( 'content', 'slider' ); ?>
 
 	<?php endif; ?>
-
 	<div id="content-wrapper">
 
 
@@ -57,6 +56,9 @@
 		<?php endforeach; ?>
 		
 	</div><!-- #content-wrapper -->
+	<div class="bottom-back-button">
+		<a href="<?php echo get_the_permalink(27); ?>" title="Back to bedrooms" class="button secondary white">Back to bedrooms</a>
+	</div>
 </div><!-- #bedrooms -->
 
 <?php get_footer(); ?>

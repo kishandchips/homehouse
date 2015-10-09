@@ -27,12 +27,6 @@ body {
     @extend .icon-#{$icon}:before !optional;
 }
 
-
-@mixin icon($icon){
-    @extend [class^="icon-"];
-    @extend .icon-#{$icon}:before !optional;
-}
-
 ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;

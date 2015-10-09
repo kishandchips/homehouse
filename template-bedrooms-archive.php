@@ -100,10 +100,10 @@
 			$prologue = get_field('prologue');
 			$epilogue = get_field('epilogue');
 			$i = 1;
-			$array = array(1,4);
+			//$array = array(1,4);
 		?>
 
-		<?php if($prologue): ?>
+<!-- 		<?php if($prologue): ?>
 			<div class="column col-1-3 pad prologue equal-height">
 				<div class="inner">
 					<p><?php echo $prologue; ?></p>
@@ -111,7 +111,7 @@
 			</div>
 		<?php endif; ?>
 
-		<?php if(have_rows('grid_items')): while(have_rows('grid_items')): the_row(); ?>
+ -->		<?php if(have_rows('grid_items')): while(have_rows('grid_items')): the_row(); ?>
 
 			
 			<div class="column pad <?php if (in_array($i, $array)){echo 'col-2-3 equal-height';} else {echo 'col-1-2';} ?> ">		
@@ -149,14 +149,14 @@
 			<?php $i++; ?>
 		<?php endwhile; endif; ?>
 
-		<?php if($epilogue): ?>
+<!-- 		<?php if($epilogue): ?>
 			<div class="column col-1-3 pad epilogue equal-height">
 				<div class="inner">
 					<p><?php echo $epilogue; ?></p>
 				</div>
 			</div>
 		<?php endif; ?>		
-
+ -->
 		</section><!--  .grid-flow -->
 	</div><!-- .flow -->
 

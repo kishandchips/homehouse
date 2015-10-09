@@ -11,6 +11,18 @@
 
 <div id="single-bedroom" class="flex-page">
 
+    <div id="call-us">
+        <div class="login-overlay"></div><!-- .login overlay -->
+        <div class="login-modal valign">
+            <button class="button call-us-close" aria-role="toggle login form">
+                <i class="icon-cross"></i>
+            </button>
+
+			<p>For more detailed information and to book by phone please call our dedicated Reservations Team, who will be more than happy to assist you in your enquiry. </p>
+			<p>Please call: <strong>0207 670 2000</strong> <br>or email: <a href="mailto:reservations@homehouse.co.uk">reservations@homehouse.co.uk</a></p>
+        </div><!-- .login -->   
+    </div><!-- #login -->
+
 	<div id="content-wrapper">	
 		<div class="container">
 
@@ -39,16 +51,16 @@
 					
 					<?php $images = get_field('images'); ?>
 					<?php if($images): ?>
-							<section class="images flexslider ">
+							<section class="images flexslider" data-controlnav="thumbnails">
 								
 								<ul class="slides">
 									<?php foreach ($images as $image): ?>
-										<li style='background-image: url(<?php echo $image['url']; ?>)'>
+										<li style="background-image: url(<?php echo $image['url']; ?>)" data-thumb="<?php echo $image['sizes']['medium']; ?>">
 											&nbsp;
-											<a class="fancybox-thumb" rel="fancybox-thumb-<?php echo $i; ?>" href="<?php echo $image['url']; ?>" title="">				
+<!-- 											<a class="fancybox-thumb" rel="fancybox-thumb-<?php echo $i; ?>" href="<?php echo $image['url']; ?>" title="">				
 										  		<span class="icon icon-fulllscreen"></span>
 										  	</a>											
-										</li>
+ -->									</li>
 									<?php endforeach; ?>
 								</ul>								
 								<div class="arrow-wrap"></div>
@@ -66,6 +78,10 @@
 		<?php get_template_part( 'content', 'grid' ); ?>
 
 	<?php endif; ?>		
+	<div class="bottom-back-button">
+		<a href="<?php echo get_the_permalink(27); ?>" title="Back to bedrooms" class="button secondary white">Back to bedrooms</a>
+	</div>
+
 
 
 	</div><!-- #content-wrapper -->

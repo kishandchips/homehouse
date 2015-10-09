@@ -1274,7 +1274,7 @@ button {
     .button.cta:hover, input.cta[type="submit"]:hover, .comment-form .form-submit input.cta[type=submit]:hover {
       background-color: #27ae60;
       border: 1px solid #27ae60; }
-  .button.small, input.small[type="submit"], #event_espresso_shopping_cart .price_list input[type="submit"].reg-allowed-limit, .slide-content-wrapper input[type="submit"].slide-description, #breadcrumbs input[type="submit"].breadcrumb_last, #cedric #isotope .grid-sizer .meta input[type="submit"].cat, #cedric #isotope .item .meta input[type="submit"].cat, input[type="submit"].js-login, #login .login-modal input[type="submit"].instructions, #login .login-modal .login-submit input[type="submit"].button-primary, #event_espresso_shopping_cart .price_list .button.reg-allowed-limit, #event_espresso_shopping_cart .price_list .comment-form .form-submit input.reg-allowed-limit[type=submit], .comment-form .form-submit #event_espresso_shopping_cart .price_list input.reg-allowed-limit[type=submit], .comment-form .form-submit input.small[type=submit], .comment-form .form-submit .slide-content-wrapper input[type=submit].slide-description, .slide-content-wrapper .comment-form .form-submit input[type=submit].slide-description, .comment-form .form-submit #breadcrumbs input[type=submit].breadcrumb_last, #breadcrumbs .comment-form .form-submit input[type=submit].breadcrumb_last, .comment-form .form-submit #cedric #isotope .grid-sizer .meta input[type=submit].cat, #cedric #isotope .grid-sizer .meta .comment-form .form-submit input[type=submit].cat, .comment-form .form-submit #cedric #isotope .item .meta input[type=submit].cat, #cedric #isotope .item .meta .comment-form .form-submit input[type=submit].cat, .comment-form .form-submit input[type=submit].js-login, .comment-form .form-submit #login .login-modal input[type=submit].instructions, #login .login-modal .comment-form .form-submit input[type=submit].instructions, .comment-form .form-submit #login .login-modal .login-submit input[type=submit].button-primary, #login .login-modal .login-submit .comment-form .form-submit input[type=submit].button-primary, .slide-content-wrapper .button.slide-description, #breadcrumbs a.button, #breadcrumbs .button.breadcrumb_last, #cedric #isotope .grid-sizer .meta .button.cat, #cedric #isotope .item .meta .button.cat, .button.js-login, #login .login-modal .button.instructions, #login .login-modal .login-submit .button.button-primary, #login-bar .login-options a.button {
+  .button.small, input.small[type="submit"], #event_espresso_shopping_cart .price_list input[type="submit"].reg-allowed-limit, .slide-content-wrapper input[type="submit"].slide-description, #breadcrumbs input[type="submit"].breadcrumb_last, #cedric #isotope .grid-sizer .meta input[type="submit"].cat, #cedric #isotope .item .meta input[type="submit"].cat, input[type="submit"].js-login, #login .login-modal input[type="submit"].instructions, #call-us .login-modal input[type="submit"].instructions, #login .login-modal .login-submit input[type="submit"].button-primary, #call-us .login-modal .login-submit input[type="submit"].button-primary, #event_espresso_shopping_cart .price_list .button.reg-allowed-limit, #event_espresso_shopping_cart .price_list .comment-form .form-submit input.reg-allowed-limit[type=submit], .comment-form .form-submit #event_espresso_shopping_cart .price_list input.reg-allowed-limit[type=submit], .comment-form .form-submit input.small[type=submit], .comment-form .form-submit .slide-content-wrapper input[type=submit].slide-description, .slide-content-wrapper .comment-form .form-submit input[type=submit].slide-description, .comment-form .form-submit #breadcrumbs input[type=submit].breadcrumb_last, #breadcrumbs .comment-form .form-submit input[type=submit].breadcrumb_last, .comment-form .form-submit #cedric #isotope .grid-sizer .meta input[type=submit].cat, #cedric #isotope .grid-sizer .meta .comment-form .form-submit input[type=submit].cat, .comment-form .form-submit #cedric #isotope .item .meta input[type=submit].cat, #cedric #isotope .item .meta .comment-form .form-submit input[type=submit].cat, .comment-form .form-submit input[type=submit].js-login, .comment-form .form-submit #login .login-modal input[type=submit].instructions, #login .login-modal .comment-form .form-submit input[type=submit].instructions, .comment-form .form-submit #call-us .login-modal input[type=submit].instructions, #call-us .login-modal .comment-form .form-submit input[type=submit].instructions, .comment-form .form-submit #login .login-modal .login-submit input[type=submit].button-primary, #login .login-modal .login-submit .comment-form .form-submit input[type=submit].button-primary, .comment-form .form-submit #call-us .login-modal .login-submit input[type=submit].button-primary, #call-us .login-modal .login-submit .comment-form .form-submit input[type=submit].button-primary, .slide-content-wrapper .button.slide-description, #breadcrumbs a.button, #breadcrumbs .button.breadcrumb_last, #cedric #isotope .grid-sizer .meta .button.cat, #cedric #isotope .item .meta .button.cat, .button.js-login, #login .login-modal .button.instructions, #call-us .login-modal .button.instructions, #login .login-modal .login-submit .button.button-primary, #call-us .login-modal .login-submit .button.button-primary, #login-bar .login-options a.button {
     font-size: 0.75em; }
   .button.med, input.med[type="submit"], .comment-form .form-submit input.med[type=submit] {
     font-size: 1em; }
@@ -1340,6 +1340,13 @@ button {
     background-repeat: no-repeat;
     background-position: -12px -42px; }
 
+.bottom-back-button {
+  padding: 4em;
+  text-align: center;
+  background-image: url(../img/page-bg.jpg); }
+  .bottom-back-button a:before {
+    margin-right: 15px; }
+
 body {
   font-family: 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, 'Lucida Grande', sans-serif; }
 
@@ -1352,7 +1359,7 @@ h1, h2, h3, h4, h5, h6 {
 .black, #events-single, #booking {
   color: #333; }
 
-.small, #event_espresso_shopping_cart .price_list .reg-allowed-limit, .slide-content-wrapper .slide-description, #breadcrumbs a, #breadcrumbs .breadcrumb_last, #cedric #isotope .grid-sizer .meta .cat, #cedric #isotope .item .meta .cat, .js-login, #login .login-modal .instructions, #login .login-modal .login-submit .button-primary, #login-bar .login-options a {
+.small, #event_espresso_shopping_cart .price_list .reg-allowed-limit, .slide-content-wrapper .slide-description, #breadcrumbs a, #breadcrumbs .breadcrumb_last, #cedric #isotope .grid-sizer .meta .cat, #cedric #isotope .item .meta .cat, .js-login, #login .login-modal .instructions, #call-us .login-modal .instructions, #login .login-modal .login-submit .button-primary, #call-us .login-modal .login-submit .button-primary, #login-bar .login-options a {
   font-size: 0.75em; }
 
 .medium, #team .member-name {
@@ -1403,7 +1410,7 @@ h1, h2, h3, h4, h5, h6 {
   src: url("fonts/icomoon.eot?puulei#iefix") format("embedded-opentype"), url("fonts/icomoon.woff2?puulei") format("woff2"), url("fonts/icomoon.ttf?puulei") format("truetype"), url("fonts/icomoon.woff?puulei") format("woff"), url("fonts/icomoon.svg?puulei#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
-[class^="icon-"], .comment-list li .comment-reply-link:before, #single-bedroom .container .images .flex-direction-nav a.flex-prev:before, #single-bedroom .container .images .flex-direction-nav a.flex-next:before, [class*=" icon-"], .button.download:after, input.download[type="submit"]:after, .comment-form .form-submit input.download[type=submit]:after {
+[class^="icon-"], .bottom-back-button a:before, .comment-list li .comment-reply-link:before, #single-bedroom .container .images .flex-direction-nav a.flex-prev:before, #single-bedroom .container .images .flex-direction-nav a.flex-next:before, [class*=" icon-"], .button.download:after, input.download[type="submit"]:after, .comment-form .form-submit input.download[type=submit]:after {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -1415,7 +1422,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.icon-chevron-left:before, #single-bedroom .container .images .flex-direction-nav a.flex-prev:before {
+.icon-chevron-left:before, .bottom-back-button a:before, #single-bedroom .container .images .flex-direction-nav a.flex-prev:before {
   content: "\e610"; }
 
 .icon-chevron-right:before, #single-bedroom .container .images .flex-direction-nav a.flex-next:before {
@@ -1556,12 +1563,12 @@ hr {
   display: none !important;
   visibility: hidden; }
 
-.invisible, #header #nav ul.menu > li.menu-item.menu-item-has-children > ul.sub-menu, #filters .filters-menu, #contact .feedback, #login .login-modal, #login .login-modal .instructions {
+.invisible, #header #nav ul.menu > li.menu-item.menu-item-has-children > ul.sub-menu, #filters .filters-menu, #contact .feedback, #login .login-modal, #call-us .login-modal, #login .login-modal .instructions, #call-us .login-modal .instructions {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   visibility: hidden; }
 
-.visible, #header #nav ul.menu > li.menu-item.menu-item-has-children:hover > ul.sub-menu, #filters.filters-visible .filters-menu, #contact.feedback-visible .feedback, #login.visible .login-modal, #login .login-modal .instructions.visible {
+.visible, #header #nav ul.menu > li.menu-item.menu-item-has-children:hover > ul.sub-menu, #filters.filters-visible .filters-menu, #contact.feedback-visible .feedback, #login.visible .login-modal, #call-us.visible .login-modal, #login .login-modal .instructions.visible, #call-us .login-modal .instructions.visible {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
   visibility: visible; }
@@ -1937,7 +1944,7 @@ input.submit {
   margin: 0;
   padding: 0;
   font-size: 1em; }
-.event_espresso_form_wrapper .event_espresso_form_wrapper input.small, .event_espresso_form_wrapper .event_espresso_form_wrapper #event_espresso_shopping_cart .price_list input.reg-allowed-limit, #event_espresso_shopping_cart .price_list .event_espresso_form_wrapper .event_espresso_form_wrapper input.reg-allowed-limit, .event_espresso_form_wrapper .event_espresso_form_wrapper .slide-content-wrapper input.slide-description, .slide-content-wrapper .event_espresso_form_wrapper .event_espresso_form_wrapper input.slide-description, .event_espresso_form_wrapper .event_espresso_form_wrapper #breadcrumbs input.breadcrumb_last, #breadcrumbs .event_espresso_form_wrapper .event_espresso_form_wrapper input.breadcrumb_last, .event_espresso_form_wrapper .event_espresso_form_wrapper #cedric #isotope .grid-sizer .meta input.cat, #cedric #isotope .grid-sizer .meta .event_espresso_form_wrapper .event_espresso_form_wrapper input.cat, .event_espresso_form_wrapper .event_espresso_form_wrapper #cedric #isotope .item .meta input.cat, #cedric #isotope .item .meta .event_espresso_form_wrapper .event_espresso_form_wrapper input.cat, .event_espresso_form_wrapper .event_espresso_form_wrapper input.js-login, .event_espresso_form_wrapper .event_espresso_form_wrapper #login .login-modal input.instructions, #login .login-modal .event_espresso_form_wrapper .event_espresso_form_wrapper input.instructions, .event_espresso_form_wrapper .event_espresso_form_wrapper #login .login-modal .login-submit input.button-primary, #login .login-modal .login-submit .event_espresso_form_wrapper .event_espresso_form_wrapper input.button-primary {
+.event_espresso_form_wrapper .event_espresso_form_wrapper input.small, .event_espresso_form_wrapper .event_espresso_form_wrapper #event_espresso_shopping_cart .price_list input.reg-allowed-limit, #event_espresso_shopping_cart .price_list .event_espresso_form_wrapper .event_espresso_form_wrapper input.reg-allowed-limit, .event_espresso_form_wrapper .event_espresso_form_wrapper .slide-content-wrapper input.slide-description, .slide-content-wrapper .event_espresso_form_wrapper .event_espresso_form_wrapper input.slide-description, .event_espresso_form_wrapper .event_espresso_form_wrapper #breadcrumbs input.breadcrumb_last, #breadcrumbs .event_espresso_form_wrapper .event_espresso_form_wrapper input.breadcrumb_last, .event_espresso_form_wrapper .event_espresso_form_wrapper #cedric #isotope .grid-sizer .meta input.cat, #cedric #isotope .grid-sizer .meta .event_espresso_form_wrapper .event_espresso_form_wrapper input.cat, .event_espresso_form_wrapper .event_espresso_form_wrapper #cedric #isotope .item .meta input.cat, #cedric #isotope .item .meta .event_espresso_form_wrapper .event_espresso_form_wrapper input.cat, .event_espresso_form_wrapper .event_espresso_form_wrapper input.js-login, .event_espresso_form_wrapper .event_espresso_form_wrapper #login .login-modal input.instructions, #login .login-modal .event_espresso_form_wrapper .event_espresso_form_wrapper input.instructions, .event_espresso_form_wrapper .event_espresso_form_wrapper #call-us .login-modal input.instructions, #call-us .login-modal .event_espresso_form_wrapper .event_espresso_form_wrapper input.instructions, .event_espresso_form_wrapper .event_espresso_form_wrapper #login .login-modal .login-submit input.button-primary, #login .login-modal .login-submit .event_espresso_form_wrapper .event_espresso_form_wrapper input.button-primary, .event_espresso_form_wrapper .event_espresso_form_wrapper #call-us .login-modal .login-submit input.button-primary, #call-us .login-modal .login-submit .event_espresso_form_wrapper .event_espresso_form_wrapper input.button-primary {
   width: 100px; }
 .event_espresso_form_wrapper label.error,
 .event_espresso_form_wrapper span.error {
@@ -2673,15 +2680,15 @@ nav ul {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0; }
 .hero .hero-content {
-  width: 70%;
-  margin-left: 15%;
+  width: 60%;
+  margin-left: 20%;
   text-align: center;
   z-index: 100; }
   .hero .hero-content .highlight, .hero .hero-content .title, .hero .hero-content #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu .hero .hero-content a {
     display: inline-block;
     margin: 0 0 0.3em 0;
     padding: 0.3em 0.3em 0.1em;
-    background-color: rgba(0, 0, 0, 0.45);
+    background-color: rgba(0, 0, 0, 0.65);
     -moz-transition: all, 0.3s;
     -o-transition: all, 0.3s;
     -webkit-transition: all, 0.3s;
@@ -2698,6 +2705,18 @@ nav ul {
     @media screen and (max-width: 750px) {
       .hero .hero-content .highlight, .hero .hero-content .title, .hero .hero-content #footer .sitemap .right nav ul.menu a, #footer .sitemap .right nav ul.menu .hero .hero-content a {
         font-size: 1.2em; } }
+  .hero .hero-content .description {
+    display: inline-block;
+    margin: 0 0 0.3em 0;
+    padding: 0.3em 0.3em 0.1em;
+    background-color: rgba(0, 0, 0, 0.65);
+    font-family: 'Simoncini Garamond W01';
+    font-weight: 400;
+    font-style: italic;
+    font-size: 18px; }
+    @media screen and (max-width: 550px) {
+      .hero .hero-content .description {
+        font-size: 16px; } }
   .hero .hero-content .button, .hero .hero-content input[type="submit"], .hero .hero-content .comment-form .form-submit input[type=submit], .comment-form .form-submit .hero .hero-content input[type=submit] {
     margin-top: 1em; }
 .hero.flexslider {
@@ -4553,7 +4572,7 @@ body.logged-in #login-bar {
   .js-login:hover {
     background-color: #272727; }
 
-#login {
+#login, #call-us {
   position: fixed;
   top: 0;
   left: 0;
@@ -4563,26 +4582,26 @@ body.logged-in #login-bar {
   -o-transition: all, 0.3s;
   -webkit-transition: all, 0.3s;
   transition: all, 0.3s; }
-  #login.visible, #header #nav ul.menu > li.menu-item.menu-item-has-children:hover > ul#login.sub-menu, #filters.filters-visible #login.filters-menu, #contact.feedback-visible #login.feedback, #login.visible #login.login-modal, #login .login-modal #login.instructions.visible {
+  #login.visible, #header #nav ul.menu > li.menu-item.menu-item-has-children:hover > ul#login.sub-menu, #filters.filters-visible #login.filters-menu, #contact.feedback-visible #login.feedback, #login.visible #login.login-modal, #call-us.visible #login.login-modal, #login .login-modal #login.instructions.visible, #call-us .login-modal #login.instructions.visible, #call-us.visible, #header #nav ul.menu > li.menu-item.menu-item-has-children:hover > ul#call-us.sub-menu, #filters.filters-visible #call-us.filters-menu, #contact.feedback-visible #call-us.feedback, #login.visible #call-us.login-modal, #call-us.visible #call-us.login-modal, #login .login-modal #call-us.instructions.visible, #call-us .login-modal #call-us.instructions.visible {
     z-index: 9999; }
-    #login.visible .login-overlay, #header #nav ul.menu > li.menu-item.menu-item-has-children:hover > ul#login.sub-menu .login-overlay, #filters.filters-visible #login.filters-menu .login-overlay, #contact.feedback-visible #login.feedback .login-overlay, #login .login-modal #login.instructions.visible .login-overlay {
+    #login.visible .login-overlay, #header #nav ul.menu > li.menu-item.menu-item-has-children:hover > ul#login.sub-menu .login-overlay, #filters.filters-visible #login.filters-menu .login-overlay, #contact.feedback-visible #login.feedback .login-overlay, #call-us.visible #login.login-modal .login-overlay, #login .login-modal #login.instructions.visible .login-overlay, #call-us .login-modal #login.instructions.visible .login-overlay, #call-us.visible .login-overlay, #header #nav ul.menu > li.menu-item.menu-item-has-children:hover > ul#call-us.sub-menu .login-overlay, #filters.filters-visible #call-us.filters-menu .login-overlay, #contact.feedback-visible #call-us.feedback .login-overlay, #login.visible #call-us.login-modal .login-overlay, #login .login-modal #call-us.instructions.visible .login-overlay, #call-us .login-modal #call-us.instructions.visible .login-overlay {
       display: block;
       background-color: rgba(0, 0, 0, 0.4);
       z-index: 200; }
-    #login.visible .login-modal, #header #nav ul.menu > li.menu-item.menu-item-has-children:hover > ul#login.sub-menu .login-modal, #filters.filters-visible #login.filters-menu .login-modal, #contact.feedback-visible #login.feedback .login-modal, #login .login-modal #login.instructions.visible .login-modal {
+    #login.visible .login-modal, #header #nav ul.menu > li.menu-item.menu-item-has-children:hover > ul#login.sub-menu .login-modal, #filters.filters-visible #login.filters-menu .login-modal, #contact.feedback-visible #login.feedback .login-modal, #call-us.visible #login.login-modal .login-modal, #login .login-modal #login.instructions.visible .login-modal, #call-us .login-modal #login.instructions.visible .login-modal, #call-us.visible .login-modal, #header #nav ul.menu > li.menu-item.menu-item-has-children:hover > ul#call-us.sub-menu .login-modal, #filters.filters-visible #call-us.filters-menu .login-modal, #contact.feedback-visible #call-us.feedback .login-modal, #login.visible #call-us.login-modal .login-modal, #login .login-modal #call-us.instructions.visible .login-modal, #call-us .login-modal #call-us.instructions.visible .login-modal {
       top: 50%;
       -moz-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       -webkit-transform: translateY(-50%);
       transform: translateY(-50%); }
-  #login .login-overlay {
+  #login .login-overlay, #call-us .login-overlay {
     display: none;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%; }
-  #login .login-modal {
+  #login .login-modal, #call-us .login-modal {
     position: absolute;
     top: 30%;
     left: 35%;
@@ -4597,38 +4616,38 @@ body.logged-in #login-bar {
     -webkit-transition: all, 0.3s;
     transition: all, 0.3s; }
     @media screen and (max-width: 1000px) {
-      #login .login-modal {
+      #login .login-modal, #call-us .login-modal {
         width: 50%;
         left: 25%; } }
     @media screen and (max-width: 600px) {
-      #login .login-modal {
+      #login .login-modal, #call-us .login-modal {
         width: 80%;
         left: 10%; } }
-    #login .login-modal > button {
+    #login .login-modal > button, #call-us .login-modal > button {
       position: absolute;
       top: 0;
       right: 0;
       color: #fff; }
-    #login .login-modal p {
+    #login .login-modal p, #call-us .login-modal p {
       font-family: 'Simoncini Garamond W01';
       font-weight: 400; }
-    #login .login-modal a {
+    #login .login-modal a, #call-us .login-modal a {
       color: #A268BE;
       text-decoration: none; }
-    #login .login-modal .heading {
+    #login .login-modal .heading, #call-us .login-modal .heading {
       margin-top: 0;
       font-size: 1.3125em; }
-    #login .login-modal .instructions-prompt {
+    #login .login-modal .instructions-prompt, #call-us .login-modal .instructions-prompt {
       margin-top: 2em;
       margin-bottom: 0;
       font-size: 0.75em; }
-      #login .login-modal .instructions-prompt button {
+      #login .login-modal .instructions-prompt button, #call-us .login-modal .instructions-prompt button {
         padding: 0; }
-        #login .login-modal .instructions-prompt button i {
+        #login .login-modal .instructions-prompt button i, #call-us .login-modal .instructions-prompt button i {
           color: #fff;
           display: inline-block;
           vertical-align: middle; }
-    #login .login-modal .instructions {
+    #login .login-modal .instructions, #call-us .login-modal .instructions {
       max-height: 0;
       width: 100%;
       margin: 1em 0 0 0;
@@ -4636,21 +4655,26 @@ body.logged-in #login-bar {
       -o-transition: all, 0.3s;
       -webkit-transition: all, 0.3s;
       transition: all, 0.3s; }
-      #login .login-modal #header #nav ul.menu > li.menu-item.menu-item-has-children:hover > ul.instructions.sub-menu, #header #nav #login .login-modal ul.menu > li.menu-item.menu-item-has-children:hover > ul.instructions.sub-menu, #login .login-modal #filters.filters-visible .instructions.filters-menu, #filters.filters-visible #login .login-modal .instructions.filters-menu, #login .login-modal #contact.feedback-visible .instructions.feedback, #contact.feedback-visible #login .login-modal .instructions.feedback, #login.visible .login-modal .instructions.login-modal, #login .login-modal .instructions.visible {
+      #login .login-modal #header #nav ul.menu > li.menu-item.menu-item-has-children:hover > ul.instructions.sub-menu, #header #nav #login .login-modal ul.menu > li.menu-item.menu-item-has-children:hover > ul.instructions.sub-menu, #login .login-modal #filters.filters-visible .instructions.filters-menu, #filters.filters-visible #login .login-modal .instructions.filters-menu, #login .login-modal #contact.feedback-visible .instructions.feedback, #contact.feedback-visible #login .login-modal .instructions.feedback, #login.visible .login-modal .instructions.login-modal, #login .login-modal #call-us.visible .instructions.login-modal, #call-us.visible #login .login-modal .instructions.login-modal, #login .login-modal .instructions.visible, #call-us .login-modal #header #nav ul.menu > li.menu-item.menu-item-has-children:hover > ul.instructions.sub-menu, #header #nav #call-us .login-modal ul.menu > li.menu-item.menu-item-has-children:hover > ul.instructions.sub-menu, #call-us .login-modal #filters.filters-visible .instructions.filters-menu, #filters.filters-visible #call-us .login-modal .instructions.filters-menu, #call-us .login-modal #contact.feedback-visible .instructions.feedback, #contact.feedback-visible #call-us .login-modal .instructions.feedback, #call-us .login-modal #login.visible .instructions.login-modal, #login.visible #call-us .login-modal .instructions.login-modal, #call-us.visible .login-modal .instructions.login-modal, #call-us .login-modal .instructions.visible {
         max-height: 500px; }
       @media screen and (max-width: 500px) {
-        #login .login-modal .instructions {
+        #login .login-modal .instructions, #call-us .login-modal .instructions {
           padding: 0; } }
-    #login .login-modal .login-remember label {
+    #login .login-modal .login-remember label, #call-us .login-modal .login-remember label {
       text-transform: inherit; }
     #login .login-modal input[type="text"],
-    #login .login-modal input[type="password"] {
+    #login .login-modal input[type="password"], #call-us .login-modal input[type="text"],
+    #call-us .login-modal input[type="password"] {
       font-family: 'Simoncini Garamond W01';
       font-weight: 400; }
       @media screen and (max-width: 1600px) {
         #login .login-modal input[type="text"],
-        #login .login-modal input[type="password"] {
+        #login .login-modal input[type="password"], #call-us .login-modal input[type="text"],
+        #call-us .login-modal input[type="password"] {
           max-width: 300px; } }
+
+#call-us p {
+  font-size: 20px; }
 
 #login-bar {
   display: none;
@@ -5021,13 +5045,15 @@ body.logged-in #login-bar {
     #single-bedroom .container .images {
       width: 60%;
       float: right;
-      height: 90vh;
       border: none;
       margin: 0;
       border-left: 17px solid #000;
       background: #000 url(../img/loader.gif) center center no-repeat; }
       #single-bedroom .container .images .slides {
-        height: 100%; }
+        height: 95vh; }
+        @media only screen and (max-width: 900px) {
+          #single-bedroom .container .images .slides {
+            height: 55vh; } }
         #single-bedroom .container .images .slides li {
           height: 100%;
           background-position: center;
@@ -5044,6 +5070,8 @@ body.logged-in #login-bar {
             @media only screen and (max-width: 700px) {
               #single-bedroom .container .images .slides li .fancybox-thumb {
                 display: none; } }
+      #single-bedroom .container .images .flex-control-thumbs li {
+        border: 2px solid #000; }
       #single-bedroom .container .images .flex-direction-nav a {
         opacity: 1;
         color: #FFF;
@@ -5063,5 +5091,5 @@ body.logged-in #login-bar {
       #single-bedroom .container .inner-content, #single-bedroom .container .images {
         width: 100%; }
       #single-bedroom .container .images {
-        height: 50vh;
+        height: auto;
         padding-left: 0; } }

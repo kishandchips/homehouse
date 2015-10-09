@@ -3,6 +3,12 @@
     box-sizing: border-box;
 }
 
+@mixin icon($icon){
+    @extend [class^="icon-"];
+    @extend .icon-#{$icon}:before !optional;
+}
+
+
 .row, .clearfix, .container {
   *zoom: 1;
 

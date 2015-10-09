@@ -498,8 +498,8 @@ nav{
 	}
 
 	.hero-content{
-		width: 70%;
-		margin-left: 15%;
+		width: 60%;
+		margin-left: 20%;
 		text-align: center;
 		z-index: 100;
 
@@ -508,7 +508,7 @@ nav{
 			margin: 0 0 0.3em 0;
 			padding: 0.3em 0.3em 0.1em;
 			@extend .title;
-			background-color: rgba(#000, 0.45);
+			background-color: rgba(#000, 0.65);
 			// box-shadow: 0.3em 0 0 rgba(#000, 0.45), -0.3em 0 0 rgba(#000, 0.45);
 			@include transition(all,.3s);
 			
@@ -524,6 +524,20 @@ nav{
 			@media screen and (max-width: 750px){
 				font-size: 1.2em;
 			}
+		}
+
+		.description {
+			display: inline-block;
+			margin: 0 0 0.3em 0;
+			padding: 0.3em 0.3em 0.1em;
+			background-color: rgba(#000, 0.65);
+			@include garamond;
+		    font-style: italic;
+		    font-size: 18px;	
+
+		    @media screen and (max-width: 550px){
+		    	font-size: 16px;			    	
+		    }
 		}
 
 		.button{
