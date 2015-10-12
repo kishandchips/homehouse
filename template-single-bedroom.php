@@ -39,7 +39,7 @@
 					</div>
 
 					<div class="buttons">
-						<a href="tel:555-555-5555" class="button secondary med white">Book by Phone</a>
+						<a href="tel:555-555-5555" class="button secondary med white call-btn">Book by Phone</a>
 						<a href="mailto:reservations@homehouse.co.uk?subject=Bedroom booking request - <?php the_title(); ?>&body=Hi,I would like to book the bedroom found here: <?php the_permalink(); ?>" title="<?php the_title(); ?>" class="button primary purple med">Book by Email</a>		
 					</div>					
 					
@@ -55,7 +55,12 @@
 								
 								<ul class="slides">
 									<?php foreach ($images as $image): ?>
-										<li style="background-image: url(<?php echo $image['url']; ?>)" data-thumb="<?php echo $image['sizes']['medium']; ?>">
+										<?php 
+											$thumb = $image['url'];
+											$thumb_size = array('width' => 230, 'height' => 175);
+											$thumb = bfi_thumb($thumb, $thumb_size);
+										?>										
+										<li style="background-image: url(<?php echo $image['url']; ?>)" data-thumb="<?php echo $thumb; ?>">
 											&nbsp;
 <!-- 											<a class="fancybox-thumb" rel="fancybox-thumb-<?php echo $i; ?>" href="<?php echo $image['url']; ?>" title="">				
 										  		<span class="icon icon-fulllscreen"></span>
