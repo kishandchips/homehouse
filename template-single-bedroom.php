@@ -84,7 +84,14 @@
 
 	<?php endif; ?>		
 	<div class="bottom-back-button">
-		<a href="<?php echo get_the_permalink(27); ?>" title="Back to bedrooms" class="button secondary white">Back to bedrooms</a>
+		<?php
+		$this_page = get_post($id);
+		$parent_id = $this_page->post_parent;
+		if ($parent_id) {
+			$parent = get_page($parent_id);
+			echo '<a href="'.get_permalink($parent->ID).'" title="Back to bedrooms" class="button secondary white">Back to bedrooms</a>';
+		}
+		?>	
 	</div>
 
 
