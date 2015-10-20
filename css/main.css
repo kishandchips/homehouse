@@ -1341,9 +1341,12 @@ button {
     background-position: -12px -42px; }
 
 .bottom-back-button {
-  padding: 4em;
+  padding: 2em;
   text-align: center;
-  background-image: url(../img/page-bg.jpg); }
+  background-image: url(../img/page-bg.jpg);
+  margin-left: -3em;
+  margin-right: -3em;
+  margin-bottom: -3em; }
   .bottom-back-button a:before {
     margin-right: 15px; }
 
@@ -2374,7 +2377,7 @@ body {
   -moz-box-shadow: 0 0 10px #000;
   -webkit-box-shadow: 0 0 10px #000;
   box-shadow: 0 0 10px #000;
-  z-index: 100; }
+  z-index: 110; }
   #header:after {
     content: "";
     display: inline-block;
@@ -2712,7 +2715,6 @@ nav ul {
     background-color: rgba(0, 0, 0, 0.65);
     font-family: 'Simoncini Garamond W01';
     font-weight: 400;
-    font-style: italic;
     font-size: 18px; }
     @media screen and (max-width: 550px) {
       .hero .hero-content .description {
@@ -4965,6 +4967,9 @@ body.logged-in #login-bar {
 .page-bedrooms .flow .grid-flow {
   width: 100%; }
 
+.page-template-template-bedrooms .bottom-back-button {
+  padding: 4em;
+  margin: 0; }
 .page-template-template-bedrooms .rect-items .pad {
   padding: 10px; }
 .page-template-template-bedrooms .rect-items .content, .page-template-template-bedrooms .rect-items .image {
@@ -5036,9 +5041,14 @@ body.logged-in #login-bar {
       #single-bedroom .container .inner-content h3 {
         margin-top: 2em; }
       #single-bedroom .container .inner-content .buttons {
-        margin-top: 2.5em; }
+        margin-top: 2.5em;
+        text-align: center;
+        margin-bottom: 25px; }
         #single-bedroom .container .inner-content .buttons a:first-child {
           margin: 0 25px 25px 0; }
+          @media screen and (max-width: 470px) {
+            #single-bedroom .container .inner-content .buttons a:first-child {
+              margin: 0 0px 25px 0; } }
     #single-bedroom .container .images {
       width: 60%;
       float: right;
@@ -5046,6 +5056,9 @@ body.logged-in #login-bar {
       margin: 0;
       border-left: 17px solid #000;
       background: #000 url(../img/loader.gif) center center no-repeat; }
+      @media only screen and (max-width: 900px) {
+        #single-bedroom .container .images {
+          border-left: none; } }
       #single-bedroom .container .images .slides {
         height: 95vh; }
         @media only screen and (max-width: 900px) {

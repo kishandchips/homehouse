@@ -28,6 +28,7 @@
 					<h2 class="title"><?php the_title(); ?></h2>
 					<?php if(get_field('description')): ?>
 						<div class="description"><?php the_field('description'); ?></div>
+						<div class="description">To book please contact reservations@homehouse.co.uk or call 020 7670 2000</div>
 					<?php endif; ?>
 				</div>
 

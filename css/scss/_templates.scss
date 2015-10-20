@@ -1948,6 +1948,12 @@ body.logged-in{
 }
 // BEDROOM LIST PAGE STYLES
 .page-template-template-bedrooms {
+
+	.bottom-back-button {
+		padding: 4em;
+		margin: 0;
+	}
+	
 	.rect-items {
 
 		.pad {
@@ -2065,9 +2071,15 @@ body.logged-in{
 
 			.buttons {
 				 margin-top: 2.5em;
+				 text-align: center;
+				 margin-bottom: 25px;
 
 				a:first-child {
 					margin: 0 25px 25px 0;
+
+					@media screen and (max-width: 470px){
+						margin: 0 0px 25px 0;
+					}
 				}
 			}
 		}
@@ -2079,6 +2091,11 @@ body.logged-in{
 			margin: 0;
 		    border-left: 17px solid #000;
 		    background: #000 url(../img/loader.gif) center center no-repeat;	
+
+			@include device-width(9) {
+				border-left: none;		
+			}
+
 
 			.slides {
 				height: 95vh;

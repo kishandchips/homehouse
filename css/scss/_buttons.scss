@@ -166,8 +166,6 @@ button{
 		background-image:url(../img/ticket-sprite.png);
 		background-repeat: no-repeat;
 		background-position: -12px 0;
-		
-
 	}
 
 	&:after{
@@ -186,9 +184,12 @@ button{
 }
 
 .bottom-back-button {
-	padding: 4em;
+	padding: 2em;
 	text-align: center;
     background-image: url(../img/page-bg.jpg);
+    margin-left: -3em;
+    margin-right: -3em;
+    margin-bottom: -3em;    
 
 	a {
 		&:before {

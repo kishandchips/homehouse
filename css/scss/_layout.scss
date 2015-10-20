@@ -76,7 +76,7 @@ body{
 	background-image: url(../img/header-bg.png);
 	background-repeat: repeat;
 	@include box-shadow(0 0 10px #000);
-	z-index: 100;
+	z-index: 110;
 
 	&:after{
 		content: "";
@@ -532,7 +532,6 @@ nav{
 			padding: 0.3em 0.3em 0.1em;
 			background-color: rgba(#000, 0.65);
 			@include garamond;
-		    font-style: italic;
 		    font-size: 18px;	
 
 		    @media screen and (max-width: 550px){
