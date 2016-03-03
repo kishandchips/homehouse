@@ -92,6 +92,7 @@
 	<?php if(get_field('display_grid')): ?>
 
 	<div class="flow">
+		<a href="<?php echo get_booking_url(); ?>" target="_blank" title="<?php the_title(); ?>" class="button primary purple med book-button">Book Online</a>	
 		<section class="rect-items grid-flow row">
 
 		<?php 
@@ -114,7 +115,7 @@
  -->		<?php if(have_rows('grid_items')): while(have_rows('grid_items')): the_row(); ?>
 
 			
-			<div class="column pad <?php if (in_array($i, $array)){echo 'col-2-3 equal-height';} else {echo 'col-1-2';} ?> ">		
+			<div class="column pad col-1-2">		
 
 
 				<?php if(get_sub_field('display_background')): ?>

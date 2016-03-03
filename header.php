@@ -6,7 +6,7 @@
     <head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title><?php bloginfo('name'); ?></title>
+		<title><?php wp_title( '|', true, 'right' ); ?></title>
         <meta name="format-detection" content="telephone=no">
         <meta name="viewport" content="width=device-width">
         <link href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.png" rel="shortcut icon" type="image/x-icon">

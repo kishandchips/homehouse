@@ -835,3 +835,11 @@ function add_slug_body_class( $classes ) {
 	}
 	return $classes;
 }
+
+function get_booking_url() {
+	if( is_user_logged_in() ) {
+		return 'https://app.thebookingbutton.com/properties/homehousedirect?promotion_code=Confirmed-Member';
+	} else {
+		return 'https://app.thebookingbutton.com/properties/homehousedirect';
+	}
+}

@@ -37,22 +37,16 @@
 					<div class="body">
 						<?php the_content(); ?>
 					</div>
+					<!-- <div class="bottom-back-button">
+						<a href="tel:02076702000" class="button primary purple med call-btn">Book by Phone</a>
+						<a href="<?php echo get_booking_url(); ?>" target="_blank" title="<?php the_title(); ?>" class="button primary purple med">Book Online</a>	
+						<a href="mailto:reservations@homehouse.co.uk?subject=Bedroom booking request - <?php the_title(); ?>&body=Hi,I would like to book the bedroom found here: <?php the_permalink(); ?>" title="<?php the_title(); ?>" class="button primary purple med">Book by Email</a>
+ 					</div> -->
 
-					<div class="buttons">
-						<a href="tel:555-555-5555" class="button cta call-btn">Book by Phone</a>
-						<a href="mailto:reservations@homehouse.co.uk?subject=Bedroom booking request - <?php the_title(); ?>&body=Hi,I would like to book the bedroom found here: <?php the_permalink(); ?>" title="<?php the_title(); ?>" class="button primary purple med">Book by Email</a>		
-					</div>	
-				
 					<div class="bottom-back-button">
-						<?php
-						$this_page = get_post($id);
-						$parent_id = $this_page->post_parent;
-						if ($parent_id) {
-							$parent = get_page($parent_id);
-							echo '<a href="'.get_permalink($parent->ID).'" title="Back to bedrooms" class="button secondary med white">Back to bedrooms</a>';
-						}
-						?>	
+						<a href="<?php echo get_permalink($post->post_parent); ?>" title="Back to bedrooms" class="button secondary white">Back to bedrooms</a>
 					</div>
+
 
 					
 					<?php endwhile; endif; ?>
@@ -95,6 +89,18 @@
 		<?php get_template_part( 'content', 'grid' ); ?>
 
 	<?php endif; ?>		
+	<!--div class="bottom-back-button">
+		<?php
+		$this_page = get_post($id);
+		$parent_id = $this_page->post_parent;
+		if ($parent_id) {
+			$parent = get_page($parent_id);
+			echo '<a href="'.get_permalink($parent->ID).'" title="Back to bedrooms" class="button secondary white">Back to bedrooms</a>';
+		}
+		?>	
+	</div-->
+
+
 
 	</div><!-- #content-wrapper -->
 </div><!-- #page -->

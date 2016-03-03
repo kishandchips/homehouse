@@ -46,7 +46,8 @@
 							</p>
 							<div class="buttons">
 								<a href="<?php echo get_the_permalink($post->ID); ?>" title="<?php the_title(); ?>" class="button secondary med white">Explore</a>
-								<a href="mailto:reservations@homehouse.co.uk?subject=Bedroom booking request - <?php the_title(); ?>&body=Hi,I would like to book the bedroom found here: <?php the_permalink(); ?>" title="<?php the_title(); ?>" class="button primary purple med">Book Now</a>
+								<!--a href="<?php echo get_booking_url(); ?>" target="_blank" title="<?php the_title(); ?>" class="button primary purple med">Book Now</a-->							
+								<!--a href="mailto:reservations@homehouse.co.uk?subject=Bedroom booking request - <?php the_title(); ?>&body=Hi,I would like to book the bedroom found here: <?php the_permalink(); ?>" title="<?php the_title(); ?>" class="button primary purple med">Book Now</a-->
 							</div>							
 						</div>
 					</div>
